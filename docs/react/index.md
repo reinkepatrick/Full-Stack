@@ -1,5 +1,11 @@
 # React
 
+## Was ist React?
+React ist ein JavaScript Framework für die Erstellung von Benutzeroberflächen. Es ist eins
+der größten JavaScript Frameworks neben Angular und Vue.js. React steht aktuell bei der 
+Version 16.8.6 vom 27. März 2019, die neusten Neuerungen sind die sogenannten Hooks welche später genauer 
+erläutert werden. 
+
 ## Anforderungen
 React bietet große Möglichkeiten SPA (_Singe Page Application_) und 
 MPA (_Multi Page Application_) zu erstellen, aber um mit React einem guten Workflow 
