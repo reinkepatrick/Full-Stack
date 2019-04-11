@@ -116,7 +116,7 @@ export default App;
 
 
 ## JSX
-JSX ist die Sprache die zum darstellen von unseren Components verwenden, um genauer zu
+JSX ist die Sprache die zum darstellen von unseren Components verwenden wird, um genauer zu
 sagen den Teil den wir die `render()` Funktion schreiben.
 
 ```js
@@ -155,7 +155,7 @@ render() {
    <div className="App">
      <h1>Hello World</h1>
    </div>
-   <p>I'm not working</>
+   <p>I'm not working</p>
  );
 }
 ```
