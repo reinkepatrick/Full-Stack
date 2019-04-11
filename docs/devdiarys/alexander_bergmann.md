@@ -6,7 +6,10 @@
 
 **08.04.2019 - 14.04.2019**
 
-
+- Rechere und Überblick
+  - Continuous Integration Tools  
+  - Jenkins 
+  - Cloud Computing Docker
 
 ## Woche 2 
 
