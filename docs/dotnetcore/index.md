@@ -57,11 +57,11 @@ Ein Service welcher Daten für das Netzwerk bereitstellen kann und mit im Grundu
 
 #### Programmiersprachen
 
-##### C#
+##### C# #
 
 C# ist eine Simple und Moderne Objekt Orierntierte Programmiersprache die Typ sicher ist.
 
-##### F#
+##### F# #
 
 F# ist eine Plattform unabhängige funktionale Programmiersprache. Welche außerdem ein Open-Source Projekt ist. F# kann genutzt werden um Objekt Orientiert oder Imperativ zu programmieren.
 
