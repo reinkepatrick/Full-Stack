@@ -20,6 +20,25 @@ Das dotnet Core Team hat für die Version 3.0 die in der zweiten Hälfte 2019 ve
 
 Eine liste aller Änderungen sind [hier](https://docs.microsoft.com/de-de/dotnet/core/whats-new/dotnet-core-3-0) erhältlich.
 
+## Funktionen  (Platzhalter)
+### interesante packages
+#### System
+die Klassen für die primitiven Datentypen,
+Einige Exception Klassen,
+die Random Klasse und
+Tuppel
+
+_Beispiel werden noch hinzugefügt_
+#### System.Collections.Generics
+Unterschiedlche Generische Datenstrukturen z.b. List, Stack, Map, Queue
+
+_Beispiele werden noch hinzugefügt_
+#### System.Linq
+Das einbinden dieses Namespaces erlaubt Linq zu nutzen. Es muss nicht für Ling to sql ein anderes Namespace eingebunden werden.
+#### (System/Microsoft).EntityFrameworkCore
+Alle EntityFramework relevanten Klassen
+z.b. DBContext
+
 
 
 ## Technologien
