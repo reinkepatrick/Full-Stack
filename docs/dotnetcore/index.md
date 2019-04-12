@@ -2,11 +2,11 @@
 
 ## Einleitung
 
-### Was ist dotnet core
+### Was ist dotnet Core ?
 
 dotnet Core ist ein Open source framework welches die Technologien des Microsoft Produktes dotnet framework als einzelne Komponenten anbietet. Der Ansatz von dotnet core ist es eine ähnlichen Ansatz wie Java zufahren nur ohne Virtuelle Maschine. Der Quellcode muss nur einmal geschrieben werden und kann dann native für das jeweilige Betriebssystem kompiliert werden. Eine der ersten Funktionen die Implementiert wurden war die Webserver Möglichkeit sowie das Entity Framework. Wichtig zu wissen ist auch das dotnet core nicht nur von einer Programmiersprache verwendet werden kann sondern von mehreren. Microsoft bietet aktuell C#, F# und VB als mögliche Programmiersprachen an.
 
-### Wer entwickelt dotnet core
+### Wer entwickelt dotnet core ?
 
 Das Projekt wurde von Microsoft gestartet und wird vom Programm Manager Richard Lander betreut. Aufgrund das dotnet core ein öffentlich zugängliches Projekt ist und auf github bereit gestellt wurde, gibt es bereits einige Entwickler außerhalb von Microsofts dotnet core teams die zur Verbesserung und weiter Entwicklung des Frameworks beigetragen haben. 
 
