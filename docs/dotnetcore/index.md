@@ -41,6 +41,58 @@ z.b. DBContext
 
 
 
+
+
+
+
+### Codebeispiele
+#### Entity Framework
+```c#
+class Context : DbContext
+{
+   private const string connectionString = @"Data Source=:memory:;";
+   protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+   {
+      // dotnet core configuration was für ein Server benutzt werden sll
+      optionsBuilder.UseSqlite(connectionString);
+      // optionsBuilder.UseSqlServer(connectionString)
+   }
+   public DbSet<Nutzer> Nutzer { get; set; }
+   public DbSet<Nachricht> Nachrichten { get; set; }
+}
+```
+
+```c#
+class Nutzer
+{
+   public int id { get; set; }
+   public string name { get; set; }
+   private ICollection<Nachrichten> Nachrichten { get; set; }
+}
+
+class Nachrichten
+{
+   public int id { get; set; }
+   public string nachricht { get; set; }
+   public Nutzer Nutzer { get; set; }
+}
+```
+
+```c#
+class Program
+{
+   static void Main(string[] args)
+   {
+      var db = new Context();
+      // Datenbank auf den neuesten Stand Updaten
+      db.Database.Migrate();
+      // Einen Nutzer anlegen und fürs speichern in der Datenbank vormerken
+      db.Nutzer.Add(new Nutzer{ id=1, name="Text" });
+      // Alle gemerkten Änderungen in der Datenbank abspeichern
+      db.SaveChanges();
+   }
+}
+```
 ## Technologien
 
 #### Entity Framework
