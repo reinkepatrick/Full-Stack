@@ -93,6 +93,50 @@ class Program
    }
 }
 ```
+
+#### Linq
+
+##### Funktionssyntax
+
+```c#
+var list = new List<string>();
+list.Where((x) => x.length > 5)
+```
+
+```c#
+var list = new List<string>();
+list.OrderBy((x) => x.length)
+```
+
+```c#
+var list = new List<string>();
+list.Select((x) => x.length)
+```
+
+##### Lambda
+
+Funktionssyntax ist nicht zu verwechseln mit lambda welches in etwa zur selben zeit eingeführt wurde und vom syntax ähnlich aussieht. und schnell zu verwirrungen führen kann
+
+```c#
+var list = new List<string>();
+list.foreach((x) => Console.WriteLine(x))
+```
+Besonders Interessant ist auch dieser eigentliche Select der aber Lambda ist und nicht Query 
+```c#
+var list = new List<string>();
+list.FirstOrDefault((x) => x.length)
+```
+##### Querysyntax
+
+Der größte Funktionale unterschied ist das der Query syntax wie ein Datenbank Query genutzt werden kann. also Sortieren, auswählen, Filtern, Gruppieren.
+
+```c#
+var list = new List<string>();
+var element = from text in list where text == "Beispiel" select text;
+```
+
+
+
 ## Technologien
 
 #### Entity Framework
@@ -133,3 +177,4 @@ Visual Basic ist eine Programmiersprache mit Simplen Syntax um Typ sichere und O
 
 [F# Github Organisation](https://github.com/fsharp)
 
+[C# Querysyntax](https://www.tutorialsteacher.com/linq/linq-query-syntax)
