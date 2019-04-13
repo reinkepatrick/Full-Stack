@@ -7,7 +7,7 @@
 * [Nodejs](nodejs/index.md)
 * [React](react/index.md)
 * Tagebücher
-	* [Alexander Heinisch](devdiarys/alexanderheinisch)
-	* [Alexander Bergmann](devdiarys/alexander_bergmann)
-	* [Marti Stuwe](devdiarys/martistuwe)
-	* [Patrick Reinke](devdiarys/patrickreinke)
+	* [Alexander Bergmann](devdiaries/alexander_bergmann)
+	* [Alexander Heinisch](devdiaries/alexanderheinisch)
+	* [Marti Stuwe](devdiaries/martistuwe)
+	* [Patrick Reinke](devdiaries/patrickreinke)
