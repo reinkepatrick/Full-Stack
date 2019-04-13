@@ -40,8 +40,11 @@ npm start
 Komponenten sind das grundlegendste in React auch bekannt als __Components__, 
 aus einzelnen Components wird unsere App am Ende zusammengesetzt. Der Vorteil an 
 Components sind das man sie immer wieder verwenden kann. Jede Component muss 
-zwingend JSX zurückgeben oder diesen rendern. Der allgemeine Aufbau eines Components
- (_src/App.js_) in React sieht wie folgt aus:
+zwingend JSX zurückgeben oder diesen rendern. 
+
+![components](./img/components.svg ':size=525')
+
+Der allgemeine Aufbau eines Components (_src/App.js_) in React sieht wie folgt aus:
 
 ```js
 import React, { Component } from 'react';
@@ -173,6 +176,8 @@ des Components übergeben.
 <Foobar foo="bar" />
 <Foobar foo="bar" >Foobar</Foobar>
 ```
+
+![components](./img/props.svg)
 
 Diese Properties kann man dann einfach innerhalb des Components verwenden. Im zweiten
 Aufruf übergeben wir etwas nicht als Attribut, dies kann man einfach über `.children`
@@ -328,6 +333,8 @@ return (
   </div>
 );
 ```
+
+![components](./img/if.svg)
 
 ### For-Schleifen
 Diese können unter React wirklich simpel durch die JavaScript Methode `map` verwirklicht
