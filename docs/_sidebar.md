@@ -2,10 +2,12 @@
 
 * [Home](/)
 * [Cloud-Docker-Jenkins](cloud-docker-jenkins/index.md)
+* [Django](django/index)
 * [DotNetCore](dotnetcore/index.md)
 * [Flutter](flutter/index.md)
 * [Nodejs](nodejs/index.md)
 * [React](react/index.md)
+* [WebGL](webgl/index)
 * Tagebücher
 	* [Alexander Bergmann](devdiaries/alexander_bergmann)
 	* [Alexander Heinisch](devdiaries/alexanderheinisch)
