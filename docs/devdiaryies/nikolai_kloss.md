@@ -17,7 +17,11 @@
   - HelloWorld Projekt erzeugt
   - Ionic Konto erstellt
   - Suche nach IDE
-  - Debugging
+  - Debugging in Testfunktion
+  - Ändern der home.html nach Tutorial
+  - Änderungen in VS Code werden direkt in laufende Instanz geladen
+  - http://localhost:8100/?ionicplatform=ios
+  - http://localhost:8100/?ionicplatform=android
 
 
 
