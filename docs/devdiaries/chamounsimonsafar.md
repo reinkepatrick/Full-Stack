@@ -14,4 +14,4 @@ __15.04.2019 - 21.04,2019__
 
 | Datum      | Tätigkeit                                                                | Dauer      | Zusatz |
 | ---------- | ------------------------------------------------------------------------ | ---------- | ------ |
-| 15.04.2019 | Eingelesen ind Node.js->Module,Debugging,Callback Hell und Tests         | 3 h        |        |
+| 15.04.2019 | Eingelesen in Node.js->Module,Debugging,Callback Hell und Tests         | 3 h        |        |
