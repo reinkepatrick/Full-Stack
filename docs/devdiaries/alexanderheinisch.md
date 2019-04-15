@@ -14,6 +14,7 @@ __08.04.2019 - 14.04.2019__
 | 10.04.2019 | Einleitung für .net core geschrieben                         | 40 min |                                                              |
 | 11.04.2019 | Beispiel für Entityframework geschrieben                     | 30 min | .net Core nutzt nicht die selben namespaces im Web wie in der Konsole |
 | 11.04.2019 | Beispiel für Linq Funktions und Query Syntax                 | 1 h    | Query Syntax ist ungewohnt zu schreiben wenn man es noch nie gemacht hat, während Funktions Syntax lambda und pfeil funktionen (js) ähnelt |
+| 12.04.2019 | erstellen von Contributing.md                                | 40 min |                                                              |
 
 
 

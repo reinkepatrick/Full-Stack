@@ -1,17 +1,14 @@
-# Full Stack Development
-Sommersemester 2019
+# Wie wir das Repo managen
 
-## Wie wir das Repo managen
-
-### Änderungen in den Master bekommen
+## Änderungen in den Master bekommen
 
 Änderungen dürfen nur über einen PR in das Repo und auch nur wenn mindestens eine weitere Person einen kontrollblick getätigt hat. Wir hatten ein unentschieden der Stimmen welche Variante wir nutzen wollen 7 Stimmen für jeder hat einen Branch auf den Repo und ebenfalls 7 Stimmen für jeder erstellt einen Fork. Einige von euch haben daraufhin diese Entscheidung dem Repo Owner überlassen. Somit werden wir das Projekt Forken und wenn ihr Änderungen abgeschlossen habt oder veröffentlichen wollt stellt ihr einen PR an dieses Hauptrepo.
 
 Der Master Branch des Hauptrepos ist nur gegen pushen gesperrt und nicht gegen klonen/pullen. Somit könnt ihr euer Repo jederzeit aktualisieren.
 
-### Projekttagebuch
+## Projekttagebuch
 
-#### Markdown Datei
+### Markdown Datei
 
 Euer Tagebuch soll wie folgt benannt werden 
 
@@ -21,7 +18,7 @@ der Ort wo ihr die Datei abspeichern sollt liegt unter docs/devdiaries
 
 ein verlinken wird vom Repo owner getätigt somit ist keine Änderung an der Sidebar von Nöten dies ist um eine gleichmäßige Sortierung einzubringen.
 
-#### Struktur
+### Struktur
 
 Header 1 wo ihr euren Vornamen Nachnamen - Projekttagebuch
 
@@ -50,7 +47,7 @@ als nächstes kommt die Struktur eurer Einträge eine Tabelle welche folgenden G
 
 ```
 
-### Thema
+## Thema
 
 Struktur
 
