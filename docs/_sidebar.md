@@ -8,6 +8,7 @@
 * [MQTT](mqtt/index)
 * [Nodejs](nodejs/index.md)
 * [React](react/index.md)
+* [Statemanagment](state-managment/index)
 * [WebGL](webgl/index)
 * Tagebücher
 	* [Alexander Bergmann](devdiaries/alexander_bergmann)
@@ -15,5 +16,6 @@
 	* [Daniel Räder](devdiaries/danielraeder)
 	* [Jonas Raddatz](devdiaries/jonasraddatz)
 	* [Marti Stuwe](devdiaries/martistuwe)
+	* [Patrick Poppe](devdiaries/patrickpoppe)
 	* [Patrick Reinke](devdiaries/patrickreinke)
 	* [Stefan Kröker](devdiaries/stefankroeker)
