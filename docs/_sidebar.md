@@ -16,6 +16,7 @@
 	* [Alexander Heinisch](devdiaries/alexanderheinisch)
 	* [Andre Matutat](devdiaries/andrematutat)
 	* [Daniel Räder](devdiaries/danielraeder)
+	* [Dario Leunig](devdiaries/darioleunig)
 	* [Jonas Raddatz](devdiaries/jonasraddatz)
 	* [Marti Stuwe](devdiaries/martistuwe)
 	* [Nikolai Kloß](devdiaries/nikolaikloss)
