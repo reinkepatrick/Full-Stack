@@ -11,3 +11,4 @@ __08.04.2019 - 14.04.2019__
 | 10.04.2019 | Weitere Recherche und Beschreibung "Was ist Flutter?"                    | 1 h 30 min |        |
 | 10.04.2019 | Beschreibung des Workflows einschl. Simulation und USB-Debugging         | 1 h        |        |
 | 14.04.2019 | Umstrukturierung und zwei Grafiken zum Aufbau von Flutterapps            | 30 min     |        |
+| 14.04.2019 | Hinweis zum Debugging mit Xcode                                          | 20 min     |        |
