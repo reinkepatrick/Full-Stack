@@ -73,7 +73,7 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.index, name='index'), # 
+    path('', views.index, name='index'),
 ]
 ```
 Die Method path kriegt als ersten Parameter die URL, welche aufgerufen werden soll. Dann die Methode, welche aufgerufen wird und mit dem Parameter name kann der URL einen Namen gegeben werden um darauf später referenzieren zu können.
