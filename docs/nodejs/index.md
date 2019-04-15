@@ -11,16 +11,17 @@
 * Automatisches typecasting
 * == führt automatisch ein typecast aus 2 == "2" -> true
 ## Buffer
-* 
+
 # Events
 
-# Datenbanken
+# DB
 
 # ORM
+
 ## Module 
 * Anders als bei Javascript wird alles lokal gehalten. 
 * Mit exports.name = object können Objekte in global verwendet werden.
-* Mit let obj = require('./modul/toImport.js) lassen sich andere Module/Objete aus Modulen importieren
+* Mit let obj = require('./modul/toImport.js) lassen sich andere Module(/Objete aus anderen Modulen) importieren
 * Module lassen sich über npm installieren
 
 ## Callback Hell
@@ -36,13 +37,13 @@
 * core debugger:
     * mit dem keyword debugger wird ein breakpoint im code gesetzt
     * weitere breakpoints können mit 
-        setBreakpoint(), sb() - Set breakpoint on current line
-        setBreakpoint(line), sb(line) - Set breakpoint on specific line
+        * setBreakpoint(), sb() - Set breakpoint on current line
+        * setBreakpoint(line), sb(line) - Set breakpoint on specific line
      gesetzt werden
-    *   cont, c - Continue execution
-        next, n - Step next
-        step, s - Step in
-        out, o - Step out
+    * cont, c - Continue execution
+    * next, n - Step next
+    * step, s - Step in
+    * out, o - Step out
 * node-inspector (V8 inspector)
     * mit node-debug filename.js wird die app mit debugger gestartet
 ## Tests
