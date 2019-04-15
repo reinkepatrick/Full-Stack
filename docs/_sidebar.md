@@ -11,6 +11,7 @@
 * [React](react/index.md)
 * [Statemanagment](state-managment/index)
 * [WebGL](webgl/index)
+* [Rust und Yew](rust_yew/index.md)
 * Tagebücher
 	* [Alexander Bergmann](devdiaries/alexander_bergmann)
 	* [Alexander Heinisch](devdiaries/alexanderheinisch)
@@ -24,3 +25,4 @@
 	* [Patrick Poppe](devdiaries/patrickpoppe)
 	* [Patrick Reinke](devdiaries/patrickreinke)
 	* [Stefan Kröker](devdiaries/stefankroeker)
+	* [Dejan Novakovic](devdiaries/dejannovakovic.md)
