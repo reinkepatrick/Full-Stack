@@ -14,6 +14,7 @@
 * Tagebücher
 	* [Alexander Bergmann](devdiaries/alexander_bergmann)
 	* [Alexander Heinisch](devdiaries/alexanderheinisch)
+	* [Andre Matutat](devdiaries/andrematutat)
 	* [Daniel Räder](devdiaries/danielraeder)
 	* [Jonas Raddatz](devdiaries/jonasraddatz)
 	* [Marti Stuwe](devdiaries/martistuwe)
