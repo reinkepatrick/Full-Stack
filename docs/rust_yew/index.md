@@ -7,6 +7,7 @@
 [Yew](https://github.com/DenisKolodin/yew) ist ein in Rust geschriebens Framework für die Erstellung von Frontend Apps mit WebAssembly. Das Framework unterstützt multi-threading sowie Nebenläufigkeit und benutzt die Web Workers API zur Erstellung von agents in seperaten Threads.
 
 ## Grundlagen Rust
+Grundlagen und sprachspezifische Eigenschaften von Rust (basierend auf https://doc.rust-lang.org/book)
 
 ### Installation, Updates, Deinstallation
 
@@ -113,9 +114,7 @@ In Rust ist es möglich eine Variable mehrmals zu deklarieren, sodass die alte V
 ```
 fn main() {
     let x = 5;
-
     let x = x + 1;
-
     let x = x * 2;
 
     println!("The value of x is: {}", x); // The value of x is 12
@@ -130,10 +129,155 @@ fn Name(param_name: Typ) -> Rückgabetyp {
 
 }
 ```
-Wenn die Funktion kein Rückgabewert hat wird `-> Rückgabetyp` weggelassen. Zudem wird in Rust kein `return` o.Ä. gebraucht, da der letzte Ausdruck als Rückgabewert gesehen wird:
+Wenn die Funktion kein Rückgabewert hat wird `-> Rückgabetyp` weggelassen. Zudem wird in Rust kein `return` o.Ä. gebraucht, da der letzte wert im Ausdruck als Rückgabewert gesehen wird:
 ```
 fn five() -> i32 {
   5
 }
 ```
-Ausdrücke werden nicht von einem `;` beendet.
+Rückgabewerte in Ausdrücken werden nicht von einem `;` beendet, somit wäre folgendes falsch:
+```
+fn five() -> i32 {
+  5;
+}
+```
+Fehlermeldung:
+```
+error[E0308]: mismatched types
+ --> src/main.rs:7:28
+  |
+7 |   fn plus_one(x: i32) -> i32 {
+  |  ____________________________^
+8 | |     x + 1;
+  | |          - help: consider removing this semicolon
+9 | | }
+  | |_^ expected i32, found ()
+  |
+  = note: expected type `i32`
+             found type `()`
+```
+Fehlt der Ausdruck wird ein leerer Tupel zurückgegeben und wird auch `statement` anstatt `expression` genannt
+
+Ausdrücke können auch mitten in einer Funktion vorkommen z.B.:
+```
+fn something() {
+  let i = { // anfang Ausdruck
+    5
+  }; // ende Ausdruck
+  println!("value: {}", i); // value: 5
+}
+```
+
+##### Macros sind keine Funktionen
+Macros wie z.B. `println!()` werden mit einem `!` gekennzeichnet und sind nicht Funktionen. Genaueres zu Macros wird später geschrieben.
+
+#### Kommentare
+Kommentare werden nur mit `//` gekennzeichnet und können überall im Code stehen. Alles folgende nach `//` wird als Kommentar gesehen und nicht als Programmcode.
+
+#### Kontrollfluss
+
+##### If-Ausdrücke
+If-Ausdrücke werten einen bool aus und führt dann einen der Zweige (auch `arms` genannt) aus.
+```
+let num = 3;
+if num < 5 {
+  println!("condition true");
+} else {
+  println!("condition false");
+}
+
+Ausgabe: condition true
+```
+Ist der auszuwertende Wert kein bool wird ein Fehler zur Kompilierzeit erkannt, da Rust nicht versucht den Wert in ein bool zu casten sondern in erster Linie nur bools akzeptiert.
+Es können mehrere Konditionen mit `else if` kombiniert werden, es wird aber nur der erstzutreffende Arm ausgeführt:
+```
+let number = 6;
+if number % 4 == 0 {
+    println!("number is divisible by 4");
+} else if number % 3 == 0 {
+    println!("number is divisible by 3");
+} else if number % 2 == 0 {
+    println!("number is divisible by 2");
+} else {
+    println!("number is not divisible by 4, 3, or 2");
+}
+
+Ausgabe: number is divisible by 3
+```
+
+Man kann If-Ausdrücke auch mit `let` kombinieren, solange die erwarteten Rückgabewerte den selben Typen besitzen:
+```
+let condition = true;
+let number = if condition {
+    5
+} else {
+    6
+};
+
+println!("The value of number is: {}", number);
+
+Ausgabe: The value of number is: 5
+
+
+let condition = true;
+let number = if condition {
+    5
+} else {
+    "six"
+};
+
+Fehler: error[E0308]: if and else have incompatible types
+note: expected type `{integer}`
+             found type `&str`
+```
+
+##### Schleifen
+
+###### loop
+`loop` ist eine Endlosschleife, aus der nur mit `break` rauskommt.
+```
+loop {
+    counter += 1;
+
+    if counter == 10 {
+        break;
+    }
+};
+```
+
+`loop` kann man auch wieder mit `let` verbinden:
+```
+let result = loop {
+    counter += 1;
+
+    if counter == 10 {
+        break counter * 2;
+    }
+};
+```
+
+###### while
+`while` wird so lange ausgeführt bis die gegebene Kondition `false` ist.
+```
+let mut number = 3;
+
+while number != 0 {
+    println!("{}!", number);
+
+    number = number - 1;
+}
+```
+
+###### for
+Für den durchlauf z.B. eines Arrays ist nutzung von `while`-Schleifen riskant und es wird eine `for`-Schleife bevorzugt. sie ermöglicht es Entweder durch ein Array o.Ä. oder durch eine `range` von Zahlen zu iterieren.
+```
+let a = [10, 20, 30, 40, 50];
+
+for element in a.iter() {
+    println!("the value is: {}", element);
+}
+
+for n in 0..101 { // von 0 bis 100
+  //code
+}
+```
