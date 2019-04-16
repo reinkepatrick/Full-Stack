@@ -6,7 +6,7 @@ Mit WebGL gerenderte Elemente werden im HTML Canvas Element dargestellt, mit Hil
 
 Die API ist low-level OpenGL, und enthält nahezu keinen boilerplate code, d.h. direktes Arbeiten mit Vertices und Framebuffern. Der Grund dafür ist, dass die API möglichst simpel und flexibel bleiben soll. Es existieren jedoch mehrere Bibliotheken die auf bestimmte use-cases zugeschnitten sind.
 
-##WebGL Bibliotheken
+## WebGL Bibliotheken
 
 ### three.js
 
