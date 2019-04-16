@@ -10,6 +10,7 @@
 * [Nodejs](nodejs/index.md)
 * [React](react/index.md)
 * [Rust und Yew](rust_yew/index.md)
+* [Sicherheit und Authentifizierung](security-auth/index)
 * [Statemanagment](state-managment/index)
 * [WebGL](webgl/index)
 * Tagebücher
@@ -23,6 +24,7 @@
 	* [Jonas Raddatz](devdiaries/jonasraddatz)
 	* [Marti Stuwe](devdiaries/martistuwe)
 	* [Nikolai Kloß](devdiaries/nikolaikloss)
+	* [Pascal Turon](devdiaries/pascalturon)
 	* [Patrick Poppe](devdiaries/patrickpoppe)
 	* [Patrick Reinke](devdiaries/patrickreinke)
 	* [Stefan Kröker](devdiaries/stefankroeker)
