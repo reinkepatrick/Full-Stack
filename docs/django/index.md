@@ -6,7 +6,7 @@ Django ist ein Python Framework für Backends von Web Applications.
 Django ist im release 2.2 und wird unterstützt von Python 3.5 und folgende.
 
 - Läuft auf Apache Web Server (Produktion). Hat eigenen Webserver für Tests
-- MTV (Model Template View) als Kern Architektur. So ähnlich wie ein MVP (Model View Presenter)
+- MTV (Model Template View) als Kern Architektur.
 - Object Relational Mapper
 - Python unit test framework
 - Unterstützung von bekannten Datenbanken
@@ -50,7 +50,7 @@ $ python manage.py startapp appname
 ```
 
 ### Views
-Views sind die Business Logic. Hier wird alles geschehen. Jede App besitzt eine View. Die einfachste View ist diese hier.
+Views sind zu für die Trennung zwischen Logik und Frontend zuständig. Jede App besitzt eine View. Die einfachste View ist diese hier.
 
 ```python
 # apps/testapp/view.py
@@ -58,7 +58,7 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the polls index.")
+    return HttpResponse("Hello, world. You're at the test index.")
 ```
 
 Wenn von dieser view nun die Methode _index_ aufgerufen wird, sendet die view einen HttpResponse mit der Nachricht zurück. 
