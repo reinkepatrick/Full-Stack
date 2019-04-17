@@ -3,10 +3,10 @@
 ## Was ist Django?
 Django ist ein Python Framework für Backends von Web Applications.
 
-Django ist im release 2.2 und wird unterstützt von Python 3.5 und folgende.
+Django ist im Release 2.2 und wird von Python 3.5 und folgende unterstützt.
 
-- Läuft auf Apache Web Server (Produktion). Hat eigenen Webserver für Tests
-- MTV (Model Template View) als Kern Architektur. So ähnlich wie ein MVP (Model View Presenter)
+- Läuft auf Apache Web Server (Produktion). Hat einen eigenen Webserver für Tests
+- MTV (Model Template View) als Kern Architektur
 - Object Relational Mapper
 - Python unit test framework
 - Unterstützung von bekannten Datenbanken
@@ -14,7 +14,6 @@ Django ist im release 2.2 und wird unterstützt von Python 3.5 und folgende.
   
 ### Bekannte Firmen
 
-- Instagram
 - Spotify
 - Dropbox
 - Mozilla
@@ -26,7 +25,7 @@ Django ist im release 2.2 und wird unterstützt von Python 3.5 und folgende.
 ![MTV](./img/MTV-Diagram.png ':size=525')
 
 ## Workflow
-Als erstes wird python 3.x.y installiert. Danach noch eine Datenbank (Maria DB) einrichten.
+Als erstes wird Python 3.x.y installiert. Danach kann noch eine Datenbank (Maria DB) einrichten.
 
 Nachdem dann Django installiert wurde, kann man sein Projekt erstellen.
 
@@ -50,7 +49,7 @@ $ python manage.py startapp appname
 ```
 
 ### Views
-Views sind die Business Logic. Hier wird alles geschehen. Jede App besitzt eine View. Die einfachste View ist diese hier.
+Views sind für die Trennung zwischen Logik und Frontend zuständig. Jede App besitzt eine View. Die einfachste View ist diese hier:
 
 ```python
 # apps/testapp/view.py
@@ -58,13 +57,13 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the polls index.")
+    return HttpResponse("Hello, world. You're at the test index.")
 ```
 
 Wenn von dieser view nun die Methode _index_ aufgerufen wird, sendet die view einen HttpResponse mit der Nachricht zurück. 
 
 ### URLs
-Damit bestimmte Methoden von Views aufgerufen werden können, müssen URLs konfiguriert werden. In der App selber wird eine _urls.py_ die sieht dann mit dem View Beispiel von vorher so aus. 
+Damit bestimmte Methoden von Views aufgerufen werden können, müssen die URLs konfiguriert werden. In der App selber wird eine Datei _urls.py_ erstellt. Die sieht dann mit dem View Beispiel von vorher so aus. 
 
 ```python
 # apps/testapp/urls.py
@@ -76,10 +75,10 @@ urlpatterns = [
     path('', views.index, name='index'),
 ]
 ```
-Die Method path kriegt als ersten Parameter die URL, welche aufgerufen werden soll. Dann die Methode, welche aufgerufen wird und mit dem Parameter name kann der URL einen Namen gegeben werden um darauf später referenzieren zu können.
+Die Methode _path_ kriegt als ersten Parameter die URL, welche aufgerufen werden soll, dann die Methode, welche aufgerufen wird und mit dem Parameter _name_ kann der URL einen Namen gegeben werden, um darauf später referenzieren zu können.
 
 
-Nun muss noch die root URL konfiguriert werden. Damit dies weiter zur testapp geleitet wird.
+Nun muss noch die root URL konfiguriert werden. Damit dies weiter zur _testapp_ geleitet wird.
 
 ```python
 # test_project/urls.py
