@@ -22,7 +22,13 @@ __08.04.2019 - 14.04.2019__
 
 __15.04.2019 - 21.04.2019__
 
-| Datum      | Tätigkeit           | Dauer | Zusatz                              |
-| ---------- | ------------------- | ----- | ----------------------------------- |
-| 15.04.2019 | Github Repo Wartung | 1 h   | Nie strukturelle Änderungen machen! |
+| Datum      | Tätigkeit                                   | Dauer  | Zusatz                                                       |
+| ---------- | ------------------------------------------- | ------ | ------------------------------------------------------------ |
+| 15.04.2019 | Github Repo Wartung                         | 1 h    | Nie strukturelle Änderungen machen!                          |
+| 16.04.2019 | Testen von travis CI für markdown kontrolle | 1 h    | Ja es wäre möglich mit markdownlint dennoch sieht es sehr nach hack aus. |
+| 16.04.2019 | Variablen in F#                             | 15 min | in F# sind Variablen Immuatable, Zuweisungen werden beim deklarieren mit = zugewiesen und danach mit <- |
+| 16.04.2019 | schleifen in F#                             | 15 min |                                                              |
+| 16.04.2019 | Kontrollstrukturen in F#                    | 10 min | ein Switchcase sieht ähnlich aus wie beim Ruby               |
+| 16.04.2019 | Funktionen in F#                            | 10 min | Funktionen können als let deklariert werden und wenn sie annonym sind mit fun |
+|            |                                             |        |                                                              |
 
