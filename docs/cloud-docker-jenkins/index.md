@@ -43,8 +43,26 @@ Gitlab CI stellt auch eine Cloud-basierte Lösung dar, bei der allerdings die Se
 ## Jenkins
 
 - Dokumentaion
-- Möglichkeiten Jenkins aufzusetzen? 
+
+- Möglichkeiten Jenkins aufzusetzen
+
+- Jenksins testweise aufsetzten
+
+  - `sudo apt-get install oracle-java8-installer`
+
+  - ```bash
+    $ curl -fsSL https://get.docker.com -o get-docker.sh
+    $ sudo sh get-docker.sh
+    ```
+
+  - `sudo usermod -aG docker your-user`
+
+  - Prüfen ob der Deamon läuft
+
+  - Im Netzwerk zugänglich machen 
+
 - Jenkins Plugins?
+
 - Dependencies?
 
 ## Docker / Cloud Computing
@@ -52,14 +70,20 @@ Gitlab CI stellt auch eine Cloud-basierte Lösung dar, bei der allerdings die Se
 - Jenkins in einem Docker Container?
 - Scaling Jenkins mit Docker und Kubernates?
 - Scaling Jenkins mit Docker Compose?
+- Docker-Swarm?
 - Eigene Docker Container erstellen?
 
 
 
 ## Quellen
 
+**Continuous Integration Tools**
+
 - [50 CI Tools](https://stackify.com/top-continuous-integration-tools/)
 - [Jenkins in Docker und mit Docker und für Docker](https://www.oose.de/blogpost/jenkins-in-docker-und-mit-docker-und-fuer-docker/)
 - [CircleCI vs Travis CI vs Jenkins](https://hackernoon.com/continuous-integration-circleci-vs-travis-ci-vs-jenkins-41a1c2bd95f5)
 - Wikipedia
 
+**Jenkins**
+
+- [Dokumentation](https://jenkins.io/doc/)

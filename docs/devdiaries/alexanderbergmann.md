@@ -14,11 +14,12 @@ __08.04.2019 - 14.04.2019__
 
 __15.04.2019 - 21.04.2019__
 
-| Datum  | Tätigkeit                                                    | Dauer | Zusatz |
-| ------ | ------------------------------------------------------------ | ----- | ------ |
-| 17.04. | Jenkins Dokumentation                                        | 4 h   |        |
-| 18.04  | Jenkins testweise aufsetzten/konfigurieren (Hello World - Java Projekt) |       |        |
-|        | Jenkins mit Docker                                           |       |        |
+| Datum  | Tätigkeit                                          | Dauer | Zusatz |
+| ------ | -------------------------------------------------- | ----- | ------ |
+| 17.04. | Jenkins Dokumentation                              | 4 h   |        |
+| 18.04  | Jenkins aufsetzten (Raspberry Pi)                  | 3,5 h |        |
+| 18.04  | Jenkins konfigurieren (Hello World - Java Projekt) |       |        |
+|        | Jenkins mit Docker                                 |       |        |
 
 ## Woche 3
 
@@ -29,4 +30,5 @@ __22.04.2019 - 28.04.2019__
 |       | Eigene Docker-Images erstellen |       |        |
 |       | Docker und Docker Compose      |       |        |
 |       | Docker und Kubernates          |       |        |
+|       | Docker Swarm                   |       |        |
 
