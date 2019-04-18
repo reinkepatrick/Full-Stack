@@ -12,3 +12,11 @@ __08.04.2019 - 14.04.2019__
 | 10.04.2019 | Beschreibung des Workflows einschl. Simulation und USB-Debugging         | 1 h        |        |
 | 14.04.2019 | Umstrukturierung und zwei Grafiken zum Aufbau von Flutterapps            | 30 min     |        |
 | 14.04.2019 | Hinweis zum Debugging mit Xcode                                          | 20 min     |        |
+
+## Woche 2
+__15.04.2019 - 21.04.2019__
+
+| Datum      | Tätigkeit                      | Dauer      | Zusatz |
+| ---------- | ------------------------------ | ---------- | ------ |
+| 18.04.2019 | Recherche Composite-Pattern    | 20 min     |        |
+| 18.04.2019 | Stateless vs. Stateful Widgets | 2 h 30 min |        |
