@@ -40,7 +40,7 @@ Zunächst ist es notwendig USB-Debugging in den Entwickleroptionen am Gerät zu 
 ## Aufbau einer Flutter App
 **Grundprinzip: Alles ist ein Widget**
 
-Widgets sind die Grundbausteine des gesamten UIs. Jedes Widget liegt innerhalb eines übergeordneten Widgets und erbt dessen Eigenschaften. Sogar die denkbar einfachste App erbt von einem anderen Widget.
+Widgets sind die Grundbausteine des gesamten UIs. Jedes Widget liegt innerhalb eines übergeordneten Widgets und erbt dessen Eigenschaften. Somit nutzt Flutter (und auch React) das Coposite Pattern, wobei die Widgets den Components entsprechen. Sogar die denkbar einfachste App erbt von einem anderen Widget.
 
 ```Dart
 import 'package:flutter/material.dart';
@@ -68,3 +68,12 @@ Bei der Beispielapp liegt in dem App-Widget ein Scaffold-Widget und in diesem wi
 
 ![Flutter-App](./img/flutter_app.png)
 ![Flutter-App-Diagram](./img/flutter_app_dia.png)
+
+### Stateless vs. Stateful
+Man unterscheidet Widgets hauptsächlich zwischen stateless und stateful. Wenn ein Widget sich verändert, z.B. durch Benutzerinteraktion, ist es stateful.
+
+#### Stateless
+Ein **StatelessWidget** ändert sich nicht und die zugehörigen Attribute sind *immutable*. Zustandlose Widgets sind z.B. Icons oder Texte.
+
+#### Stateful
+Ein **StatefulWidget** ist dynamisch. Es kann bei Bedarf auslösen, dass es neu gerendert wird. So werden z.B. Änderungen einer Variable auf dem Bildschirm dargestellt. Der Zustand eines solchen Widgets wird in einem Objekt **State** gespeichert, um die Zustandsinformationen von der Darstellung zu trennen. **State** besteht veränderbaren Werten, wie z.B. der aktuelle Wert eines Sliders. Wenn sich der Zustand eines Widgets ändert, ruft **State** die Methode `setState()` auf um das entsprechende Widget neu zu rendern.
