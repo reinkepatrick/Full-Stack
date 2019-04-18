@@ -16,3 +16,8 @@ __08.04.2019 - 14.04.2019__
 | 11.04.2019 | Definition von [Two-Way Databinding](react/index#two-way-databinding), [If-Bedingungen](react/index#if-bedingungen) und [For-Schleifen](react/index#for-schleifen) | 1 h 30 min |        |
 | 13.04.2019 | Visualisierung von Components, Properties und If-Bedingungen erstellt                                                                                              | 2 h 30 min |        |   
 
+## Woche 2 
+__15.04.2019 - 21.04.2019__
+| Datum      | Tätigkeit                                                                                                                                                          | Dauer      | Zusatz |
+| 16.04.2019 | Definition von [Styling](react/index#styling) unter React                                                                                                          | 2 h 30 min |        |
+| 16.04.2019 | Fertigstellung von [Styling](react/index#styling) unter React                                                                                                      | 3 h        |        |
