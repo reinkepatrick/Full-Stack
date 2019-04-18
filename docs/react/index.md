@@ -119,8 +119,8 @@ export default App;
 
 
 ## JSX
-JSX ist die Sprache die zum darstellen von unseren Components verwenden wird, um genauer zu
-sagen den Teil den wir die `render()` Funktion schreiben.
+JSX ist die Sprache die zum darstellen von unseren Components verwendet wird, um genauer zu
+sagen den Teil den wir in die `render()` Funktion schreiben.
 
 ```js
 render() {
@@ -355,6 +355,152 @@ if ( this.state.showPersons ) {
   );
 }
 ```
+
+## Styling
+Wie unter normalen HTML gibt es auch hier die Möglichkeit Inline Styling oder via externe
+`.css`-File Stylings vorzunehmen. Als erstes schauen wir uns das Styling via `.css`-File
+an. Hier für müssen wir eigentlich nur die `.css`-File importieren.
+
+```js
+import React from 'react';
+```
+
+Nun können wir einfach die Klassen via `className` verwenden. __Wichtig hier bei ist das
+alle Änderungen in der `.css`-File global sind.__ Für das Inline Styling müssen wir 
+unsere Anweisungen in JavaScript verfassen, in dem nächsten Beispiel speichern wir diese
+in einer Variable.
+
+```js
+const style = {
+  backgroundColor: 'white',
+  border: '1px solid blue'
+};
+```
+
+Jetzt müssen wir dies nur noch in unserem JSX Code verwenden.
+
+```js
+return (
+  <div className="App">
+    <h1 style={ style }>Hi, I'm a React App</h1>
+  </div>
+);
+```
+
+### Radium
+Radium ist eine Reihe an Tools die uns die Möglichkeit geben unsere Inline Styles von 
+unseren React Components zu verbessern. Diese bauen außerdem auch Pseudo Selektoren, 
+Media Queries und vieles mehr als Inline Styling ein.
+
+```bash
+npm install radium --save
+```
+
+Um es aber nun auch verwenden zu können müssen wir es in der Datei, wo wir es verwenden wollen,
+noch einbinden und unser Component beim zurückgeben darin einpacken (_wrapping_).
+
+```js
+import Radium from 'radium';
+```
+
+```js
+export default Radium(App);
+```
+
+Nun können wir Pseudo Selektoren in unserem Inline Styling verwenden. Alle Pseudo Selektoren
+sind unterstützt.
+
+```js
+const style = {
+  backgroundColor: 'white',
+  border: '1px solid blue',
+  'hover': {
+    backgroundColor: 'black',
+    color: 'white'
+  }
+};
+```
+
+Als nächstes schauen wir uns an wie man Media Queries unter Radium und React macht, als 
+Inline Styling.
+
+```js
+const style = {
+  '@media (min-width: 500px)': {
+      width: '450px'
+  }
+};
+```
+
+Da wir Media Queries verwenden müssen wir unsere App in ein `StyleRoot` packen, dasselbe
+gilt auch für Keyframes.
+
+```js
+return (
+  <StyleRoot>
+    <div className="App">
+      { helloWorld }
+    </div>
+  </StyleRoot>
+);
+```
+
+### CSS Modules
+
+Wir haben aber auch die Möglichkeit die Scopes unserer Styles anzupassen, hierzu müssen
+wir, aber paar Konfigurationen anpassen. Dazu müssen wir `react-scripts` aufrufen.
+
+```bash
+react-scripts eject
+```
+
+Jetzt passen wir die `webpack.config.js` an in unserem neu generierten `config`-Ordner.
+Ab Zeile 391 sollte sie wie folgt aussehen:
+
+```js
+{
+  test: cssRegex,
+  exclude: cssModuleRegex,
+  use: getStyleLoaders({
+    importLoaders: 1,
+    sourceMap: isEnvProduction && shouldUseSourceMap,
+  }),
+  sideEffects: true,
+}
+```
+
+Diese passen wir nun so an, dass der CSS-Loader einzigartige Klassen daraus generiert.
+
+```js
+{
+  test: cssRegex,
+  exclude: cssModuleRegex,
+  use: getStyleLoaders({
+    importLoaders: 1,
+    modules: true,
+    localIdentName: '[name]__[local]__[hash:base64:5]',
+    sourceMap: isEnvProduction && shouldUseSourceMap,
+  }),
+  sideEffects: true,
+}
+```
+
+Alternativ muss man kein `react-scripts` dafür ausführen, mehr dafür siehe [hier](https://facebook.github.io/create-react-app/docs/adding-a-css-modules-stylesheet).
+
+Nun müssen wir unseren JavaScript-Code nur noch anpassen. Wir importieren unsere `App.css`
+
+```js
+import classes from './App.css';
+```
+
+```js
+return (
+    <div className={classes.App}>
+    </div>
+);
+```
+
+
 
 
 
