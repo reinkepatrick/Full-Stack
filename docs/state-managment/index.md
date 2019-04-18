@@ -6,9 +6,27 @@ State Managment umfasst die Verwaltung von verschiedenen Zuständen eines Objekt
 
 
 
-## Beispiel
+## Wo finde ich State Managment?
 
-In den Themen zur grundlegenden Erklärung werde ich mich vor allem auf ein Beispiel beziehen, nämlich die Zustände einer Freundin. Die Zustände der Freundin sind ihre momentane Stimmungslage, sie kann also zum Beispiel fröhlich, traurig, verärgert und so weiter sein. Die Zustände wechselt man durch verschiedene Handlungen, z.B unterhalten oder ärgern.
+State Managment finden wir in fast allen modernen Softwaresystemen. Dabei ist es egal, ob wir gerade ein soziales Netzwerk bedienen, welches uns immer die aktuelle Anzahl ungelesener Nachrichten mitteilt, oder einen Online Shop, wo wir immer wissen wollen, wie viele Waren gerade im Einkaufswagen abgelegt sind. Aber auch Desktop Apps nutzen State Managment. So wäre es Spotify zum Beispiel schwierig, immer das aktuelle Lied, welches gerade abgespielt wird, auf jeder Unterseite anzuzeigen.
+
+
+
+## Gründe für State Managment
+
+Der größte Grund für State Managment ist die Verbesserung des Usererlebnisses. Nehmen wir als Beispiel die Spotify App. 
+
+![Beispiel Spotify](img/BeispielSpotify.png)
+
+In dem unteren Bereich sieht man welches Lied momentan gespielt wird. Dazu werden noch Zusatsinformationen eingeblendet wie der Name des Künstlers und das Musikalbum. Rechts sieht man eine Fortschrittsleiste für das Lied und noch weiter rechts, in diesem Bildausschnitt nicht vorhanden, sind auch die üblichen Steuerungsbutton zum Abspielen von Musik. In dem oberen, dunkleren Bereich sehe ich die Komponente die ich gerade geöffnet habe. In diesem Beispiel handelt es sich um die verschiedenen Titel in einer Playlist.
+
+Während der obere Bereich immer wechselt, je nachdem welche Komponente gerade geöffnet wurde, bleibt der untere an sich immer gleich. 
+
+Doch was sind die Effekte in diesem Beispiel von schlechtem oder gar keinem State Managment? Der Aufbau der App würde sich nicht zwingend verändern. Aber das Benutzererlebnis könnte sich signifikant verschlechtern. Man könnte sich zum Beispiel vorstellen, dass nicht mehr immer der aktuelle Titel angezeigt wird, sondern vielleicht teilweise ein bereits gespielter. Der User würde bei solchen Nachteilen schnell genervt sein und womöglich sogar auf ein Konkurrenzprodukt umsteigen.
+
+Entstehen könnten solche Fehler durch eine inkonsistente Behandlung der Zustandswerte. Wenn zwei verschiedene Komponenten auf unterschiedliche Daten zugreifen um das aktuelle Lied zu erfahren, muss gewährleistet werden, dass beide Daten immer aktuell sind. Viel einfacher ist es natürlich, wenn jede Komponente den Zustand zentral erfragen kann. 
+
+Neben der Konsistenz der Zustände in den verschiedenen Komponenten und der damit einhergehende Verbesserung der Nutzbarkeit gibt es auch noch weitere positive Effekte. So ist der Code zum Beispiel wartbarer und besser erweiterbar. Die Pflege der Zustände erfolgt zentral, weshalb ich auch nur an einer Stelle Änderungen oder Erweiterungen pflegen muss. 
 
 # Grundlagen
 
@@ -16,25 +34,23 @@ In den Themen zur grundlegenden Erklärung werde ich mich vor allem auf ein Beis
 
 ### State / Zustand
 
-Definiert auf Deutsch einen Zustand. Bezogen auf unser Beispiel gibt dieser an, wie die Freundin sich gerade fühlt. Würde man das jetzt auf einen Onlineshop beziehen, wären mögliche Zustände zum Beispiel ob man Premiumkunde ist oder nicht.  In vielen Programmiersprachen ist der Zustand eines Objektes auch als die Menge und Werte seiner Attribute definiert. 
-
-Für unser Beispiel wäre deshalb folgendes Klassendiagramm denkbar:
-
-![Klassendiagramm Freundin](./img/klassendiagramm_freundin_historie.svg)
+Wird häufig durch die Gesamtheit der Attribute und ihrer Werte beschrieben. Der Zustand ergibt sich also aus der momentanen Belegung aller Attribute. 
 
 
 
-## Zustandsidagramm
+## Zustandsdiagramm
 
-Aus diesem Klassendiagramm kann man jetzt ein Zustandsdiagramm entwickeln.
+Um die verschiedenen Zustände darzustellen, wird meistens ein Zustandsdiagramm verwendet.
 
-![Zustandsdiagramm Freundin](./img/zustandsautomat_freundin.svg)
 
-Wie man sieht sind hier 3 verschiedene Zustände vorhanden: Neutral, Fröhlich und Bockig. Um diese Zustände zu erreichen kann man verschiedene Aktionen ausführen. So wechselt man von dem Zustand Neutral in den Zustand Bockig, in dem man die Freundin ärgert.
 
-Es sind also alle Zustände aufgeführt und die entsprechenden Aktionen um die Zustände zu erreichen.
+![Zustandsdiagramm Beispiel](img/StatusBeispielSpotify.png)
 
-Diese Diagrammform kennen wir bereits aus der theoretischen Informatik. Auch die Automatentheorie zeigt letztendlich nur verschiedene Zustände und ihre Übergänge an.
+In dem Diagramm sind nur zwei Zustände und deren Übergänge dargestellt. Die beiden Zustände sind, dass entweder die Musik spielt oder stoppt. Ein Wechsel in andere Zustände wird durch die beiden Methoden Play() oder Stop() realisiert.
+
+
+
+Hierbei handelt es sich natürlich um ein sehr einfaches Beispiel. Größere Anwendungen werden allerdings viele verschiedene Zustände haben. Die Fälle und Übergänge werden also deutliche komplexer. 
 
 ## Historie
 
