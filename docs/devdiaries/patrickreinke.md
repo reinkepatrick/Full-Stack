@@ -18,7 +18,9 @@ __08.04.2019 - 14.04.2019__
 
 ## Woche 2 
 __15.04.2019 - 21.04.2019__
+
 | Datum      | Tätigkeit                                                                                                                                                          | Dauer      | Zusatz |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | ------ |
 | 16.04.2019 | Definition von [Styling](react/index#styling) unter React                                                                                                          | 2 h 30 min |        |
 | 16.04.2019 | Fertigstellung von [Styling](react/index#styling) unter React                                                                                                      | 3 h        |        |
 | 16.04.2019 | Auseinandersetzung mit Debugging unter React                                                                                                                       | 30 min     |        |
