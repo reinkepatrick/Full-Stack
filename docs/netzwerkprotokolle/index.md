@@ -32,11 +32,11 @@ Ein typisches JSON File könnte in etwa so aussehen  :
 {
     "student": {
   		"id": 012,
-  		"name": "Beispiek Student"
-        "gebDat": 31.12.1990,
+  		"name": "Beispiel Student"
+        "gebDat": "1990-01-01",
         "Wahlfächer": [
         	"KI",
-        	"Full STack Development"
+        	"Full STack Development",
         	"Kunst"
         ]
     }
