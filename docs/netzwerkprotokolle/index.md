@@ -67,12 +67,12 @@ Diese Anfrage besteht aus drei Teilen
 
 REST verwendet Methoden des HTTP um den Zugriff auf Daten zu ermöglichen, die wichtigsten Methoden sind: 
 
-| Methode | Beschreibung     |
-| ------- | ---- |
-|   GET      | Daten von Server anfordern |
-| POST| Daten an Server übermitteln |
-| PUT| Daten auf den Server ändern |
-|DELETE | Daten auf den Server löschen |
+| Methode | Beschreibung                 |
+| ------- | ---------------------------- |
+| GET     | Daten von Server anfordern   |
+| POST    | Daten an Server übermitteln  |
+| PUT     | Daten auf den Server ändern  |
+| DELETE  | Daten auf den Server löschen |
 
 Welche Methode verwendet wird, legen wir im HTTP Header fest:
 
@@ -91,21 +91,42 @@ In diesem Beispiel senden wir einen POST Request, also übermitteln wir Daten an
 
 ### Nachteile von REST
 
-REST hat auch mit einigen Limitierungen zu kämpfen. So kommt es unter REST oft dazu, das man mehrere zusammenhängende Abfragen nacheinander stellen muss und sie nicht gleichzeitig stellen kann.  Möchte man beispielsweise Informationen über ein Produkt und gleichzeitig über den Hersteller abrufen, muss man zwei Anfragen stellen.  <br/>Außerdem ist es unter REST nicht möglich nur bestimmte Informationen über eine  Ressource abzufragen. Hat ein Hersteller also einen Namen, Adresse und ein Gründungsjahr, wir wollen aber nur den Namen wissen, bekommen wir trotzdem den ganzen Datensatz geliefert, auch Overfetching genannt.  <br/>Zusammengefasst könnte man sagen, REST ist sehr unflexibel. 
+REST hat auch mit einigen Limitierungen zu kämpfen. So kommt es unter REST oft dazu, das man mehrere zusammenhängende Abfragen nacheinander stellen muss und sie nicht gleichzeitig stellen kann.  Möchte man beispielsweise Informationen über ein Produkt und gleichzeitig über den Hersteller abrufen, muss man zwei Anfragen stellen. Bei größeren Datenmenge, kann dies ganz schön langsam sein.<br/>Außerdem ist es unter REST nicht möglich nur bestimmte Informationen über eine  Ressource abzufragen. Hat ein Hersteller also einen Namen, Adresse und ein Gründungsjahr, wir wollen aber nur den Namen wissen, bekommen wir trotzdem den ganzen Datensatz geliefert, auch Overfetching genannt.  <br/>
 
 ## GraphQL	
 
+GraphQL ist eine, von Facebook entwickelte, opensource Abfragesprache, dessen Fokus auf einfache und flexible Benutzung liegt. <br/>
+
+Die Facebook App war Anfangs sehr träge, dies lag aber nicht an der App selber, sondern an der Kommunikation zwischen Backend und App. Facebook hat dann damit angefangen eine Komplexe REST Schnittstelle zu entwickeln die unterschiedliche Abfragen zu lies, daraus entwickelte sich GraphQL.<br/>Grundkonzept von GraphQL ist die Vorstellung, dass Daten als Graf dargestellt werden. Wo REST Datenknoten mithilfe von Verlinkungen miteinander verbindet, werden diese bei GraphQL über Relationen im Grafen miteinander verbunden. Das erlaubt es GraphQL deutlich flexibler zu sein als REST.<br/>
+
+GraphQL ist unabhängig von der Datenbanksoftware und ist in fast jeder Programmiersprache anwendbar(wie Haskell, JavaScript, Python,Ruby, Java, C#, Scala, Go, Elixir, Erlang, PHP, R und Clojure).
+
+### Abfragen
+
+- verwendet immer http Post
+- schickt abrfrage immer an die selbe URL
+
+### Schemen
+
+### Nachteile
+
+Auch wenn GraphQL auf den ersten Blick wie das bessere REST aussieht, hat es aber auch einige schwächen. <br/>Die große Freiheit der Clients, Abfragen nach Bedarf zu formen, kann zu hohen Performance Problemen auf den Backend führen. Serverseitig muss man also ein besonderes Augenmerk auf die Performance legen. <br/>
+
+GraphQL hat aber auch noch mit einigen Kinderkrankheiten zu kämpfen, so gibt es noch keine native Lösung zur Handhabung von Authentifizierungen und natives HTTP Caching ist nicht möglich. Da das Schema nach außen Bekannt gegeben wird, gibt man auch so die Datenstruktur der Applikation preis. <br/>
+
+### GraphQL vs REST
+
+- Wann was verwenden?
+
+## Websockets
 ## GRPC
 ## HTTP 3
-## Websockets
+
 
 ## Quellen
 - [GraphQL Guide mit interaktiven Beispielen](https://graphql.github.io/learn/)
+- [Grundlagen Netzwerkprotokolle](https://de.wikipedia.org/wiki/Netzwerkprotokoll)
+- [Grundlagen JSON](https://www.w3schools.com/js/js_json_intro.asp)
+- [Grundlagen REST](http://www.codeadventurer.de/?p=3228)
+- [GraphQL Wikipedia](https://de.wikipedia.org/wiki/GraphQL)
 
-- [Grundlagen Netzwerkprotokolle](<https://de.wikipedia.org/wiki/Netzwerkprotokoll>)
-
-- [Grundlagen JSON](<https://www.w3schools.com/js/js_json_intro.asp>)
-
-- [Grundlagen REST](<http://www.codeadventurer.de/?p=3228>)
-
-  
