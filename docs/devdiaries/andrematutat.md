@@ -23,4 +23,8 @@ __15.04.2019 - 21.04.2019__
 | 19.04      | Aufarbeitung JSON                                         | 0.5h      |                                          |
 | 19.04      | Aufarbeitung REST                                         | 2.5h      |     
 |19.04| Kurzüberblick REST vs GraphQL geholt | 1h | Teilweise wiedersprüchliche Aussagen gefunden. |
+|20.04 |Frage beatnwortet: Was ist GraphQL? |1h | Schwierigkeiten verständliche Beschreibung zu schreiben. |
+|20.04|Anfang GraphQL Dokumentation|2h||
+
+
  
