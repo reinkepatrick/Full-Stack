@@ -7,6 +7,7 @@
 * [Flutter](flutter/index.md)
 * [IONIC](ionic/index)
 * [MQTT](mqtt/index)
+* [Kommunikation in Verteilten Systemen](netzwerkprotokolle/index)
 * [Nodejs](nodejs/index.md)
 * [React](react/index.md)
 * [Rust und Yew](rust_yew/index.md)

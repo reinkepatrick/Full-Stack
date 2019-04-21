@@ -2,25 +2,46 @@
 
 ## Einleitung
 
-### Was ist dotnet Core ?
+### Was ist dotnet Core?  
 
-dotnet Core ist ein Open source framework welches die Technologien des Microsoft Produktes dotnet framework als einzelne Komponenten anbietet. Der Ansatz von dotnet core ist es eine ähnlichen Ansatz wie Java zufahren nur ohne Virtuelle Maschine. Der Quellcode muss nur einmal geschrieben werden und kann dann native für das jeweilige Betriebssystem kompiliert werden. Eine der ersten Funktionen die Implementiert wurden war die Webserver Möglichkeit sowie das Entity Framework. Wichtig zu wissen ist auch das dotnet core nicht nur von einer Programmiersprache verwendet werden kann sondern von mehreren. Microsoft bietet aktuell C#, F# und VB als mögliche Programmiersprachen an.
+dotnet Core ist ein Opensource Framework. Dieses Framework soll das dotnet Framework ersetzen und grundsätzliche Änderungen durchführen. Eine dieser Funktionen ist es Plattformunabhängig zu sein. Das dotnet Team stellt eine CLI zur Verfügung um ein Projekt zu erstellen, Kompilieren und testen. Das dotnet core Framework kann mit VB, C# und F# genutzt werden. Außerdem wurden die einzelnen Komponenten von dem Grundsystem endkapselt.
 
-### Wer entwickelt dotnet core ?
+### Wer entwickelt dotnet core?
 
-Das Projekt wurde von Microsoft gestartet und wird vom Programm Manager Richard Lander betreut. Aufgrund das dotnet core ein öffentlich zugängliches Projekt ist und auf github bereit gestellt wurde, gibt es bereits einige Entwickler außerhalb von Microsofts dotnet core teams die zur Verbesserung und weiter Entwicklung des Frameworks beigetragen haben. 
-
-### Crossplattform
-
-Aufgrund der großen Überarbeitung des dotnet Framework und kompletter Auftrennung aller Funktionalitäten  in eigene Pakete kann jede Plattform beim nativen kompilieren die für die Plattform notwendigen Pakete austauschen. 
+Die Entwicklung wird von Microsoft koordiniert der Programm Manager ist Richard Lander. Es handelt sich bei dotnet core um ein Opensource Produkt somit kann jeder Nutzer an der Entwicklung teilnehmen.
 
 ### Weiter Entwicklung
 
-Das dotnet Core Team hat für die Version 3.0 die in der zweiten Hälfte 2019 veröffentlicht werden soll vorgesehen Desktop Gui entwicklung, Razorkomponenten , c# 8.0 support und noch vieles mehr.
+Das dotnet Core Team hat für die Version 3.0 die in der zweiten Hälfte 2019 veröffentlicht werden soll vorgesehen Desktop Gui Entwicklung, Razorkomponenten , c# 8.0 support und noch vieles mehr.
 
 Eine liste aller Änderungen sind [hier](https://docs.microsoft.com/de-de/dotnet/core/whats-new/dotnet-core-3-0) erhältlich.
 
+## getting started
+
+Download und Installation kann [hier](<https://dotnet.microsoft.com/download>) gefunden werden.
+
+nach der Installation söllte die dotnet CLI verfügbar sein.
+
+Um jetzt zu beginnen bietet die CLI die Funktion ein Projekt anhand eines Templates vorzubereiten. Um eine Liste aller Templates zu erhalten gibt es den Befehl: 
+
+``` bash
+dotnet new --list
+```
+
+![Liste in der Eingabeaufforderung Windows](img/dotnet-template-list.png)
+
+In dieser Tabelle kann erkannt werden für welche Programmiersprache dieses Template zur Verfügung steht.
+
+
+
+``` bash
+dotnet new webapi -lang F#
+```
+
+
+
 ## Funktionen  (Platzhalter)
+
 ### interesante packages
 #### System
 die Klassen für die primitiven Datentypen,
@@ -46,6 +67,91 @@ z.b. DBContext
 
 
 ### Codebeispiele
+
+#### F#
+
+##### Variablen
+
+``` F#
+let Name = Wert
+let ``besonderer Name`` = Wert
+
+let funktion a = a
+```
+
+##### Enum / Typen
+
+``` F#
+type enum = 
+	| A 
+	| B 
+	| C
+
+type Typ = { Vorname:string ; Nachname:string; alter:int }
+let beispielNutzer:Typ = { Vorname = "Beispiel"; Nachname = ""; alter = 0 }
+```
+
+##### Funktionen
+
+```F#
+let readInput = 
+    printfn ":"
+    Console.ReadLine()
+
+let parse a = double a
+
+let calc a = a ** a
+
+let print a = printfn "Die Zahl ist %f" a
+```
+
+Parameter und Rückgabewerte benötigen keinen Typen diese Aufgabe übernimmt der Compiler. 
+
+| Funktion  | Parameter | Rückgabewert |
+| --------- | --------- | ------------ |
+| readInput | -         | string       |
+| parse     | string    | double       |
+| calc      | double    | double       |
+| print     | string    | -            |
+
+##### Pipelining
+
+Pipelining dient dazu lesbare aneinander Reihungen von Funktionen zu schreiben.
+
+``` F#
+let reihenfolge  = readInput |> parse |> calc |> print
+
+reihenfolge 
+```
+
+##### rekursive Funktionen
+
+In der Grundkonfiguration kann eine Funktion nicht von sich selbst aufgerufen werden. Um diese Funktionalität zu gewähren muss das Keyword **rec** vor dem Funktionsnamen geschrieben werden.
+
+Hier ein Beispiel mit der [McCarthy91](https://en.wikipedia.org/wiki/McCarthy_91_function) Funktion
+
+``` F#
+let rec McCarthy91 a = 
+    if a > 100 then a - 10 
+    else McCarthy91 (McCarthy91 (a + 11))
+```
+
+##### Linq
+
+F# unterstützt nur den Querysyntax und nicht den Funktionssyntax. 
+
+``` F#
+let list = ["Beispiel"; "Text"; "ab"]
+let abfrage = query { 
+    for text in list do 
+    where (text.Length > 3) 
+    select text 
+    }
+abfrage |> Seq.iter (fun x -> printfn "%s" x)
+```
+
+Für eine Sammlung aller Keywords und 
+
 #### Entity Framework
 ```c#
 class Context : DbContext
@@ -163,7 +269,13 @@ F# ist eine Plattform unabhängige funktionale Programmiersprache. Welche außer
 
 ##### VB (Visual Basic)
 
-Visual Basic ist eine Programmiersprache mit Simplen Syntax um Typ sichere und Objekt Orientierte Anwendungen zu entwickeln.  
+Visual Basic ist eine Programmiersprache mit Simplen Syntax um Typ sichere und Objekt Orientierte Anwendungen zu entwickeln.
+
+## Glossar
+
+### CLI
+
+Ein Command Line Interface in kurz CLI ist eine Anwendung die nur in der Konsole des Betriebssystems gesteuert werden kann.  
 
 ## Quellen
 
