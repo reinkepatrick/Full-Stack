@@ -17,7 +17,7 @@ Jenkins ist bei nahezu jeder CI-Tool-Liste die Nummer eins. Es ist frei zugängl
 
 **Travis CI / Circle CI**
 
-Die beiden CI-Tools stellen ein Cloud-basierte Lösung eine Build und Deploysystem dar. Travis sowie Circle bieten die Nutzung für Open-Source Projekte umsonst an, die auf Github gehostet werden. Aber auch diese sind auf Build-Anzahl etc. beschränkt. Diese Tools nehmen einem sehr viel Denkarbeit ab und man kann sich aufs Wesentliche konzentrieren.
+Die beiden CI-Tools stellen ein Cloud-basierte Lösung eines Build und Deploysystem dar. Travis sowie Circle bieten die Nutzung für Open-Source Projekte umsonst an die auf Github gehostet werden. Aber auch diese sind auf Build-Anzahl etc. beschränkt. Diese Tools nehmen einem sehr viel Denkarbeit ab und man kann sich aufs Wesentliche konzentrieren.
 
 - Vorteile
   - Nimmt einem sehr viel Arbeit ab, schnell konfigurierbar
@@ -42,26 +42,37 @@ Gitlab CI stellt auch eine Cloud-basierte Lösung dar, bei der allerdings die Se
 
 ## Jenkins
 
-- Dokumentaion
+**Möglichkeiten Jenkins aufzusetzen**
 
-- Möglichkeiten Jenkins aufzusetzen
+- Man kann Jenkins auf allen Systemen installieren, dafür benötigt man nur ein OS mit einem installierten Java (7 oder 8, mit 9 läuft es wohl noch nicht). Möchte man die Builds mit Docker-Containern ausführen, benötigt man natürlich auch noch ein lauffähiges Docker.
 
-- Jenksins testweise aufsetzten
+**Jenkins testweise aufsetzten** (2.1.6.X)
 
-  - `sudo apt-get install oracle-java8-installer`
+- Ich habe Jenkins auf einem Raspberry 2B installiert, den ich noch zuhause hatte. Die Performance lässt natürlich zu wünschen übrig, aber so hat man gleich das feeling eines Cloud-Servers. Konfiguriert wird Jenkins über das bereitgestellte Webinterface, Konfigurationen am Server selbst führe ich durch eine SSH-Verbindung durch.
 
-  - ```bash
-    $ curl -fsSL https://get.docker.com -o get-docker.sh
-    $ sudo sh get-docker.sh
-    ```
+- ```bash
+  # Java installieren
+  $ sudo apt-get install oracle-java8-installer
+  # Docker installieren
+  $ curl -fsSL https://get.docker.com -o get-docker.sh
+  $ sudo sh get-docker.sh
+  $ sudo usermod -aG docker your-user
+  # Jenkins installieren
+  $ wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+  # deb https://pkg.jenkins.io/debian-stable binary/ >> /etc/apt/source.list
+  $ sudo apt-get update
+  $ sudo apt-get install jenkins
+  ```
 
-  - `sudo usermod -aG docker your-user`
-
-  - Prüfen ob der Deamon läuft
-
-  - Im Netzwerk zugänglich machen 
-
+- Pipeline anlegen
+  
+  - 
+  
 - Jenkins Plugins?
+
+- Was sind Pipelines?
+
+- Wie funktioniert ein `Jenkinsfile`?
 
 - Dependencies?
 

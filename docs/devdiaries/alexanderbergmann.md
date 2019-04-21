@@ -14,12 +14,14 @@ __08.04.2019 - 14.04.2019__
 
 __15.04.2019 - 21.04.2019__
 
-| Datum  | Tätigkeit                                          | Dauer | Zusatz |
-| ------ | -------------------------------------------------- | ----- | ------ |
-| 17.04. | Jenkins Dokumentation                              | 4 h   |        |
-| 18.04  | Jenkins aufsetzten (Raspberry Pi)                  | 3,5 h |        |
-| 18.04  | Jenkins konfigurieren (Hello World - Java Projekt) |       |        |
-|        | Jenkins mit Docker                                 |       |        |
+| Datum      | Tätigkeit                                            | Dauer | Zusatz                       |
+| ---------- | ---------------------------------------------------- | ----- | ---------------------------- |
+| 17.04.2019 | Jenkins Dokumentation                                | 4 h   |                              |
+| 18.04.2019 | Jenkins aufsetzten (Raspberry Pi)                    | 3,5 h |                              |
+| 20.04.2019 | Jenkins aufsetzten (Raspberry Pi)                    | 1,5 h | Diesmal die Aktuelle Version |
+| 21.04.2019 | Jenkins konfigurieren (Hello World - Java Projekt)   |       |                              |
+| 18.04      | Jenkins konfigurieren (Hello World - Python Projekt) |       |                              |
+|            | Jenkins mit Docker                                   |       |                              |
 
 ## Woche 3
 
