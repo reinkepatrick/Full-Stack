@@ -25,5 +25,5 @@ __22.04.2019 - 28.04.2019__
 
 | Datum      | Tätigkeit      | Dauer  | Zusatz |
 | ---------- | -------------- | ------ | ------ |
-| 22.04.2019 | Dokumentation MQTT | 120 min |        |
+| 22.04.2019 | Dokumentation MQTT | 150 min |        |
 | 22.04.2019 | Recherche Kafka | 30 min |        |
