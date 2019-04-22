@@ -1,4 +1,4 @@
-<img src="img\angular_logo.png" width="300px" height="300px" />
+<img src="img/angular_logo.png" width="300px" height="300px" />
 
 
 
@@ -70,4 +70,7 @@ ng serve
 
 das Angular Projekt gestartet werden. Dieser Vorgang kann eine Weile dauern, da unter anderem TypeScript in JavaScript kompiliert werden muss. Die Standard Website kann nun unter `localhost:4200` im Browser aufgerufen werden.
 
-![Angular first serve](img\first_serve.png)
+![Angular first serve](img/first_serve.png)
+
+
+
