@@ -22,7 +22,18 @@ __08.04.2019 - 14.04.2019__
 
 __15.04.2019 - 21.04.2019__
 
-| Datum      | Tätigkeit           | Dauer | Zusatz                              |
-| ---------- | ------------------- | ----- | ----------------------------------- |
-| 15.04.2019 | Github Repo Wartung | 1 h   | Nie strukturelle Änderungen machen! |
+| Datum      | Tätigkeit                                      | Dauer  | Zusatz                                                       |
+| ---------- | ---------------------------------------------- | ------ | ------------------------------------------------------------ |
+| 15.04.2019 | Github Repo Wartung                            | 1 h    | Nie strukturelle Änderungen machen!                          |
+| 16.04.2019 | Testen von travis CI für markdown kontrolle    | 1 h    | Ja es wäre möglich mit markdownlint dennoch sieht es sehr nach hack aus. |
+| 16.04.2019 | Variablen in F#                                | 15 min | in F# sind Variablen Immuatable, Zuweisungen werden beim deklarieren mit = zugewiesen und danach mit <- |
+| 16.04.2019 | schleifen in F#                                | 15 min |                                                              |
+| 16.04.2019 | Kontrollstrukturen in F#                       | 10 min | ein Switchcase sieht ähnlich aus wie beim Ruby               |
+| 16.04.2019 | Funktionen in F#                               | 10 min | Funktionen können als let deklariert werden und wenn sie annonym sind mit fun |
+| 19.04.2019 | Projekt erstellen für F#                       | 20 min | dotnet cli erstellt Standard c# und wenn die Parameter in der Falschen Reihenfolge sind ebenfalls |
+| 19.04.2019 | Entity Framework Integration verstehen         | 60 min | es kann keine bidirektionale Assoziation erstellt werden     |
+| 19.04.2019 | Datenbank erstellen                            | 20 min | F# unterstützt keine Migration                               |
+| 20.04.2019 | Linq mit F#                                    | 60 min | F# nutzt andere Keywords als C# im Linq Query syntax der Funktionssyntax ist nicht unterstützt |
+| 20.04.2019 | Beispiele Für F# Code hinzugefügt              | 10 min |                                                              |
+| 21.04.2019 | über SQL Type Provider informationen gesammelt | 20 min | Als Alternative zum EF mögliche Provider MSSQL/PostgreSQL/   |
 
