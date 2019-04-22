@@ -11,14 +11,17 @@ Unterstüzt werden Android, iOS und mit Ionic 2 auch UWP für Windows 10.
 
 Systemanforderungen: min. iOS7+ und Android 4.1+
 
-## Android
+### Android
 Android ist ein sehr verbreitetes Betriebssystem (Marktanteil 2016: 87,5%) des Google Konzerns für mobile Geräte. Apps die hierfür entwickelt werden, können im "Google Play Store" vertrieben werden. Apps werden meist in Java geschrieben und zu einer ".apk" Datei kompiliert.
 
-## iOS
+### iOS
 Apple verwendet für seine mobilen Geräte ihr eigenes Betriebssystem iOS. Das Betriebssystem ist im Gegensatz zu Android auch ausschließlich für Apple Geräte verfügbar.Entwickelt wird meist in Objective-C, C und C++. Die Apps werden nach einer Prüfung durch Apple im "App-Store" angeboten.
 
-## Universal Windows Platform
+### Universal Windows Platform
 UWP ermöglicht das Entwickeln von Applikationen, welche auf diversen Windows 10-Hardware-Umgebungen ausführbar sind. Das Besondere hierbei ist, dass der Quellcode nur einmal geschrieben wird und dabei nicht extra für die Zielplattform(en) angepasst werden muss.
+
+### Progressive Web App
+PWA's sind im Grunde Webseiten, welche sich für den Anwender aber wie eine App anfühlen. Ein sogenannter "Service-Worker" bietet hierbei die Möglichkeit, dass die App auch offline funktioniert. Der große Vorteil ist, dass eine mehrfache Entwicklung einer Applikation/Website überflüssig wird. HTML5, CSS3 und JavaScript ermöglichen die Realisierung einer PWA.
 
 ## Workflow
 Zu beginn steht die Einrichtung von Cordova via Node-Package-Manager an.
@@ -51,7 +54,6 @@ Als IDE bietet sich Ionic Studio an, welches auf der selben Basis wie Visual Stu
 stanselljs
 cordova weiterentwicklung capaciter
 
-eine progressiv web ist
 
 Appflow ausarbeiten
 
@@ -59,4 +61,4 @@ Orientierung in Projektarchitektur finden
 
 Erklärung von WebApp, Native und Hybrid
 
-Export --> apk ?
+Ionic Export --> apk ?
