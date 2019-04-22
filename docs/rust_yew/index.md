@@ -6,7 +6,8 @@
 ## Was ist Yew?
 [Yew](https://github.com/DenisKolodin/yew) ist ein in Rust geschriebens Framework für die Erstellung von Frontend Apps mit WebAssembly. Das Framework unterstützt multi-threading sowie Nebenläufigkeit und benutzt die Web Workers API zur Erstellung von agents in seperaten Threads.
 
-## Grundlagen Rust
+<details>
+    <summary> <h2>Grundlagen Rust</h2> </summary>
 Grundlagen und sprachspezifische Eigenschaften von Rust (basierend auf https://doc.rust-lang.org/book)
 
 ### Installation, Updates, Deinstallation
@@ -281,3 +282,4 @@ for n in 0..101 { // von 0 bis 100
   //code
 }
 ```
+<details>
