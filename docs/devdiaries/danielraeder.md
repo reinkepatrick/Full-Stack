@@ -16,3 +16,10 @@ __15.04.2019 - 21.04.2019__
 | ---------- | ------------------------------------------------------------------------------------- | ---------- | ------ |
 | 16.04.2019 | Experimente with Babylon physics, ansätze eines kleinen Billiard Spiels               | 60 min     |        |
 
+## Woche 3 
+__22.04.2019 - 28.04.2019__
+
+| Datum      | Tätigkeit                                                                             | Dauer      | Zusatz |
+| ---------- | ------------------------------------------------------------------------------------- | ---------- | ------ |
+| 22.04.2019 | Einarbeiten in SVG und d3js, experimente mit dynamischer Darstellung                  | 300 min    | d3js ist zwar nett, aber noch kein vollständiger WebGL Ansatz. Da muss mehr gehen.|
+
