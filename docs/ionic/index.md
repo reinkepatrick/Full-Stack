@@ -11,6 +11,15 @@ Unterstüzt werden Android, iOS und mit Ionic 2 auch UWP für Windows 10.
 
 Systemanforderungen: min. iOS7+ und Android 4.1+
 
+## Android
+Android ist ein sehr verbreitetes Betriebssystem (Marktanteil 2016: 87,5%) des Google Konzerns für mobile Geräte. Apps die hierfür entwickelt werden, können im "Google Play Store" vertrieben werden. Apps werden meist in Java geschrieben und zu einer ".apk" Datei kompiliert.
+
+## iOS
+Apple verwendet für seine mobilen Geräte ihr eigenes Betriebssystem iOS. Das Betriebssystem ist im Gegensatz zu Android auch ausschließlich für Apple Geräte verfügbar.Entwickelt wird meist in Objective-C, C und C++. Die Apps werden nach einer Prüfung durch Apple im "App-Store" angeboten.
+
+## Universal Windows Platform
+UWP ermöglicht das Entwickeln von Applikationen, welche auf diversen Windows 10-Hardware-Umgebungen ausführbar sind. Das Besondere hierbei ist, dass der Quellcode nur einmal geschrieben wird und dabei nicht extra für die Zielplattform(en) angepasst werden muss.
+
 ## Workflow
 Zu beginn steht die Einrichtung von Cordova via Node-Package-Manager an.
 
@@ -36,3 +45,18 @@ $ ionic serve
 ## Entwicklerumgebung
 
 Als IDE bietet sich Ionic Studio an, welches auf der selben Basis wie Visual Studio Code aufbaut. Es bietet TypeScript sowie Autocompletion- und Debugging-Features, kostet jedoch Geld.
+
+
+
+stanselljs
+cordova weiterentwicklung capaciter
+
+eine progressiv web ist
+
+Appflow ausarbeiten
+
+Orientierung in Projektarchitektur finden
+
+Erklärung von WebApp, Native und Hybrid
+
+Export --> apk ?
