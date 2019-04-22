@@ -16,7 +16,9 @@ __08.04.2019 - 14.04.2019__
 ## Woche 2
 __15.04.2019 - 21.04.2019__
 
-| Datum      | Tätigkeit                      | Dauer      | Zusatz |
-| ---------- | ------------------------------ | ---------- | ------ |
-| 18.04.2019 | Recherche Composite-Pattern    | 20 min     |        |
-| 18.04.2019 | Stateless vs. Stateful Widgets | 2 h 30 min |        |
+| Datum      | Tätigkeit                            | Dauer      | Zusatz |
+| ---------- | ------------------------------------ | ---------- | ------ |
+| 18.04.2019 | Recherche Composite-Pattern          | 20 min     |        |
+| 18.04.2019 | Stateless vs. Stateful Widgets       | 2 h 30 min |        |
+| 21.04.2019 | Dart: Überblick, Syntax und Semantik | 2 h        |        |
+| 22.04.2019 | Dart: Syntax und Semantik            | 3 h        |        |
