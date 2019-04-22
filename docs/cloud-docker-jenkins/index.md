@@ -84,8 +84,6 @@ Gitlab CI stellt auch eine Cloud-basierte Lösung dar, bei der allerdings die Se
 - Docker-Swarm?
 - Eigene Docker Container erstellen?
 
-
-
 ## Quellen
 
 **Continuous Integration Tools**
