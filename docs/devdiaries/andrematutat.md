@@ -27,3 +27,10 @@ __15.04.2019 - 21.04.2019__
 | 20.04 | Anfang GraphQL Dokumentation             | 2h    |                                          |
 | 21.04 | Dokumentaton GraphQL Abfragen            | 2h    |                                          |
 
+## Woche 3
+
+__22.04.2019 - 28.04.2019__
+
+| Datum | Tätigkeit                                | Dauer | Zusatz                                   |
+| ----- | ---------------------------------------- | ----- | ---------------------------------------- |
+| 25.04| Projekt Dokumentation| 2h||
