@@ -34,8 +34,11 @@ __15.04.2019 - 21.04.2019__
 
 __22.04.2019 - 28.04.2019__
 
-| Datum      | Tätigkeit                                                                                        | Dauer  | Zusatz |
-|:-----------|:-------------------------------------------------------------------------------------------------|:-------|:-------|
-| 24.04.2019 | Erstellung von der [Projekt Organisation](https://github.com/cardholder), Repos und Kanban Board | 1 h    |        |
-| 24.04.2019 | Erstellung von einem Projekt Logo                                                                | 1 h 30 min     ||
-| 25.04.2019 | Einbinden von Docsify                                                                            | 30 min |        |
+| Datum      | Tätigkeit                                                                                        | Dauer      | Zusatz |
+|:-----------|:-------------------------------------------------------------------------------------------------|:-----------|:-------|
+| 24.04.2019 | Erstellung von der [Projekt Organisation](https://github.com/cardholder), Repos und Kanban Board | 1 h        |        |
+| 24.04.2019 | Erstellung von einem Projekt Logo                                                                | 1 h 30 min |        |
+| 25.04.2019 | Einbinden von Docsify                                                                            | 30 min     |        |
+| 25.04.2019 | Inline Styling mit [Aphrodite](react/index#aphrodite) und [Emotion](react/index#) hinzugefügt    | 1 h 30 min |        |
+| 25.04.2019 | Überarbeitung der kompletten React Dokumentation                                                 | 30 min     |        |
+| 25.04.2019 | Erstellung von Grafiken für die Veranschaulichung der Reihenfolge von Lifecycle Hooks            | 30 min     |        |
