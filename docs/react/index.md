@@ -557,7 +557,6 @@ class App extends React.Component {
       </div>
     );
   }
-
 ```
 
 ### CSS Modules
@@ -636,6 +635,8 @@ aufgeführten Reihenfolge.
 - [__`render()`__](https://reactjs.org/docs/react-component.html#render)
 - [__`componentDidMount()`__](https://reactjs.org/docs/react-component.html#componentdidmount)
 
+![mounting](./img/mounting.svg)
+
 ### Updating
 
 Diese Lifecycle Hooks werden aufgerufen, in dieser Reihenfolge, wenn das
@@ -649,6 +650,8 @@ Component neu gerendert wird.
 
 `shouldComponentUpdate()` kann weggelassen werden wenn man
 `PureComponent` importiert statt `Component`.
+
+![updating](./img/updating.svg)
 
 ### Unmounting
 
