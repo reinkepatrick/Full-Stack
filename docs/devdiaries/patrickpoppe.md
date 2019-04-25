@@ -21,3 +21,13 @@ __15.04.2019 - 21.04.2019__
 | 21.04.2019 | Flux-Konzept                 | 3h    | Verständnissproblem zwischen Dispatcher und Store |
 | 22.04.2019 | Flux-Beispiele, Bibliotheken | 1,5h  |                                                   |
 
+## Woche 3
+
+__22.04.2019 - 28.04.2019__
+
+| Datum      | Tätigkeit                           | Dauer | Zusatz |
+| ---------- | ----------------------------------- | ----- | ------ |
+| 24.04.2019 | Recherche zu MVC und Flux-Vergleich | 1h    |        |
+| 25.04.2019 | MVC und Datenfluß in MVC            | 1,5h  |        |
+|            |                                     |       |        |
+

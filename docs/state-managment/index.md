@@ -1,3 +1,7 @@
+
+
+
+
 # Einleitung
 
 ## Was ist "State Managment"?
@@ -117,6 +121,34 @@ Zu der Benutzung mit React, gibt es zusätzlich noch eine offizielle Binding Lib
 ### Alt
 
 Hierbei handelt es sich um eine reine Implementierung von Flux. Es hat die gleichen Merkmale wie die Redux-Bibliotheken und konnte sich deshalb nie wirklich gegenüber von Redux durchsetzen.
+
+### Flux vs. MVC
+
+Bei beiden handelt es sich um Architekturlösungen, wie Anwendungen aufgebaut werden sollen. Doch kann man jetzt sagen, dass Flux in allen Punkten besser ist als MVC (Model-View-Controller)?
+
+Zur Erinnerung noch einmal die wesentlichen Bestandteile von MVC.
+
+Das Model enthält die Geschäftslogik und die Zustandsinformationen der Softwareanwendung.
+
+Die View stellt die Daten des Model da, ist also abhängig von diesem. Es kann viele Views für ein Model geben.
+
+Der Controller ist eine Zwischenschicht, welche die Eingaben aus der View verarbeitet und zwischen View und den Models vermittelt. Der Controller legt also das Verhalten auf Benutzereingaben fest, beinhaltet allerdings selber keine Geschäftslogik.
+
+
+
+![Ablauf MVC](img/AblaufMVC.png)
+
+In dem Diagramm kann man den Ablauf in einer aktiven MVC-Implementierung sehen. Die View schickt die Benutzerereignisse an den Controller. Dieser ändert darauf die entsprechenden Models. Die Models benachrichtigen die mit dem Model verbundenen Views. Die Views holen sich anschließend die neuen Daten und aktualisieren sich. Die aktive Variante wird mit Hilfe des Observer-Pattern umgesetzt.
+
+Daraus ergibt sich dann folgender Datenfluss:
+
+![DataFlow MVC](img/DataFlowMVC.png)
+
+Der bidirektionale Datenfluss zwischen Model und View war es letztendlich, der Facebook dazu veranlasste Flux zu entwickeln. Das obere Diagramm stellt nämlich nur die Kommunikation zwischen einem Model und einer View. Was passiert allerdings wenn wir mehrere Models und mehrere Views haben?
+
+![Big Data Flow MVC](img/BigDataFlowMVC.png)
+
+Wie man sehen kann, kommt es zwischen den Models und den Views zu einigen Verstrebungen. In dieser Architektur jetzt immer dran zu denken, die View bei jedem Model anzumelden, damit es jede Benachrichtigung bekommt und sich immer von den passenden Models die Daten holt, kann sehr aufwändig werden. 
 
 ### Sonstiges
 
