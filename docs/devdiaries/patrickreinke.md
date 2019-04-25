@@ -41,3 +41,4 @@ __22.04.2019 - 28.04.2019__
 | 25.04.2019 | Einbinden von Docsify                                                                            | 30 min     |        |
 | 25.04.2019 | Inline Styling mit [Aphrodite](react/index#aphrodite) und [Emotion](react/index#) hinzugefügt    | 1 h 30 min |        |
 | 25.04.2019 | Überarbeitung der kompletten React Dokumentation                                                 | 30 min     |        |
+| 25.04.2019 | Erstellung von Grafiken für die Veranschaulichung der Reihenfolge von Lifecycle Hooks            | 30 min     |        |
