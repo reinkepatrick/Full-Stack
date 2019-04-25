@@ -136,7 +136,8 @@ export default App;
 
 JSX ist die Sprache die zum darstellen von unseren Components verwendet
 wird, um genauer zu sagen den Teil den wir in die `render()`-Methode
-schreiben, man kann natürlich auch einfach so JSX-Code zurückgeben ohne `render()`-Methode.
+schreiben, man kann natürlich auch einfach so JSX-Code zurückgeben ohne
+`render()`-Methode.
 
 ```js
 render() {
@@ -166,9 +167,9 @@ JSX hat aber ein paar kleine Einschränkungen, es sieht zwar aus wie HTML
 und es verhält sich auch in den meisten Fällen so, weswegen wir auch zum
 Beispiel `className` nutzen anstatt die normale HTML-`class`, weil JSX
 intern immer noch zu JavaScript kompiliert wird und `class` unter
-JavaScript eine andere Verwendung findet. Außerdem kann man unter JSX im Normalfall
-nur ein HTML Element zurückgeben, am folgenden Beispiel sieht man wie es
-__nicht__ funktioniert.
+JavaScript eine andere Verwendung findet. Außerdem kann man unter JSX im
+Normalfall nur ein HTML Element zurückgeben, am folgenden Beispiel sieht
+man wie es __nicht__ funktioniert.
 
 ```js
 render() {
@@ -182,8 +183,8 @@ render() {
 ```
 
 Aus diesem Grund packt man um ein Component immer ein HTML-Element und
-fügt sein Kontent in dieses HTML-Element oder man nutzt `React.Fragment` anstatt es
-in ein `<div></div>` zupacken.
+fügt sein Kontent in dieses HTML-Element oder man nutzt `React.Fragment`
+anstatt es in ein `<div></div>` zupacken.
 
 
 ## Properties
@@ -486,6 +487,90 @@ return (
 );
 ```
 
+### Aphrodite
+
+[Aphrodite](https://github.com/Khan/aphrodite) ist eine weitere
+Bibliothek für React, die es einem ermöglicht Inline-Style mit
+Pseudo-Selektoren und Media Queries zu verwenden. Der größte Unterschied
+zu Radium ist, dass es unter Aphrodite eine Möglichkeit gibt
+`@font-face` zu verwenden, das man seine Style-Objekte bei der
+`StyleSheet.create()`-Funktion übergibt und das man diese in an
+`className` übergibt anstatt an `style`, über die Funktion `css`.
+Ebenfalls ist es eine Sache von Aphrodite, dass alle Styling bekommen
+das `!important`-Tag, dafür kann man aber `aphroidte/no-important`
+importieren.
+
+Anhand eines Beispiel lässt sich das besser verdeutlichen:
+
+```jsx
+import { StyleSheet, css } from 'aphrodite';
+
+const styles = StyleSheet.create({
+                 panel: {
+                   backgroundColor: '#00ffff',
+                   ':hover': {
+                     color: '#ffffff',
+                     cursor: 'pointer'
+                   },
+                   '@media (max-width: 700px)': {
+                     backgroundColor: '#ff0000'
+                   }
+                 }
+               });
+
+class App extends Component {
+  render() {
+    return (
+      <div className={css(styles.panel)}>
+        React + Aphrodite rocks!
+      </div>
+    );
+  }
+}
+```
+
+### Emotion
+
+[Emotion](https://emotion.sh/) ist die dritte und letzte Bibliothek für
+Inline Styling unter React, die hier behandelt wird. Sie bietet dasselbe
+wie die Aphrodite, sie nutzt ebenfalls `className` und eine Funktion die
+`css` heißt. Anstatt eines Objekt, welches an `className` übergeben
+wird, übergibt man ein sogenanntes "tagged Template". Emotion hat den
+größten Vorteil, dass es mehr nach CSS aussieht als bei den anderen
+beiden Bibliotheken. Es gibt hier bei auch eine weitere Bibliothek die
+sich `react-emotion` nennt, diese ermöglicht es einem mit der Funktion
+`styled()` eigene HTML zu erstellen und diese unter JSX zu verwenden.
+
+Alles nochmal zusammenfassend als Beispiel:
+
+```jsx
+import { css } from 'emotion';
+
+const style = css`
+  background-color: #00ffff;
+  text-align: center;
+  width: 100%;
+  padding 20px;
+  &:hover {
+    color: #ffffff;
+    cursor: pointer;
+  }
+  @media (max-width: 700px) {
+    background-color: #ff0000;
+  }
+`;
+
+class App extends React.Component {
+  render() {
+    return (
+      <div className={style}>
+        React + Emotion rocks!
+      </div>
+    );
+  }
+
+```
+
 ### CSS Modules
 
 Wir haben aber auch die Möglichkeit die Scopes unserer Styles
@@ -507,7 +592,7 @@ Jetzt passen wir die `webpack.config.js` an in unserem neu generierten
     importLoaders: 1,
     sourceMap: isEnvProduction && shouldUseSourceMap,
   }),
-  sideEffects: true,
+  sideEffects: true
 }
 ```
 
@@ -587,8 +672,9 @@ entfernt wird.
 ### useEffect() und React.memo()
 
 Seit React 16 gibt es durch React Hooks die Möglichkeit so etwas auch in
-funktionale Components einzubinden, durch `useEffect()` und um dasselbe wie `PureComponent`
-unter funktionalen Components zu verwenden, kann man `React.memo()` einbinden.
+funktionale Components einzubinden, durch `useEffect()` und um dasselbe
+wie `PureComponent` unter funktionalen Components zu verwenden, kann man
+`React.memo()` einbinden.
 
 ```js
 import React, { useEffect } from 'react';
@@ -615,3 +701,6 @@ const foobar = props => {
 export default React.memo(foobar);
 ```
 
+## Quellen
+
+- [Inline Styling with Radium, Aphrodite & Emotion](https://blog.logrocket.com/the-best-react-inline-style-libraries-comparing-radium-aphrodite-emotion-849ef148c473)
