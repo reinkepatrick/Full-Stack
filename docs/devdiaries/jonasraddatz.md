@@ -17,7 +17,13 @@ __15.04.2019 - 21.04.2019__
 | Datum      | Tätigkeit      | Dauer  | Zusatz |
 | ---------- | -------------- | ------ | ------ |
 |  15.04.2019          | Pullen in Fork, Pull Request etc.               | 20 min       |        |
-|            |                |        |        |
-|            |                |        |        |
-|            |                |        |        |
+| 16.04.2019 | Recherche RabbitMQ | 30 min |        |
+| 16.04.2019 | Recherche Kafka | 30 min |        |
 
+## Woche 3 
+__22.04.2019 - 28.04.2019__
+
+| Datum      | Tätigkeit      | Dauer  | Zusatz |
+| ---------- | -------------- | ------ | ------ |
+| 22.04.2019 | Dokumentation MQTT | 150 min |        |
+| 22.04.2019 | Recherche Kafka | 30 min |        |

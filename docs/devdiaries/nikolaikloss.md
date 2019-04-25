@@ -22,3 +22,10 @@ __08.04.2019 - 14.04.2019__
     - Probleme:
       - Synchronisierung vom Fork mit mit Source-Repo
       - Lösung: Compare-Funktion in GitHub
+
+## Woche 2
+__15.04.2019 - 22.04.2019__
+
+|Datum|Tätigkeit|Dauer|Zusatz|
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | ------ |
+| 13.04.2019 | Recherche zu bzgl. offener Fragen und Ionic Framework. Einpflegen der Erkenntnisse.|4 h| |

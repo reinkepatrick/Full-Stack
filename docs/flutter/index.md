@@ -1,7 +1,7 @@
 # Flutter
 
 ## Was ist Flutter?
-[Flutter](https://flutter.dev/) ist ein SDK für Android und iOS Apps. Der größte Vorteil ist, dass die Apps sich eine in [Dart](https://www.dartlang.org/) geschriebene Codebase teilen und dann in jeweiligen nativen Sprachen Java und Swift übersetzt werden ohne dabei die Designsprache des jeweiligen Systems zu verletzen. Das Resultat ist eine performante App mit plattformkonsistentem Design durch verhältnismäßig wenig Programmieraufwand. Flutter besteht aus C / C++, Dart und Skia (2D Grafikengine).
+[Flutter](https://flutter.dev/) ist ein SDK für Android und iOS Apps. Der größte Vorteil ist, dass die Apps sich eine in [Dart](https://www.dartlang.org/) geschriebene Codebase teilen und dann in jeweiligen nativen Sprachen Java und Swift übersetzt werden ohne dabei die Designsprache des jeweiligen Systems zu verletzen. Das Resultat ist eine performante App mit plattformkonsistentem Design, durch verhältnismäßig wenig Programmieraufwand. Flutter besteht aus C / C++, Dart und Skia (2D Grafikengine).
 
 Systemanforderungen: min. iPhone 4S mit iOS 8 oder Android 4.1.x und Gerät mit ARM Prozessor
 
@@ -40,9 +40,9 @@ Zunächst ist es notwendig USB-Debugging in den Entwickleroptionen am Gerät zu 
 ## Aufbau einer Flutter App
 **Grundprinzip: Alles ist ein Widget**
 
-Widgets sind die Grundbausteine des gesamten UIs. Jedes Widget liegt innerhalb eines übergeordneten Widgets und erbt dessen Eigenschaften. Sogar die denkbar einfachste App erbt von einem anderen Widget.
+Widgets sind die Grundbausteine des gesamten UIs. Jedes Widget liegt innerhalb eines übergeordneten Widgets und erbt dessen Eigenschaften. Somit nutzt Flutter (und auch React) das Coposite Pattern, wobei die Widgets den Components entsprechen. Sogar die denkbar einfachste App erbt von einem anderen Widget.
 
-```Dart
+```dart
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -68,3 +68,209 @@ Bei der Beispielapp liegt in dem App-Widget ein Scaffold-Widget und in diesem wi
 
 ![Flutter-App](./img/flutter_app.png)
 ![Flutter-App-Diagram](./img/flutter_app_dia.png)
+
+### Stateless vs. Stateful
+Man unterscheidet Widgets hauptsächlich zwischen stateless und stateful. Wenn ein Widget sich verändert, z.B. durch Benutzerinteraktion, ist es stateful.
+
+#### Stateless
+Ein **StatelessWidget** ändert sich nicht und die zugehörigen Attribute sind *immutable*. Zustandlose Widgets sind z.B. Icons oder Texte.
+
+#### Stateful
+Ein **StatefulWidget** ist dynamisch. Es kann bei Bedarf auslösen, dass es neu gerendert wird. So werden z.B. Änderungen einer Variable auf dem Bildschirm dargestellt. Der Zustand eines solchen Widgets wird in einem Objekt **State** gespeichert, um die Zustandsinformationen von der Darstellung zu trennen. **State** besteht veränderbaren Werten, wie z.B. der aktuelle Wert eines Sliders. Wenn sich der Zustand eines Widgets ändert, ruft **State** die Methode `setState()` auf um das entsprechende Widget neu zu rendern.
+
+# Dart
+Dart ist eine objektorientierte Programmiersprache. Sie wird primär für mobile- und web-Apps verwendet, kann aber auch serverseitig eingesetzt werden. 
+
+## Syntax und Semantik
+```dart
+void main() {
+  print('Hello World!');
+}
+```
+
+### Variablen
+Bei der Deklaration von Variablen muss kein expliziter Typ angegenben werden, da es Typinferenz gibt.
+
+Standard Datentypen:
++ Integer
++ Double
++ String
++ Boolean
++ List (Array)
++ Set
++ Map
++ Rune (Darstellung von Unicodezeichen in einem String)
+
+> Variablen, die nicht initialisiert wurden, haben immer den Wert *null* (auch numerische Typen).
+```dart
+var name = 'Max Mustermann';
+var year = 1995;
+var height = 1.85;
+var favFoods = ['Pizza', 'Coffee','Icecream'];
+var image = {
+  'tags': ['face'],
+  'url': '//path/to/face.jpg'
+};
+```
+
+### Kontrollfluss
+Dart unterstützt folgende Kontrollflussanweisungen:
++ `if` und `else`
++ `for`
++ `while` und `do-while`
++ `break` und `continue`
++ `switch` und `case`
++ `assert`
+ 
+```dart
+if (year >= 2001) {
+  print('21. Jahrhundert');
+} else if (year >= 1901) {
+  print('20. Jahrhundert');
+}
+
+for (var object in favFoods) {
+  print(object);
+}
+
+for (int month = 1; month <= 12; month++) {
+  print(month);
+}
+
+while (year < 2016) {
+  year += 1;
+}
+```
+### Funktionen
+Zusätzlich zur klassichen Schreibweise wird auch die kürzere, mit Pfeilsyntax (`=>`), unterstützt. Die Pfeilsyntax ist besonders nützlich, wenn anonyme Funktionen als Argumente übergeben werden. Anzumerken ist außerdem, dass die top-level Funktion `print()` als Argument für `forEach()` übergeben werden kann.
+```dart
+int fibonacci(int n) {
+  if (n == 0 || n == 1) return n;
+  return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+var result = fibonacci(20);
+
+favFoods.where((name) => name.contains('zz')).forEach(print);
+```
+
+### Kommentare
+```dart
+// einzeiliger  Kommentar
+
+///
+/// dokumentations Kommentar
+///
+
+/*
+ * mehrzeiliger Kommentar
+ */
+```
+
+### Imports
+```dart
+// Kernbibliotheken
+import 'dart:math';
+
+// Bibliotheken aus externen Paketen
+import 'package:test/test.dart';
+
+// Dateien
+import 'path/to/my_other_file.dart';
+```
+
+Falls man zwei Bibliotheken mit widersprüchlicher Identifikation importiert, kann ein **Bibliothekspräfix** den Konflikt auflösen.
+```dart
+import 'package:lib1/lib1.dart';
+import 'package:lib2/lib2.dart' as lib2;
+
+// Benutzt Element aus lib1
+Element element1 = Element();
+
+// Benutzt Element aus lib2.
+lib2.Element element2 = lib2.Element();
+```
+
+Mit `show` und `hide` ist es möglich nur **Teile einer Bibliothek** zu importieren.
+```dart
+// Importiert nur foo
+import 'package:lib1/lib1.dart' show foo;
+
+// Importiert alles außer foo
+import 'package:lib2/lib2.dart' hide foo;
+```
+
+Dart unterstütz **verzögertes Laden** (*deferred loading* / *lazy loading*). Das erlaubt dem Programm das Laden von Bibliotheken aufzuschieben, bis/falls sie benötigt werden. Die Verwendung von verzögertem Laden kann die initiale Ladezeit eines Programms verringern. Im folgenden Beispiel wird die Funktion `printGreeting()` aus dem Package `greetings` erst während der Laufzeit geladen.
+
+> In der Dart-VM (verwendet für Debugging) weicht das Verhalten von verzögertem Laden von der Spezifikation ab. Dort ist ist bereits vor dem Aufruf von `loadLibrary()` möglich auf die Bibliothek zuzugreifen.
+
+```dart
+import 'package:greetings/hello.dart' deferred as hello;
+
+Future greet() async {
+  await hello.loadLibrary();
+  hello.printGreeting();
+}
+```
+
+### Klassen
+In dem unten stehenden Beispiel ist eine Klasse mit zwei Konstruktoren, einer Methode und 3 Eigenschaften. Eine der Eigenschaften ist nur durch eine *Get-Methode* definiert.
+```dart
+class Spacecraft {
+  String name;
+  DateTime launchDate;
+
+  // Konstruktor
+  Spacecraft(this.name, this.launchDate);
+
+  // benannter Konstruktor; leitet zum "default" weiter
+  Spacecraft.unlaunched(String name) : this(name, null);
+
+  int get launchYear =>
+      launchDate?.year;
+
+  // Methode
+  void describe() {
+    print('Spacecraft: $name');
+    if (launchDate != null) {
+      int years =
+          DateTime.now().difference(launchDate).inDays ~/
+              365;
+      print('Launched: $launchYear ($years years ago)');
+    } else {
+      print('Unlaunched');
+    }
+  }
+}
+
+var voyager = Spacecraft('Voyager I', DateTime(1977, 9, 5));
+voyager.describe();
+
+var voyager3 = Spacecraft.unlaunched('Voyager III');
+voyager3.describe();
+```
+
+### Vererbung
+In Dart gibt es nur Einfachvererbung.
+```dart
+class Orbiter extends Spacecraft {
+  num altitude;
+  Orbiter(String name, DateTime launchDate, this.altitude)
+      : super(name, launchDate);
+}
+```
+
+### Mixins
+Mit Mixins kann Code in komplexeren Klassenhierarchien wiederverwendet werden. Im folgenden Beispiel ist die Klasse `Piloted` ein Mixin und gewährt der Klasse `PilotedCraft` so Zugriff auf die Variable `astronauts` und die Methode `describeCrew`. Mit `mixin` anstatt `class` kann verhindert werden, dass Piloted als normale Klasse verwendet wird. Zusätlich kann mit dem optionalen `on` eingeschränkt werden auf welche Klassen das Mixin angewendet werden kann.
+```dart
+class Piloted {
+  int astronauts = 1;
+  void describeCrew() {
+    print('Number of astronauts: $astronauts');
+  }
+}
+
+class PilotedCraft extends Spacecraft with Piloted {
+  // ···
+}
+```
