@@ -21,4 +21,10 @@ __15.04.2019 - 21.04.2019__
 | 18.04.2019 | Recherche Composite-Pattern          | 20 min     |        |
 | 18.04.2019 | Stateless vs. Stateful Widgets       | 2 h 30 min |        |
 | 21.04.2019 | Dart: Überblick, Syntax und Semantik | 2 h        |        |
-| 22.04.2019 | Dart: Syntax und Semantik            | 3 h        |        |
+
+## Woche 3 
+__22.04.2019 - 28.04.2019__
+| Datum      | Tätigkeit                                                          | Dauer      | Zusatz |
+| ---------- | ------------------------------------------------------------------ | ---------- | ------ |
+| 22.04.2019 | Dart: Syntax und Semantik                                          | 3 h        |        |
+| 26.04.2019 | Definition: Stakeholder, Betriebsbedingungen und Qualitätsmerkmale | 1 h 30 min |        |

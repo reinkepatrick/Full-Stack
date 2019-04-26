@@ -102,6 +102,7 @@ Standard Datentypen:
 + Rune (Darstellung von Unicodezeichen in einem String)
 
 > Variablen, die nicht initialisiert wurden, haben immer den Wert *null* (auch numerische Typen).
+
 ```dart
 var name = 'Max Mustermann';
 var year = 1995;
