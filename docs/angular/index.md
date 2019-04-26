@@ -1,6 +1,6 @@
-<img src="img/angular_logo.png" width="300px" height="300px" />
 
 
+![Angular Logo](img\angular_logo.png)
 
 # Angular
 
