@@ -2,11 +2,11 @@
 
 ## Was ist React?
 
-React ist ein JavaScript Framework für die Erstellung von
-Benutzeroberflächen. Es ist eins der größten JavaScript Frameworks neben
-Angular und Vue.js. React steht aktuell bei der Version 16.8.6 vom 27.
-März 2019, die neusten Neuerungen sind die sogenannten Hooks welche
-später genauer erläutert werden.
+[React](https://reactjs.org/) ist ein JavaScript Framework, von
+Facebook, für die Erstellung von Benutzeroberflächen. Es ist eins der
+größten JavaScript Frameworks neben Angular und Vue.js. React steht
+aktuell bei der Version 16.8.6 vom 27. März 2019, die neusten Neuerungen
+sind die sogenannten Hooks welche später genauer erläutert werden.
 
 ## Anforderungen
 
@@ -47,17 +47,17 @@ npm start
 ## Components
 
 Komponenten sind das grundlegendste in React auch bekannt als
-__Components__, aus einzelnen Components wird unsere App am Ende
+__Components__, aus einzelnen Components wird eine App am Ende
 zusammengesetzt. Der Vorteil an Components sind das man sie immer wieder
-verwenden kann. Jede Component muss zwingend JSX zurückgeben oder diesen
-rendern.
+verwenden und dynamisch anpassen kann. Jedes Component muss zwingend JSX
+zurückgeben oder diesen rendern.
 
 ![components](./img/components.svg ':size=525')
 
 Der allgemeine Aufbau eines Components (_src/App.js_) in React sieht wie
 folgt aus:
 
-```js
+```jsx
 import React, { Component } from 'react';
 import './App.css';
 
@@ -78,9 +78,11 @@ export default App;
 
 Diese bezeichnet man als Präsentations- oder zustandslose Components, da
 sie in den meisten Fällen nur JSX zurückgeben. Diese Art sollte so oft
-wie nur möglich verwendet werden und gilt als Best-Practice.
+wie nur möglich verwendet werden und gilt als Best-Practice, diese
+bieten durch React Hooks fast die selben Möglichkeiten wie
+klassenbasierte Components.
 
-```js
+```jsx
 import React from 'react';
 
 const foobar = () => {
@@ -93,26 +95,13 @@ export default foobar;
 ### Klassenbasierte Components
 
 Diese bezeichnet man als Container- oder Zustandscomponents, diese
-verwendet man wie der Name schon sagt wenn man Zustande in der Component
-speichern möchte.
+verwendet man wie der Name schon sagt, wenn man Zustände in einem
+Component speichern möchte. Um eigene Components dann zu verwenden, kann
+man diese einfach einbinden und aufrufen. Hier zu nutzen wir das
+funktionale Component aus dem Beispiel über uns und importieren es in
+die `App.js`.
 
-```js
-import React, { Component } from 'react';
-
-class Foobar extends Component {
-  render() {
-    return <p>Foobar!</p>;
-  }
-}
-
-export default Foobar;
-```
-
-Um eigene Components dann zu verwenden kann man diese einfach einbinden
-und aufrufen. Hier zu nutzen wir das funktionale Component aus dem
-Beispiel über uns und importieren es in unsere `App.js`.
-
-```js
+```jsx
 import React, { Component } from 'react';
 import './App.css';
 import Foobar from './Foobar';
@@ -134,11 +123,12 @@ export default App;
 
 ## JSX
 
-JSX ist die Sprache die zum darstellen von unseren Components verwendet
+JSX ist die Sprache die zum darstellen von Components verwendet
 wird, um genauer zu sagen den Teil den wir in die `render()`-Methode
-schreiben, man kann natürlich auch einfach so JSX-Code zurückgeben ohne `render()`-Methode.
+schreiben, man kann natürlich auch einfach so JSX-Code zurückgeben ohne
+`render()`-Methode.
 
-```js
+```jsx
 render() {
  return (
    <div className="App">
@@ -154,7 +144,7 @@ lesbares JavaScript. Als Beispiel zeige zeige ich euch wie der obere
 Code als normales JavaScript aussieht und was React intern mit JSX
 macht.
 
-```js
+```jsx
 render() {
  return React.createElement('div', 
                             { className: 'App' }, 
@@ -166,11 +156,11 @@ JSX hat aber ein paar kleine Einschränkungen, es sieht zwar aus wie HTML
 und es verhält sich auch in den meisten Fällen so, weswegen wir auch zum
 Beispiel `className` nutzen anstatt die normale HTML-`class`, weil JSX
 intern immer noch zu JavaScript kompiliert wird und `class` unter
-JavaScript eine andere Verwendung findet. Außerdem kann man unter JSX im Normalfall
-nur ein HTML Element zurückgeben, am folgenden Beispiel sieht man wie es
-__nicht__ funktioniert.
+JavaScript eine andere Verwendung findet. Außerdem kann man unter JSX im
+Normalfall nur ein HTML Element zurückgeben, am folgenden Beispiel sieht
+man wie es __nicht__ funktioniert.
 
-```js
+```jsx
 render() {
  return (
    <div className="App">
@@ -182,8 +172,8 @@ render() {
 ```
 
 Aus diesem Grund packt man um ein Component immer ein HTML-Element und
-fügt sein Kontent in dieses HTML-Element oder man nutzt `React.Fragment` anstatt es
-in ein `<div></div>` zupacken.
+fügt sein Kontent in dieses HTML-Element oder man nutzt `React.Fragment`
+anstatt es in ein `<div></div>` zupacken.
 
 
 ## Properties
@@ -192,7 +182,7 @@ Eigenschaften, auch __Properties__ oder Props genannt, bieten uns die
 Möglichkeit unseren Inhalt der Components dynamisch anpassbar zu machen.
 Diese kann man einfach bei den Aufruf des Components übergeben.
 
-```js
+```jsx
 <Foobar foo="bar" />
 <Foobar foo="bar" >Foobar</Foobar>
 ```
@@ -206,7 +196,7 @@ __Wichtig:__ Sollte man dasselbe bei einem klassenbasierten Component
 machen, dann muss man in dem unten gezeigten Beispiel `this.props.foo`
 verwenden.
 
-```js
+```jsx
 import React from 'react';
 
 const foobar = (props) => {
@@ -228,7 +218,7 @@ funktioniert wie ein Objekt in JavaScript, du kannst Sachen drin
 speichern und Abrufen. Das besondere daran ist das wenn du den Inhalt
 ändert löst das ein rendern im UI aus.
 
-```js
+```jsx
 class App extends Component {
   state = {
     foo: [
@@ -264,7 +254,7 @@ JavaScript. Am folgenden Beispiel wird gezeigt wie das Event-Handling
 unter React im Allgemeinen aussieht. Event-Handler können auch über
 Properties weitergegeben werden.
 
-```js
+```jsx
 class App extends Component {
   eventHandler = () => {
     console.log('Button was clicked!');
@@ -299,7 +289,7 @@ Als erstes benötigen wir einen Event-Handler um auf diese Aktion
 reagiert, also wenn etwas in das Input-Feld etwas eingetragen wird, in
 dem Beispiel wollen wir einen Namen in unserer State-Property ändern.
 
-```js
+```jsx
 nameChangedHandler = ( event, id ) => {
   const personIndex = this.state.persons.findIndex(p => {
     return p.id === id;
@@ -322,7 +312,7 @@ Diese Methode übergeben wir nun beim Rendern unserer Person Component,
 hier ist wichtig das wir eine `Key` Attribut mit übergeben, das hilft
 React dabei nur die geänderten Teile neu zu rendern.
 
-```js
+```jsx
 <Person
   name={ person.name } 
   age={ person.age }
@@ -332,7 +322,7 @@ React dabei nur die geänderten Teile neu zu rendern.
 
 Das Component kann nun auf das Attribut reagieren.
 
-```js
+```jsx
 <input type="text" onChange={ props.changed } value={ props.name } />
 ```
 
@@ -343,7 +333,7 @@ Directives (_ngIf_). Wir nutzen einfaches JavaScript, es bietet uns hier
 zwei Möglichkeiten. Die erste Möglichkeit ist es die If-Bedingung direkt
 im JSX einzubinden.
 
-```js
+```jsx
 return (
   <div className="App">
     { 1 + 2 === 4 ? <div>Hello World</div> : null }
@@ -353,7 +343,7 @@ return (
 
 Die zweite Möglichkeit ist das ganze auszulagern.
 
-```js
+```jsx
 if ( 1 + 2 === 4 ) {
   helloWorld = (
     <div>Hello World</div>
@@ -375,7 +365,7 @@ Diese können unter React wirklich simpel durch die JavaScript Methode
 `map` verwirklicht werden, diese liefert jedes Array unter JavaScript
 mit.
 
-```js
+```jsx
 if ( this.state.showPersons ) {
   persons = (
     <div>
@@ -398,7 +388,7 @@ oder via externe `.css`-File Stylings vorzunehmen. Als erstes schauen
 wir uns das Styling via `.css`-File an. Hier für müssen wir eigentlich
 nur die `.css`-File importieren.
 
-```js
+```jsx
 import React from 'react';
 ```
 
@@ -408,7 +398,7 @@ das Inline Styling müssen wir unsere Anweisungen in JavaScript
 verfassen, in dem nächsten Beispiel speichern wir diese in einer
 Variable.
 
-```js
+```jsx
 const style = {
   backgroundColor: 'white',
   border: '1px solid blue'
@@ -417,7 +407,7 @@ const style = {
 
 Jetzt müssen wir dies nur noch in unserem JSX Code verwenden.
 
-```js
+```jsx
 return (
   <div className="App">
     <h1 style={ style }>Hi, I'm a React App</h1>
@@ -440,18 +430,18 @@ Um es aber nun auch verwenden zu können müssen wir es in der Datei, wo
 wir es verwenden wollen, noch einbinden und unser Component beim
 zurückgeben darin einpacken (_wrapping_).
 
-```js
+```jsx
 import Radium from 'radium';
 ```
 
-```js
+```jsx
 export default Radium(App);
 ```
 
 Nun können wir Pseudo Selektoren in unserem Inline Styling verwenden.
 Alle Pseudo Selektoren sind unterstützt.
 
-```js
+```jsx
 const style = {
   backgroundColor: 'white',
   border: '1px solid blue',
@@ -465,7 +455,7 @@ const style = {
 Als nächstes schauen wir uns an wie man Media Queries unter Radium und
 React macht, als Inline Styling.
 
-```js
+```jsx
 const style = {
   '@media (min-width: 500px)': {
       width: '450px'
@@ -476,7 +466,7 @@ const style = {
 Da wir Media Queries verwenden müssen wir unsere App in ein `StyleRoot`
 packen, dasselbe gilt auch für Keyframes.
 
-```js
+```jsx
 return (
   <StyleRoot>
     <div className="App">
@@ -484,6 +474,89 @@ return (
     </div>
   </StyleRoot>
 );
+```
+
+### Aphrodite
+
+[Aphrodite](https://github.com/Khan/aphrodite) ist eine weitere
+Bibliothek für React, die es einem ermöglicht Inline-Style mit
+Pseudo-Selektoren und Media Queries zu verwenden. Der größte Unterschied
+zu Radium ist, dass es unter Aphrodite eine Möglichkeit gibt
+`@font-face` zu verwenden, das man seine Style-Objekte bei der
+`StyleSheet.create()`-Funktion übergibt und das man diese in an
+`className` übergibt anstatt an `style`, über die Funktion `css`.
+Ebenfalls ist es eine Sache von Aphrodite, dass alle Styling bekommen
+das `!important`-Tag, dafür kann man aber `aphroidte/no-important`
+importieren.
+
+Anhand eines Beispiel lässt sich das besser verdeutlichen:
+
+```jsx
+import { StyleSheet, css } from 'aphrodite';
+
+const styles = StyleSheet.create({
+                 panel: {
+                   backgroundColor: '#00ffff',
+                   ':hover': {
+                     color: '#ffffff',
+                     cursor: 'pointer'
+                   },
+                   '@media (max-width: 700px)': {
+                     backgroundColor: '#ff0000'
+                   }
+                 }
+               });
+
+class App extends Component {
+  render() {
+    return (
+      <div className={css(styles.panel)}>
+        React + Aphrodite rocks!
+      </div>
+    );
+  }
+}
+```
+
+### Emotion
+
+[Emotion](https://emotion.sh/) ist die dritte und letzte Bibliothek für
+Inline Styling unter React, die hier behandelt wird. Sie bietet dasselbe
+wie die Aphrodite, sie nutzt ebenfalls `className` und eine Funktion die
+`css` heißt. Anstatt eines Objekt, welches an `className` übergeben
+wird, übergibt man ein sogenanntes "tagged Template". Emotion hat den
+größten Vorteil, dass es mehr nach CSS aussieht als bei den anderen
+beiden Bibliotheken. Es gibt hier bei auch eine weitere Bibliothek die
+sich `react-emotion` nennt, diese ermöglicht es einem mit der Funktion
+`styled()` eigene HTML zu erstellen und diese unter JSX zu verwenden.
+
+Alles nochmal zusammenfassend als Beispiel:
+
+```jsx
+import { css } from 'emotion';
+
+const style = css`
+  background-color: #00ffff;
+  text-align: center;
+  width: 100%;
+  padding 20px;
+  &:hover {
+    color: #ffffff;
+    cursor: pointer;
+  }
+  @media (max-width: 700px) {
+    background-color: #ff0000;
+  }
+`;
+
+class App extends React.Component {
+  render() {
+    return (
+      <div className={style}>
+        React + Emotion rocks!
+      </div>
+    );
+  }
 ```
 
 ### CSS Modules
@@ -499,7 +572,7 @@ react-scripts eject
 Jetzt passen wir die `webpack.config.js` an in unserem neu generierten
 `config`-Ordner. Ab Zeile 391 sollte sie wie folgt aussehen:
 
-```js
+```jsx
 {
   test: cssRegex,
   exclude: cssModuleRegex,
@@ -507,14 +580,14 @@ Jetzt passen wir die `webpack.config.js` an in unserem neu generierten
     importLoaders: 1,
     sourceMap: isEnvProduction && shouldUseSourceMap,
   }),
-  sideEffects: true,
+  sideEffects: true
 }
 ```
 
 Diese passen wir nun so an, dass der CSS-Loader einzigartige Klassen
 daraus generiert.
 
-```js
+```jsx
 {
   test: cssRegex,
   exclude: cssModuleRegex,
@@ -535,11 +608,11 @@ siehe
 Nun müssen wir unseren JavaScript-Code nur noch anpassen. Wir
 importieren unsere `App.css`
 
-```js
+```jsx
 import classes from './App.css';
 ```
 
-```js
+```jsx
 return (
     <div className={classes.App}>
     </div>
@@ -562,6 +635,8 @@ aufgeführten Reihenfolge.
 - [__`render()`__](https://reactjs.org/docs/react-component.html#render)
 - [__`componentDidMount()`__](https://reactjs.org/docs/react-component.html#componentdidmount)
 
+![mounting](./img/mounting.svg)
+
 ### Updating
 
 Diese Lifecycle Hooks werden aufgerufen, in dieser Reihenfolge, wenn das
@@ -576,6 +651,8 @@ Component neu gerendert wird.
 `shouldComponentUpdate()` kann weggelassen werden wenn man
 `PureComponent` importiert statt `Component`.
 
+![updating](./img/updating.svg)
+
 ### Unmounting
 
 Diese Lifecycle Hooks werden aufgerufen, wenn das Component vom DOM
@@ -587,10 +664,11 @@ entfernt wird.
 ### useEffect() und React.memo()
 
 Seit React 16 gibt es durch React Hooks die Möglichkeit so etwas auch in
-funktionale Components einzubinden, durch `useEffect()` und um dasselbe wie `PureComponent`
-unter funktionalen Components zu verwenden, kann man `React.memo()` einbinden.
+funktionale Components einzubinden, durch `useEffect()` und um dasselbe
+wie `PureComponent` unter funktionalen Components zu verwenden, kann man
+`React.memo()` einbinden.
 
-```js
+```jsx
 import React, { useEffect } from 'react';
 
 const foobar = props => {
@@ -615,3 +693,6 @@ const foobar = props => {
 export default React.memo(foobar);
 ```
 
+## Quellen
+
+- [Inline Styling with Radium, Aphrodite & Emotion](https://blog.logrocket.com/the-best-react-inline-style-libraries-comparing-radium-aphrodite-emotion-849ef148c473)

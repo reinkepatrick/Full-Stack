@@ -1,6 +1,7 @@
 <!-- _navbar.md -->
 
 * [Home](/)
+* [Angular](angular/index)
 * [Cloud-Docker-Jenkins](cloud-docker-jenkins/index.md)
 * [Django](django/index)
 * [DotNetCore](dotnetcore/index.md)
