@@ -26,22 +26,6 @@ Nachdem Node.js und npm installiert wurden, kann das Angular Projekt durch die A
 
 per npm zu installieren.
 
-Es ist stets sinnvoll die aktuellen Version zu nutzen. Diese kann jeweils mit 
-
-```shell
-> npm --version
-```
-
-```shell
-> node --version
-```
-
-```shell
-> ng --version
-```
-
- geprüft werden.
-
 ### Projekt erstellen
 
 Um ein Angular Projekt zu erstellen, wechselt man zunächst in das gewünschte Zielverzeichnis. Anschließend wird per Angular CLI ein neues Projekt erstellt.
@@ -64,8 +48,8 @@ Which stylesheet format would you like to use?
 
 Im Anschluss wird die Projektstruktur erstellt. Wechselt man nun in das neu erstellte Verzeichnis, kann mit
 
-```shell
-ng serve
+```bash
+> ng serve
 ```
 
 das Angular Projekt gestartet werden. Dieser Vorgang kann eine Weile dauern, da unter anderem TypeScript in JavaScript kompiliert werden muss. Die Standard Website kann nun unter `localhost:4200` im Browser aufgerufen werden.
