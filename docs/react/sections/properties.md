@@ -68,3 +68,18 @@ auch wirklich durch `this.setState` verändert wurden.
 Um States unter funktionalen Components verwenden zu können benutzt man
 `useState`, hier ist aber wichtig das das neue State-Property das alte
 __überschreibt__. `useState` kann dafür beliebig oft verwendet werden.
+
+### PropTypes
+
+ProTypes ist eine Bibliothek, die es ermöglicht festzulegen welche Typen
+die zu übergebenden Properties haben sollen und warnt den Entwickler,
+wenn diese nicht eingehalten werden. Diese Bibliothek ist von der React Community
+entwickelt worden und muss nachinstalliert (`prop-types`) werden.
+
+```js
+Greeting.propTypes = {
+  name: PropTypes.string
+};
+```
+
+Für weitere Typen die PropTypes mitliefert, siehe [hier](https://reactjs.org/docs/typechecking-with-proptypes.html).
