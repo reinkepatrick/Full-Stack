@@ -101,11 +101,23 @@ Die Facebook App war Anfangs sehr träge, dies lag aber nicht an der App selber,
 
 GraphQL ist unabhängig von der Datenbanksoftware und ist in fast jeder Programmiersprache anwendbar(wie Haskell, JavaScript, Python,Ruby, Java, C#, Scala, Go, Elixir, Erlang, PHP, R und Clojure).
 
+__Inhaltsverzeichnis__
+
+| Themen                                   | Kurzbeschreibugn                         |
+| ---------------------------------------- | ---------------------------------------- |
+| [Standard Abfragen](#Standard Abfrage)   | Einfache Abfragen von einzelnen Knoten   |
+| [Verschachtelte Abfragen](#Verschachtelte Abfragen) | Abfragen über mehrere Knoten             |
+| [Argumente](#Argumente)                  | Verfeinerung von Abfragen                |
+| [Variablen](#Variablen)                  | Variable Argumente für Abfragen          |
+| [Richtlinien (Directives)](#Richtlinien (Directives)) | Ermöglichen es, Abfragen dynamisch anzupassen |
+| [Mutation](#Mutation)                    | Ändern von Daten auf den Server          |
+| [Schemen](#Schemen)                      | Stellt Serverseitig die Datenstruktur zur Verfügung |
+
 ### Abfragen
 
 GraphQL Abfragen verwenden immer die HTTP Methode POST und anders als REST, stellt GraphQL Anfragen immer an dieselbe URL.
 
-#### Standart Abfragen
+#### Standard Abfragen
 
 GraphQL bietet den Client besondere Freiheiten, wenn es darum geht seine Abfragen zu gestalten. <br/>Eine einfache Abfrage in GraphQL könnte in etwa so aussehen: 
 
@@ -128,8 +140,6 @@ Und so könnte die Antwort JSON aussehen:
   }
 }
 ```
-
-
 
 Ändern wir die Anfrage etwas ab, könnte sie so aussehen: 
 
@@ -297,9 +307,41 @@ Im Grunde funktioniert dies genauso wie die Verwendung von Argumenten. Die Infor
 }
 ```
 
-#### Mutationen
+### Mutationen
 
-- tbd
+Mutationen dienen dazu, Daten auf den Server zu ändern, sie sind also das Äquivalent zum REST POST bzw. UPDATE. Syntaktisch sind sie genauso aufgebaut wie Querys:
+
+```
+mutation createDozent($name: String!, $titel: String!, $fachgebiet: String) {
+  createDozentOnServer(String: $name, String: $titel, String: $fachgebiet) {  
+    titel
+  }
+}
+```
+
+Wir übergeben in unserer Mutation(!) wieder unterschiedliche Parameter an die Server Methode "createDozentOnServer". Wir haben auch die Möglichkeit, eine Abfrage in eine Mutation zu integrieren. In diesem Beispiel erstellen wir also einen Dozenten und Fragen danach den Titel unseres Dozenten ab. <br/>Dafür brauchen wir wieder eine JSON, welche unsere Argumente mit Werten füllt:
+
+```JSON
+{
+  "name": "Müller",
+  "titel": "Dr.",
+  "fachgebiet": "Computer Grafik"  
+}
+```
+
+Antwort vom Server:
+
+```JSON
+{
+  "data": {
+    "createDozentOnServer": {
+      "titel": "Dr."
+    }
+  }
+}
+```
+
+
 
 ### Schemen
 
