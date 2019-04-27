@@ -32,3 +32,4 @@ __22.04.2019 - 28.04.2019__
 | 27.04.2019 | Dart: Asynchrone Programmierung                                                                                             | 30 min     |        |
 | 27.04.2019 | Einlesen in Apple's [iOS-App Designguidelines](https://developer.apple.com/design/human-interface-guidelines/ios/overview/) | 30 min     |        |
 | 27.04.2019 | Dart: Vor- und Nachteile, Flutter: Vergleich mit anderen Frameworks                                                         | 3 h        |        |
+| 27.04.2019 | User-Stories und Stakeholder überarbeitet, Begriffe dem Glossar hinzugefügt                                                 | 1 h 30 min |        |
