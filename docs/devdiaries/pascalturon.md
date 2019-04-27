@@ -16,7 +16,16 @@ __08.04.2019 - 14.04.2019__
 
 __15.04.2019 - 21.04.2019__
 
-| Datum      | Tätigkeit | Dauer | Zusatz |
-| ---------- | --------- | ----- | ------ |
-| 15.04.2019 |           |       |        |
+| Datum      | Tätigkeit                   | Dauer | Zusatz |
+| ---------- | --------------------------- | ----- | ------ |
+| 15.04.2019 | Einrichtung OAuth Recherche | 2 Std |        |
+| 17.04.2019 | OAuth mit Google            | 1 Std |        |
+
+## Woche 3
+
+__22.04.2019 - 8.04.2019__
+
+| Datum      | Tätigkeit          | Dauer | Zusatz |
+| ---------- | ------------------ | ----- | ------ |
+| 22.04.2019 | Recherche über JWT | 1 Std |        |
 
