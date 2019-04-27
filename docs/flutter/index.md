@@ -5,6 +5,25 @@
 
 Systemanforderungen: min. iPhone 4S mit iOS 8 oder Android 4.1.x und Gerät mit ARM Prozessor
 
+
+### Vorteile
++ Native Performance
++ Eine Codebase für Android und iOS
++ Gute Dokumentation
+
+### Nachteile
++ Um für jede Plattform das entsprechende Design zu realisieren, muss das Gerät abgefragt und unterschieden werden
++ Alle Designelemente sind nur Reproduktionen der nativen API-Elemente
++ Bringt keine Schnittstelle zur Hardware mit
+
+### Vergleich mit anderen Frameworks
+| Name             | Performance         | Designelemente                                                              | Hardwareaufrufe          | Programmier-/Skriptsprache | Kompatibilität mit weiteren Frameworks |
+| ---------------- | ------------------- | --------------------------------------------------------------------------- | ------------------------ | -------------------------- | -------------------------------------- |
+| **Flutter**      | nativ               | reproduziert, Unterscheidung notwendig                                      | selbst zu implementieren | Dart                       | -                                      |
+| **Ionic**        | Progressive Web App | reproduziert, Unterscheidung nicht notwenig                                 | Cordova Plugins          | JavaScript, TypeScript     | Angular, Vue, React                    |
+| **NativeScript** | nativ               | nativ                                                                       | Plugins                  | JavaScript, TypeScript     | Angular, Vue                           |
+| **React Native** | nativ               | teilweise nativ, teilweise reproduziert, Unterscheidung teilweise notwendig | selbst zu implementieren | JavaScript, TypeScript     | -                                      |
+
 ## Workflow
 Nach der Installation von Flutter wird zunächst ein neues Projekt erzeugt. Dieses automatisch erzeugte Projekt bringt bereits eine Testapp mit an der man sich orientieren kann.
 
@@ -287,3 +306,9 @@ Future checkVersion() async {
 
 Future<String> lookUpVersion() async => '1.0.0';
 ```
+
+**Quellen:**  
+https://www.dartlang.org/guides/language/language-tour  
+https://facebook.github.io/react-native/docs/getting-started  
+https://ionicframework.com/docs  
+https://docs.nativescript.org/  
