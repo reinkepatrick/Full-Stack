@@ -28,3 +28,5 @@ __22.04.2019 - 28.04.2019__
 | ---------- | ------------------------------------------------------------------ | ---------- | ------ |
 | 22.04.2019 | Dart: Syntax und Semantik                                          | 3 h        |        |
 | 26.04.2019 | Definition: Stakeholder, Betriebsbedingungen und Qualitätsmerkmale | 1 h 30 min |        |
+| 26.04.2019 | Definition: User-Stories                                           | 45 min     |        |
+| 27.04.2019 | Dart: Asynchrone Programmierung                                    | 30 min     |        |

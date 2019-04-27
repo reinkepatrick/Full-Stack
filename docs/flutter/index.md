@@ -275,3 +275,15 @@ class PilotedCraft extends Spacecraft with Piloted {
   // ···
 }
 ```
+
+### Asynchrone Programmierung
+Asynchrone Programmierung lässt das Programm weitere Aufgaben erledigen, während auf das Beenden einer Operation gewartet wird. `Future` stellt dabei das Ergebnis einer asynchronen Operation dar.
+
+```dart
+Future checkVersion() async {
+  var version = await lookUpVersion();
+  // Do something with version
+}
+
+Future<String> lookUpVersion() async => '1.0.0';
+```
