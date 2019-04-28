@@ -1,6 +1,6 @@
 ## Lifecycle Hooks
 
-Lifecycle Hooks sind eine Möglichkeit Code auszuführen, bei bestimmten
+Lifecycle Hooks sind eine Möglichkeit Code auszuführen, zu bestimmten
 Zuständen von klassenbasierten Components.
 
 ### Mounting

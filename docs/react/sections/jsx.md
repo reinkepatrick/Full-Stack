@@ -1,8 +1,8 @@
 ## JSX
 
 JSX ist die Sprache die zum darstellen von Components verwendet wird, um
-genauer zu sagen den Teil den wir in die `render()`-Methode schreiben,
-man kann natürlich auch einfach so JSX-Code zurückgeben ohne
+genauer zu sagen der Teil der in die `render()`-Methode geschrieben
+wird, man kann natürlich auch einfach so JSX-Code zurückgeben ohne eine
 `render()`-Methode.
 
 ```jsx
@@ -15,11 +15,10 @@ render() {
 }
 ```
 
-Damit wir dort JSX verwenden können importieren wir auch `React` in
-unserem Component. React erstellt dann aus dem JSX für den Browser
-lesbares JavaScript. Als Beispiel zeige zeige ich euch wie der obere
-Code als normales JavaScript aussieht und was React intern mit JSX
-macht.
+Damit JSX verwendet werden kann, wird auch `React` in ein Component
+importiert. React erstellt dann aus dem JSX für den Browser lesbares
+JavaScript. Als Beispiel wird gezeigt wie der obere Code als
+normales JavaScript aussieht und was React intern mit JSX macht.
 
 ```jsx
 render() {
@@ -30,8 +29,8 @@ render() {
 ```
 
 JSX hat aber ein paar kleine Einschränkungen, es sieht zwar aus wie HTML
-und es verhält sich auch in den meisten Fällen so, weswegen wir auch zum
-Beispiel `className` nutzen anstatt die normale HTML-`class`, weil JSX
+und es verhält sich auch in den meisten Fällen so, weswegen auch zum
+Beispiel `className` genutzt wird anstatt die normale HTML-`class`, weil JSX
 intern immer noch zu JavaScript kompiliert wird und `class` unter
 JavaScript eine andere Verwendung findet. Außerdem kann man unter JSX im
 Normalfall nur ein HTML Element zurückgeben, am folgenden Beispiel sieht
@@ -49,5 +48,5 @@ render() {
 ```
 
 Aus diesem Grund packt man um ein Component immer ein HTML-Element und
-fügt sein Kontent in dieses HTML-Element oder man nutzt `React.Fragment`
+fügt seinen Kontent in dieses HTML-Element ein oder man nutzt `React.Fragment`
 anstatt es in ein `<div></div>` zupacken.
