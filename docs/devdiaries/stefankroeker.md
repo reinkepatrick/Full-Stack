@@ -23,7 +23,8 @@ __15.04.2019 - 21.04.2019__
 | 19.04.2019 | Einlesen in virtualenv.                                                                                                         | 30 min     |        |
 | 19.04.2019 | Integrieren von MariaDB in Django Projekt und verstehen von bestimmten Konfigurationen.                                         | 1h 30 min  | Datenbankinformationen werden in die Datei _settings.py_ geschrieben. Das kann problematisch sein, wenn das Projekt im Git Repository ist. Die Informationen können auch in eine Konfigurationsdatei gespeichert werden. Git hat eine Möglichkeit, welche es erlaubt Dateien zu verschlüsseln. Diese Möglichkeit muss noch recherchiert werden.       |
 | 19.04.2019 | Dokumentieren von Tätigkeit.                                                                                                    | 45 min     |        |
-| 19.04.2019 | Einlesen der Datenbank API, sowie testen der Funktionen und dokumentieren der benutzten Methoden                                | 2h         |        |
+| 19.04.2019 | Einlesen der Datenbank API, sowie testen der Funktionen und Dokumentieren der benutzten Methoden.                               | 2h         |        |
+| 20.04.2019 | Django Admin erstellen und Funtionalität aufschreiben.                                                                          | 15 min     |        |
 
 ## Woche 2 
 __22.04.2019 - 28.04.2019__
