@@ -26,7 +26,7 @@ __15.04.2019 - 21.04.2019__
 | 19.04.2019 | Einlesen der Datenbank API, sowie testen der Funktionen und Dokumentieren der benutzten Methoden.                               | 2h         |        |
 | 20.04.2019 | Django Admin erstellen und Funtionalität aufschreiben.                                                                          | 15 min     |        |
 
-## Woche 2 
+## Woche 3 
 __22.04.2019 - 28.04.2019__
 
 | Datum      | Tätigkeit                                                                                                                       | Dauer      | Zusatz |
@@ -35,3 +35,4 @@ __22.04.2019 - 28.04.2019__
 | 26.04.2019 | Definition von Betribsbedingungen und Qualitätsmerkmalen von cardholder.                                                        | 1h         |        |
 | 26.04.2019 | Nach URL Patterns recherchieren und erklären.                                                                                   | 2h         |        |
 | 26.04.2019 | Definition von User-Stories erstellen.                                                                                          | 45 min     |        |
+| 28.04.2019 | Templates verstehen und erklären.                                                                                               | 2h         |        |
