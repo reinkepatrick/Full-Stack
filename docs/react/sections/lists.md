@@ -1,17 +1,17 @@
 ## Lists
 
-Dieser Teil wird erklären wir man Werte von Forms verändern kann, wie
+In diesem Teil wird erklären wie man Werte von Forms verändern kann, wie
 If-Bedingungen und For-Schleifen unter React verwendet werden können.
 
 ### Two-Way Databinding
 
-Im Vergleich zu Angular besitzen wir hier kein ngModel welches uns die
-Arbeit dafür abnimmt das heißt wir müssen selbst auf Änderungen
+Im Vergleich zu Angular besitzt React kein ngModel, welches einem die
+Arbeit dafür abnimmt. Das heißt man müssen selbst auf Änderungen
 reagieren und Werte setzen.
 
-Als erstes benötigen wir einen Event-Handler um auf diese Aktion
-reagiert, also wenn etwas in das Input-Feld etwas eingetragen wird, in
-dem Beispiel wollen wir einen Namen in unserer State-Property ändern.
+Als erstes wird ein Event-Handler um auf diese Aktion reagieren
+benötigt, also wenn etwas in das Input-Feld eingetragen wird, in dem
+Beispiel wird ein Name im State-Property geändert.
 
 ```jsx
 nameChangedHandler = ( event, id ) => {
@@ -32,9 +32,9 @@ nameChangedHandler = ( event, id ) => {
 }
 ```
 
-Diese Methode übergeben wir nun beim Rendern unserer Person Component,
-hier ist wichtig das wir eine `Key` Attribut mit übergeben, das hilft
-React dabei nur die geänderten Teile neu zu rendern.
+Diese Methode wird nun beim Rendern der Person Component übergeben, hier
+ist wichtig das ein `Key` Attribut mit übergeben wird, das hilft React
+dabei nur die geänderten Teile neu zu rendern.
 
 ```jsx
 <Person
@@ -52,10 +52,10 @@ Das Component kann nun auf das Attribut reagieren.
 
 ### If-Bedingungen
 
-Auch dies ist etwas ungewohnter als unter Angular, wir haben hier keine
-Directives (_ngIf_). Wir nutzen einfaches JavaScript, es bietet uns hier
-zwei Möglichkeiten. Die erste Möglichkeit ist es die If-Bedingung direkt
-im JSX einzubinden.
+Auch dies ist etwas ungewohnter als unter Angular, es gibt unter React
+keine Directives (_ngIf_). Es wird einfaches JavaScript genutzt. Es
+werden zwei Möglichkeiten geboten. Die erste Möglichkeit ist es die
+If-Bedingung direkt im JSX einzubinden.
 
 ```jsx
 return (
@@ -108,8 +108,8 @@ if ( this.state.showPersons ) {
 ### Refs
 
 __Refs__ sind eine Möglichkeit von React auf die Elemente zuzugreifen
-ohne die standardmäßige JavaScript-Funktion zuverwenden. Wichtig hier bei ist es,
-Refs nicht für alles zu verwenden.  
+ohne die standardmäßige JavaScript-Funktion zuverwenden. Wichtig hier
+bei ist es, Refs nicht für alles zu verwenden.  
 Gute Möglichkeiten Refs zu verwenden sind:
 - Verwaltung von Fokusse der Elemente
 - Auslösen von Animationen
@@ -135,4 +135,5 @@ __Refs verwenden__
 const node = this.myRef.current;
 ```
 
-Für eine genauere Dokumentation, siehe [hier](https://reactjs.org/docs/refs-and-the-dom.html).
+Für eine genauere Dokumentation, siehe
+[hier](https://reactjs.org/docs/refs-and-the-dom.html).
