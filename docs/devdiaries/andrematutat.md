@@ -31,7 +31,12 @@ __15.04.2019 - 21.04.2019__
 
 __22.04.2019 - 28.04.2019__
 
-| Datum | Tätigkeit                                | Dauer | Zusatz                                   |
-| ----- | ---------------------------------------- | ----- | ---------------------------------------- |
-| 25.04| Projekt Dokumentation| 2h||
-| 27.04| GraphQL Mutation| 1h||
+| Datum | Tätigkeit                    | Dauer | Zusatz                                   |
+| ----- | ---------------------------- | ----- | ---------------------------------------- |
+| 25.04 | Projekt Dokumentation        | 2h    |                                          |
+| 27.04 | GraphQL Mutation             | 1h    |                                          |
+| 27.04 | Dokumentation Überarbeitet   | 1h    |                                          |
+| 28.04 | GraphQL Schema Recherche     | 2h    | Mutations Schema noch nicht verstand     |
+| 28.04 | GraphQL Schema Dokumentation | 1h    | Aufs wesentliche gekürzt (keine interfaces, scalare etc.) |
+| 28.04 | GraphQL Struktur Diagramm    | 0.5h  |                                          |
+
