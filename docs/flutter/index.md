@@ -17,12 +17,12 @@ Systemanforderungen: min. iPhone 4S mit iOS 8 oder Android 4.1.x und Gerät mit 
 + Bringt keine Schnittstelle zur Hardware mit
 
 ### Vergleich mit anderen Frameworks
-| Name             | Performance         | Designelemente                                                              | Hardwareaufrufe          | Programmier-/Skriptsprache | Kompatibilität mit weiteren Frameworks |
-| ---------------- | ------------------- | --------------------------------------------------------------------------- | ------------------------ | -------------------------- | -------------------------------------- |
-| **Flutter**      | nativ               | reproduziert, Unterscheidung notwendig                                      | selbst zu implementieren | Dart                       | -                                      |
-| **Ionic**        | Progressive Web App | reproduziert, Unterscheidung nicht notwenig                                 | Cordova Plugins          | JavaScript, TypeScript     | Angular, Vue, React                    |
-| **NativeScript** | nativ               | nativ                                                                       | Plugins                  | JavaScript, TypeScript     | Angular, Vue                           |
-| **React Native** | nativ               | teilweise nativ, teilweise reproduziert, Unterscheidung teilweise notwendig | selbst zu implementieren | JavaScript, TypeScript     | -                                      |
+| Name             | Performance         | Designelemente                                                              | Programmier-/Skriptsprache | Kompatibilität mit weiteren Frameworks |
+| ---------------- | ------------------- | --------------------------------------------------------------------------- | -------------------------- | -------------------------------------- |
+| **Flutter**      | nativ               | reproduziert, Unterscheidung notwendig                                      | Dart                       | -                                      |
+| **Ionic**        | Progressive Web App | reproduziert, Unterscheidung nicht notwenig                                 | JavaScript, TypeScript     | Angular, Vue, React                    |
+| **NativeScript** | nativ               | nativ                                                                       | JavaScript, TypeScript     | Angular, Vue                           |
+| **React Native** | nativ               | teilweise nativ, teilweise reproduziert, Unterscheidung teilweise notwendig | JavaScript, TypeScript     | -                                      |
 
 ## Workflow
 Nach der Installation von Flutter wird zunächst ein neues Projekt erzeugt. Dieses automatisch erzeugte Projekt bringt bereits eine Testapp mit an der man sich orientieren kann.
