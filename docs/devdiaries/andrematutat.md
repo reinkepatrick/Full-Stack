@@ -25,7 +25,7 @@ __15.04.2019 - 21.04.2019__
 | 19.04 | Kurzüberblick REST vs GraphQL geholt     | 1h    | Teilweise wiedersprüchliche Aussagen gefunden. |
 | 20.04 | Frage beatnwortet: Was ist GraphQL?      | 1h    | Schwierigkeiten verständliche Beschreibung zu schreiben. |
 | 20.04 | Anfang GraphQL Dokumentation             | 2h    |                                          |
-| 21.04 | Dokumentaton GraphQL Abfragen            | 2h    |                                          |
+| 21.04 | Dokumentation GraphQL Abfragen            | 2h    |                                          |
 
 ## Woche 3
 
