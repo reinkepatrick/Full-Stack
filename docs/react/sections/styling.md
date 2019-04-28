@@ -1,19 +1,19 @@
 ## Styling
 
 Wie unter normalen HTML gibt es auch hier die Möglichkeit Inline Styling
-oder via externe `.css`-File Stylings vorzunehmen. Als erstes schauen
-wir uns das Styling via `.css`-File an. Hier für müssen wir eigentlich
-nur die `.css`-File importieren.
+oder via externe `.css`-File Stylings vorzunehmen. Als erstes wird das
+Styling via `.css`-File an dargestellt.
+
+Hier für muss nur die `.css`-File importiert werden.
 
 ```jsx
 import React from 'react';
 ```
 
-Nun können wir einfach die Klassen via `className` verwenden. __Wichtig
-hier bei ist das alle Änderungen in der `.css`-File global sind.__ Für
-das Inline Styling müssen wir unsere Anweisungen in JavaScript
-verfassen, in dem nächsten Beispiel speichern wir diese in einer
-Variable.
+Nun kann man die Klassen via `className` verwenden.  
+__Wichtig hier bei ist das alle Änderungen in der `.css`-File global sind.__  
+Für das Inline Styling muss eine Anweisung in JavaScript
+verfasst werden.
 
 ```jsx
 const style = {
@@ -22,7 +22,7 @@ const style = {
 };
 ```
 
-Jetzt müssen wir dies nur noch in unserem JSX Code verwenden.
+Jetzt muss dies nur noch in den JSX Code verwendet werden.
 
 ```jsx
 return (
@@ -34,18 +34,14 @@ return (
 
 ### Radium
 
-Radium ist eine Reihe an Tools die uns die Möglichkeit geben unsere
-Inline Styles von unseren React Components zu verbessern. Diese bauen
+Radium ist eine Reihe an Tools, die die Möglichkeit bieten
+Inline Styles in einem React Component zu verbessern. Diese bauen
 außerdem auch Pseudo Selektoren, Media Queries und vieles mehr als
 Inline Styling ein.
 
-```bash
-npm install radium --save
-```
-
-Um es aber nun auch verwenden zu können müssen wir es in der Datei, wo
-wir es verwenden wollen, noch einbinden und unser Component beim
-zurückgeben darin einpacken (_wrapping_).
+Um es aber nun auch verwenden zu können muss es in der Datei, wo
+es verwendet werden soll, noch eingebunden und das Component beim
+zurückgeben darin eingepackt (_wrapping_) werden.
 
 ```jsx
 import Radium from 'radium';
@@ -55,7 +51,7 @@ import Radium from 'radium';
 export default Radium(App);
 ```
 
-Nun können wir Pseudo Selektoren in unserem Inline Styling verwenden.
+Nun können Pseudo Selektoren in Inline Styling verwenden.
 Alle Pseudo Selektoren sind unterstützt.
 
 ```jsx
@@ -69,8 +65,8 @@ const style = {
 };
 ```
 
-Als nächstes schauen wir uns an wie man Media Queries unter Radium und
-React macht, als Inline Styling.
+Als nächstes wird dargestellt wie man Media Queries unter Radium und
+React verwendet, als Inline Styling.
 
 ```jsx
 const style = {
@@ -80,8 +76,8 @@ const style = {
 };
 ```
 
-Da wir Media Queries verwenden müssen wir unsere App in ein `StyleRoot`
-packen, dasselbe gilt auch für Keyframes.
+Um Media Queries verwenden zu können, muss die App in ein `StyleRoot` gepackt werden,
+dasselbe gilt auch für Keyframes.
 
 ```jsx
 return (
@@ -178,16 +174,16 @@ class App extends React.Component {
 
 ### CSS Modules
 
-Wir haben aber auch die Möglichkeit die Scopes unserer Styles
-anzupassen, hierzu müssen wir, aber paar Konfigurationen anpassen. Dazu
-müssen wir `react-scripts` aufrufen.
+Es gibt auch die Möglichkeit die Scopes der Styles
+anzupassen, hierzu müssen, aber paar Konfigurationen angepasst werden. Dazu
+muss `react-scripts` aufgerufen werden.
 
 ```bash
 react-scripts eject
 ```
 
-Jetzt passen wir die `webpack.config.js` an in unserem neu generierten
-`config`-Ordner. Ab Zeile 391 sollte sie wie folgt aussehen:
+Jetzt wird noch die `webpack.config.js` angepasst, diese ist im neu generierten
+`config`-Ordner. Ab _Zeile 391_, sie sollte wie folgt aussehen:
 
 ```jsx
 {
@@ -201,8 +197,8 @@ Jetzt passen wir die `webpack.config.js` an in unserem neu generierten
 }
 ```
 
-Diese passen wir nun so an, dass der CSS-Loader einzigartige Klassen
-daraus generiert.
+Diese wird so angepasst, dass der CSS-Loader einzigartige Klassen
+daraus generieren kann.
 
 ```jsx
 {
@@ -222,8 +218,8 @@ Alternativ muss man kein `react-scripts` dafür ausführen, mehr dafür
 siehe
 [hier](https://facebook.github.io/create-react-app/docs/adding-a-css-modules-stylesheet).
 
-Nun müssen wir unseren JavaScript-Code nur noch anpassen. Wir
-importieren unsere `App.css`
+Nun muss nur noch der JavaScript-Code angepasst werden,
+dies wird unten anhand eines Beispiels gezeigt. 
 
 ```jsx
 import classes from './App.css';
@@ -235,3 +231,4 @@ return (
     </div>
 );
 ```
+
