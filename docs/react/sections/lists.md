@@ -104,3 +104,35 @@ if ( this.state.showPersons ) {
   );
 }
 ```
+
+### Refs
+
+__Refs__ sind eine Möglichkeit von React auf die Elemente zuzugreifen
+ohne die standardmäßige JavaScript-Funktion zuverwenden. Wichtig hier bei ist es,
+Refs nicht für alles zu verwenden.  
+Gute Möglichkeiten Refs zu verwenden sind:
+- Verwaltung von Fokusse der Elemente
+- Auslösen von Animationen
+- Third-Party Bibliotheken für die DOM-Manipulation
+
+__Refs erstellen__
+
+```jsx
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.myRef = React.createRef();
+  }
+  render() {
+    return <div ref={this.myRef} />;
+  }
+}
+```
+
+__Refs verwenden__
+
+```jsx
+const node = this.myRef.current;
+```
+
+Für eine genauere Dokumentation, siehe [hier](https://reactjs.org/docs/refs-and-the-dom.html).
