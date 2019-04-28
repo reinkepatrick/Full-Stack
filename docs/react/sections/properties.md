@@ -1,7 +1,7 @@
 ## Properties
 
-Eigenschaften, auch __Properties__ oder Props genannt, bieten uns die
-Möglichkeit unseren Inhalt der Components dynamisch anpassbar zu machen.
+Eigenschaften, auch __Properties__ oder __Props__ genannt, bieten uns die
+Möglichkeit den Inhalt der Components dynamisch anpassbar zu machen.
 Diese kann man einfach bei den Aufruf des Components übergeben.
 
 ```jsx
@@ -73,8 +73,9 @@ __überschreibt__. `useState` kann dafür beliebig oft verwendet werden.
 
 ProTypes ist eine Bibliothek, die es ermöglicht festzulegen welche Typen
 die zu übergebenden Properties haben sollen und warnt den Entwickler,
-wenn diese nicht eingehalten werden. Diese Bibliothek ist von der React Community
-entwickelt worden und muss nachinstalliert (`prop-types`) werden.
+wenn diese nicht eingehalten werden. Diese Bibliothek ist von der React
+Community entwickelt worden und muss nachinstalliert (`prop-types`)
+werden.
 
 ```js
 Greeting.propTypes = {
@@ -82,4 +83,54 @@ Greeting.propTypes = {
 };
 ```
 
-Für weitere Typen die PropTypes mitliefert, siehe [hier](https://reactjs.org/docs/typechecking-with-proptypes.html).
+Für weitere Typen die PropTypes mitliefert, siehe
+[hier](https://reactjs.org/docs/typechecking-with-proptypes.html).
+
+### Context
+
+React bietet eine Option, Daten von Component A zu Component D zu
+übergeben, diese Option nennt sich Context. Ein Beispiel für so eine
+Anwendung ist zum Beispiel eine Authentifizierung.
+
+__Context erstellen__  
+Das Erstellen eines Context geschieht mit `React.createContext()`.
+```jsx
+import React from 'react';
+
+const authContext = React.createContext({
+  authenticated: false,
+  login: () => {}
+});
+
+export default authContext;
+```
+
+__Context bereitstellen__  
+Das Bereitstellen des Context geschieht in einem übergeordneten Component über `Context.Provider`.
+
+```jsx
+<AuthContext.Provider
+  value={{
+    authenticated: this.state.authenticated,
+    login: this.loginHandler
+  }}
+>
+<Element />
+</AuthContext.Provider>
+```
+
+__Context verwenden__  
+Das Verwenden vom Context ist mit `contextType` oder `useContext()` möglich.
+
+Klassenbasierte Components:
+```jsx
+static contextType = AuthContext;
+console.log(this.context.authenticated);
+```
+
+Funktionale Components:
+```jsx
+const authContext = useContext(AuthContext);
+console.log(authContext.authenticated);
+```
+
