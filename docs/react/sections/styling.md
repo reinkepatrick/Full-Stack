@@ -219,7 +219,7 @@ siehe
 [hier](https://facebook.github.io/create-react-app/docs/adding-a-css-modules-stylesheet).
 
 Nun muss nur noch der JavaScript-Code angepasst werden,
-dies wird unten anhand eines Beispiels gezeigt. 
+dies wird unten anhand eines Beispiels gezeigt.
 
 ```jsx
 import classes from './App.css';
