@@ -24,6 +24,7 @@ __15.04.2019 - 21.04.2019__
 
 ## Woche 3 
 __22.04.2019 - 28.04.2019__
+
 | Datum      | Tätigkeit                                                                                                                   | Dauer      | Zusatz |
 | ---------- | --------------------------------------------------------------------------------------------------------------------------- | ---------- | ------ |
 | 22.04.2019 | Dart: Syntax und Semantik                                                                                                   | 3 h        |        |
@@ -34,3 +35,10 @@ __22.04.2019 - 28.04.2019__
 | 27.04.2019 | Dart: Vor- und Nachteile, Flutter: Vergleich mit anderen Frameworks                                                         | 3 h        |        |
 | 27.04.2019 | User-Stories und Stakeholder überarbeitet, Begriffe dem Glossar hinzugefügt                                                 | 1 h 30 min |        |
 | 27.04.2019 | Use-Case Diagramm erstellt                                                                                                  | 30 min     |        |
+
+## Woche 3 
+__29.04.2019 - 05.05.2019__
+
+| Datum | Tätigkeit | Dauer | Zusatz |
+| ----- | --------- | ----- | ------ |
+|       |           |       |        |
