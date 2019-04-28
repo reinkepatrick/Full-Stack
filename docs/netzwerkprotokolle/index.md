@@ -101,13 +101,12 @@ Die Facebook App war Anfangs sehr träge, dies lag aber nicht an der App selber,
 
 GraphQL ist unabhängig von der Datenbanksoftware und ist in fast jeder Programmiersprache anwendbar(wie Haskell, JavaScript, Python,Ruby, Java, C#, Scala, Go, Elixir, Erlang, PHP, R und Clojure).
 
-
 __Inhaltsverzeichnis__
 
 | Themen                                   | Kurzbeschreibugn                         |
 | ---------------------------------------- | ---------------------------------------- |
-| [Standard Abfragen](#Standard Abfrage)   | Einfache Abfragen von einzelnen Knoten   |
-| [Verschachtelte Abfragen](#Verschachtelte Abfragen) | Abfragen über mehrere Knoten             |
+| [Standard Abfragen](#Abfragen)   | Einfache Abfragen von einzelnen Knoten   |
+| [Verschachtelte Abfragen](#Abfragen) | Abfragen über mehrere Knoten             |
 | [Argumente](#Argumente)                  | Verfeinerung von Abfragen                |
 | [Variablen](#Variablen)                  | Variable Argumente für Abfragen          |
 | [Richtlinien (Directives)](#Richtlinien (Directives)) | Ermöglichen es, Abfragen dynamisch anzupassen |
