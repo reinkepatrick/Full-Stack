@@ -11,11 +11,11 @@ Diese kann man einfach bei den Aufruf des Components übergeben.
 
 ![components](./img/props.svg)
 
-Diese Properties kann man dann einfach innerhalb des Components
-verwenden. Im zweiten Aufruf übergeben wir etwas nicht als Attribut,
-dies kann man einfach über `.children` aufrufen.  
+Properties kann man dann einfach innerhalb des Components
+verwenden. Im zweiten Aufruf, im Beispiel, wird es nicht als Attribut übergeben,
+dies kann man einfach über `.children` abrufen.  
 __Wichtig:__ Sollte man dasselbe bei einem klassenbasierten Component
-machen, dann muss man in dem unten gezeigten Beispiel `this.props.foo`
+machen, dann muss man es wie in dem unten gezeigten Beispiel, `this.props.foo`
 verwenden.
 
 ```jsx
@@ -35,10 +35,10 @@ export default foobar;
 
 ### State-Property
 
-Die State-Property ist eine besondere Property in React, sie
+Die State-Property ist eine besondere Art von Property in React, sie
 funktioniert wie ein Objekt in JavaScript, du kannst Sachen drin
-speichern und Abrufen. Das besondere daran ist das wenn du den Inhalt
-ändert löst das ein rendern im UI aus.
+speichern und abrufen. Das besondere daran ist, wenn man den Inhalt
+ändert löst das ein neues Rendern im UI aus.
 
 ```jsx
 class App extends Component {
