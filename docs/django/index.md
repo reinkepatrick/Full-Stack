@@ -259,7 +259,7 @@ admin.site.register(Question)
 ```
 
 ## Templates
-Templates sind dafür da, um beim Response ein Design für bestimmte Responses zu ermöglichen. Somit wird views von der Benutzeroberfläche abgekapselt.  
+Templates sind dafür da, um beim Response ein Design für bestimmte Responses zu ermöglichen. Somit werden views von der Benutzeroberfläche abgekapselt.  
 Die Templates sind in einer HTML Datei geschrieben, welche dann in der View angegeben werden muss. Im Template selber können auf Variablen zugegriffen werden. Dies ist durch Django möglich. Genauso können auch Kontrollstrukturen verwendet werden.
 
 Beispiel Ablauf:
