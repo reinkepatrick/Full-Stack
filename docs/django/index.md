@@ -242,5 +242,21 @@ Löschen einer Datenzeile ist mit der Methode `delete()` möglich. Der Aufruf de
 >>> question.delete()
 ```
 
+## Django Admin
+Mit Django hat man die Möglichkeit, eine Admin Seite zu betreten. Dort können z.B. die Datenbank Einträge eingesehen und geändert werden. Um einen Admin zu erstellen, wird dieser Befehl auf der Shell ausgeführt.
+
+```bash
+$ python manage.py createsuperuser
+```
+
+Danach wird man auch nach Username und Passwort gefragt. Nun kann der Benutzer sich unter der URL `/admin/` anmelden. Damit die Models auf der Admin Seite sichbar sind, muss dies noch in der Datei `testapp/admin.py` der App, angepasst werden.
+
+```python
+from django.contrib import admin
+from .models import Question
+
+admin.site.register(Question)
+```
+
 ## Templates
 
