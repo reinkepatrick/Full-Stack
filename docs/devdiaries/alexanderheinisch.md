@@ -37,3 +37,25 @@ __15.04.2019 - 21.04.2019__
 | 20.04.2019 | Beispiele Für F# Code hinzugefügt              | 10 min |                                                              |
 | 21.04.2019 | über SQL Type Provider informationen gesammelt | 20 min | Als Alternative zum EF mögliche Provider MSSQL/PostgreSQL/   |
 
+## Woche 3 
+
+__22.04.2019 - 28.04.2019__
+
+| Datum      | Tätigkeit                                                    | Dauer  | Zusatz                                                       |
+| ---------- | ------------------------------------------------------------ | ------ | ------------------------------------------------------------ |
+| 23.04.2019 | Umstrukturierung dotnet core Thema                           | 30 min | Fälschlicherweise dotnet Framework und dotnet Core als "Framework" bezeichnet. |
+| 23.04.2019 | Relevante dotnet core Frameworks recherchiert                | 60 min |                                                              |
+| 25.04.2019 | Überblick grafik für dotnet core                             | 30 min |                                                              |
+| 26.04.2019 | Informationen über Funktionale Programmierung gesammelt      | 60 min |                                                              |
+| 27.04.2019 | Docker für dotnet core angeschaut                            | 60 min | dockerhub unterstützt keine preview versionen von dotnet core |
+| 28.04.2019 | über die Großen 3 Test Frameworks recherchiert (XUnit, NUnit, MSUnit) | 60 min |                                                              |
+
+## Woche 3 
+
+__22.04.2019 - 28.04.2019__
+| Datum      | Tätigkeit                     | Dauer | Zusatz                        |
+| ---------- | ----------------------------- | ----- | ----------------------------- |
+| 29.04.2019 | Überarbeitung F# Beschreibung | 2 h   |                               |
+| 29.04.2019 | Anfang von Pattern Matching   | 1h    | Active Pattern ist verwirrend |
+
+
