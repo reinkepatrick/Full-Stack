@@ -25,9 +25,10 @@ __15.04.2019 - 21.04.2019__
 
 __22.04.2019 - 28.04.2019__
 
-| Datum      | Tätigkeit                           | Dauer | Zusatz                                         |
-| ---------- | ----------------------------------- | ----- | ---------------------------------------------- |
-| 24.04.2019 | Recherche zu MVC und Flux-Vergleich | 1h    |                                                |
-| 25.04.2019 | MVC und Datenfluß in MVC            | 1,5h  |                                                |
-| 27.04.2029 | MVC vs Flux, Redux                  | 4h    | Offene Fragen: Wie funktioniert Asynchronität? |
+| Datum      | Tätigkeit                                     | Dauer | Zusatz                                         |
+| ---------- | --------------------------------------------- | ----- | ---------------------------------------------- |
+| 24.04.2019 | Recherche zu MVC und Flux-Vergleich           | 1h    |                                                |
+| 25.04.2019 | MVC und Datenfluß in MVC                      | 1,5h  |                                                |
+| 27.04.2029 | MVC vs Flux, Redux                            | 4h    | Offene Fragen: Wie funktioniert Asynchronität? |
+| 29.04.2019 | Überarbeitung, Stores zwischen Redux und Flux | 1h    |                                                |
 
