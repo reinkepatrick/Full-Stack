@@ -4,7 +4,7 @@
 
 ### Was ist dotnet Core?  
 
-![ersatz text](./img/dotnetcore_overview.svg)
+![ersatz text](./img/dotnetcore-overview.svg)
 
 dotnet Core ist ein Opensource Plattform. Diese Plattform soll in Zukunft das dotnet Framework ersetzen. Eine große Änderung ist es Plattformunabhängig zu werden. Das dotnet Team stellt eine CLI zur Verfügung um ein Projekt zu erstellen, Kompilieren und testen. Die dotnet core Plattform kann mit VB, C# und F# genutzt werden. Außerdem wurden die einzelnen Komponenten von dem Grundsystem endkapselt.
 
