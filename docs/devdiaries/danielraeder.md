@@ -25,3 +25,9 @@ __22.04.2019 - 28.04.2019__
 | 26.04.2019 | Einarbeiten in StardustJS in Kombination mit d3js                                     | 1 h 45 min | |
 | 28.04.2019 | Umsetzung von Graphen aus CSV in StardustJS, mit dynamischer Darstelung & Transitions | 4 h 40 min | |
 
+## Woche 4 
+__29.04.2019 - 05.01.2019__
+
+| Datum      | Tätigkeit                                                                             | Dauer      | Zusatz |
+| ---------- | ------------------------------------------------------------------------------------- | ---------- | ------ |
+| 29.04.2019 | Aufarbeitung der Dokumentation von WebGL: weniger Code, mehr Inhalt                   | 2 h        | |
