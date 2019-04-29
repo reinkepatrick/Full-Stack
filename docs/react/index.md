@@ -1,5 +1,6 @@
 # React
 
+
 ## Was ist React?
 
 [React](https://reactjs.org/) ist ein JavaScript Framework, von
@@ -19,15 +20,15 @@ genau der Unterschied zwischen SPA und MPA ist.
 ## Workflow
 
 Die Dependencies spielen eine große Rolle in der heutigen Zeit von
-JavaScript um dort den Überblick und den bestmöglichen Komfort zu haben
-benutzen wir einen sogenanntes Dependency Managment Tool. In unserem
-Fall nutzen wir den Node Package Manager (_npm_). Wir nutzen einen
-sogenannten Bundler der aus all unseren Dateien ein kompaktes Produkt
-formt, hier zu nutzen wir Webpack. Um wie oben, in den
+JavaScript um dort den Überblick und den bestmöglichen Komfort zu bieten
+wird einen sogenanntes Dependency Management Tool empfohlen. In diesem
+Fall wird der Node Package Manager (_npm_) genutzt. Es wird ein Bundler,
+der aus allen Dateien ein kompaktes Produkt formt, genutzt. React
+verwendet dafür Webpack. Um wie oben, in den
 [Anforderungen](#anforderungen) angesprochen, ES6 verwenden zu können
-benötigen wir einen Compiler, dieser sorgt dafür das aus ES6 gängiges
-JavaScript wird und es für jeden Browser verständlich ist. Diese Arbeit
-nimmt uns bei React ein Tool ab, dieses Tool nennt sich
+wird ein Compiler genutzt, dieser sorgt dafür das aus ES6 gängiges
+JavaScript wird das für jeden modernen Browser verständlich ist. Diese
+Arbeit nimmt bei React ein Tool ab, dieses Tool nennt sich
 [create-react-app](https://github.com/facebook/create-react-app).
 
 ```bash
@@ -35,20 +36,21 @@ npm install -g create-react-app
 create-react-app test-react-app
 ```
 
-Um die App im Browser richtig darstellen zu können starten wir den
-mitgebrachten Webserver über npm, die App ist dann über
+Um die App im Browser richtig darstellen zu können wird der
+mitgebrachten Webserver über npm gestartet, die App ist dann über
 [localhost:3000](http://localhost:3000) erreichbar. __Bei einer Änderung
-an unserer App wird diese automatisch neu erstellt.__
+an der App wird diese automatisch neu erstellt.__
 
 ```bash
 npm start
 ```
 
+
 ## Components
 
-Komponenten sind das grundlegendste in React auch bekannt als
-__Components__, aus einzelnen Components wird eine App am Ende
-zusammengesetzt. Der Vorteil an Components sind das man sie immer wieder
+Komponenten sind das grundlegendste in React, auch bekannt als
+__Components__. Einzelne Components werden am Ende zu einer App
+zusammengesetzt. Der Vorteil an Components ist das man sie immer wieder
 verwenden und dynamisch anpassen kann. Jedes Component muss zwingend JSX
 zurückgeben oder diesen rendern.
 
@@ -97,9 +99,9 @@ export default foobar;
 Diese bezeichnet man als Container- oder Zustandscomponents, diese
 verwendet man wie der Name schon sagt, wenn man Zustände in einem
 Component speichern möchte. Um eigene Components dann zu verwenden, kann
-man diese einfach einbinden und aufrufen. Hier zu nutzen wir das
-funktionale Component aus dem Beispiel über uns und importieren es in
-die `App.js`.
+man diese einfach einbinden und aufrufen. Hier zu wird das
+funktionale Component aus dem oberen Beispiel genutzt und es in
+die `App.js` importiert.
 
 ```jsx
 import React, { Component } from 'react';
@@ -123,9 +125,9 @@ export default App;
 
 ## JSX
 
-JSX ist die Sprache die zum darstellen von Components verwendet
-wird, um genauer zu sagen den Teil den wir in die `render()`-Methode
-schreiben, man kann natürlich auch einfach so JSX-Code zurückgeben ohne
+JSX ist die Sprache die zum darstellen von Components verwendet wird, um
+genauer zu sagen der Teil der in die `render()`-Methode geschrieben
+wird, man kann natürlich auch einfach so JSX-Code zurückgeben ohne eine
 `render()`-Methode.
 
 ```jsx
@@ -138,11 +140,10 @@ render() {
 }
 ```
 
-Damit wir dort JSX verwenden können importieren wir auch `React` in
-unserem Component. React erstellt dann aus dem JSX für den Browser
-lesbares JavaScript. Als Beispiel zeige zeige ich euch wie der obere
-Code als normales JavaScript aussieht und was React intern mit JSX
-macht.
+Damit JSX verwendet werden kann, wird auch `React` in ein Component
+importiert. React erstellt dann aus dem JSX für den Browser lesbares
+JavaScript. Als Beispiel wird gezeigt wie der obere Code als
+normales JavaScript aussieht und was React intern mit JSX macht.
 
 ```jsx
 render() {
@@ -153,8 +154,8 @@ render() {
 ```
 
 JSX hat aber ein paar kleine Einschränkungen, es sieht zwar aus wie HTML
-und es verhält sich auch in den meisten Fällen so, weswegen wir auch zum
-Beispiel `className` nutzen anstatt die normale HTML-`class`, weil JSX
+und es verhält sich auch in den meisten Fällen so, weswegen auch zum
+Beispiel `className` genutzt wird anstatt die normale HTML-`class`, weil JSX
 intern immer noch zu JavaScript kompiliert wird und `class` unter
 JavaScript eine andere Verwendung findet. Außerdem kann man unter JSX im
 Normalfall nur ein HTML Element zurückgeben, am folgenden Beispiel sieht
@@ -172,14 +173,14 @@ render() {
 ```
 
 Aus diesem Grund packt man um ein Component immer ein HTML-Element und
-fügt sein Kontent in dieses HTML-Element oder man nutzt `React.Fragment`
+fügt seinen Kontent in dieses HTML-Element ein oder man nutzt `React.Fragment`
 anstatt es in ein `<div></div>` zupacken.
 
 
 ## Properties
 
-Eigenschaften, auch __Properties__ oder Props genannt, bieten uns die
-Möglichkeit unseren Inhalt der Components dynamisch anpassbar zu machen.
+Eigenschaften, auch __Properties__ oder __Props__ genannt, bieten uns die
+Möglichkeit den Inhalt der Components dynamisch anpassbar zu machen.
 Diese kann man einfach bei den Aufruf des Components übergeben.
 
 ```jsx
@@ -189,11 +190,11 @@ Diese kann man einfach bei den Aufruf des Components übergeben.
 
 ![components](./img/props.svg)
 
-Diese Properties kann man dann einfach innerhalb des Components
-verwenden. Im zweiten Aufruf übergeben wir etwas nicht als Attribut,
-dies kann man einfach über `.children` aufrufen.  
+Properties kann man dann einfach innerhalb des Components
+verwenden. Im zweiten Aufruf, im Beispiel, wird es nicht als Attribut übergeben,
+dies kann man einfach über `.children` abrufen.  
 __Wichtig:__ Sollte man dasselbe bei einem klassenbasierten Component
-machen, dann muss man in dem unten gezeigten Beispiel `this.props.foo`
+machen, dann muss man es wie in dem unten gezeigten Beispiel, `this.props.foo`
 verwenden.
 
 ```jsx
@@ -213,10 +214,10 @@ export default foobar;
 
 ### State-Property
 
-Die State-Property ist eine besondere Property in React, sie
+Die State-Property ist eine besondere Art von Property in React, sie
 funktioniert wie ein Objekt in JavaScript, du kannst Sachen drin
-speichern und Abrufen. Das besondere daran ist das wenn du den Inhalt
-ändert löst das ein rendern im UI aus.
+speichern und abrufen. Das besondere daran ist, wenn man den Inhalt
+ändert löst das ein neues Rendern im UI aus.
 
 ```jsx
 class App extends Component {
@@ -247,6 +248,72 @@ Um States unter funktionalen Components verwenden zu können benutzt man
 `useState`, hier ist aber wichtig das das neue State-Property das alte
 __überschreibt__. `useState` kann dafür beliebig oft verwendet werden.
 
+### PropTypes
+
+ProTypes ist eine Bibliothek, die es ermöglicht festzulegen welche Typen
+die zu übergebenden Properties haben sollen und warnt den Entwickler,
+wenn diese nicht eingehalten werden. Diese Bibliothek ist von der React
+Community entwickelt worden und muss nachinstalliert (`prop-types`)
+werden.
+
+```js
+Greeting.propTypes = {
+  name: PropTypes.string
+};
+```
+
+Für weitere Typen die PropTypes mitliefert, siehe
+[hier](https://reactjs.org/docs/typechecking-with-proptypes.html).
+
+### Context
+
+React bietet eine Option, Daten von Component A zu Component D zu
+übergeben, diese Option nennt sich Context. Ein Beispiel für so eine
+Anwendung ist zum Beispiel eine Authentifizierung.
+
+__Context erstellen__  
+Das Erstellen eines Context geschieht mit `React.createContext()`.
+```jsx
+import React from 'react';
+
+const authContext = React.createContext({
+  authenticated: false,
+  login: () => {}
+});
+
+export default authContext;
+```
+
+__Context bereitstellen__  
+Das Bereitstellen des Context geschieht in einem übergeordneten Component über `Context.Provider`.
+
+```jsx
+<AuthContext.Provider
+  value={{
+    authenticated: this.state.authenticated,
+    login: this.loginHandler
+  }}
+>
+<Element />
+</AuthContext.Provider>
+```
+
+__Context verwenden__  
+Das Verwenden vom Context ist mit `contextType` oder `useContext()` möglich.
+
+Klassenbasierte Components:
+```jsx
+static contextType = AuthContext;
+console.log(this.context.authenticated);
+```
+
+Funktionale Components:
+```jsx
+const authContext = useContext(AuthContext);
+console.log(authContext.authenticated);
+```
+
+
 ## Event-Handling
 
 Event Handling ist unter React relativ ähnlich zum Event-Handling unter
@@ -276,18 +343,18 @@ Für weitere Events siehe
 
 ## Lists
 
-Dieser Teil wird erklären wir man Werte von Forms verändern kann, wie
+In diesem Teil wird erklären wie man Werte von Forms verändern kann, wie
 If-Bedingungen und For-Schleifen unter React verwendet werden können.
 
 ### Two-Way Databinding
 
-Im Vergleich zu Angular besitzen wir hier kein ngModel welches uns die
-Arbeit dafür abnimmt das heißt wir müssen selbst auf Änderungen
+Im Vergleich zu Angular besitzt React kein ngModel, welches einem die
+Arbeit dafür abnimmt. Das heißt man müssen selbst auf Änderungen
 reagieren und Werte setzen.
 
-Als erstes benötigen wir einen Event-Handler um auf diese Aktion
-reagiert, also wenn etwas in das Input-Feld etwas eingetragen wird, in
-dem Beispiel wollen wir einen Namen in unserer State-Property ändern.
+Als erstes wird ein Event-Handler um auf diese Aktion reagieren
+benötigt, also wenn etwas in das Input-Feld eingetragen wird, in dem
+Beispiel wird ein Name im State-Property geändert.
 
 ```jsx
 nameChangedHandler = ( event, id ) => {
@@ -308,9 +375,9 @@ nameChangedHandler = ( event, id ) => {
 }
 ```
 
-Diese Methode übergeben wir nun beim Rendern unserer Person Component,
-hier ist wichtig das wir eine `Key` Attribut mit übergeben, das hilft
-React dabei nur die geänderten Teile neu zu rendern.
+Diese Methode wird nun beim Rendern der Person Component übergeben, hier
+ist wichtig das ein `Key` Attribut mit übergeben wird, das hilft React
+dabei nur die geänderten Teile neu zu rendern.
 
 ```jsx
 <Person
@@ -328,10 +395,10 @@ Das Component kann nun auf das Attribut reagieren.
 
 ### If-Bedingungen
 
-Auch dies ist etwas ungewohnter als unter Angular, wir haben hier keine
-Directives (_ngIf_). Wir nutzen einfaches JavaScript, es bietet uns hier
-zwei Möglichkeiten. Die erste Möglichkeit ist es die If-Bedingung direkt
-im JSX einzubinden.
+Auch dies ist etwas ungewohnter als unter Angular, es gibt unter React
+keine Directives (_ngIf_). Es wird einfaches JavaScript genutzt. Es
+werden zwei Möglichkeiten geboten. Die erste Möglichkeit ist es die
+If-Bedingung direkt im JSX einzubinden.
 
 ```jsx
 return (
@@ -381,22 +448,56 @@ if ( this.state.showPersons ) {
 }
 ```
 
+### Refs
+
+__Refs__ sind eine Möglichkeit von React auf die Elemente zuzugreifen
+ohne die standardmäßige JavaScript-Funktion zuverwenden. Wichtig hier
+bei ist es, Refs nicht für alles zu verwenden.  
+Gute Möglichkeiten Refs zu verwenden sind:
+- Verwaltung von Fokusse der Elemente
+- Auslösen von Animationen
+- Third-Party Bibliotheken für die DOM-Manipulation
+
+__Refs erstellen__
+
+```jsx
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.myRef = React.createRef();
+  }
+  render() {
+    return <div ref={this.myRef} />;
+  }
+}
+```
+
+__Refs verwenden__
+
+```jsx
+const node = this.myRef.current;
+```
+
+Für eine genauere Dokumentation, siehe
+[hier](https://reactjs.org/docs/refs-and-the-dom.html).
+
+
 ## Styling
 
 Wie unter normalen HTML gibt es auch hier die Möglichkeit Inline Styling
-oder via externe `.css`-File Stylings vorzunehmen. Als erstes schauen
-wir uns das Styling via `.css`-File an. Hier für müssen wir eigentlich
-nur die `.css`-File importieren.
+oder via externe `.css`-File Stylings vorzunehmen. Als erstes wird das
+Styling via `.css`-File an dargestellt.
+
+Hier für muss nur die `.css`-File importiert werden.
 
 ```jsx
 import React from 'react';
 ```
 
-Nun können wir einfach die Klassen via `className` verwenden. __Wichtig
-hier bei ist das alle Änderungen in der `.css`-File global sind.__ Für
-das Inline Styling müssen wir unsere Anweisungen in JavaScript
-verfassen, in dem nächsten Beispiel speichern wir diese in einer
-Variable.
+Nun kann man die Klassen via `className` verwenden.  
+__Wichtig hier bei ist das alle Änderungen in der `.css`-File global sind.__  
+Für das Inline Styling muss eine Anweisung in JavaScript
+verfasst werden.
 
 ```jsx
 const style = {
@@ -405,7 +506,7 @@ const style = {
 };
 ```
 
-Jetzt müssen wir dies nur noch in unserem JSX Code verwenden.
+Jetzt muss dies nur noch in den JSX Code verwendet werden.
 
 ```jsx
 return (
@@ -417,18 +518,14 @@ return (
 
 ### Radium
 
-Radium ist eine Reihe an Tools die uns die Möglichkeit geben unsere
-Inline Styles von unseren React Components zu verbessern. Diese bauen
+Radium ist eine Reihe an Tools, die die Möglichkeit bieten
+Inline Styles in einem React Component zu verbessern. Diese bauen
 außerdem auch Pseudo Selektoren, Media Queries und vieles mehr als
 Inline Styling ein.
 
-```bash
-npm install radium --save
-```
-
-Um es aber nun auch verwenden zu können müssen wir es in der Datei, wo
-wir es verwenden wollen, noch einbinden und unser Component beim
-zurückgeben darin einpacken (_wrapping_).
+Um es aber nun auch verwenden zu können muss es in der Datei, wo
+es verwendet werden soll, noch eingebunden und das Component beim
+zurückgeben darin eingepackt (_wrapping_) werden.
 
 ```jsx
 import Radium from 'radium';
@@ -438,7 +535,7 @@ import Radium from 'radium';
 export default Radium(App);
 ```
 
-Nun können wir Pseudo Selektoren in unserem Inline Styling verwenden.
+Nun können Pseudo Selektoren in Inline Styling verwenden.
 Alle Pseudo Selektoren sind unterstützt.
 
 ```jsx
@@ -452,8 +549,8 @@ const style = {
 };
 ```
 
-Als nächstes schauen wir uns an wie man Media Queries unter Radium und
-React macht, als Inline Styling.
+Als nächstes wird dargestellt wie man Media Queries unter Radium und
+React verwendet, als Inline Styling.
 
 ```jsx
 const style = {
@@ -463,8 +560,8 @@ const style = {
 };
 ```
 
-Da wir Media Queries verwenden müssen wir unsere App in ein `StyleRoot`
-packen, dasselbe gilt auch für Keyframes.
+Um Media Queries verwenden zu können, muss die App in ein `StyleRoot` gepackt werden,
+dasselbe gilt auch für Keyframes.
 
 ```jsx
 return (
@@ -561,16 +658,16 @@ class App extends React.Component {
 
 ### CSS Modules
 
-Wir haben aber auch die Möglichkeit die Scopes unserer Styles
-anzupassen, hierzu müssen wir, aber paar Konfigurationen anpassen. Dazu
-müssen wir `react-scripts` aufrufen.
+Es gibt auch die Möglichkeit die Scopes der Styles
+anzupassen, hierzu müssen, aber paar Konfigurationen angepasst werden. Dazu
+muss `react-scripts` aufgerufen werden.
 
 ```bash
 react-scripts eject
 ```
 
-Jetzt passen wir die `webpack.config.js` an in unserem neu generierten
-`config`-Ordner. Ab Zeile 391 sollte sie wie folgt aussehen:
+Jetzt wird noch die `webpack.config.js` angepasst, diese ist im neu generierten
+`config`-Ordner. Ab _Zeile 391_, sie sollte wie folgt aussehen:
 
 ```jsx
 {
@@ -584,8 +681,8 @@ Jetzt passen wir die `webpack.config.js` an in unserem neu generierten
 }
 ```
 
-Diese passen wir nun so an, dass der CSS-Loader einzigartige Klassen
-daraus generiert.
+Diese wird so angepasst, dass der CSS-Loader einzigartige Klassen
+daraus generieren kann.
 
 ```jsx
 {
@@ -605,8 +702,8 @@ Alternativ muss man kein `react-scripts` dafür ausführen, mehr dafür
 siehe
 [hier](https://facebook.github.io/create-react-app/docs/adding-a-css-modules-stylesheet).
 
-Nun müssen wir unseren JavaScript-Code nur noch anpassen. Wir
-importieren unsere `App.css`
+Nun muss nur noch der JavaScript-Code angepasst werden,
+dies wird unten anhand eines Beispiels gezeigt.
 
 ```jsx
 import classes from './App.css';
@@ -619,9 +716,10 @@ return (
 );
 ```
 
+
 ## Lifecycle Hooks
 
-Lifecycle Hooks sind eine Möglichkeit Code auszuführen, bei bestimmten
+Lifecycle Hooks sind eine Möglichkeit Code auszuführen, zu bestimmten
 Zuständen von klassenbasierten Components.
 
 ### Mounting
@@ -692,6 +790,7 @@ const foobar = props => {
 
 export default React.memo(foobar);
 ```
+
 
 ## Quellen
 

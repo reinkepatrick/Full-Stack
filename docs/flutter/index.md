@@ -5,6 +5,25 @@
 
 Systemanforderungen: min. iPhone 4S mit iOS 8 oder Android 4.1.x und Gerät mit ARM Prozessor
 
+
+### Vorteile
++ Native Performance
++ Eine Codebase für Android und iOS
++ Gute Dokumentation
+
+### Nachteile
++ Um für jede Plattform das entsprechende Design zu realisieren, muss das Gerät abgefragt und unterschieden werden
++ Alle Designelemente sind nur Reproduktionen der nativen API-Elemente
++ Bringt keine Schnittstelle zur Hardware mit
+
+### Vergleich mit anderen Frameworks
+| Name             | Performance         | Designelemente                                                              | Programmier-/Skriptsprache | Kompatibilität mit weiteren Frameworks |
+| ---------------- | ------------------- | --------------------------------------------------------------------------- | -------------------------- | -------------------------------------- |
+| **Flutter**      | nativ               | reproduziert, Unterscheidung notwendig                                      | Dart                       | -                                      |
+| **Ionic**        | Progressive Web App | reproduziert, Unterscheidung nicht notwenig                                 | JavaScript, TypeScript     | Angular, Vue, React                    |
+| **NativeScript** | nativ               | nativ                                                                       | JavaScript, TypeScript     | Angular, Vue                           |
+| **React Native** | nativ               | teilweise nativ, teilweise reproduziert, Unterscheidung teilweise notwendig | JavaScript, TypeScript     | -                                      |
+
 ## Workflow
 Nach der Installation von Flutter wird zunächst ein neues Projekt erzeugt. Dieses automatisch erzeugte Projekt bringt bereits eine Testapp mit an der man sich orientieren kann.
 
@@ -102,6 +121,7 @@ Standard Datentypen:
 + Rune (Darstellung von Unicodezeichen in einem String)
 
 > Variablen, die nicht initialisiert wurden, haben immer den Wert *null* (auch numerische Typen).
+
 ```dart
 var name = 'Max Mustermann';
 var year = 1995;
@@ -274,3 +294,21 @@ class PilotedCraft extends Spacecraft with Piloted {
   // ···
 }
 ```
+
+### Asynchrone Programmierung
+Asynchrone Programmierung lässt das Programm weitere Aufgaben erledigen, während auf das Beenden einer Operation gewartet wird. `Future` stellt dabei das Ergebnis einer asynchronen Operation dar.
+
+```dart
+Future checkVersion() async {
+  var version = await lookUpVersion();
+  // Do something with version
+}
+
+Future<String> lookUpVersion() async => '1.0.0';
+```
+
+**Quellen:**  
+https://www.dartlang.org/guides/language/language-tour  
+https://facebook.github.io/react-native/docs/getting-started  
+https://ionicframework.com/docs  
+https://docs.nativescript.org/  

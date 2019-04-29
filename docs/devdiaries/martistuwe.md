@@ -21,4 +21,25 @@ __15.04.2019 - 21.04.2019__
 | 18.04.2019 | Recherche Composite-Pattern          | 20 min     |        |
 | 18.04.2019 | Stateless vs. Stateful Widgets       | 2 h 30 min |        |
 | 21.04.2019 | Dart: Überblick, Syntax und Semantik | 2 h        |        |
-| 22.04.2019 | Dart: Syntax und Semantik            | 3 h        |        |
+
+## Woche 3 
+__22.04.2019 - 28.04.2019__
+
+| Datum      | Tätigkeit                                                                                                                     | Dauer      | Zusatz                  |
+| ---------- | ----------------------------------------------------------------------------------------------------------------------------- | ---------- | ----------------------- |
+| 22.04.2019 | Dart: Syntax und Semantik                                                                                                     | 3 h        |                         |
+| 26.04.2019 | Definition: Stakeholder, Betriebsbedingungen und Qualitätsmerkmale                                                            | 1 h 30 min |                         |
+| 26.04.2019 | Definition: User-Stories                                                                                                      | 45 min     |                         |
+| 27.04.2019 | Dart: Asynchrone Programmierung                                                                                               | 30 min     |                         |
+| 27.04.2019 | Einlesen in Apple's [Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/ios/overview/) | 30 min     |                         |
+| 27.04.2019 | Dart: Vor- und Nachteile, Flutter: Vergleich mit anderen Frameworks                                                           | 3 h        |                         |
+| 27.04.2019 | User-Stories und Stakeholder überarbeitet, Begriffe dem Glossar hinzugefügt                                                   | 1 h 30 min |                         |
+| 27.04.2019 | Use-Case Diagramm erstellt                                                                                                    | 30 min     |                         |
+| 28.04.2019 | GUI-Mockups für die mobile Anwendung                                                                                          | 2 h 30 min | Einarbeiten in Adobe XD |
+
+## Woche 3 
+__29.04.2019 - 05.05.2019__
+
+| Datum | Tätigkeit | Dauer | Zusatz |
+| ----- | --------- | ----- | ------ |
+|       |           |       |        |
