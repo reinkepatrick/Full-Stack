@@ -50,3 +50,12 @@ __22.04.2019 - 28.04.2019__
 | 28.04.2019 | Definition von [Context](react/index#context)                                                                                                                                                                                            | 1h         |                                                                  |
 | 28.04.2019 | Erneutes überarbeiten der kompletten React Dokumentation                                                                                                                                                                                 | 30 min     |                                                                  |
 | 28.04.2019 | Rückgängig machen der Aufteilung in separate Dateien                                                                                                                                                                                     | 10 min     | Auf Grund eines Bugs von docsify                                 |
+| 28.04.2019 | Erstellung der Mockups für die Web-Anwendung angefangen                                                                                                                                                                                  | 3 h        |                                                                  |
+
+## Woche 4
+
+__29.04.2019 - 05.05.2019__
+
+| Datum      | Tätigkeit                                                      | Dauer | Zusatz |
+|:-----------|:---------------------------------------------------------------|:------|:-------|
+| 29.04.2019 | Weiterführung der Erstellung der Mockups für die Web-Anwendung | 3 h   |        |
