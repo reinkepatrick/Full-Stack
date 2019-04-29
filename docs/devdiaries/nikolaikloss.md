@@ -22,3 +22,27 @@ __08.04.2019 - 14.04.2019__
     - Probleme:
       - Synchronisierung vom Fork mit mit Source-Repo
       - Lösung: Compare-Funktion in GitHub
+
+## Woche 2
+__15.04.2019 - 22.04.2019__
+
+|Datum|Tätigkeit|Dauer|Zusatz|
+| - | - | - | - |
+| 13.04.2019 | Recherche zu bzgl. offener Fragen und Ionic Framework. Einpflegen der Erkenntnisse.|4 h| |
+
+## Woche 3
+__23.04.2019 - 29.04.2019__
+
+|Datum|Tätigkeit|Dauer|Zusatz|
+| - | - | - | - |
+| 24.04.2019 | Oberflächliche Appflow Recherche.|20 Min| |
+| 24.04.2019 | Recherche MVVM & MVVM in Ionic.|2 h| |
+| 25.04.2019 | Grobes Klassendiagramm fürs Projekt erzeugt.|2 h| |
+| 26.04.2019 | Oberflächliche Recherche zu Stancil.|20 min| |
+| 29.04.2019 | Einarbeitung in Ionic Youtube-Crashkurs| 1 h |
+
+- Notizen:
+  - Recherche MVVM
+    - MVVM in Ionic
+      - AngularJS reingeschaut
+  - Youtube Tutorial Angular & Ionic 4
