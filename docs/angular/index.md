@@ -1,6 +1,6 @@
-<img src="img/angular_logo.png" width="300px" height="300px" />
 
 
+![Angular Logo](img\angular_logo.png)
 
 # Angular
 
@@ -26,22 +26,6 @@ Nachdem Node.js und npm installiert wurden, kann das Angular Projekt durch die A
 
 per npm zu installieren.
 
-Es ist stets sinnvoll die aktuellen Version zu nutzen. Diese kann jeweils mit 
-
-```shell
-> npm --version
-```
-
-```shell
-> node --version
-```
-
-```shell
-> ng --version
-```
-
- geprüft werden.
-
 ### Projekt erstellen
 
 Um ein Angular Projekt zu erstellen, wechselt man zunächst in das gewünschte Zielverzeichnis. Anschließend wird per Angular CLI ein neues Projekt erstellt.
@@ -64,13 +48,100 @@ Which stylesheet format would you like to use?
 
 Im Anschluss wird die Projektstruktur erstellt. Wechselt man nun in das neu erstellte Verzeichnis, kann mit
 
-```shell
-ng serve
+```bash
+> ng serve
 ```
 
 das Angular Projekt gestartet werden. Dieser Vorgang kann eine Weile dauern, da unter anderem TypeScript in JavaScript kompiliert werden muss. Die Standard Website kann nun unter `localhost:4200` im Browser aufgerufen werden.
 
 ![Angular first serve](img/first_serve.png)
 
+## Das Herzstück
 
+Das Herzstück einer Angular App ist standartmäßig die Datei `app.module.ts`, diese Datei kann jedoch auch umbenannt werden. Dort laufen alle Funktionalitäten auf unterschiedliche Weise zusammen. Alle Dateien werden über Imports eingebunden.
 
+Beim Erstellen einer neuen Angular App über die Angular CLI werden in der `app.module.ts` zunächst die wichtigsten Module geladen.
+
+```typescript
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+
+**BrowserModule** dient dazu, die Anwendung zu starten.
+
+**NgModule** stellt das Hauptmodul der Anwendung dar und erstellt das App-Modul. Beim Laden dieses Moduls wird der *AppComponent* gestartet, wie unter `bootstrap` angegeben.
+
+**AppRoutingModule** ist optional und bietet die Möglichkeit, Inhalt in Abhängigkeit der aktuellen URL zu laden. Der Import dieser Datei kann schon während der Einrichtung über die Angular CLI erfolgen. Siehe Abschnitt *Projekt erstellen*.
+
+**AppComponent** ist die Elternkomponente, welche alle weiteren App-Komponenten als Kind-Komponente enthält.
+
+## Komponenten
+
+Angular ist komponentenorientiert, die gesamte Anwendung ist zunächst eine Komponente, auch Top Level Komponente genannt. Darunter sind wieder weitere Komponenten die selbst auch wieder Komponenten beinhalten könnten. Eine Anwendung setzt sich somit aus vielen Komponenten zusammen. So existiert zum Beispiel für die Navigation, einzelne Unterseiten usw. eigene Komponenten.
+
+![Angular Komententenbaum](img\components_dia.png)
+
+Eine Komponenten besteht im wesentlichen aus 2 Teilen. Dem *Component Controller* welcher die Logik beinhaltet sowie einem *Template* welches für die Darstellung verantwortlich ist und üblicherweise aus HTML besteht. Des Weiteren gibt es eine CSS Datei welche nur für die entsprechende Komponente gilt.
+
+Der Inhalt der *AppComponent* sieht wie folgt aus:
+
+```typescript
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'Full-Stack';
+}
+```
+
+Unter **selector** wird angegeben, wie dieses Modul eingebunden werden soll (HTML-Element oder HTML-Attribut). Die **templateUrl** und **styleUrls** beinhalten Pfade zum Template bzw. Stylesheet dieser Komponente. Es ist außerdem möglich, anstelle von Pfaden Inline Code zu verwenden. Dafür muss jedoch *templateUrl* in *template* und *styleUrls* in *styles* umgeschrieben werden.
+
+### Eigene Komponenten
+
+Über die Angular CLI können neue Komponenten generiert werden.
+
+```shell
+ng generate component <name_der_komponente>
+```
+
+Innerhalb eines neu erstellten Verzeichnisses unter `src/app` findet sich im Anschluss das Grundgerüst der neuen Komponente. Bequemer und schnell lässt sich dies jedoch über eine IDE generieren welche für Angular geeignet bzw. durch Plugins dafür erweitert wurde.
+
+Durch die Angular CLI wird die Komponente automatisch in `app.module.ts` importiert und steht zur Verwendung bereit.
+
+Möchte man nun den Inhalt der Komponente bzw. das Template anzeigen lassen, kann in der Datei `app.compent.html` das jeweilige Tag `<name-der-komponente></name-der-komponente>` hinzugefügt werden.
+
+## Interpolation
+
+Durch Interpolation kann innerhalb eines Templates dynamisch auf Eigenschaften eines Komponentenobjekts zugegriffen werden. Die Syntax sieht wie folgt aus: `{{ <name> }}`.
+
+Auf nicht primitive Datentypen kann durch den Safe Navigation Operator `?.` zugegriffen werden.
+
+Beispiel: `{{ film?.laenge }}`
+
+Sollte der Datentyp nicht vorhanden sein, wird kein Fehler geworfen. Durch das Fragezeichen kann asynchrones Laden realisiert werden. Ist ein Datentyp während der Ladezeit noch nicht vorhanden, wird dieser nachgeladen und im nachhinein gerendert.
+
+Des weiteren können durch `[]` bestehende HTML Tag weiterhin verwendet und dynamisch mit Properties aus der Komponente besetzt werden. `<a [href]="<name_der_property>">...</a>`.
+
+## Quellen
+
+[Angular University](https://angular-university.io/home)
