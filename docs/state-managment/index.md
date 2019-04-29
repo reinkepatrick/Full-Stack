@@ -16,7 +16,7 @@ State Managment finden wir in fast allen modernen Softwaresystemen. Dabei ist es
 
 Der größte Grund für State Managment ist die Verbesserung des Usererlebnisses. Nehmen wir als Beispiel die Spotify App. 
 
-![Beispiel Spotify](./img/BeispielSpotify.png)
+![Beispiel Spotify](./img/beispielSpotify.png)
 
 In dem unteren Bereich sieht man welches Lied momentan gespielt wird. Dazu werden noch Zusatzinformationen eingeblendet wie der Name des Künstlers und das Musikalbum. Rechts sieht man eine Fortschrittsleiste für das Lied und noch weiter rechts, in diesem Bildausschnitt nicht vorhanden, sind auch die üblichen Steuerungsbutton zum Abspielen von Musik. In dem oberen, dunkleren Bereich sehe ich die Komponente, die ich gerade geöffnet habe. In diesem Beispiel handelt es sich um die verschiedenen Titel in einer Playlist.
 
@@ -62,7 +62,7 @@ Es gab bei der Entwicklung nach dem klassischen MVC-Modell verschiedene Probleme
 
 ### Aufbau
 
-![Aufbau Flux](./img/FluxDataFlow.png)
+![Aufbau Flux](./img/fluxDataFlow.png)
 
 Das obere Diagramm beschreibt den Aufbau und Datenfluss der Architektur. Wie man sieht, fließen die Daten immer von einem Punkt zu einem anderen. Was genau die einzelnen Komponenten sind, wird später noch beschrieben. Aber eine Action kommuniziert immer mit dem Dispatcher, welcher immer mit dem Store redet. Und der Store kommuniziert immer mit der View. Wie man sehen kann, gibt es zwei Actions. Einmal die Action links, welche aus dem Backend ausgelöst wird und einmal die Action ausgehend von der View-Komponente. Diese Action wird also von der UI ausgelöst. 
 
