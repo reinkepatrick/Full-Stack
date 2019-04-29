@@ -35,4 +35,11 @@ __22.04.2019 - 28.04.2019__
 | 26.04.2019 | Definition von Betribsbedingungen und Qualitätsmerkmalen von cardholder.                                                        | 1h         |        |
 | 26.04.2019 | Nach URL Patterns recherchieren und erklären.                                                                                   | 2h         |        |
 | 26.04.2019 | Definition von User-Stories erstellen.                                                                                          | 45 min     |        |
-| 28.04.2019 | Templates verstehen und erklären.                                                                                               | 2h         |        |
+| 28.04.2019 | Templates verstehen und erklären.                                                                                               | 2h         | Erste Templates mit anzeigen von Variablen, welche von views übergeben worden sind. Erstellen von Listen über eine Loop.       |
+
+## Woche 3 
+__29.04.2019 - 03.05.2019__
+
+| Datum      | Tätigkeit                                                                                                                       | Dauer      | Zusatz |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------- | ---------- | ------ |
+| 26.04.2019 | Weiter Templates testen.                                                                                                         | 2h         | Kontrollstrukturen und logik testen mit Datenbank.       |
