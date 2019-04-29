@@ -16,11 +16,6 @@ JSX ist eine Javascript Erweiterung. XML wird genutzt, um Daten intern zu strukt
 Dabei werden von JSX die HTML-Dateien in die Javascript-Dateien eingebettet. Sprich mit JSX ist es möglich Auszeichnungssprachen
 in Javascripte zu nutzen. 
 
-* TODO
-
-## Vor - und Nachteile von React-Native
-
-* TODO
 
 ## Wie funktioniert React-Native ?
 
@@ -31,12 +26,53 @@ React-Native funktioniert ähnlich wie React mit dem Browser DOM. Statt einen Br
 ## Props 
 
 Mithilfe von Props kurzform für Properties werden die Komponeten mit Daten befüllt. Komponenten können verschachtelt sein. So kann eine Komponente Kinder haben oder ist selbst ein Kind sein. Die Elternkomponenten setzen die Props der jeweiligen Komponenten. Props sollten selbst für die eignene Komponente unveränderlich. //Todo warum sollten props unveränderlich sein für die eigne Komponente? 
-Die UI-Komponenten basierend nach 
+Die UI-Komponenten werden basierend  nach den States und Props gerendert. Die Komponenten können über die Props von außerhalb gesteuert werden.
+
+### PropTypes
+
+PropTypes ist ein Package, dass genutzt werden kann um während der Laufzeit zu Prüfen, ob eine Property mit dem richtig Typ gesetzt wurde.
+Beispiel:
+```
+name: PropTypes.string.isRequired
+```
+Die Property name ist vom Typ String und muss gesetzt sein.
+
+Zudem kann eine Property mehrere propTypes haben. Dies mit **oneOfType möglich.
+
+```
+name: PropTypes.oneOfType ( [
+    PropTypes.string,
+    PropTypes.object
+] )
+```
+Mit defaultProp ist es möglich Defaultwerte zu setzen für Properties. Diese werden übernommen, wenn die Properties nicht gesetzt werden.
+
+```
+myComponent.defaultProps = {
+    name : 'Simon'
+}
+
+```
 ## States
 
-
+Innerhalb der Komponenten werde diese mithilfe der States gesteuert.  Dies geschieht durch die Methode setState, die entweder ein Key-Value-Objekt annimmt oder eine Funktion, die ein Key-Value-Objekt zurückgibt. SetState löst das Rerendern der Komponente sowie der Kinderkomponenten aus. Die Zustande sollten im Konstruktor initialisiert.
 
 ## Styles
+
+Zum Stylen der Komponeten wird jeglich JavaScript benötigt. Die Styles werden in der Property Style gesetzt. Die Style Property ist im Besitz jeder Komponente. Die Style-Namen und Werte entsprechen die in CSS mit ein paar Ausnahmen. In React Native werden die Style-Namen nach der Camel Case Konvention geschrieben. 
+
+Die Styles können in derselben Zeile gesetzt wie die Komponete, die gestyled werden soll.
+```
+<Text style={{color:'red'}}>Red text</Text>
+```
+Mit StyleSheet.create ist es möglich ein "Style"-Objekt zu definieren, dass von verschiedenen Komponenten verwendet werden kann.
+
+Die Styles können bedingt gestetzt werden.
+
+```
+<View style={[(this.props.isTrue) ? styles.bgcolorBlack : styles.bgColorWhite]}>
+```
+//Todo Array mit Styles
 
 ## React-Native mit Typescript
 
@@ -69,4 +105,3 @@ Die UI-Komponenten basierend nach
 ## Statemanagement
 
 ## Datenbank/Persistenter Speicher
-
