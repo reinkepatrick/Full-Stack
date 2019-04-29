@@ -401,16 +401,18 @@ Hier kann man auch sehen, wie für `Message::Bulk()` ein `vector` erstellt wird,
 
 ### Crates
 
-Mit Cargo erstelle Projekte werden `crates` genannt, egal ob es ein Binärprogramm oder eine Bibliothek ist. Es gibt eine öffentliche Liste von anerkannten Crates die man auf [Crates.io](https://crates.io/) finden kann. Erstellt man so ein Projekt werden zwei Dateien und ein Ordner erstellt:
+Mit Cargo erstelle Projekte werden `crates` genannt, egal ob es sich um ein Binärprogramm oder eine Bibliothek handelt. Es gibt eine öffentliche Liste von anerkannten Crates die man auf [Crates.io](https://crates.io/) finden kann. 
+Erstellt man so ein Projekt werden zwei Dateien und ein Ordner erstellt:
 * `src` Ordner mit der Datei `main.rs` (Binärprogramm) oder `lib.rs` (Bibliothek)
 * `Cargo.toml`
 
-`main.rs` und `lib.rs` werden als Einstiegspunkt des Programms gesehen und `Cargo.toml` bezeichnet man als Manifest und beinhaltet alle Metainformationen, die das Programm benötigt. Diese Datei ist vergleichbar zu `package.json`, welches man aus `Node.js` kennt. Die meist Benutzten Metadaten für Cargo Projekte sind: 
+`main.rs` und `lib.rs` werden als Einstiegspunkt des Programms gesehen und `Cargo.toml` bezeichnet man als Manifest,das alle Metainformationen beinhaltet, die das Programm zum kompilieren benötigt. Diese Datei ist vergleichbar zu `package.json`, welches man aus `Node.js` kennt. Die meist Benutzten Metadaten für Cargo Projekte sind: 
 * package
     * beinhaltet Name, Version, Author(en) und Edition (Benutzte Rustversion zum Kompilieren)
 * dependencies
     * beinhaltet Informationen von benutzten Paketen und deren Version
-Pakete die in den `dependencies` genannt sind werden beim Kompilieren als source runtergeladen und kompiliert.
+
+Pakete die in den `dependencies` genannt sind werden beim Kompilieren als source runtergeladen und mit kompiliert, d.h. dass es nicht zu Fehlern kommt, weil eine Library für das falsche System kompiliert wurde.
 Bei oder nach dem Kompilieren wird auch eine `Cargo.lock` Datei erstellt, die Informationen über benutzte Pakete beinhaltet.
 Jedes Paket in der Datei ist folgend aufgebaut:
 
@@ -444,8 +446,46 @@ Als Values sind folgende Typen erlaubt:
 * Local Time
 * Array
 
-Wenn man ein Datum benutzt, muss dieser [RFC 3339](https://tools.ietf.org/html/rfc3339) konform sein. Arrays werden mit eckigen Klammern dargestellt und die Elemente werden mit einem Komma getrennt.
+Wenn man ein Datum benutzt, muss dieser [RFC 3339](https://tools.ietf.org/html/rfc3339) konform sein. Arrays werden mit eckigen Klammern dargestellt und die Elemente werden mit einem Komma getrennt. Ebenfalls können Arrays weitere Arrays beinhalten.
 
 
 #### Tables
-Tables, bzw. auch hash tables und dictionaries genannt, werden werden hier als Kollektion von Key-Value-Paaren benutzt. Sie werden mit eckigen Klammern mit einem Namen gekennzeichnet (`[table]`) und sammelt alle Paare die danach Folgen. 
+Tables, bzw. auch hash tables und dictionaries genannt, werden hier als Kollektion von Key-Value-Paaren benutzt. Sie werden mit eckigen Klammern mit einem Namen gekennzeichnet (`[table]`) und sammelt alle Paare die danach Folgen. 
+
+
+Ein [Beispiel](https://github.com/toml-lang/toml/blob/master/README.md#user-content-example) für eine .toml-Datei wäre:
+```
+# This is a TOML document.
+
+title = "TOML Example"
+
+[owner]
+name = "Tom Preston-Werner"
+dob = 1979-05-27T07:32:00-08:00 # First class dates
+
+[database]
+server = "192.168.1.1"
+ports = [ 8001, 8001, 8002 ]
+connection_max = 5000
+enabled = true
+
+[servers]
+
+  # Indentation (tabs and/or spaces) is allowed but not required
+  [servers.alpha]
+  ip = "10.0.0.1"
+  dc = "eqdc10"
+
+  [servers.beta]
+  ip = "10.0.0.2"
+  dc = "eqdc10"
+
+[clients]
+data = [ ["gamma", "delta"], [1, 2] ]
+
+# Line breaks are OK when inside arrays
+hosts = [
+  "alpha",
+  "omega"
+]
+```
