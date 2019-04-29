@@ -12,11 +12,9 @@ auf die Kamera zu zugreifen.
 
 ## JSX
 
-JSX ist eine Javascript Erweiterung. XML wird genutzt, um Daten intern zu strukturieren und sinnvol anzuordnen.
-Dabei werden von JSX die HTML-Dateien in die Javascript-Dateien eingebettet. Sprich mit JSX ist es möglich html
+JSX ist eine Javascript Erweiterung. XML wird genutzt, um Daten intern zu strukturieren und sinnvoll anzuordnen.
+Dabei werden von JSX die HTML-Dateien in die Javascript-Dateien eingebettet. Sprich mit JSX ist es möglich Auszeichnungssprachen
 in Javascripte zu nutzen. 
-
-The other unusual thing in this code example is <View><Text>Hello world!</Text></View>. This is JSX - a syntax for embedding XML within JavaScript. Many frameworks use a special templating language which lets you embed code inside markup language. In React, this is reversed. JSX lets you write your markup language inside code. It looks like HTML on the web, except instead of web things like <div> or <span>, you use React components. In this case, <Text> is a built-in component that just displays some text and View is like the <div> or <span>.
 
 * TODO
 
@@ -28,14 +26,15 @@ The other unusual thing in this code example is <View><Text>Hello world!</Text><
 
 ![Rendering](/img/react-native_rendering.png)
 
-React-Native funktioniert ähnlich wie React mit dem Browser DOM. Statt einen Browser Dom zu rendern nutzt React-Native die API, der jeweiligen Plattform, um die Komponenten zu rendern.
-Eine React-Natve View wird dann beispielsweise über die jeweilige "Bridge" zu UIView in iOS. Es ist möglich weitere "Bridges" zu entwickeln, um mit React Native für weitere Plattformen zu entwickeln. So gibt es eine React-Native Version, mit der es möglich ist eine Desktopandwendung für Windows und Ubuntu zu entwickeln.     
+React-Native funktioniert ähnlich wie React mit dem Browser DOM. Statt einen Browser Dom zu rendern nutzt React-Native die API, der jeweiligen Plattform, um die Komponenten zu rendern. Eine React-Natve View wird dann beispielsweise über die jeweilige "Bridge" zu UIView in iOS. Es ist möglich weitere "Bridges" zu entwickeln, um mit React Native für weitere Plattformen zu entwickeln. So gibt es eine React-Native Version, mit der es möglich ist eine Desktopandwendung für Windows und Ubuntu zu entwickeln.     
 
 ## Props 
 
-Um die Komponenten mti Daten zu füllen und diese zu Steuern, gibt es Props und States. Komponenten können verschachtelt sein. So kann eine Komponente Kinder haben oder sind selbst Kinder. Die Elternkomponenten setzen die Props der jeweiligen Komponente. Mit den States werden die Daten manipuliert.
-
+Mithilfe von Props kurzform für Properties werden die Komponeten mit Daten befüllt. Komponenten können verschachtelt sein. So kann eine Komponente Kinder haben oder ist selbst ein Kind sein. Die Elternkomponenten setzen die Props der jeweiligen Komponenten. Props sollten selbst für die eignene Komponente unveränderlich. //Todo warum sollten props unveränderlich sein für die eigne Komponente? 
+Die UI-Komponenten basierend nach 
 ## States
+
+
 
 ## Styles
 
@@ -59,14 +58,9 @@ Um die Komponenten mti Daten zu füllen und diese zu Steuern, gibt es Props und 
 
 ## Animations
 
-## Linking
-
 ## Unit-Test
 
-## Modules
-
 ## Native Code
-
 
 ## Debugging Tools
 
