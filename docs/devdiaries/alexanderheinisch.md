@@ -50,9 +50,9 @@ __22.04.2019 - 28.04.2019__
 | 27.04.2019 | Docker für dotnet core angeschaut                            | 60 min | dockerhub unterstützt keine preview versionen von dotnet core |
 | 28.04.2019 | über die Großen 3 Test Frameworks recherchiert (XUnit, NUnit, MSUnit) | 60 min |                                                              |
 
-## Woche 3 
+## Woche 34
 
-__22.04.2019 - 28.04.2019__
+__29.04.2019 - 05.04.2019__
 | Datum      | Tätigkeit                     | Dauer | Zusatz                        |
 | ---------- | ----------------------------- | ----- | ----------------------------- |
 | 29.04.2019 | Überarbeitung F# Beschreibung | 2 h   |                               |
