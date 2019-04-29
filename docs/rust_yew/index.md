@@ -394,3 +394,58 @@ impl Renderable<Model> for Model {
 ```
 
 Hier kann man auch sehen, wie für `Message::Bulk()` ein `vector` erstellt wird, welches weitere `Message`s beinhaltet.
+
+
+
+## Cargo als Paketmanager
+
+### Crates
+
+Mit Cargo erstelle Projekte werden `crates` genannt, egal ob es ein Binärprogramm oder eine Bibliothek ist. Es gibt eine öffentliche Liste von anerkannten Crates die man auf [Crates.io](https://crates.io/) finden kann. Erstellt man so ein Projekt werden zwei Dateien und ein Ordner erstellt:
+* `src` Ordner mit der Datei `main.rs` (Binärprogramm) oder `lib.rs` (Bibliothek)
+* `Cargo.toml`
+
+`main.rs` und `lib.rs` werden als Einstiegspunkt des Programms gesehen und `Cargo.toml` bezeichnet man als Manifest und beinhaltet alle Metainformationen, die das Programm benötigt. Diese Datei ist vergleichbar zu `package.json`, welches man aus `Node.js` kennt. Die meist Benutzten Metadaten für Cargo Projekte sind: 
+* package
+    * beinhaltet Name, Version, Author(en) und Edition (Benutzte Rustversion zum Kompilieren)
+* dependencies
+    * beinhaltet Informationen von benutzten Paketen und deren Version
+Pakete die in den `dependencies` genannt sind werden beim Kompilieren als source runtergeladen und kompiliert.
+Bei oder nach dem Kompilieren wird auch eine `Cargo.lock` Datei erstellt, die Informationen über benutzte Pakete beinhaltet.
+Jedes Paket in der Datei ist folgend aufgebaut:
+
+``` 
+[[package]]
+name = "name" # Name des Pakets
+verson = "1.0.0" # Versionsnummer
+source = "source+link" # Für Crates in Crates.io "registry+https://github.com/rust-lang/crates.io-index" sonst z.B. "git+https://github.com/some/project"
+dependencies = {
+    "name version (source)", # z.B. "stdweb 0.4.16 (registry+https://github.com/rust-lang/crates.io-index)",
+}
+```
+
+Zudem stehen zum Schluss alle Checksums der benutzten Pakete, passend zu ihrer Version. Für Pakete die nicht in Crates.io zu finden sind, ist es möglich, dass keine Checksum vorhanden ist.
+
+### .toml
+
+Die Dateiendung `.toml`steht für "Tom's Obvious Minimal Language" und wird im Rustkontext als Datenformat für die Manifestinformationen benutzt. Der Aufbau einer .toml-Datei ist .json relativ ähnlich, doch sie unterscheiden sich stark in der Syntax.
+
+#### Key-Value-Paare
+
+Geabreitet wird weiterhin noch mit Key-Value-Paaren. Bei den Keys ist zu beachten, dass es `Bare` und `Quoted` Keys gibt. Bei den Bare Keys darf man nur ASCII Buchstaben, Zahlen, Unter- und Bindestriche benutzen (A-Za-z0-9_-), wobei man bei den Quoted Keys (mit `"` gekennzeichnet) eine größere Auswahl hat. Als Best-Practice soll man dennoch nur Bare Keys und Quoted nur in Notfällen benutzten. 
+Als Values sind folgende Typen erlaubt:
+* String
+* Integer
+* Float
+* Boolean
+* Offset Date-Time
+* Local Date-Time
+* Local Date
+* Local Time
+* Array
+
+Wenn man ein Datum benutzt, muss dieser [RFC 3339](https://tools.ietf.org/html/rfc3339) konform sein. Arrays werden mit eckigen Klammern dargestellt und die Elemente werden mit einem Komma getrennt.
+
+
+#### Tables
+Tables, bzw. auch hash tables und dictionaries genannt, werden werden hier als Kollektion von Key-Value-Paaren benutzt. Sie werden mit eckigen Klammern mit einem Namen gekennzeichnet (`[table]`) und sammelt alle Paare die danach Folgen. 
