@@ -1,0 +1,31 @@
+# Dario Leunig Projekt Tagebuch
+
+## Woche 1 
+
+**08.04.2019 - 14.04.2019**
+
+| Datum      | Tätigkeit                                                    | Dauer  | Zusatz |
+| ---------- | ------------------------------------------------------------ | ------ | ------ |
+| 09.04.2019 | Erste Recherche zum Thema Angular                            | 1h     |        |
+| 10.04.2019 | Videoreihe auf YouTube begonnen                              | 0h 45m |        |
+| 12.04.2019 | Videoreihe fortgesetzt<br />Installation von Angular und Abhängigkeiten | 2h     |        |
+
+## Woche 2 
+
+**15.04.2019 - 21.04.2019**
+
+| Datum      | Tätigkeit                                                    | Dauer  | Zusatz |
+| ---------- | ------------------------------------------------------------ | ------ | ------ |
+| 15.04.2019 | Forken des Repositories, Pull Request gestellt               | 0h 30m |        |
+| 17.04.2019 | Eigenes Angular Projekt angelegt                             | 1h     |        |
+| 18.04.2019 | Begonnen gelerntes Wissen textuell zu erfassen               | 1h     |        |
+| 20.04.2019 | Videoreihe fortgesetzt, Erfahrung mit Verzeichnisstruktur gemacht | 0h 50m |        |
+
+## Woche 3 
+
+**22.04.2019 - 28.04.2019**
+
+| Datum      | Tätigkeit                                              | Dauer  | Zusatz |
+| ---------- | ------------------------------------------------------ | ------ | ------ |
+| 22.04.2019 | Notizen aufgearbeitet und in Dokumentation aufgenommen | 0h 30m |        |
+
