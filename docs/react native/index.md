@@ -19,7 +19,7 @@ in Javascripte zu nutzen.
 
 ## Wie funktioniert React-Native ?
 
-![Rendering](/img/react-native_rendering.png)
+![Rendering](img/react-native_rendering.png)
 
 React-Native funktioniert ähnlich wie React mit dem Browser DOM. Statt einen Browser Dom zu rendern nutzt React-Native die API, der jeweiligen Plattform, um die Komponenten zu rendern. Eine React-Natve View wird dann beispielsweise über die jeweilige "Bridge" zu UIView in iOS. Es ist möglich weitere "Bridges" zu entwickeln, um mit React Native für weitere Plattformen zu entwickeln. So gibt es eine React-Native Version, mit der es möglich ist eine Desktopandwendung für Windows und Ubuntu zu entwickeln.     
 
