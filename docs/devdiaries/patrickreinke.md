@@ -56,6 +56,8 @@ __22.04.2019 - 28.04.2019__
 
 __29.04.2019 - 05.05.2019__
 
-| Datum      | Tätigkeit                                                      | Dauer | Zusatz |
-|:-----------|:---------------------------------------------------------------|:------|:-------|
-| 29.04.2019 | Weiterführung der Erstellung der Mockups für die Web-Anwendung | 3 h   |        |
+| Datum      | Tätigkeit                                                                                             | Dauer      | Zusatz |
+|:-----------|:------------------------------------------------------------------------------------------------------|:-----------|:-------|
+| 29.04.2019 | Weiterführung der Erstellung der Mockups für die Web-Anwendung                                        | 3 h        |        |
+| 30.04.2019 | Definition von der [Projektorganisation](https://cardholder.github.io/docs/#/?id=projektorganisation) | 1 h 30 min |        |
+| 30.04.2019 | Fertigstellung der Mockups für die Web-Anwendung                                                      | 2 h 30 min |        |
