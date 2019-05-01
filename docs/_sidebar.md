@@ -18,7 +18,7 @@
 * Organisatorisches
   * [Projekte](orga/projekt)
 * Tagebücher
-  * [Alexander Bergmann](devdiaries/alexander_bergmann)
+  * [Alexander Bergmann](devdiaries/alexanderbergmann)
   * [Alexander Heinisch](devdiaries/alexanderheinisch)
   * [Andre Matutat](devdiaries/andrematutat)
   * [Chamoun Simon Safar](devdiaries/chamounsimonsafar)
