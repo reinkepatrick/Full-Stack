@@ -1,22 +1,29 @@
 <!-- _navbar.md -->
 
 * [Home](/)
-* [Angular](angular/index)
-* [Cloud-Docker-Jenkins](cloud-docker-jenkins/index.md)
-* [Django](django/index)
-* [DotNetCore](dotnetcore/index.md)
-* [Flutter](flutter/index.md)
-* [IONIC](ionic/index)
-* [MQTT](mqtt/index)
-* [Kommunikation in Verteilten Systemen](netzwerkprotokolle/index)
-* [React](react/index.md)
-* [React Native](react%20native/index.md)
-* [Rust und Yew](rust_yew/index.md)
-* [Sicherheit und Authentifizierung](security-auth/index)
-* [Statemanagment](state-managment/index)
-* [WebGL](webgl/index)
-* Organisatorisches
+* 1 Inhalte
+  * Grundlagen
+    * [Cloud-Docker-Jenkins](cloud-docker-jenkins/index.md)
+    * [MQTT](mqtt/index)
+    * [Kommunikation in Verteilten Systemen](netzwerkprotokolle/index)
+    * [Sicherheit und Authentifizierung](security-auth/index)
+    * [Statemanagment](state-managment/index)
+  * Frontend
+    * Web 
+      * [Angular](angular/index)
+      * [React](react/index.md)
+      * [Rust und Yew](rust_yew/index)
+      * [WebGL](webgl/index)
+    * Mobile
+      * [Flutter](flutter/index.md)
+      * [IONIC](ionic/index)
+      * [React Native](react%20native/index)
+  * Backend
+    * [Django](django/index)
+    * [DotNetCore](dotnetcore/index)
+* 2 Projekte
   * [Projekte](orga/projekt)
+  
 * Tagebücher
   * [Alexander Bergmann](devdiaries/alexanderbergmann)
   * [Alexander Heinisch](devdiaries/alexanderheinisch)
