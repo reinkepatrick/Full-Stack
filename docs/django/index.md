@@ -85,9 +85,80 @@ def index(request):
 ```
 
 Wenn von dieser View nun die Methode `index` aufgerufen wird, sendet die View einen HttpResponse mit der Nachricht zurück.  
-Damit die View aufgerufen werden kann, müssen die [URLs](#URLs) konfiguriert werden. 
+Damit die View aufgerufen werden kann, müssen die [URLs](#URLs) konfiguriert werden.  
 
 Views müssen am Ende einen HTTP Response haben oder eine Exception wie HTTP 404.
+
+### HTTP Response
+
+Die Klasse `HttpResponse` hat folgende Eigenschaften:
+* `status_code`
+* `content`
+* `closed`
+* `reason_phrase`
+
+Wenn im Response noch weitere Parameter übergeben werden, können auch auf diese zugegriffen werden. Ein typischer Parameter ist `context`. Damit übergibt die View Objekte.
+
+### Generic Views
+Generic Views sind dafür da, um Wiederholungen zu vermeiden und weniger Code zu schreiben. Es gibt zwei verschiedene Generic Views:
+* ListView
+* DetailView
+
+Bei der `ListView` wird mit einer Liste von Objekten gearbeitet und bei der `DetailView` nur mit einem Objekt.  
+Eine Generic View muss ein Model mitgegeben bekommen.  
+Eine `DetailView` erwartet den Hauptschlüssel als Parameter, weshalb dies in der [URL](#urls) geändert werden muss.
+
+In den Generic Views, muss auch der `template_name` gesetzt werden.  
+
+Der übergebene Kontext für das [Template](#templates) ist bei der `DetailView` das Model und beim `ListView` das Attribut `context_object_name`
+
+Beispiel __DetailView__:
+
+```python
+class DetailView(generic.DetailView):
+    model = Question
+    template_name = 'polls/detail.html'
+```
+Das Model enthält nun die Question mit dem übergebenen Hauptschlüssel. Dies wird automatisch an das Template übergeben, da eine GenericView bestimmte Methoden abarbeitet.
+
+1. setup()
+2. dispatch()
+3. http_method_not_allowed()
+4. get_template_names()
+5. get_slug_field()
+6. get_queryset()
+7. get_object()
+8. get_context_object_name()
+9. get_context_data()
+10. get()
+11. render_to_response()
+
+Die Methoden können überschrieben werden.
+
+Beispiel __ListView__:
+
+```python
+class IndexView(generic.ListView):
+    template_name = 'polls/index.html'
+    context_object_name = 'latest_question_list'
+
+    def get_queryset(self):
+        """Return the last five published questions."""
+        return Question.objects.order_by('-pub_date')[:5]
+```
+
+Eine ListView brauch keinen übergebenen Parameter, jedoch muss dann die Methode `get_queryset` überschrieben werden.
+Die abgearbeiteten Methoden sind. 
+
+1. setup()
+2. dispatch()
+3. http_method_not_allowed()
+4. get_template_names()
+5. get_queryset()
+6. get_context_object_name()
+7. get_context_data()
+8. get()
+9. render_to_response()
 
 ## URLs
 Es gibt eine URL Konfigurationsdatei, welche beim Projekt anlegen existiert. Dies ist die Root Konfigurationsdatei. In jeder App wird noch eine weitere URL Datei angelegt. In der Root Konfigurationsdatei wird zu der URL Datei von einer App weitergeleitet. Dazu wird ein Array `urlpatterns` erstellt, indem die verschiedenen Pfade zu den Apps angegeben werden. Von der URL Datei in der App wird zu den Methoden von der Views Datei geleitet.
@@ -259,7 +330,7 @@ admin.site.register(Question)
 ```
 
 ## Templates
-Templates sind dafür da, um beim Response ein Design für bestimmte Responses zu ermöglichen. Somit werden views von der Benutzeroberfläche abgekapselt.  
+Templates sind dafür da, um beim Response ein Design für bestimmte Responses zu ermöglichen. Somit werden Views von der Benutzeroberfläche abgekapselt.  
 Die Templates sind in einer HTML Datei geschrieben, welche dann in der View angegeben werden muss. Im Template selber können auf Variablen zugegriffen werden. Dies ist durch Django möglich. Genauso können auch Kontrollstrukturen verwendet werden.
 
 Beispiel Ablauf:
@@ -268,3 +339,37 @@ Beispiel Ablauf:
 3. View bekommt Daten vom Model.
 4. Daten werden zum Template gegeben, welches Daten anzeigt.
 
+## Tests
+
+Tests werden üblicherweise in einer Datei `tests.py` geschrieben. Diese Datei befindet sich in der jeweiligen App. 
+
+Tests werden folgendermaßen ausgeführt.
+```bash
+$ python manage.py test <appname>
+```
+
+Wenn ein Test ausgeführt wird, werden folgende Schritte ausgeführt.
+* `manage.py` sucht nach Tests in den angegebenen apps.
+* Wenn in einer Datei die Subklasse django.test.TestCase vorhanden ist, wird diese Datei als Testfile anerkannt.
+* Für die Tests wird eine Test Datenbank erstellt.
+* Es wird nach Methoden gesucht, welche mit __test__ anfangen.
+* Die Methode wird ausgeführt.
+* Nachdem alle Tests durch gelaufen sind, wird die Datenbank gelöscht.
+
+### Views
+Für Tests der Views gibt es eine Klasse `Client`, welche den Client simulieren kann und somit mit den Code der View interagiert.
+Zunächst musss eine Testumgebung erstellt werden. 
+```python
+from django.test.utils import setup_test_environment
+setup_test_environment()
+```
+
+Nun kann mit der Client Klasse auf URLs zugegriffen werden. Beispiel:  
+```python
+from django.test import Client
+client = Client()
+response = client.get('/')
+```
+
+Der Response ist ein [HTTP Response](#http-response)
+Darauf können dann die Tests ausgeführt werden.

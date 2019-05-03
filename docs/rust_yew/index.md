@@ -394,3 +394,98 @@ impl Renderable<Model> for Model {
 ```
 
 Hier kann man auch sehen, wie für `Message::Bulk()` ein `vector` erstellt wird, welches weitere `Message`s beinhaltet.
+
+
+
+## Cargo als Paketmanager
+
+### Crates
+
+Mit Cargo erstelle Projekte werden `crates` genannt, egal ob es sich um ein Binärprogramm oder eine Bibliothek handelt. Es gibt eine öffentliche Liste von anerkannten Crates die man auf [Crates.io](https://crates.io/) finden kann. 
+Erstellt man so ein Projekt werden zwei Dateien und ein Ordner erstellt:
+* `src` Ordner mit der Datei `main.rs` (Binärprogramm) oder `lib.rs` (Bibliothek)
+* `Cargo.toml`
+
+`main.rs` und `lib.rs` werden als Einstiegspunkt des Programms gesehen und `Cargo.toml` bezeichnet man als Manifest,das alle Metainformationen beinhaltet, die das Programm zum kompilieren benötigt. Diese Datei ist vergleichbar zu `package.json`, welches man aus `Node.js` kennt. Die meist Benutzten Metadaten für Cargo Projekte sind: 
+* package
+    * beinhaltet Name, Version, Author(en) und Edition (Benutzte Rustversion zum Kompilieren)
+* dependencies
+    * beinhaltet Informationen von benutzten Paketen und deren Version
+
+Pakete die in den `dependencies` genannt sind werden beim Kompilieren als source runtergeladen und mit kompiliert, d.h. dass es nicht zu Fehlern kommt, weil eine Library für das falsche System kompiliert wurde.
+Bei oder nach dem Kompilieren wird auch eine `Cargo.lock` Datei erstellt, die Informationen über benutzte Pakete beinhaltet.
+Jedes Paket in der Datei ist folgend aufgebaut:
+
+``` 
+[[package]]
+name = "name" # Name des Pakets
+verson = "1.0.0" # Versionsnummer
+source = "source+link" # Für Crates in Crates.io "registry+https://github.com/rust-lang/crates.io-index" sonst z.B. "git+https://github.com/some/project"
+dependencies = {
+    "name version (source)", # z.B. "stdweb 0.4.16 (registry+https://github.com/rust-lang/crates.io-index)",
+}
+```
+
+Zudem stehen zum Schluss alle Checksums der benutzten Pakete, passend zu ihrer Version. Für Pakete die nicht in Crates.io zu finden sind, ist es möglich, dass keine Checksum vorhanden ist.
+
+### .toml
+
+Die Dateiendung `.toml`steht für "Tom's Obvious Minimal Language" und wird im Rustkontext als Datenformat für die Manifestinformationen benutzt. Der Aufbau einer .toml-Datei ist .json relativ ähnlich, doch sie unterscheiden sich stark in der Syntax.
+
+#### Key-Value-Paare
+
+Geabreitet wird weiterhin noch mit Key-Value-Paaren. Bei den Keys ist zu beachten, dass es `Bare` und `Quoted` Keys gibt. Bei den Bare Keys darf man nur ASCII Buchstaben, Zahlen, Unter- und Bindestriche benutzen (A-Za-z0-9_-), wobei man bei den Quoted Keys (mit `"` gekennzeichnet) eine größere Auswahl hat. Als Best-Practice soll man dennoch nur Bare Keys und Quoted nur in Notfällen benutzten. 
+Als Values sind folgende Typen erlaubt:
+* String
+* Integer
+* Float
+* Boolean
+* Offset Date-Time
+* Local Date-Time
+* Local Date
+* Local Time
+* Array
+
+Wenn man ein Datum benutzt, muss dieser [RFC 3339](https://tools.ietf.org/html/rfc3339) konform sein. Arrays werden mit eckigen Klammern dargestellt und die Elemente werden mit einem Komma getrennt. Ebenfalls können Arrays weitere Arrays beinhalten.
+
+
+#### Tables
+Tables, bzw. auch hash tables und dictionaries genannt, werden hier als Kollektion von Key-Value-Paaren benutzt. Sie werden mit eckigen Klammern mit einem Namen gekennzeichnet (`[table]`) und sammelt alle Paare die danach Folgen. 
+
+
+Ein [Beispiel](https://github.com/toml-lang/toml/blob/master/README.md#user-content-example) für eine .toml-Datei wäre:
+```
+# This is a TOML document.
+
+title = "TOML Example"
+
+[owner]
+name = "Tom Preston-Werner"
+dob = 1979-05-27T07:32:00-08:00 # First class dates
+
+[database]
+server = "192.168.1.1"
+ports = [ 8001, 8001, 8002 ]
+connection_max = 5000
+enabled = true
+
+[servers]
+
+  # Indentation (tabs and/or spaces) is allowed but not required
+  [servers.alpha]
+  ip = "10.0.0.1"
+  dc = "eqdc10"
+
+  [servers.beta]
+  ip = "10.0.0.2"
+  dc = "eqdc10"
+
+[clients]
+data = [ ["gamma", "delta"], [1, 2] ]
+
+# Line breaks are OK when inside arrays
+hosts = [
+  "alpha",
+  "omega"
+]
+```
