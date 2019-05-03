@@ -44,7 +44,9 @@ __29.04.2019 - 05.05.2019__
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------- | ---------- | ------ |
 | 29.04.2019 | Weiter Templates testen.                                                                                                        | 2h         | Kontrollstrukturen und Logik testen mit Datenbank.       |
 | 30.04.2019 | Systemübersicht und Softwarearchitekturdiagramm gezeichnet                                                                      | 1h         |        |
-| 30.04.2019 | ERM gezeichnet                                                                                                                  | 1h         |        |
-| 30.04.2019 | User-Stories angepasst                                                                                                          | 15 min     |        |
+| 30.04.2019 | ERM gezeichnet.                                                                                                                 | 1h         |        |
+| 30.04.2019 | User-Stories angepasst.                                                                                                         | 15 min     |        |
 | 01.05.2019 | Generic Views angeguckt.                                                                                                        | 3h         |        |
-| 01.05.2019 | Tests angucken, gestoppt wegen DB Schnittstelle.                                                                                 | 2h         | Es gab Komplikationen, weil der Datenbank User nicht genug Rechte hatte und das Root Passwort nicht funktionierte.       |
+| 02.05.2019 | Tests angucken. Gestoppt wegen DB Schnittstelle.                                                                                | 2h         | Es gab Komplikationen, weil der Datenbank User nicht genug Rechte hatte und das Root Passwort nicht funktionierte.       |
+| 03.05.2019 | Test zum Laufen bekommen.                                                                                                       | 30 min     | User brauch Berechtigungen um eine Datenbank zu erstellen.       |
+| 03.05.2019 | Tests erstellt Views und Models getestet.                                                                                       | 3h         |        |
