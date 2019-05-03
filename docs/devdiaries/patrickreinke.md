@@ -61,3 +61,5 @@ __29.04.2019 - 05.05.2019__
 | 29.04.2019 | Weiterführung der Erstellung der Mockups für die Web-Anwendung                                        | 3 h        |        |
 | 30.04.2019 | Definition von der [Projektorganisation](https://cardholder.github.io/docs/#/?id=projektorganisation) | 1 h 30 min |        |
 | 30.04.2019 | Fertigstellung der Mockups für die Web-Anwendung                                                      | 2 h 30 min |        |
+| 02.05.2019 | Erstellung eines Beispiel Projekt mit der Berücksichtigung der erlernten Themen                       | 3 h        |        |
+| 03.05.2019 | Fertigstellung des Beispiel Projektes mit den bisher erlernten Themen                                 | 2 h 30 min |        |
