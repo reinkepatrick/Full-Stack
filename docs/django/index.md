@@ -89,8 +89,18 @@ Damit die View aufgerufen werden kann, müssen die [URLs](#URLs) konfiguriert we
 
 Views müssen am Ende einen HTTP Response haben oder eine Exception wie HTTP 404.
 
+### HTTP Response
+
+Die Klasse `HttpResponse` hat folgende Eigenschaften:
+* `status_code`
+* `content`
+* `closed`
+* `reason_phrase`
+
+Wenn im Response noch weitere Parameter übergeben werden, können auch auf diese zugegriffen werden. Ein typischer Parameter ist `context`. Damit übergibt die View Objekte.
+
 ### Generic Views
-Generic Views sind dafür da, um wiederholungen zu vermeiden und weniger Code zu schreiben. Es gibt zwei verschiedene Generic Views:
+Generic Views sind dafür da, um Wiederholungen zu vermeiden und weniger Code zu schreiben. Es gibt zwei verschiedene Generic Views:
 * ListView
 * DetailView
 
@@ -100,7 +110,7 @@ Eine `DetailView` erwartet den Hauptschlüssel als Parameter, weshalb dies in de
 
 In den Generic Views, muss auch der `template_name` gesetzt werden.  
 
-Der übergebene Kontext für das [Template](#templates) ist bei der `DetailView` das model und beim `ListView` das Attribut `context_object_name`
+Der übergebene Kontext für das [Template](#templates) ist bei der `DetailView` das Model und beim `ListView` das Attribut `context_object_name`
 
 Beispiel __DetailView__:
 
@@ -109,7 +119,7 @@ class DetailView(generic.DetailView):
     model = Question
     template_name = 'polls/detail.html'
 ```
-Das Model enthält nun die Question mit dem übergebenen Hauptschlüssel. Dies wird automatisch an das Template übergeben, da eine GenericView Methoden abarbeitet.
+Das Model enthält nun die Question mit dem übergebenen Hauptschlüssel. Dies wird automatisch an das Template übergeben, da eine GenericView bestimmte Methoden abarbeitet.
 
 1. setup()
 2. dispatch()
@@ -320,7 +330,7 @@ admin.site.register(Question)
 ```
 
 ## Templates
-Templates sind dafür da, um beim Response ein Design für bestimmte Responses zu ermöglichen. Somit werden views von der Benutzeroberfläche abgekapselt.  
+Templates sind dafür da, um beim Response ein Design für bestimmte Responses zu ermöglichen. Somit werden Views von der Benutzeroberfläche abgekapselt.  
 Die Templates sind in einer HTML Datei geschrieben, welche dann in der View angegeben werden muss. Im Template selber können auf Variablen zugegriffen werden. Dies ist durch Django möglich. Genauso können auch Kontrollstrukturen verwendet werden.
 
 Beispiel Ablauf:
@@ -329,3 +339,37 @@ Beispiel Ablauf:
 3. View bekommt Daten vom Model.
 4. Daten werden zum Template gegeben, welches Daten anzeigt.
 
+## Tests
+
+Tests werden üblicherweise in einer Datei `tests.py` geschrieben. Diese Datei befindet sich in der jeweiligen App. 
+
+Tests werden folgendermaßen ausgeführt.
+```bash
+$ python manage.py test <appname>
+```
+
+Wenn ein Test ausgeführt wird, werden folgende Schritte ausgeführt.
+* `manage.py` sucht nach Tests in den angegebenen apps.
+* Wenn in einer Datei die Subklasse django.test.TestCase vorhanden ist, wird diese Datei als Testfile anerkannt.
+* Für die Tests wird eine Test Datenbank erstellt.
+* Es wird nach Methoden gesucht, welche mit __test__ anfangen.
+* Die Methode wird ausgeführt.
+* Nachdem alle Tests durch gelaufen sind, wird die Datenbank gelöscht.
+
+### Views
+Für Tests der Views gibt es eine Klasse `Client`, welche den Client simulieren kann und somit mit den Code der View interagiert.
+Zunächst musss eine Testumgebung erstellt werden. 
+```python
+from django.test.utils import setup_test_environment
+setup_test_environment()
+```
+
+Nun kann mit der Client Klasse auf URLs zugegriffen werden. Beispiel:  
+```python
+from django.test import Client
+client = Client()
+response = client.get('/')
+```
+
+Der Response ist ein [HTTP Response](#http-response)
+Darauf können dann die Tests ausgeführt werden.
