@@ -335,7 +335,7 @@ Um die Signatur zu erstellen braucht man:
 
 Mit dem HMAC SHA256 Algorithmus sieht die Signatur so aus:
 
-```
+```js
 HMACSHA256(
 base64UrlEncode(header) + "." +
 base64UrlEncode(payload),
@@ -344,9 +344,40 @@ secret)
 
 Die Signatur wird verwendet um sicherzustellen, dass die Nachricht nicht verändert wurde. Wenn man einen private Key verwendet kann man auch verifizieren ob der Absender auch der Richtige ist.
 
+## OpenID
+
+### Was ist OpenID?
+
+OpenID ist ein Authentifizierungssystem, bei dem sich ein Benutzer nur einmal bei einem OpenID Provider mit Benutzernamen und Passwort anmelden muss, um mit Hilfe seiner OpenID sich bei allen das System unterstützenden Websites anmelden kann. 
+
+Für die Anmeldung mit OpenID wird eine OpenID-Identität benötigt. Da die Software Open Source ist kann sie einfach auf dem eigenen Server installiert werden. Durche die einfache Einrichtung wird bei vielen Anbietern zum normalen Login auch eine OpenId Authentifizierung. 
+
+OpenID hatd ie Form einer URL. Dabei wird der Benutzername als Subdomain des Anbieters verwendet. Das kann so aussehen: 
+
+* benutzer.example.com
+* example.com/benutzer
+
+Wenn man nur auf eine OpenID Anmeldeverfahren setzt, kann man auf die "Passwort vergessen" verzichten und durch das nicht speichern der Benutzernamen und Passwörter entfällt auch der dafür nötige Sciherheitsaufwand, da er auf den OpenID-Anbieter verlagert wird. Nachteil ist aber, dass klassische Elemente, wie ein Benutzername häufig nicht verwendet werden können und deshalb eien vollständige Registrierung vorgezogen wird. 
+
+### Nutzung
+
+Wenn eine Website die Anmeldung mit OpenID unterstützt, kann man eine OpenID bereits bei der Registrierung angeben. Der Betreiber der Webseite kann nun neun Informationen vom OpenID-Anbieter erhalten, wenn der Benutzer dem zustimmt und die Informationen zuvor beim Anbieter hinterlegt wurden. 
+
+Beim Anmeldeverfahren wird der Nutzer auf die  Anmeldeseite des OpenID-Anbieters geleitet. Dort erfolgt die Anmeldung. Zur Sicherheit wird eine weitere hinweisende Seite angezeigt, die bestätigt werden muss. Wenn die Anmeldung als vertrauenswürdig gekennzeichnet wird, wird der Nutzer bei einer erneuten Anmeldung auf die Bestätigungseite verzichtet. Nach der Anmeldung wird der Nutzer auf die eigentliche Webseite im angemeldeten Zustand umgeleitet. Bei der Anmeldung kann die Webseite die neun Informationen abfragen und ist somit immer auf dem neusten Stand, was den Vorteil hat, dass der Nutzer diese Daten nur noch bei dem OpenId-Anbiter pflegen muss. Der Benutzer kann auch einer Datenübertragung dauerhaft zustimmen, damit er dieser nicht immer bei jeder Anmeldung angeben muss. 
+
+### Sicherheit
+
+Für den Nutzer ist es einfacher eine Loginseite auf Echtheit zu überprüfen, da sich durch OpenID nur auf eine einzige Seite beschränkt. Der Nutzer muss sich also nur die sicherheitsrelevanten Merkmale von einer Seite merken. Die OpenID-Provider sorgen ebenfalls für Sicherheit, indem sie:
+
+* Cookies verwenden
+* Ein individuelles Bild anzeigen 
+* Den HTTP-Referer mit der IP des Requesters vergleichen 
+* Clientseitiges TLS-Zertifikat zur Autentifizierung nutzen
+
 ## Quellen
 
 * https://www.welivesecurity.com/deutsch/2016/05/04/grundlagen-der-authentifizierung/
 * https://de.wikipedia.org/wiki/Zwei-Faktor-Authentisierung
 * https://de.wikipedia.org/wiki/OAuth
 * https://www.oauth.com/oauth2-servers/getting-ready/
+* https://www.ibm.com/support/knowledgecenter/de/SS7K4U_liberty/com.ibm.websphere.wlp.zseries.doc/ae/cwlp_authentication.html#cwlp_authentication__OpenID

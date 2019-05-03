@@ -28,4 +28,14 @@
 | Datum      | Tätigkeit                                              | Dauer  | Zusatz |
 | ---------- | ------------------------------------------------------ | ------ | ------ |
 | 22.04.2019 | Notizen aufgearbeitet und in Dokumentation aufgenommen | 0h 30m |        |
+| 24.04.2019 | Kapitel Komponenten in Dokumentation aufgenommen       | 2h     |        |
+| 26.04.2019 | Kapitel Interpolation in Dokumentation aufgenommen     | 0h 45m |        |
+| 27.04.2019 | Videoreihe fortgesetzt                                 | 1h     |        |
 
+## Woche 4 
+
+**29.04.2019 - 05.05.2019**
+
+| Datum      | Tätigkeit                                                    | Dauer  | Zusatz |
+| ---------- | ------------------------------------------------------------ | ------ | ------ |
+| 29.04.2019 | Kurzer Einblick in Manipulation von DOM Elementen durch Maus Events | 0h 40m |        |

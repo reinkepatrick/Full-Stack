@@ -17,7 +17,7 @@ __15.04.2019 - 21.04.2019__
 
 | Datum      | Tätigkeit                                                                                                                       | Dauer      | Zusatz |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------- | ---------- | ------ |
-| 15.04.2019 | Aufsetzen der ersten Website und beschreiben des Ablaufs. Desweiteren Ordnerstruktur nach gefundenen Best Practices anpassen.   | 3h         | Probleme mit Struktur des Verzeichnisses und einbinden der URLs, beim ändern der Ordnerstruktur.                                                                     |
+| 15.04.2019 | Aufsetzen der ersten Website und beschreiben des Ablaufs. Desweiteren Ordnerstruktur nach gefundenen Best Practices anpassen.   | 3h         | Probleme mit Struktur des Verzeichnisses und einbinden der URLs, beim ändern der Ordnerstruktur.                                                                         |
 | 17.04.2019 | Korrigieren der Struktur von Django. Rechtschreibung korrigieren.                                                               | 1h         |        |
 | 19.04.2019 | Aufsetzen von MariaDB und Django Projekt in einer virtuellen Umgebung.                                                          | 30 min     |        |
 | 19.04.2019 | Einlesen in virtualenv.                                                                                                         | 30 min     |        |
@@ -35,4 +35,16 @@ __22.04.2019 - 28.04.2019__
 | 26.04.2019 | Definition von Betribsbedingungen und Qualitätsmerkmalen von cardholder.                                                        | 1h         |        |
 | 26.04.2019 | Nach URL Patterns recherchieren und erklären.                                                                                   | 2h         |        |
 | 26.04.2019 | Definition von User-Stories erstellen.                                                                                          | 45 min     |        |
-| 28.04.2019 | Templates verstehen und erklären.                                                                                               | 2h         |        |
+| 28.04.2019 | Templates verstehen und erklären.                                                                                               | 2h         | Erste Templates mit anzeigen von Variablen, welche von Views übergeben worden sind. Erstellen von Listen über eine Loop.       |
+
+## Woche 4 
+__29.04.2019 - 05.05.2019__
+
+| Datum      | Tätigkeit                                                                                                                       | Dauer      | Zusatz |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------- | ---------- | ------ |
+| 29.04.2019 | Weiter Templates testen.                                                                                                        | 2h         | Kontrollstrukturen und Logik testen mit Datenbank.       |
+| 30.04.2019 | Systemübersicht und Softwarearchitekturdiagramm gezeichnet                                                                      | 1h         |        |
+| 30.04.2019 | ERM gezeichnet                                                                                                                  | 1h         |        |
+| 30.04.2019 | User-Stories angepasst                                                                                                          | 15 min     |        |
+| 01.05.2019 | Generic Views angeguckt.                                                                                                        | 3h         |        |
+| 01.05.2019 | Tests angucken, gestoppt wegen DB Schnittstelle.                                                                                 | 2h         | Es gab Komplikationen, weil der Datenbank User nicht genug Rechte hatte und das Root Passwort nicht funktionierte.       |

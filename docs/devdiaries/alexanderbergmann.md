@@ -25,12 +25,20 @@ __15.04.2019 - 21.04.2019__
 
 __22.04.2019 - 28.04.2019__
 
-| Datum | Tätigkeit                                            | Dauer | Zusatz |
-| ----- | ---------------------------------------------------- | ----- | ------ |
-|       | Jenkins konfigurieren (Hello World - Python Projekt) |       |        |
-|       | Jenkins mit Docker                                   |       |        |
-|       | Eigene Docker-Images erstellen                       |       |        |
-|       | Docker und Docker Compose                            |       |        |
-|       | Docker und Kubernates                                |       |        |
-|       | Docker Swarm                                         |       |        |
+| Datum      | Tätigkeit                             | Dauer | Zusatz |
+| ---------- | ------------------------------------- | ----- | ------ |
+| 23.04.2019 | Wöchentliches Meeting - Projektarbeit | 5 h   |        |
+| 24.04.2019 | Recherche und Dokumetation bearbeiten | 2,5 h |        |
+| 25.04.2019 | Recherche und Dokumetation bearbeiten | 1,5 h |        |
+
+## Woche 4
+
+__29.04.2019 - 05.05.2019__
+
+| Datum | Tätigkeit                                          | Dauer | Zusatz |
+| ----- | -------------------------------------------------- | ----- | ------ |
+|       | Wöchentliches Meeting - Projektarbeit              |       |        |
+|       | Eigene Docker-Images erstellen                     |       |        |
+|       | Jenkins konfigurieren (Hello World - Java Projekt) |       |        |
+|       |                                                    |       |        |
 

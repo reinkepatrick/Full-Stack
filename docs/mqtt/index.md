@@ -1,3 +1,11 @@
+# Event-Driven Architecture
+
+![Event-Driven Architecture](img/eventdriven.jpg)
+
+
+
+![Event-Driven Architecture2](img/eventdrivenasynchron.jpg)
+
 # MQTT
 
 ## Beschreibung
@@ -57,9 +65,73 @@ Je nach Anwendungszweck können einzelne Nachrichten eine sehr unterschiedliche 
 
 In einem System, wo die Sensoren dauerhaft und sehr viele Messdaten veröffentlichen, würde beispielsweise die Stufe 0 ausreichen. Wenn aber jede einzelne Nachricht für eine Auswertung nötig ist und dementsprechend eine hohe Relevanz hat, dann wird vermutlich Stufe 2 verwendet. 
 
+## Vergleich zu AMQP
+
+### Überblick über AMQP
+
+AMQP steht für **Advanced Message Queuing Protocol**.
+
+- **Container**: Anwendung (App), innerhalb der AMQP zur Kommunikation verwendet wird
+- **Node**: Addressierbare Entität innerhalb der Anwendung
+  - kann alles sein z.B. Topic (wie bei MQTT), Queue
+  - können flach, hierarchisch oder als Graph organisiert sein
+- **Links**: Dienen der Verbindung zwischen Nodes mittels Pfaden
+
+![Nodes AMQP](img/amqpnodes.png)
+
+#### Ablauf
+
+##### 1. Verbindungsaufbau
+
+![Connection AMQP](img/amqpconnection.png)
+
+
+
+##### 2. Sitzungsaufbau
+
+![Session AMQP](img/amqpsession.png)
+
+
+
+##### 3. Link erstellen
+
+![Link AMQP](img/amqplink.png)
+
+
+
+##### 4. Transfer
+
+![Transfer AMQP](img/amqptransfer.png)
+
+### Vergleich
+
+#### Vorteile:
+
+- Höhere Sicherheit 
+  - Verschlüsselung mit TLS (Transport Layer Security, Vorgänger SSL) möglich
+  - optional Authentifizierung mit SASL (Simple Authentication and Security Layer)
+- Flowcontrol
+
+#### Nachteile:
+
+- Komplexität
+  - Implementierung
+  - Clients
+- Overhead
+
+Kurz gesagt: AMQP bietet deutlich mehr Funktionalität als MQTT, ist dadurch aber auch um einiges komplexer und hat mehr Overhead. Im IoT-Umfeld kann das mit schlechten und unzuverlässigen Verbindungen ein ausschlaggebender Faktor sein.
+
+![MQTT vs AMQP](img/amqpmqtt.png)
+
+In der Grafik sind die Zusammensetzungen der einzelnen Nachrichtenpakete gegenübergestellt. Eine AMQP-Nachricht kann deutlich mehr (Meta-)Informationen bieten, hat dafür aber - wie erwähnt - auch deutlich mehr Overhead.
+
 ## Quellen
 
+Event-Driven Architecture vs. Request/Response: https://realtimeapi.io/hub/event-driven-apis/
+Synchron vs. Asynchron: https://www.slideshare.net/hamidreza-s/event-driven-architecture-concepts-in-web-technologies-part-1
 Topologie-Grafik: https://www.dataweek.co.za/9101a
 Topic-Grafiken:: https://www.hivemq.com/blog/mqtt-essentials-part-5-mqtt-topics-best-practices/
 Ablauf-Grafik: By Simon A. Eugster - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=70622928
 QoS: https://www.heise.de/developer/artikel/Kommunikation-ueber-MQTT-3238975.html
+AMQP: https://onedrive.live.com/view.aspx?resid=123CCD2A7AB10107!732068&ithint=file%2cpptx&lor=shortUrl
+AMQP vs. MQTT: https://vasters.com/blog/From-MQTT-to-AMQP-and-back/

@@ -85,9 +85,70 @@ def index(request):
 ```
 
 Wenn von dieser View nun die Methode `index` aufgerufen wird, sendet die View einen HttpResponse mit der Nachricht zurück.  
-Damit die View aufgerufen werden kann, müssen die [URLs](#URLs) konfiguriert werden. 
+Damit die View aufgerufen werden kann, müssen die [URLs](#URLs) konfiguriert werden.  
 
 Views müssen am Ende einen HTTP Response haben oder eine Exception wie HTTP 404.
+
+### Generic Views
+Generic Views sind dafür da, um wiederholungen zu vermeiden und weniger Code zu schreiben. Es gibt zwei verschiedene Generic Views:
+* ListView
+* DetailView
+
+Bei der `ListView` wird mit einer Liste von Objekten gearbeitet und bei der `DetailView` nur mit einem Objekt.  
+Eine Generic View muss ein Model mitgegeben bekommen.  
+Eine `DetailView` erwartet den Hauptschlüssel als Parameter, weshalb dies in der [URL](#urls) geändert werden muss.
+
+In den Generic Views, muss auch der `template_name` gesetzt werden.  
+
+Der übergebene Kontext für das [Template](#templates) ist bei der `DetailView` das model und beim `ListView` das Attribut `context_object_name`
+
+Beispiel __DetailView__:
+
+```python
+class DetailView(generic.DetailView):
+    model = Question
+    template_name = 'polls/detail.html'
+```
+Das Model enthält nun die Question mit dem übergebenen Hauptschlüssel. Dies wird automatisch an das Template übergeben, da eine GenericView Methoden abarbeitet.
+
+1. setup()
+2. dispatch()
+3. http_method_not_allowed()
+4. get_template_names()
+5. get_slug_field()
+6. get_queryset()
+7. get_object()
+8. get_context_object_name()
+9. get_context_data()
+10. get()
+11. render_to_response()
+
+Die Methoden können überschrieben werden.
+
+Beispiel __ListView__:
+
+```python
+class IndexView(generic.ListView):
+    template_name = 'polls/index.html'
+    context_object_name = 'latest_question_list'
+
+    def get_queryset(self):
+        """Return the last five published questions."""
+        return Question.objects.order_by('-pub_date')[:5]
+```
+
+Eine ListView brauch keinen übergebenen Parameter, jedoch muss dann die Methode `get_queryset` überschrieben werden.
+Die abgearbeiteten Methoden sind. 
+
+1. setup()
+2. dispatch()
+3. http_method_not_allowed()
+4. get_template_names()
+5. get_queryset()
+6. get_context_object_name()
+7. get_context_data()
+8. get()
+9. render_to_response()
 
 ## URLs
 Es gibt eine URL Konfigurationsdatei, welche beim Projekt anlegen existiert. Dies ist die Root Konfigurationsdatei. In jeder App wird noch eine weitere URL Datei angelegt. In der Root Konfigurationsdatei wird zu der URL Datei von einer App weitergeleitet. Dazu wird ein Array `urlpatterns` erstellt, indem die verschiedenen Pfade zu den Apps angegeben werden. Von der URL Datei in der App wird zu den Methoden von der Views Datei geleitet.
