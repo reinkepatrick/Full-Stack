@@ -1,12 +1,26 @@
-# Event-Driven Architecture
+
+
+# Message Broker
+
+## Event-Driven Architecture
 
 ![Event-Driven Architecture](img/eventdriven.jpg)
 
+Die **Even-Driven Architecture** (eventgesteuerte Architektur, kurz EDA) ist ein Softwarearchitekturmodell, das die Kommunikation innerhalb eines Systems beschreibt. Anders als beim "klassischen" Request/Response-Pattern kommunizieren zwei Knoten niemals direkt miteinander, sondern immer über einen Mediator (Vermittler). Dieser Mediator kann z.B. ein Message Broker oder ein Bus sein.
 
+Wie der Name schon sagt, stehen bei der EDA Events im Vordergrund. Ein **Event** (Ereignis) kann letzendlich alles sein, solange es zu einem klar definierten Zeitpunkt geschieht und aufgezeichnet werden kann.
+
+Die Knoten lassen sich in Eventerzeuger und -verbraucher unterteilen. 
 
 ![Event-Driven Architecture2](img/eventdrivenasynchron.jpg)
 
-# MQTT
+### Vorteile
+
+- Skalierbarkeit
+- Dezentralisierung
+- Asynchronität
+
+## MQTT
 
 ## Beschreibung
 
@@ -65,11 +79,14 @@ Je nach Anwendungszweck können einzelne Nachrichten eine sehr unterschiedliche 
 
 In einem System, wo die Sensoren dauerhaft und sehr viele Messdaten veröffentlichen, würde beispielsweise die Stufe 0 ausreichen. Wenn aber jede einzelne Nachricht für eine Auswertung nötig ist und dementsprechend eine hohe Relevanz hat, dann wird vermutlich Stufe 2 verwendet. 
 
-## Vergleich zu AMQP
+## AMQP
 
-### Überblick über AMQP
+### Bestandteile
 
 AMQP steht für **Advanced Message Queuing Protocol**.
+
+- **Connection**:
+- **Session**:
 
 - **Container**: Anwendung (App), innerhalb der AMQP zur Kommunikation verwendet wird
 - **Node**: Addressierbare Entität innerhalb der Anwendung
@@ -79,7 +96,7 @@ AMQP steht für **Advanced Message Queuing Protocol**.
 
 ![Nodes AMQP](img/amqpnodes.png)
 
-#### Ablauf
+### Ablauf
 
 ##### 1. Verbindungsaufbau
 
@@ -103,7 +120,7 @@ AMQP steht für **Advanced Message Queuing Protocol**.
 
 ![Transfer AMQP](img/amqptransfer.png)
 
-### Vergleich
+## AMQP vs. MQTT
 
 #### Vorteile:
 
