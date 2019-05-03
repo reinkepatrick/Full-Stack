@@ -99,9 +99,9 @@ export default foobar;
 Diese bezeichnet man als Container- oder Zustandscomponents, diese
 verwendet man wie der Name schon sagt, wenn man Zustände in einem
 Component speichern möchte. Um eigene Components dann zu verwenden, kann
-man diese einfach einbinden und aufrufen. Hier zu wird das
-funktionale Component aus dem oberen Beispiel genutzt und es in
-die `App.js` importiert.
+man diese einfach einbinden und aufrufen. Hier zu wird das funktionale
+Component aus dem oberen Beispiel genutzt und es in die `App.js`
+importiert.
 
 ```jsx
 import React, { Component } from 'react';
@@ -142,8 +142,8 @@ render() {
 
 Damit JSX verwendet werden kann, wird auch `React` in ein Component
 importiert. React erstellt dann aus dem JSX für den Browser lesbares
-JavaScript. Als Beispiel wird gezeigt wie der obere Code als
-normales JavaScript aussieht und was React intern mit JSX macht.
+JavaScript. Als Beispiel wird gezeigt wie der obere Code als normales
+JavaScript aussieht und was React intern mit JSX macht.
 
 ```jsx
 render() {
@@ -155,8 +155,8 @@ render() {
 
 JSX hat aber ein paar kleine Einschränkungen, es sieht zwar aus wie HTML
 und es verhält sich auch in den meisten Fällen so, weswegen auch zum
-Beispiel `className` genutzt wird anstatt die normale HTML-`class`, weil JSX
-intern immer noch zu JavaScript kompiliert wird und `class` unter
+Beispiel `className` genutzt wird anstatt die normale HTML-`class`, weil
+JSX intern immer noch zu JavaScript kompiliert wird und `class` unter
 JavaScript eine andere Verwendung findet. Außerdem kann man unter JSX im
 Normalfall nur ein HTML Element zurückgeben, am folgenden Beispiel sieht
 man wie es __nicht__ funktioniert.
@@ -173,14 +173,14 @@ render() {
 ```
 
 Aus diesem Grund packt man um ein Component immer ein HTML-Element und
-fügt seinen Kontent in dieses HTML-Element ein oder man nutzt `React.Fragment`
-anstatt es in ein `<div></div>` zupacken.
+fügt seinen Kontent in dieses HTML-Element ein oder man nutzt
+`React.Fragment` anstatt es in ein `<div></div>` zupacken.
 
 
 ## Properties
 
-Eigenschaften, auch __Properties__ oder __Props__ genannt, bieten uns die
-Möglichkeit den Inhalt der Components dynamisch anpassbar zu machen.
+Eigenschaften, auch __Properties__ oder __Props__ genannt, bieten uns
+die Möglichkeit den Inhalt der Components dynamisch anpassbar zu machen.
 Diese kann man einfach bei den Aufruf des Components übergeben.
 
 ```jsx
@@ -190,12 +190,12 @@ Diese kann man einfach bei den Aufruf des Components übergeben.
 
 ![components](./img/props.svg)
 
-Properties kann man dann einfach innerhalb des Components
-verwenden. Im zweiten Aufruf, im Beispiel, wird es nicht als Attribut übergeben,
-dies kann man einfach über `.children` abrufen.  
+Properties kann man dann einfach innerhalb des Components verwenden. Im
+zweiten Aufruf, im Beispiel, wird es nicht als Attribut übergeben, dies
+kann man einfach über `.children` abrufen.  
 __Wichtig:__ Sollte man dasselbe bei einem klassenbasierten Component
-machen, dann muss man es wie in dem unten gezeigten Beispiel, `this.props.foo`
-verwenden.
+machen, dann muss man es wie in dem unten gezeigten Beispiel,
+`this.props.foo` verwenden.
 
 ```jsx
 import React from 'react';
@@ -273,6 +273,7 @@ Anwendung ist zum Beispiel eine Authentifizierung.
 
 __Context erstellen__  
 Das Erstellen eines Context geschieht mit `React.createContext()`.
+
 ```jsx
 import React from 'react';
 
@@ -285,7 +286,8 @@ export default authContext;
 ```
 
 __Context bereitstellen__  
-Das Bereitstellen des Context geschieht in einem übergeordneten Component über `Context.Provider`.
+Das Bereitstellen des Context geschieht in einem übergeordneten
+Component über `Context.Provider`.
 
 ```jsx
 <AuthContext.Provider
@@ -299,15 +301,18 @@ Das Bereitstellen des Context geschieht in einem übergeordneten Component über
 ```
 
 __Context verwenden__  
-Das Verwenden vom Context ist mit `contextType` oder `useContext()` möglich.
+Das Verwenden vom Context ist mit `contextType` oder `useContext()`
+möglich.
 
 Klassenbasierte Components:
+
 ```jsx
 static contextType = AuthContext;
 console.log(this.context.authenticated);
 ```
 
 Funktionale Components:
+
 ```jsx
 const authContext = useContext(AuthContext);
 console.log(authContext.authenticated);
@@ -495,9 +500,10 @@ import React from 'react';
 ```
 
 Nun kann man die Klassen via `className` verwenden.  
-__Wichtig hier bei ist das alle Änderungen in der `.css`-File global sind.__  
-Für das Inline Styling muss eine Anweisung in JavaScript
-verfasst werden.
+__Wichtig hier bei ist das alle Änderungen in der `.css`-File global
+sind.__  
+Für das Inline Styling muss eine Anweisung in JavaScript verfasst
+werden.
 
 ```jsx
 const style = {
@@ -518,13 +524,12 @@ return (
 
 ### Radium
 
-Radium ist eine Reihe an Tools, die die Möglichkeit bieten
-Inline Styles in einem React Component zu verbessern. Diese bauen
-außerdem auch Pseudo Selektoren, Media Queries und vieles mehr als
-Inline Styling ein.
+Radium ist eine Reihe an Tools, die die Möglichkeit bieten Inline Styles
+in einem React Component zu verbessern. Diese bauen außerdem auch Pseudo
+Selektoren, Media Queries und vieles mehr als Inline Styling ein.
 
-Um es aber nun auch verwenden zu können muss es in der Datei, wo
-es verwendet werden soll, noch eingebunden und das Component beim
+Um es aber nun auch verwenden zu können muss es in der Datei, wo es
+verwendet werden soll, noch eingebunden und das Component beim
 zurückgeben darin eingepackt (_wrapping_) werden.
 
 ```jsx
@@ -535,8 +540,8 @@ import Radium from 'radium';
 export default Radium(App);
 ```
 
-Nun können Pseudo Selektoren in Inline Styling verwenden.
-Alle Pseudo Selektoren sind unterstützt.
+Nun können Pseudo Selektoren in Inline Styling verwenden. Alle Pseudo
+Selektoren sind unterstützt.
 
 ```jsx
 const style = {
@@ -560,8 +565,8 @@ const style = {
 };
 ```
 
-Um Media Queries verwenden zu können, muss die App in ein `StyleRoot` gepackt werden,
-dasselbe gilt auch für Keyframes.
+Um Media Queries verwenden zu können, muss die App in ein `StyleRoot`
+gepackt werden, dasselbe gilt auch für Keyframes.
 
 ```jsx
 return (
@@ -658,16 +663,17 @@ class App extends React.Component {
 
 ### CSS Modules
 
-Es gibt auch die Möglichkeit die Scopes der Styles
-anzupassen, hierzu müssen, aber paar Konfigurationen angepasst werden. Dazu
-muss `react-scripts` aufgerufen werden.
+Es gibt auch die Möglichkeit die Scopes der Styles anzupassen, hierzu
+müssen, aber paar Konfigurationen angepasst werden. Dazu muss
+`react-scripts` aufgerufen werden.
 
 ```bash
 react-scripts eject
 ```
 
-Jetzt wird noch die `webpack.config.js` angepasst, diese ist im neu generierten
-`config`-Ordner. Ab _Zeile 391_, sie sollte wie folgt aussehen:
+Jetzt wird noch die `webpack.config.js` angepasst, diese ist im neu
+generierten `config`-Ordner. Ab _Zeile 391_, sie sollte wie folgt
+aussehen:
 
 ```jsx
 {
@@ -681,8 +687,8 @@ Jetzt wird noch die `webpack.config.js` angepasst, diese ist im neu generierten
 }
 ```
 
-Diese wird so angepasst, dass der CSS-Loader einzigartige Klassen
-daraus generieren kann.
+Diese wird so angepasst, dass der CSS-Loader einzigartige Klassen daraus
+generieren kann.
 
 ```jsx
 {
@@ -702,8 +708,8 @@ Alternativ muss man kein `react-scripts` dafür ausführen, mehr dafür
 siehe
 [hier](https://facebook.github.io/create-react-app/docs/adding-a-css-modules-stylesheet).
 
-Nun muss nur noch der JavaScript-Code angepasst werden,
-dies wird unten anhand eines Beispiels gezeigt.
+Nun muss nur noch der JavaScript-Code angepasst werden, dies wird unten
+anhand eines Beispiels gezeigt.
 
 ```jsx
 import classes from './App.css';
@@ -790,6 +796,22 @@ const foobar = props => {
 
 export default React.memo(foobar);
 ```
+
+## HTTP-Requests
+
+HTTP-Request sind unter React eine wichtige Möglichkeit um Daten von
+einem Server zubekommen, natürlich kann man auch mit anderen Möglichkeiten arbeiten wie
+Websockets. Der Server, das Backend, fungiert nicht als jemand der HTML-Seiten verteilt,
+sondern der Daten verschickt, also eine REST-API.
+
+![http](./img/http.svg)
+
+### Axios
+[Axios](https://github.com/axios/axios) ist eine Bibliothek für das Senden von HTTP-Requests, diese hilft einem dabei auf
+leichtem Wege solche Requests zu senden. Die Requests werden asynchron
+
+
+
 
 
 ## Quellen
