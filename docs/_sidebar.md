@@ -17,7 +17,7 @@
     * Mobile
       * [Flutter](flutter/index.md)
       * [IONIC](ionic/index)
-      * [React Native](react%20native/index)
+      * [React Native](reactnative/index)
   * Backend
     * [Django](django/index)
     * [DotNetCore](dotnetcore/index)
