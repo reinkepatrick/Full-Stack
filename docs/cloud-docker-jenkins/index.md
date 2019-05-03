@@ -38,28 +38,28 @@ Es folgt eine Liste von CI-Tools mit einer kurzen Beschreibung und einigen Vor- 
 
 Jenkins ist bei nahezu jeder CI-Tool-Liste die Nummer eins. Es ist frei zugänglich, sprich Open-Source und bietet durch seine Plugin-Infrastruktur die Möglichkeit seine Konfiguration an viele verschiedene Projekte (und Sprachen) anzupassen. Jenkins ist eine Java Applikation und hat auch seine Wurzeln bei der Firma "Sun Microsystems" die 2010 von Oracle aufgekauft wurde.
 
-| Vorteile                                                     | Nachteile                                               | Abhängigkeiten           |
-| ------------------------------------------------------------ | ------------------------------------------------------- | ------------------------ |
-| Sehr flexible an verschiedene Projektformen anpassbar (Plugins) | Hoher Konfigurationsaufwand und Eigenleistung notwendig | Java Runtime Environment |
+| Vorteile                                                   | Nachteile                                               | Abhängigkeiten                         |
+| ---------------------------------------------------------- | ------------------------------------------------------- | -------------------------------------- |
+| Sehr flexible an verschiedene Projekte anpassbar (Plugins) | Hoher Konfigurationsaufwand und Eigenleistung notwendig | Java Runtime Environment (Java 7 o. 8) |
 
 **Travis CI / Circle CI**
 
 Die beiden CI-Tools stellen ein Cloud-basierte Lösung eines Build und Deploysystem dar. Travis sowie Circle bieten die Nutzung für Open-Source-Projekte umsonst an die auf Github gehostet werden. Aber auch diese sind auf Build-Anzahl etc. beschränkt. Diese Tools nehmen einem sehr viel Denkarbeit ab und man kann sich aufs Wesentliche konzentrieren.
 
-| Vorteile                                                | Nachteile                              | Abhängigkeiten |
-| ------------------------------------------------------- | -------------------------------------- | -------------- |
-| Kommerzielles Self-Hosting möglich                      | Bei Free-Version auf Github beschränkt | Keine da PaaS  |
-| Nimmt einem sehr viel Arbeit ab, schnell konfigurierbar |                                        |                |
-| fast alle gängigen Programmiersprachen und Projekte     |                                        |                |
+| Vorteile                                                     | Nachteile                                       | Abhängigkeiten |
+| ------------------------------------------------------------ | ----------------------------------------------- | -------------- |
+| Kommerzielles Self-Hosting möglich                           | Bei Free-Version auf Github Projekte beschränkt | Keine da PaaS  |
+| Nimmt einem sehr viel Arbeit ab und ist schnell konfigurierbar |                                                 |                |
+| Fast alle gängigen Programmiersprachen und Projekte möglich  |                                                 |                |
 
 **Gitlab CI Community**
 
 Gitlab CI stellt auch eine Cloud-basierte Lösung dar, bei der allerdings die Self-Hosted-Core Version gratis ist. Entwickelt wird Gitlab in Ruby und Go.
 
-| Vorteile                                              | Nachteile                                     | Abhängigkeiten |
-| ----------------------------------------------------- | --------------------------------------------- | -------------- |
-| Self-Hosted Git Server mit Issue Tracker, CI, CD .... | Höherer Konfigurationsaufwand bei Self-Hosted | Keine da PaaS  |
-| Integrierter GitHub-Ersatz                            |                                               |                |
+| Vorteile                                              | Nachteile                                     | Abhängigkeiten                                               |
+| ----------------------------------------------------- | --------------------------------------------- | ------------------------------------------------------------ |
+| Self-Hosted Git Server mit Issue Tracker, CI, CD .... | Höherer Konfigurationsaufwand bei Self-Hosted | Keine wenn PaaS                                              |
+| Integrierter GitHub-Ersatz                            |                                               | Sonst siehe [Gitlab Install](https://about.gitlab.com/install/) |
 
 ## Jenkins
 
