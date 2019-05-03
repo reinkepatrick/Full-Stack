@@ -46,3 +46,12 @@ __23.04.2019 - 29.04.2019__
     - MVVM in Ionic
       - AngularJS reingeschaut
   - Youtube Tutorial Angular & Ionic 4
+
+## Woche 4
+__30.04.2019 - 06.05.2019__
+
+|Datum|Tätigkeit|Dauer|Zusatz|
+| - | - | - | - |
+| 30.04.2019 | Gemeinsame Erarbeitung eines Modelklassendiagramms|2 h| |
+| 03.05.2019 | Einrichten des Dokumentationsrepository |30 Min| |
+| 03.05.2019 | Nachpflegen des Devdiary |20 Min| |
