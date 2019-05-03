@@ -1,30 +1,30 @@
 <!-- _navbar.md -->
 
 * [Home](/)
-* 1 Inhalte
-  * Grundlagen
+* **1 Inhalte**
+  * **Grundlagen**
     * [Cloud Deployment + Build + Test + Container](cloud-docker-jenkins/index.md)
     * [Message Broker (MQTT, AMQP)](mqtt/index)
     * [Protokolle und Datenformate in verteilten Systemen](netzwerkprotokolle/index)
     * [Authentifizierung und Sicherheit](security-auth/index)
     * [State Management](state-managment/index)
-  * Frontend
-    * Web 
-      * [Angular.js](angular/index)
+  * **Frontend**
+    * **Web**
+      * [Angular](angular/index)
       * [React.js](react/index.md)
       * [yew.rs](rust_yew/index)
       * [WebGL](webgl/index)
-    * Mobile
+    * **Mobile**
       * [Flutter](flutter/index.md)
       * [IONIC](ionic/index)
       * [React Native](reactnative/index)
-  * Backend
+  * **Backend**
     * [Django](django/index)
     * [.net Core](dotnetcore/index)
-* 2 Projekte
+* **2 Projekte**
   * [Projekte](orga/projekt)
   
-* Tagebücher
+* **Tagebücher**
   * [Alexander Bergmann](devdiaries/alexanderbergmann)
   * [Alexander Heinisch](devdiaries/alexanderheinisch)
   * [Andre Matutat](devdiaries/andrematutat)
