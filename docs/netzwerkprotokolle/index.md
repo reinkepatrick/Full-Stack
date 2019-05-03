@@ -4,7 +4,7 @@ von André Matutat
 
 ## Vorwort
 Ein Clientbasiertes User Interface mit Anbindung an einen Server, welcher die Business Logik ausführt und einen Datenbankserver im Hintergrund.</br> 
-Solche Strukturen sind Alltag in der heutigen Entwicklungszeit, deswegen sollte sich jeder einmal mit den Grundlagen der Kommunikation in verteilten Systemen auseinandersetzten, es schadet aber auch nicht einen Blick abseits des gängigen Standards zu werfen, da es viele junge Technologien gibt. </br>
+Solche Strukturen sind Alltag in der heutigen Entwicklungszeit, deswegen sollte sich jeder einmal mit den Grundlagen der Kommunikation in verteilten Systemen auseinandersetzten, es schadet aber auch nicht, einen Blick abseits des gängigen Standards zu werfen, da es viele junge Technologien gibt. </br>
 
 In dieser Dokumentation möchte ich Grundlagen der Kommunikation auf Anwendungsebene erläutern. Ich werde kurz auf gängige Praxis eingehen, den Fokus aber auf GraphQL legen. </br>
 
@@ -101,11 +101,23 @@ Die Facebook App war Anfangs sehr träge, dies lag aber nicht an der App selber,
 
 GraphQL ist unabhängig von der Datenbanksoftware und ist in fast jeder Programmiersprache anwendbar(wie Haskell, JavaScript, Python,Ruby, Java, C#, Scala, Go, Elixir, Erlang, PHP, R und Clojure).
 
+__Inhaltsverzeichnis__
+
+| Themen                                   | Kurzbeschreibugn                         |
+| ---------------------------------------- | ---------------------------------------- |
+| [Standard Abfragen](#Abfragen)   | Einfache Abfragen von einzelnen Knoten   |
+| [Verschachtelte Abfragen](#Abfragen) | Abfragen über mehrere Knoten             |
+| [Argumente](#Argumente)                  | Verfeinerung von Abfragen                |
+| [Variablen](#Variablen)                  | Variable Argumente für Abfragen          |
+| [Richtlinien (Directives)](#Richtlinien (Directives)) | Ermöglichen es, Abfragen dynamisch anzupassen |
+| [Mutation](#Mutation)                    | Ändern von Daten auf den Server          |
+| [Schemen](#Schemen)                      | Stellt Serverseitig die Datenstruktur zur Verfügung |
+
 ### Abfragen
 
 GraphQL Abfragen verwenden immer die HTTP Methode POST und anders als REST, stellt GraphQL Anfragen immer an dieselbe URL.
 
-#### Standart Abfragen
+#### Standard Abfragen
 
 GraphQL bietet den Client besondere Freiheiten, wenn es darum geht seine Abfragen zu gestalten. <br/>Eine einfache Abfrage in GraphQL könnte in etwa so aussehen: 
 
@@ -128,8 +140,6 @@ Und so könnte die Antwort JSON aussehen:
   }
 }
 ```
-
-
 
 Ändern wir die Anfrage etwas ab, könnte sie so aussehen: 
 
@@ -297,19 +307,97 @@ Im Grunde funktioniert dies genauso wie die Verwendung von Argumenten. Die Infor
 }
 ```
 
-#### Mutationen
+### Mutationen
 
-- tbd
+Mutationen dienen dazu, Daten auf den Server zu ändern, sie sind also das Äquivalent zum REST POST bzw. UPDATE. Syntaktisch sind sie genauso aufgebaut wie Querys:
 
-### Schemen
+```
+mutation createDozent($name: String!, $titel: String!, $fachgebiet: String) {
+  createDozentOnServer(String: $name, String: $titel, String: $fachgebiet) {  
+    titel
+  }
+}
+```
 
-- tbd
+Wir übergeben in unserer Mutation(!) wieder unterschiedliche Parameter an die Server Methode "createDozentOnServer". Wir haben auch die Möglichkeit, eine Abfrage in eine Mutation zu integrieren. In diesem Beispiel erstellen wir also einen Dozenten und Fragen danach den Titel unseres Dozenten ab. <br/>Dafür brauchen wir wieder eine JSON, welche unsere Argumente mit Werten füllt:
+
+```JSON
+{
+  "name": "Müller",
+  "titel": "Dr.",
+  "fachgebiet": "Computer Grafik"  
+}
+```
+
+Antwort vom Server:
+
+```JSON
+{
+  "data": {
+    "createDozentOnServer": {
+      "titel": "Dr."
+    }
+  }
+}
+```
+
+
+
+### Schema
+
+Das GraphQL Schema wird vom Server bereitgestellt und gibt die Datenstruktur bekannt, es gibt also an, welche Abfragen wir stellen können und welche Rückgaben wir erwarten können. <br/>*Das Schema wird in derselben Sprache geschrieben, wie der GraphQL Services selbst. In dieser Dokumentation nutzen wir eine, von [graphql.github](https://graphql.github.io/learn/schema/) erfundene, GraphQL schema langauge, welche unserer bisher verwenden Query Language ähnelt* <br/>
+
+Im Grunde besteht unser GraphQL Schema aus einer Auflistung all unserer Typen. <br/>
+
+#### Object types
+
+Die Basis eines GraphQL Schemas bilden die Objekttypen. Dise sind vergleichbar zu Objekten aus objektorientierten Programmiersprachen. Sie geben an, welche Objekt es gibt und welche Attribute sie besitzen. Die Typen in unserem Schema könnten in etwa so aussehen: 
+
+```
+type Dozent { 
+  name: String!
+  titel: String!
+  fachgebiet: String!
+}
+
+type Wahlfach{
+  name: String!
+  cp: Int!
+  dozent: Dozent!
+}
+
+type Student{
+  id: ID!
+  name: String!
+  wahlfach: [Wahlfach!]
+}
+```
+
+#### Query types
+
+Neben dem Objekttypen ist auch der Query Typ besonders wichtig. Von diesen besitzt jedes GraphQL Schema nur einen. Der Query Typ bildet alle möglichen Abfragen ab, welche Parameter benötigt werden und welchen Rückgabetyp wir bekommen, wenn wir eine Abfrage stellen. Immer wenn eine Query eintritt, dient der Query Typ als Einstiegspunkt in den Objektgrafen. Für unsere Studenten Beispiel würde der Query Typ in etwa wie folgt aussehen:
+
+```
+type Query {
+  dozent (name: String): Dozent 
+  wahlfach (name: String): Wahlfach
+  Student (id: ID): Student
+}
+```
+
+Wir können also eine Abfrage "dozent" stellen, der wir bei Bedarf einen String Parameter übergeben, die uns eine Rückgabe vom Typen Dozent gibt, wie der Typ Dozent aussieht, können wir den Objekttyp "Dozent" entnehmen. 
 
 ### Nachteile
 
 Auch wenn GraphQL auf den ersten Blick wie das bessere REST aussieht, hat es aber auch einige schwächen. <br/>Die große Freiheit der Clients, Abfragen nach Bedarf zu formen, kann zu hohen Performance Problemen auf den Backend führen. Serverseitig muss man also ein besonderes Augenmerk auf die Performance legen. <br/>
 
 GraphQL hat aber auch noch mit einigen Kinderkrankheiten zu kämpfen, so gibt es noch keine native Lösung zur Handhabung von Authentifizierungen und natives HTTP Caching ist nicht möglich. Da das Schema nach außen Bekannt gegeben wird, gibt man auch so die Datenstruktur der Applikation preis. <br/>
+
+### Zusammenfassung
+
+![Struktur von GraphQL](./resources/img/graphQLStruktur.png)
+
+- tbd 
 
 ### GraphQL vs REST
 

@@ -39,6 +39,7 @@ __23.04.2019 - 29.04.2019__
 | 24.04.2019 | Recherche MVVM & MVVM in Ionic.|2 h| |
 | 25.04.2019 | Grobes Klassendiagramm fürs Projekt erzeugt.|2 h| |
 | 26.04.2019 | Oberflächliche Recherche zu Stancil.|20 min| |
+| 29.04.2019 | Einarbeitung in Ionic Youtube-Crashkurs| 1 h |
 
 - Notizen:
   - Recherche MVVM

@@ -25,5 +25,18 @@ __15.04.2019 - 21.04.2019__
 | 19.04 | Kurzüberblick REST vs GraphQL geholt     | 1h    | Teilweise wiedersprüchliche Aussagen gefunden. |
 | 20.04 | Frage beatnwortet: Was ist GraphQL?      | 1h    | Schwierigkeiten verständliche Beschreibung zu schreiben. |
 | 20.04 | Anfang GraphQL Dokumentation             | 2h    |                                          |
-| 21.04 | Dokumentaton GraphQL Abfragen            | 2h    |                                          |
+| 21.04 | Dokumentation GraphQL Abfragen            | 2h    |                                          |
+
+## Woche 3
+
+__22.04.2019 - 28.04.2019__
+
+| Datum | Tätigkeit                    | Dauer | Zusatz                                   |
+| ----- | ---------------------------- | ----- | ---------------------------------------- |
+| 25.04 | Projekt Dokumentation        | 2h    |                                          |
+| 27.04 | GraphQL Mutation             | 1h    |                                          |
+| 27.04 | Dokumentation Überarbeitet   | 1h    |                                          |
+| 28.04 | GraphQL Schema Recherche     | 2h    | Mutations Schema noch nicht verstand     |
+| 28.04 | GraphQL Schema Dokumentation | 1h    | Aufs wesentliche gekürzt (keine interfaces, scalare etc.) |
+| 28.04 | GraphQL Struktur Diagramm    | 0.5h  |                                          |
 

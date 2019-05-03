@@ -7,7 +7,7 @@ Angular JS ist ein elementares Element von Ionic und erzeugt die Struktur der Ap
 
 Ein weiteres Feature ist, dass die Apps auch im jeweiligen App-Store der entsprechenden Plattform zur Verfügung gestellt werden können.
 
-Unterstüzt werden Android, iOS und mit Ionic 2 auch UWP für Windows 10.
+Unterstüzt werden Android, iOS und mit Ionic 2 auch UWP für Windows 10 und die Implementierung einer Electron-Desktop-App.
 
 Systemanforderungen: min. iOS7+ und Android 4.1+
 
@@ -40,10 +40,17 @@ Hybride Apps vereinen die Vorteile von Web- und nativen Apps. Sie werden mit nat
 Ionic basiert auf dem Apache Cordova Cross-Plattform-Entwicklungsframework für mobile Anwendungen. Es nutzt HTML5, CSS3 und JavaScript. Die Anwendungen werden innerhalb von Wrappern ausgeführt, die auf jede Plattform ausgerichtet sind, und verlassen sich auf standardkonforme API-Bindungen, um auf die Funktionen der einzelnen Geräte zuzugreifen.
 
 ### Capacitor
-Capacitor ist eine Alternative zu Cordova und dient ebenfalls als plattformübergreifende API- und Codeausführungsebene, die es einfach macht, Native SDKs aus dem Webcode aufzurufen und benutzerdefinierte native Plugins zu schreiben. Desweiteren unterstützt Capacitor die Entwicklung progressiver Web Apps. Capacitor bietet volle Kompatibilität zu Cordova Plugins. Android Plugins werden in Java und Kotlin geschrieben. iOS Plugins lassen sich in Objective-C realisieren.
+Capacitor ist eine Alternative zu Cordova und dient ebenfalls als plattformübergreifende API- und Codeausführungsebene, die es einfach macht, Native SDKs aus dem Webcode aufzurufen und benutzerdefinierte native Plugins zu schreiben. Desweiteren unterstützt Capacitor die Entwicklung progressiver Web Apps. Capacitor bietet volle Kompatibilität zu Cordova Plugins. Android Plugins werden in Java und Kotlin geschrieben. iOS Plugins lassen sich in Objective-C realisieren. Capacitor kann man wie eine "native App-Hülle" um den eigentlichen Web-Code verstehen. Bei Capacitor handelt es sich um eine eigene Implementierung des Ionic-Entwicklerteams.
+
+## Web-Komponenten
+Ionic stellt eine Reihe an vorgefertigten und vielseitig einsetzbaren Web-Komponenten zu verfügung. Eine Komponente besteht aus HTML, CSS und einem individuellem JavaScript, welches seine eigene Logik beinhaltet. So wäre z.B. ein Menütab eine solche immer wieder verwendbare Web-Komponente.
 
 ### Stencil
-Stencil soll die besten Konzepte aus gängigen Frontend-Frameworks in einem vereinen. Es ist komponentenbasiert und lässt sich in allen gängigen Frontend-Frameworks wie React, Angular, Vue und Ember integrieren.
+Stencil soll die besten Konzepte aus gängigen Frontend-Frameworks in einem vereinen. Es ist komponentenbasiert und lässt sich in allen gängigen Frontend-Frameworks wie React, Angular, Vue und Ember integrieren. Es ermöglicht die Verwendung von vorgefertigten Web-Komponenten und auch die Implementierung eigener Komponenten.
+
+## Zusammenspiel
+
+![Alt text](img/App_Aufbau_Ionic.png "Title")
 
 ## Workflow
 Zu beginn steht die Einrichtung von Cordova via Node-Package-Manager an.
