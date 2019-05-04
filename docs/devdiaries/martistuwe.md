@@ -37,7 +37,7 @@ __22.04.2019 - 28.04.2019__
 | 27.04.2019 | Use-Case Diagramm erstellt                                                                                                    | 30 min     |                         |
 | 28.04.2019 | GUI-Mockups für die mobile Anwendung                                                                                          | 2 h 30 min | Einarbeiten in Adobe XD |
 
-## Woche 3 
+## Woche 4 
 __29.04.2019 - 05.05.2019__
 
 | Datum | Tätigkeit | Dauer | Zusatz |
