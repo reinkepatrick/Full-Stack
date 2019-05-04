@@ -40,6 +40,6 @@ __22.04.2019 - 28.04.2019__
 ## Woche 4 
 __29.04.2019 - 05.05.2019__
 
-| Datum | Tätigkeit | Dauer | Zusatz |
-| ----- | --------- | ----- | ------ |
-|       |           |       |        |
+| Datum      | Tätigkeit                                          | Dauer     | Zusatz |
+| ---------- | -------------------------------------------------- | --------- | ------ |
+| 04.05.2019 | GUI-Mockups für die mobile Anwendung fertigstellen | 3h 30 min |        |
