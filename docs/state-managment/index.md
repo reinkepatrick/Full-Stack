@@ -178,6 +178,36 @@ __https://github.com/voronianski/flux-comparison__
 
 Hier werden auch die verschiedenen Bibliotheken miteinander verglichen.
 
+
+
+## MobX
+
+### Was ist MobX?
+
+Bei MobX handelt es sich um eine Bibliothek und kein Pattern. Das bedeutet, dass die Verwendung von MobX einem nicht vorschreibt, wie die Software aufgebaut werden muss. Häufig wird MobX deshalb auch in einem klassischen MVC-Pattern genutzt.
+
+MobX ist also nur eine spezielle Lösung für die Zustandsverwaltung. Für diese Lösung benutzt MobX das Observable Pattern.
+
+![Beobachterentwurfsmuster](./img/Beobachterentwurfsmuster.png)
+
+Das Pattern beschreibt eigentlich nur, dass es Subjekte gibt, die sich verändern können. Bei diesen Subjekten können sich Beobachter anmelden. Diese Beobachter werden automatisch dann bei jeder Änderung benachrichtigt und können sich dann verändern. Das im Vergleich von Flux und MVC beschriebene Modell von MVC nutzt auch das Observable Pattern. Dies ist also ein möglicher Datenfluss.
+
+MobX basiert jetzt auf dem Ansatz, dass es die Zustände wie eine Tabellenkalkulation betrachtet. 
+
+![Overview MobX](./img/MobX.png)
+
+State ist hier der Status der Anwendung. Das sind sozusagen die Datenzellen. In dem Diagramm steht es auch, MobX kennt nur eine Quelle der Wahrtheit.
+
+Die Derivations (Ableitungen) sind alle Informationen, die aus dem State berechnet werden . Dies sind sozusagen die Formeln der Anwendung. Diese werden automatisch geupdatet.
+
+Reactions sind sehr ähnlich zu den Derivations. Der große Unterschied ist allerdings, dass diese keinen Wert produzieren. Diese laufen automatisch und sorgen dafür, dass bestimmte Aktionen automatisiert ablaufen.
+
+Actions sind die Aktionen, die den State beeinflussen.
+
+### Vorteile / Nachteile
+
+MobX ist eine sehr schlanke Variante, die es einfach macht Anwendungen zu verwalten. Zusätzlich ist sie noch mit allen Pattern kompatibel. Dadurch, dass MobX keinen eigenen Datenfluss oder eine eigene Architektur benötigt, ist MobX sehr gut skalierbar und auch für kleinere Anwendungen gedacht. Flux zu implementieren bedeutet auch, dass man einen riesigen Overhead hat. Dies kann gerade für kleinere Anwendungen zu viel sein. 
+
 # Zusatz
 
 ## Historie
