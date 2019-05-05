@@ -811,8 +811,17 @@ sondern der Daten verschickt, also eine REST-API.
 leichtem Wege solche Requests zu senden. Die Requests werden asynchron
 
 
+## Routing
+Routing ist ein wichtiger Bestandteil von _Singe Page Applications_, es gibt einem die Möglichkeit
+zwischen den Componenten hin und her zu switchen, ohne das der Benutzer die Seite neu lädt.
+Es gibt die Möglichkeit Routen einzurichten und diese dann auf Components leiten zu lassen.
+Routing ist kein Bestandteil von React und kann nur über Bibliotheken verwirklicht werden.
 
+![routing](./img/routing.svg)
 
+### react-router-dom
+`react-router-dom` ist eine Bibliothek für das Routing unter React, es verwendet die Bibliothek
+`react-router` weswegen wir diese nicht dazu installieren müssen.
 
 ## Quellen
 
