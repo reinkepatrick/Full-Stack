@@ -265,6 +265,27 @@ Durch die `*ngIf` Bedingung wird der `ng-template` Tag nur dann gerendert, wenn 
 
 Zunächst folgt ein Property binding um den Wert von lenght aus der Komponente zu laden. In den darauf folgenden Zeilen wird wie üblich eine Strukturdirektive vom Typ switch erzeugt. Es werden nur zutreffende Bereiche gerendert.
 
+## Pipes
+
+Durch Pipes können Funktionen auf Inhalte ausgeführt werden. Mehrere Funktionen können dabei im Aufruf kaskadiert werden.
+
+```typescript
+// Innerhalb der Komponente
+name: String = 'Foo';
+
+// Innerhalb des Templates
+{{name | uppercase}}
+
+// Ausgabe
+FOO
+
+// Kaskadierung
+{{name | uppercase | json}}
+
+// Ausgabe
+"FOO"
+```
+
 ## To-Do
 
 **Verdeutlichen wie Template und Komponente zusammenarbeiten.**
