@@ -19,12 +19,12 @@ Minimale Systemanforderungen:
 + Bringt keine Schnittstelle zur Hardware mit
 
 ### Vergleich mit anderen Frameworks
-| Name             | Performance         | Designelemente                                                              | Programmier-/Skriptsprache | Kompatibilität mit weiteren Frameworks |
-| ---------------- | ------------------- | --------------------------------------------------------------------------- | -------------------------- | -------------------------------------- |
-| **Flutter**      | nativ               | reproduziert, Unterscheidung notwendig                                      | Dart                       | -                                      |
-| **Ionic**        | Progressive Web App | reproduziert, Unterscheidung nicht notwenig                                 | JavaScript, TypeScript     | Angular, Vue, React                    |
-| **NativeScript** | nativ               | nativ                                                                       | JavaScript, TypeScript     | Angular, Vue                           |
-| **React Native** | nativ               | teilweise nativ, teilweise reproduziert, Unterscheidung teilweise notwendig | JavaScript, TypeScript     | -                                      |
+| Name             | Performance | Designelemente                                                              | Programmier-/Skriptsprache | Kompatibilität mit weiteren Frameworks |
+| ---------------- | ----------- | --------------------------------------------------------------------------- | -------------------------- | -------------------------------------- |
+| **Flutter**      | nativ       | reproduziert, Unterscheidung notwendig                                      | Dart                       | -                                      |
+| **Ionic**        | hybride App | reproduziert, Unterscheidung nicht notwenig                                 | JavaScript, TypeScript     | Angular, Vue, React                    |
+| **NativeScript** | nativ       | nativ                                                                       | JavaScript, TypeScript     | Angular, Vue                           |
+| **React Native** | nativ       | teilweise nativ, teilweise reproduziert, Unterscheidung teilweise notwendig | JavaScript, TypeScript     | -                                      |
 
 ## Workflow
 Nach der Installation von Flutter wird zunächst ein neues Projekt erzeugt. Dieses automatisch erzeugte Projekt bringt bereits eine Testapp mit an der man sich orientieren kann.
@@ -83,21 +83,26 @@ class MyApp extends StatelessWidget {
 }
 ```
 
-### Beispiel einer Flutter App
-
 Bei der Beispielapp liegt in dem App-Widget ein Scaffold-Widget und in diesem wiederum App-Bar, Header-Image und List. So wird Schritt für Schritt (bzw. Widget für Widget) das UI aufgebaut.
 
 ![Flutter-App](./img/flutter_app.png)
 ![Flutter-App-Diagram](./img/flutter_app_dia.png)
 
-### Stateless vs. Stateful
+## Stateless vs. Stateful
 Man unterscheidet Widgets hauptsächlich zwischen stateless und stateful. Wenn ein Widget sich verändert, z.B. durch Benutzerinteraktion, ist es stateful.
 
-#### Stateless
+### Stateless
 Ein **StatelessWidget** ändert sich nicht und die zugehörigen Attribute sind *immutable*. Zustandlose Widgets sind z.B. Icons oder Texte.
 
-#### Stateful
+### Stateful
 Ein **StatefulWidget** ist dynamisch. Es kann bei Bedarf auslösen, dass es neu gerendert wird. So werden z.B. Änderungen einer Variable auf dem Bildschirm dargestellt. Der Zustand eines solchen Widgets wird in einem Objekt **State** gespeichert, um die Zustandsinformationen von der Darstellung zu trennen. **State** besteht aus veränderbaren Werten, wie z.B. der aktuelle Wert eines Sliders. Wenn sich der Zustand eines Widgets ändert, ruft **State** die Methode `setState()` auf um das entsprechende Widget neu zu rendern.
+
+## Navigation und Routing
+In Flutter übernimmt der `Navigator` die Verwaltung von *Routen*. *Routen* bezeichnet dabei die verschiedenen Seiten der App. Der `Navigator` funktioniert wie ein Stack, auf dem Objekte vom Typ `Route` abgelegte werden und immer das oberste Objekt auf dem Bildschirm dargestellt wird. Der `Navigator` stellt außerdem zwei Methoden bereit `Route`-Objekte zu verwalten: `Navigator.push` und `Navigator.pop`. *Routen* können benannt werden und Werte zurückgeben. *Navigatoren* können ineinander verschachtelt werden.
+
+
+## Flutter für Desktopanwendungen
+Es ist möglich mit Flutter eine Desktopanwendung zu programmieren, die aus einer Codebase, ausführbare Programme für MacOS, Linux und Windows erzeugt (vergleichbar mit [Electron](https://electronjs.org/)). Dafür kann man auf die Projekte [Flutter Desktop Embedding](https://github.com/google/flutter-desktop-embedding) oder [Go-Flutter](https://github.com/go-flutter-desktop/go-flutter) zurückgreifen. Grundsätzlich funktionieren diese beiden Projekte gleich, sie stellen eine Schnittstelle zwischen der *Flutter Engine* und dem jeweiligen Betriebsystem bereit. Code ist mit dem mobilen Framework kompatibel und kann damit geteilt werden solange keine Hardwarefunktionen aufgerufen werden.
 
 # Dart
 Dart ist eine objektorientierte Programmiersprache. Sie wird primär für mobile- und web-Apps verwendet, kann aber auch serverseitig eingesetzt werden. 
