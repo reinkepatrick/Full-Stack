@@ -140,7 +140,134 @@ Beispiel: `{{ film?.laenge }}`
 
 Sollte der Datentyp nicht vorhanden sein, wird kein Fehler geworfen. Durch das Fragezeichen kann asynchrones Laden realisiert werden. Ist ein Datentyp während der Ladezeit noch nicht vorhanden, wird dieser nachgeladen und im nachhinein gerendert.
 
-Des weiteren können durch `[]` bestehende HTML Tag weiterhin verwendet und dynamisch mit Properties aus der Komponente besetzt werden. `<a [href]="<name_der_property>">...</a>`.
+Des weiteren können durch `[]` bestehende HTML Tag weiterhin verwendet und dynamisch mit Properties aus der Komponente besetzt werden (Property binding). `<a [href]="<name_der_property>">...</a>`.
+
+## Events
+
+Durch Events könnten Methodenaufrufe innerhalb des Templates erzeugt werden. Je nach Art der Interaktiv kann demnach auf Events reagiert werden. Typische Anwendung findet zum Beispiel das click Event.
+
+Im folgenden Beispiel wird auf den Klick eines Paragraphen die Methode `myClickHandler` aufgerufen.
+
+```html
+<p (click)="myClickHandler()"></p>
+```
+
+### Eventparameter
+
+Übergibt man beim Aufruf einer Methode innerhalb des Templates das Eventobjekt, können innerhalb der Methode auf die Attribute des Eventobjekts zugegriffen werden.
+
+```typescript
+myClickHandler($event)
+```
+
+Schaut man sich den Inhalt des Event Objekts in der Konsole genauer an, fällt auf, dass dieses Objekt sehr viele Informationen bietet welche nützlich zur weiteren Verwendung sein können.
+
+```json
+MouseEvent {
+    altKey: false
+	bubbles: true
+	button: 0
+	buttons: 0
+    cancelBubble: false
+    cancelable: true
+    clientX: 13
+    clientY: 459
+    ...
+}
+```
+
+Innerhalb der Funktion kann wie bei jedem Objekt mit dem Punktoperator auf die Eigenschaften des Objekts zugegriffen werden.
+
+### Elementreferenzen
+
+Mit Elementreferenzen können komplette Elemente in einem Template referenziert werden.
+
+Befinden sich innerhalb eines <a></a> Objekts zum Beispiel weitere Attribute kann mit einer Elementreferenz im weiteren Templare darauf zugegriffen werden. Eine Elementreferenz wird mit einem # vor dem Namen definiert.
+
+```html
+<a #link [href]="url">Google</a>
+```
+
+Per Interpolation kann nun auf einzelne Attribute des Objekts zugegriffen werden. Wird der Punktoperator nicht verwendet, kann auf alle Attribute des Tags zugegriffen werden. In diesem Fall wird das gesamte Objekt zurück gegeben.
+
+```html
+{{link.href}}
+```
+
+Liefert den Inhalt von href.
+
+Elementreferenzen können nur lesend, jedoch nicht schreibend verwendet werden und sind somit also *read-only*.
+
+## Strukturdirektiven
+
+### For
+
+Mit `*ngFor` kann innerhalb eines Templates eine For Schleife realisiert werden. Der Stern Operator `*` simbolisiert eine Strukturdirektive wie switch, if ect.. `ng` hingegen, das es sich dabei um Angular handelt.
+
+Eine for-of Schleife lässt sich somit wie folgt realisieren.
+
+```typescript
+// Innerhalb der Komponente definiertes Array.
+farben = ['Rot', 'Blau', 'Gruen'];
+```
+
+```html
+<ol>
+    <li *ngFor="let x of farben">{{x}}</li>
+</ol>
+```
+
+Liefert folgendes Ergebnis im Browser:
+
+```html
+1. Rot
+2. Blau
+3. Gruen
+```
+
+Zur weiteren Nutzung stehen innerhalb der For-Schleife bestimmte bezeichner zur Verfügung. Mittels `odd, even, first, last und index` kann zum Beispiel auf weitere Eigenschaften zugefriffen werden.
+
+```html
+<ol>
+    <li *ngFor="let x of farben index as i">{{i}}</li>
+</ol>
+```
+
+Da even, odd, first und last jeweils einen boolischen Wert zurück liefern, kann im Anschluss mit einer If-Abfragen nach belieben gefilter werden.
+
+### If
+
+Eine mögliche Erweiterung könnte zum Beispiel wie folgt realisiert werden.
+
+```html
+<ol>
+    <li *ngFor="let x of farben even as e">
+        <span *ngIf="e; else other">{{x}}</span>
+        <ng-template #other>Nicht gleich</ng-template>
+    </li>
+</ol>
+```
+
+Durch die `*ngIf` Bedingung wird der `ng-template` Tag nur dann gerendert, wenn die Bedingung false entspricht.
+
+## Switch
+
+```html
+<ol>
+    <li [ngSwitch]="lenght">
+        <span *ngSwitchCase="1">Kurz</span>
+        <span *ngSwitchCase="3">Mittel</span>
+        <span *ngSwitchCase="5">Lang</span>
+        <span *ngSwitchDefault>default</span>
+    </li>
+</ol>
+```
+
+Zunächst folgt ein Property binding um den Wert von lenght aus der Komponente zu laden. In den darauf folgenden Zeilen wird wie üblich eine Strukturdirektive vom Typ switch erzeugt. Es werden nur zutreffende Bereiche gerendert.
+
+## To-Do
+
+**Verdeutlichen wie Template und Komponente zusammenarbeiten.**
 
 ## Quellen
 
