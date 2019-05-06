@@ -39,6 +39,7 @@ __22.04.2019 - 28.04.2019__
 | 28.04 | GraphQL Schema Recherche     | 120min | Mutations Schema noch nicht verstand     |
 | 28.04 | GraphQL Schema Dokumentation | 60min  | Aufs wesentliche gekürzt (keine interfaces, scalare etc.) |
 | 28.04 | GraphQL Struktur Diagramm    | 30min  |                                          |
+
 ## Woche 4
 
 __29.04.2019 - 05.05.2019__
@@ -51,4 +52,4 @@ __29.04.2019 - 05.05.2019__
 | 05.05 | GraphQL Frameworks recherchiert          | 30min | evtl. zu oberflächlich |
 | 05.05 | GraphQL vs REST: Wann was verwenden      | 60min | noch nicht zufrieden   |
 | 05.05 | GraphQL Zusammenfassung                  | 40min |                        |
-|       |                                          |       |                        |
+| 05.05      |    Beispiel Implementationen von GraphQL angeschaut| 120min | grober Überblick, verschiedener Sprachen|                                      |       |                        |
