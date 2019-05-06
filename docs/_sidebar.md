@@ -1,30 +1,30 @@
 <!-- _navbar.md -->
 
 * [Home](/)
-* 1 Inhalte
-  * Grundlagen
-    * [Cloud-Docker-Jenkins](cloud-docker-jenkins/index.md)
-    * [MQTT](mqtt/index)
-    * [Kommunikation in Verteilten Systemen](netzwerkprotokolle/index)
-    * [Sicherheit und Authentifizierung](security-auth/index)
-    * [Statemanagment](state-managment/index)
-  * Frontend
-    * Web 
+* **1 Inhalte**
+  * **Grundlagen**
+    * [Cloud Deployment + Build + Test + Container](cloud-docker-jenkins/index.md)
+    * [Message Broker (MQTT, AMQP)](mqtt/index)
+    * [Protokolle und Datenformate in verteilten Systemen](netzwerkprotokolle/index)
+    * [Authentifizierung und Sicherheit](security-auth/index)
+    * [State Management](state-managment/index)
+  * **Frontend**
+    * **Web**
       * [Angular](angular/index)
-      * [React](react/index.md)
-      * [Rust und Yew](rust_yew/index)
+      * [React.js](react/index.md)
+      * [yew.rs](rust_yew/index)
       * [WebGL](webgl/index)
-    * Mobile
+    * **Mobile**
       * [Flutter](flutter/index.md)
       * [IONIC](ionic/index)
-      * [React Native](react%20native/index)
-  * Backend
+      * [React Native](reactnative/index)
+  * **Backend**
     * [Django](django/index)
-    * [DotNetCore](dotnetcore/index)
-* 2 Projekte
+    * [.net Core](dotnetcore/index)
+* **2 Projekte**
   * [Projekte](orga/projekt)
   
-* Tagebücher
+* **Tagebücher**
   * [Alexander Bergmann](devdiaries/alexanderbergmann)
   * [Alexander Heinisch](devdiaries/alexanderheinisch)
   * [Andre Matutat](devdiaries/andrematutat)

@@ -101,17 +101,19 @@ Die Facebook App war Anfangs sehr träge, dies lag aber nicht an der App selber,
 
 GraphQL ist unabhängig von der Datenbanksoftware und ist in fast jeder Programmiersprache anwendbar(wie Haskell, JavaScript, Python,Ruby, Java, C#, Scala, Go, Elixir, Erlang, PHP, R und Clojure).
 
-__Inhaltsverzeichnis__
+__GraphQL Lexikon__ 
 
 | Themen                                   | Kurzbeschreibugn                         |
 | ---------------------------------------- | ---------------------------------------- |
-| [Standard Abfragen](#Abfragen)   | Einfache Abfragen von einzelnen Knoten   |
-| [Verschachtelte Abfragen](#Abfragen) | Abfragen über mehrere Knoten             |
+| [Standard Abfragen](#Abfragen)           | Einfache Abfragen von einzelnen Knoten   |
+| [Verschachtelte Abfragen](#Abfragen)     | Abfragen über mehrere Knoten             |
 | [Argumente](#Argumente)                  | Verfeinerung von Abfragen                |
 | [Variablen](#Variablen)                  | Variable Argumente für Abfragen          |
 | [Richtlinien (Directives)](#Richtlinien (Directives)) | Ermöglichen es, Abfragen dynamisch anzupassen |
 | [Mutation](#Mutation)                    | Ändern von Daten auf den Server          |
-| [Schemen](#Schemen)                      | Stellt Serverseitig die Datenstruktur zur Verfügung |
+| [Schemen](#Schema)                       | Stellt Serverseitig die Datenstruktur zur Verfügung |
+| [Validation](#Validation)                | Überprüfen der Gültigkeit von Querys     |
+
 
 ### Abfragen
 
@@ -343,7 +345,7 @@ Antwort vom Server:
 
 
 
-### Schema
+### Schema 
 
 Das GraphQL Schema wird vom Server bereitgestellt und gibt die Datenstruktur bekannt, es gibt also an, welche Abfragen wir stellen können und welche Rückgaben wir erwarten können. <br/>*Das Schema wird in derselben Sprache geschrieben, wie der GraphQL Services selbst. In dieser Dokumentation nutzen wir eine, von [graphql.github](https://graphql.github.io/learn/schema/) erfundene, GraphQL schema langauge, welche unserer bisher verwenden Query Language ähnelt* <br/>
 
@@ -387,6 +389,41 @@ type Query {
 
 Wir können also eine Abfrage "dozent" stellen, der wir bei Bedarf einen String Parameter übergeben, die uns eine Rückgabe vom Typen Dozent gibt, wie der Typ Dozent aussieht, können wir den Objekttyp "Dozent" entnehmen. 
 
+#### Mutation types
+
+Mutationen sind im GraphQL Schema genauso aufgebaut wie Querys. Technisch gesehen gibt es gar keinen Unterschied zwischen ihnen. Das Klassifizieren einer Query als Mutation dient jede glich dazu, anzugeben das es bei Verwendung dieser Query zu Änderungen an den Daten kommt.
+
+```
+type Mutation{
+  createDozentOnServer(name: String!, titel: String!, fachgebiet: String!):Dozent!
+}
+```
+
+#### Andere
+
+Es gibt noch weitere Typen und Elemente im GraphQL Schema. Eine kurze Auflistung folgt, für weitere Details in den offiziellen [GraphQL Guide](https://graphql.github.io/learn/schema/) schauen. 
+
+| Bezeichnung       | Erläuterung                              |
+| ----------------- | ---------------------------------------- |
+| Scalar Type       | Definieren eigener Datentypen            |
+| Enumeration types | Definieren von Enums                     |
+| Input types       | Wie Mutation types, nur das komplexere Objekte übergeben werden können |
+| Interfaces        | Interfaces wie in anderen Sprachen       |
+
+### Validation
+
+Durch das Typesystem kann die Gültigkeit einer Query bereits überprüft werden ohne diese Auszuführen. Dadurch können sowohl Server auch als Client den Entwickler über ungültige Querys informieren.
+
+### Frameworks und Libraries 
+
+Da GraphQL für fast jede Programmiersprache verfügbar ist, gibt es eine Vielzahl an Libraries für die unterschiedlichsten Sprachen und Frameworks. <br/>Eine gute Übersicht für die Serverseitige Implementierung liefert: [Libraries für Serverseitige GraphQL implementation](https://graphql.org/code/) <br/>
+
+- Clientseitige Implementierung
+  - Angular: [Apollo](https://www.apollographql.com/docs/angular/)
+  - JavaScript: [Vulcan.js](http://vulcanjs.org/)
+  - [Übersicht weiterer Frameworks](https://medium.com/open-graphql/exploring-different-graphql-clients-d1bc69de305f)
+
+
 ### Nachteile
 
 Auch wenn GraphQL auf den ersten Blick wie das bessere REST aussieht, hat es aber auch einige schwächen. <br/>Die große Freiheit der Clients, Abfragen nach Bedarf zu formen, kann zu hohen Performance Problemen auf den Backend führen. Serverseitig muss man also ein besonderes Augenmerk auf die Performance legen. <br/>
@@ -395,22 +432,39 @@ GraphQL hat aber auch noch mit einigen Kinderkrankheiten zu kämpfen, so gibt es
 
 ### Zusammenfassung
 
+GraphQL ist ein Abfragen Sprache die besonderen Fokus auf flexible Clientseitige Entwicklung legt. Ziel ist es den Client Daten in der von ihm gewünschten Formatierung zu übergeben und dabei Over- und Underfetching zu verhindern. Im Vergleich zu REST werden sowohl Rechenleistung des Clients geschohnt als auch die Abfragen Anzahl reduziert, das ist vor allem für Mobile Applikationen interessant.<br/>
+
+Der Server stellt ein GraphQL Schema zur Verfügung und gibt dadurch die Datenstruktur bekannt. So weiß der Client, welche Querys er stellen kann um Daten abzufragen.
+
+Das folgende Schaubild zeigt einen möglichen Aufbau eines GraphQL Systems: 
+
 ![Struktur von GraphQL](./resources/img/graphQLStruktur.png)
 
-- tbd 
+
 
 ### GraphQL vs REST
 
-- Wann was verwenden?
+Jetzt stellt sich die Frage, was sollen wir benutzen, REST oder GraphQL? Und die Antwort ist..... es kommt drauf an. Beide Technologien haben ihre Vor- und Nachteile und von daher müssen wir schauen, welche Anforderungen unsere API erfüllen muss. Evtl. ist auch eine Kombination von REST und GraphQL zielführend. <br/>
 
-## Websockets
+Einen guten Anhaltspunkt liefern die Fragen Liste von [Phil Sturgeon](https://philsturgeon.uk/api/2017/01/24/graphql-vs-rest-overview) 
+
+- Wie groß ist der Unterschied der einzelnen Clients?
+- Vertraust du den Clients zu, selbstständig zu Cachen?
+- Willst du lieber Dumme Clients, welche sehr wenig über die API wissen oder lieber schlaue Clients die viel Logik und ein größeres Verständnis der API haben?
+- Ist es in Ordnung, wenn HTTP-Debugging-Proxys, Cache-Proxies und all das Wissen, das dein Team rund um HTTP usw. hat, wegfällt?
+- Verwendest du nur einfaches CRUD mit simplen JSOM Dokumente oder braucht deine API File Upload und download?
+
+
+
 ## GRPC
 ## HTTP 3
 
 
 ## Quellen
 - [GraphQL Guide mit interaktiven Beispielen](https://graphql.github.io/learn/)
+- [GraphQL Schema Guide](https://www.oreilly.com/library/view/learning-graphql/9781492030706/ch04.html)
 - [Grundlagen Netzwerkprotokolle](https://de.wikipedia.org/wiki/Netzwerkprotokoll)
+- [REST vs GraphQL](https://philsturgeon.uk/api/2017/01/24/graphql-vs-rest-overview/)
 - [Grundlagen JSON](https://www.w3schools.com/js/js_json_intro.asp)
 - [Grundlagen REST](http://www.codeadventurer.de/?p=3228)
 - [GraphQL Wikipedia](https://de.wikipedia.org/wiki/GraphQL)
