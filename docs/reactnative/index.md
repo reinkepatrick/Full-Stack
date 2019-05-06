@@ -53,6 +53,7 @@ myComponent.defaultProps = {
 }
 
 ```
+
 ## States
 
 Innerhalb der Komponenten werde diese mithilfe der States gesteuert.  Dies geschieht durch die Methode setState, die entweder ein Key-Value-Objekt annimmt oder eine Funktion, die ein Key-Value-Objekt zurückgibt. SetState löst das Rerendern der Komponente sowie der Kinderkomponenten aus. Die Zustande sollten im Konstruktor initialisiert.
@@ -74,7 +75,35 @@ Die Styles können bedingt gestetzt werden.
 ```
 //Todo Array mit Styles
 
-## React-Native mit Typescript
+## Layouting
+
+Das Arrangieren der Komponenten in React Native wird durch Flexbox ermöglicht. Flexbox ist ein CSS3 Layout-Module. Mit Flexbox ist ein konsistentes Layout bei verschiedenen Displayauflösungen möglich. 
+
+Flexbox funktioniert in React Native wie in CSS im Web, mit abgesehen von ein paar Ausnahmen. Zu diese Ausnahmen gehört unteranderem, dass der Default-Wert der Property flexDirection column ist und der Parameter flex nur Zahlen annimmt.
+
+
+Beim Arbeiten mit Flexbox kann man sich zwei Achsen vorstellen. Die Hauptachse und die Querachse. Die Hauptachse wird definiert durch die Property flex-direction.
+
+Flex-direction kann folgende Werte annehmen:
+
+* row	 
+ * Die Komponenten werden horizontal von links nach rechts angeordnet.
+* row-reverse
+ * Die Komponenten werden horizontal von rechts nach links angeordnet.
+* column
+ * Die Komponenten werden vertikal von oben nach unten angeordnet.
+* Coulmn-reverse
+ * Die Komponenten werden vertikal von unten nach oben angeordnet.
+
+[ToDo:Bild zu Flex-direction Hauptachse]
+
+Der Verlauf der Querachse ist abhängig von der Hauptachse. Wenn die Hauptachse entlang der Zeile ausgerichtet ist, dann verläuft die Querachse entlang der Spalte. Verläuft die Hauptachse entlang der Spalte, dann verläuft die Querachse entlang der Spalte Dieses Wissen ist nützlich, wenn man sich mit der Ausrichtung des Inhalts beschäftigt.
+
+[ToDo:Bild zu Flex-direction Querachse]
+
+Die Flex-Property gibt an, wie sich die Komponenten in Bezug auf ihrer Größe verhalten sollen.  Ist der Wert von Flex positiv, so wir die Komponente um das Vielfache größer, sofern so viel Platz im Flex-Container frei ist. Der Flex-Container ist der Bereich, in dem Flexbox genutzt wird.  Die Komponente ist dann bezüglich ihrer Größe flexible. Ist der Wert der Property gleich 0, so bleibt die Komponente bei ihrer festen Größe. Sie ist dann nicht flexibel. Bei -1 wird die Komponente auf ihre minWidth und minHeight Werte geschrumpft, sofern nicht genügend Platz gibt im Flex-Container.
+
+[ToDo: Bilder zur Flex-Property]
 
 ## Touch and Gesture
 
@@ -83,8 +112,6 @@ Die Styles können bedingt gestetzt werden.
 ## PushNotification
 
 ## HTTP-Request
-
-## Layouting
 
 ## Components
 
