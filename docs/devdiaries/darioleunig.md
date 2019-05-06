@@ -39,3 +39,14 @@
 | Datum      | Tätigkeit                                                    | Dauer  | Zusatz |
 | ---------- | ------------------------------------------------------------ | ------ | ------ |
 | 29.04.2019 | Kurzer Einblick in Manipulation von DOM Elementen durch Maus Events | 0h 40m |        |
+| 01.05.2019 | Genauere Recherche bezüglich der Funktionsweise von Komponenten und Templates | 1h     |        |
+| 03.05.2019 | Events und Unterthemen erarbeitet und der Dokumentation hinzugefügt | 1h 30m |        |
+
+## Woche 5 
+
+**06.05.2019 - 12.05.2019**
+
+| Datum      | Tätigkeit                                                    | Dauer  | Zusatz |
+| ---------- | ------------------------------------------------------------ | ------ | ------ |
+| 06.05.2019 | Strukturdirektiven erarbeitet und der Dokumentation hinzugefügt | 0h 40m |        |
+| 06.05.2019 | Recherche bezüglich des Projekts                             | 1h 10m |        |
