@@ -8,7 +8,7 @@ Die Spannweite der Dienstleistungen die in einer Cloud angebotenen werden, umfas
 
 **Buzzwords**
 
-- **SaaS** (Anwendung) - z.B. Dropbox
+- **SaaS** (Anwendung) - z.B. GoogleDocs, GoogleMaps ...
 - **PaaS** (Plattform) -  z.B. CI und CD
 - **IaaS**  (Infrastruktur) - z.B. Digital Ocean
 
@@ -118,6 +118,81 @@ Monolithische Softwaresysteme wie z. B. Eine Java-Anwendung können nur hoch ska
 Der Docker-Hub ist ein öffentliches Repository für Container. Jeder kann dort seine erstellten Images veröffentlichen. Einige Softwarehersteller bieten aber Images an, die von ihnen selbst gewartet werden (z. B. MySQL) 
 
 ### Docker-Image erstellen
+
+**What are fortune and cowsay ?**
+
+![cowsay_1](img/cowsay_1.png)
+
+![cowsay_2](img/cowsay_2.png)
+
+#### Dockerfile
+
+| Befehl     | Beschreibung                                                 |
+| ---------- | ------------------------------------------------------------ |
+| FROM       | Setzt das Basis-Image für das Dockerfile, nachfolgende Anweisungen bauen auf diesem Image auf. `IMAGE:TAG` |
+| RUN        | Führt die angegebene Anweisung im Container aus und bestätigt das Ergebnis |
+| COPY (ADD) | Kopiert Dateien aus dem Build Context, in das Image. `ADD` ist ähnlich, aber mächtiger. `COPY src dest` oder `COPY ["src", "dest"]` möglich |
+| ENTRYPOINT | Legt eine ausführbare Datei (und Standardargumente) fest, die beim Start des Containers laufen soll |
+| CMD        | Führt die angegebene Anweisung aus, wenn der Container gestartet wurde. Wird auch als Argument für `ENTRYPOINT` verwendet |
+| VOLUME     | Deklariert die angegebene Datei oder das Verzeichnis als Volume |
+| WORKDIR    |                                                              |
+| USER       | Setzt den Benutzer (über Name oder UID), der in folgenden RUN-, CMD- oder ENTRYPOINT-Anweisungen genutzt werden soll |
+
+Weitere Befehle: `ARG ENV EXPOSE HEALTHCHECK MAINTAINER LABEL ONBUILD SHELL STOPSIGNAL`
+
+Notes:
+
+- Sowas wie `../another_dir/myfile` funktioniert im Dockerfile nicht
+- Die `FROM` Anweisung ist immer die erste in einem Dockerfile
+- Es ist zu beachten, dass UIDs auf Host und Container die gleichen sind, die Benutzernamen aber verschiedenen UIDs zugewiesen sein können – Mögliche Fehlerquelle beim setzen von Berechtigungen
+
+**Beispiele:**
+
+Möglichst einfach:
+
+```bash
+# Dockerfile
+FROM debian:wheezy
+
+RUN apt-get update && apt-get install -y cowsay fortune
+```
+
+```bash
+docker build -t test/cowsay-dockerfile .
+docker run test/cowsay-dockerfile /usr/games/cowsay “Muh“
+```
+
+Etwas flexibler, mit `ENTRYPOINT`:
+
+```bash
+#!/bin/bash
+# entrypoint.sh
+if [ $# -eq 0 ]; then
+    /usr/games/fortune | /usr/games/cowsay
+  else
+    /usr/games/cowsay “$@”
+fi
+```
+
+```bash
+# Dockerfile
+FROM debian:wheezy
+
+RUN apt-get update && apt-get install -y cowsay fortune
+COPY entrypoint.sh /
+
+ENTRYPOINT [“/entrypoint.sh”]
+```
+
+```bash
+docker build -t test/cowsay-dockerfile .
+
+docker run test/cowsay-dockerfile 
+# oder
+docker run test/cowsay-dockerfile Hallo Muh
+```
+
+
 
 ## Quellen
 

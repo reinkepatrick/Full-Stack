@@ -41,15 +41,16 @@ __29.04.2019 - 05.05.2019__
 | 02.05.2019 | Recherche Docker-Images erstellen              | 2 h   |        |
 | 03.05.2019 | Recherche Docker-Buch                          | 2 h   |        |
 | 03.05.2019 | Eigene Docker-Images erstellen mit Dockerfiles | 2 h   |        |
+| 05.05.2019 | Recherche Docker-Images erstellen              | 1 h   |        |
 
 ## Woche 5
 
 __06.05.2019 - 12.05.2019__
 
-| Datum | Tätigkeit                                                    | Dauer | Zusatz |
-| ----- | ------------------------------------------------------------ | ----- | ------ |
-|       | Jenkins konfigurieren (Hello World - Java Projekt) mit Docker |       |        |
-|       | Docker Hub                                                   |       |        |
-|       | Docker Volumes                                               |       |        |
-|       | Docker Orchestrieren                                         |       |        |
+| Datum      | Tätigkeit                                                    | Dauer | Zusatz |
+| ---------- | ------------------------------------------------------------ | ----- | ------ |
+| 07.05.2019 | Wöchentliches Meeting - Projektarbeit                        |       |        |
+|            | Docker Orchestrieren/Verbinden                               |       |        |
+|            | Docker Volumes & Docker Hub                                  |       |        |
+|            | Jenkins konfigurieren (Hello World - Java Projekt) mit Docker |       |        |
 
