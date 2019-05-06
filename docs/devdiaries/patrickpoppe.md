@@ -31,4 +31,14 @@ __22.04.2019 - 28.04.2019__
 | 25.04.2019 | MVC und Datenfluß in MVC                      | 1,5h  |                                                |
 | 27.04.2029 | MVC vs Flux, Redux                            | 4h    | Offene Fragen: Wie funktioniert Asynchronität? |
 | 29.04.2019 | Überarbeitung, Stores zwischen Redux und Flux | 1h    |                                                |
+| 29.04.2019 | Pflichtenheft bearbeiten                      | 2h    |                                                |
+
+## Woche 4
+
+__29.04.2019 - 05.05.2019__
+
+| Datum      | Tätigkeit         | Dauer | Zusatz |
+| ---------- | ----------------- | ----- | ------ |
+| 03.05.2019 | Mockups erstellen | 3,5h  |        |
+| 03.05.2019 | MobX              | 2,5h  |        |
 

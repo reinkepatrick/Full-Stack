@@ -56,6 +56,21 @@ __22.04.2019 - 28.04.2019__
 
 __29.04.2019 - 05.05.2019__
 
-| Datum      | Tätigkeit                                                      | Dauer | Zusatz |
-|:-----------|:---------------------------------------------------------------|:------|:-------|
-| 29.04.2019 | Weiterführung der Erstellung der Mockups für die Web-Anwendung | 3 h   |        |
+| Datum      | Tätigkeit                                                                                             | Dauer      | Zusatz |
+|:-----------|:------------------------------------------------------------------------------------------------------|:-----------|:-------|
+| 29.04.2019 | Weiterführung der Erstellung der Mockups für die Web-Anwendung                                        | 3 h        |        |
+| 30.04.2019 | Definition von der [Projektorganisation](https://cardholder.github.io/docs/#/?id=projektorganisation) | 1 h 30 min |        |
+| 30.04.2019 | Fertigstellung der Mockups für die Web-Anwendung                                                      | 2 h 30 min |        |
+| 02.05.2019 | Erstellung eines Beispiel Projekt mit der Berücksichtigung der erlernten Themen                       | 3 h        |        |
+| 03.05.2019 | Fertigstellung des Beispiel Projektes mit den bisher erlernten Themen                                 | 2 h 30 min |        |
+| 03.05.2019 | Definition von [HTTP-Requests](react/index#http-requests)                                             | 1 h 30 min |        |
+| 05.05.2019 | Definition von [Routing](react/index#routing)                                                         | 2 h        |        |
+
+## Woche 5
+
+__06.05.2019 - 12.05.2019__
+
+| Datum      | Tätigkeit                                         | Dauer      | Zusatz |
+|:-----------|:--------------------------------------------------|:-----------|:-------|
+| 06.05.2019 | Einbinden der Mockups                             | 1 h        |        |
+| 06.05.2019 | Erstellung eines Zustandsdiagramm für die Mockups | 1 h 30 min |        |

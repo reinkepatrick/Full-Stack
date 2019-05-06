@@ -1,24 +1,31 @@
 <!-- _navbar.md -->
 
 * [Home](/)
-* [Angular](angular/index)
-* [Cloud-Docker-Jenkins](cloud-docker-jenkins/index.md)
-* [Django](django/index)
-* [DotNetCore](dotnetcore/index.md)
-* [Flutter](flutter/index.md)
-* [IONIC](ionic/index)
-* [MQTT](mqtt/index)
-* [Kommunikation in Verteilten Systemen](netzwerkprotokolle/index)
-* [Nodejs](nodejs/index.md)
-* [React](react/index.md)
-* [Rust und Yew](rust_yew/index.md)
-* [Sicherheit und Authentifizierung](security-auth/index)
-* [Statemanagment](state-managment/index)
-* [WebGL](webgl/index)
-* Organisatorisches
+* **1 Inhalte**
+  * **Grundlagen**
+    * [Cloud Deployment + Build + Test + Container](cloud-docker-jenkins/index.md)
+    * [Message Broker (MQTT, AMQP)](mqtt/index)
+    * [Protokolle und Datenformate in verteilten Systemen](netzwerkprotokolle/index)
+    * [Authentifizierung und Sicherheit](security-auth/index)
+    * [State Management](state-managment/index)
+  * **Frontend**
+    * **Web**
+      * [Angular](angular/index)
+      * [React.js](react/index.md)
+      * [yew.rs](rust_yew/index)
+      * [WebGL](webgl/index)
+    * **Mobile**
+      * [Flutter](flutter/index.md)
+      * [IONIC](ionic/index)
+      * [React Native](reactnative/index)
+  * **Backend**
+    * [Django](django/index)
+    * [.net Core](dotnetcore/index)
+* **2 Projekte**
   * [Projekte](orga/projekt)
-* Tagebücher
-  * [Alexander Bergmann](devdiaries/alexander_bergmann)
+  
+* **Tagebücher**
+  * [Alexander Bergmann](devdiaries/alexanderbergmann)
   * [Alexander Heinisch](devdiaries/alexanderheinisch)
   * [Andre Matutat](devdiaries/andrematutat)
   * [Chamoun Simon Safar](devdiaries/chamounsimonsafar)

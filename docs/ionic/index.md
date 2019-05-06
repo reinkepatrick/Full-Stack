@@ -36,6 +36,17 @@ Hybride Apps vereinen die Vorteile von Web- und nativen Apps. Sie werden mit nat
 
 ![Alt text](img/App_Diagramm.png "Title")
 
+## App Arten im direkten Vergleich:
+
+| |Native App|Web App| Hybride App |
+| - | - | - | - | - |
+| Performance | maximal | minimal | mittel |
+| Plattformunabhängikeit | nicht vorhanden | maximal | maximal |
+| Hardwarezugriff | maximal | nicht vorhanden | maximal |
+| App-Store-Vertrieb | ja | nein | ja |
+| Kostenpunkt | maximal | gering | mittel |
+| Offline-Funktionalität | ja | ja | ja |
+
 ## Apache Cordova
 Ionic basiert auf dem Apache Cordova Cross-Plattform-Entwicklungsframework für mobile Anwendungen. Es nutzt HTML5, CSS3 und JavaScript. Die Anwendungen werden innerhalb von Wrappern ausgeführt, die auf jede Plattform ausgerichtet sind, und verlassen sich auf standardkonforme API-Bindungen, um auf die Funktionen der einzelnen Geräte zuzugreifen.
 

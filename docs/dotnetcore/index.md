@@ -28,6 +28,31 @@ Eine liste aller Änderungen sind [hier](https://docs.microsoft.com/de-de/dotnet
 
 Ein Framework welches genutzt werden kann um dynamische Webseiten und Webservices zu entwickeln. Es bietet eine eigene Templateengine an mit dem Namen Razor. 
 
+ASP.Net nutzt Klassen und Attribute für das Routing.
+
+``` fsharp
+[<Route("api/[controller]")>]
+[<ApiController>]
+type ValuesController () =
+    inherit ControllerBase()
+
+    [<HttpGet>]
+    member this.Get() =
+        let values = [|"value1"; "value2"|]
+        ActionResult<string[]>(values)
+```
+
+Die Route ist nicht direkt lesbar ohne zu wissen das [controller] durch Values ersetzt wird.
+Trotz das Klassen verwendet werden ist keine spezielle Ordner Struktur vorgeschrieben bzw. benötigt welches ein suchen nach der zugehörigen Klasse verursacht. Da die eigentliche Route in der Datei der Klasse deklariert wird.
+
+**Http Request Pipeline**
+
+In ASP.NET ist eine Pipeline verfügbar welche das hinzufügen von Middleware erlaubt. Eine detaillierte Beschreibung zu diesem Theme gibt es [hier](<https://docs.microsoft.com/de-de/aspnet/core/fundamentals/middleware/?view=aspnetcore-2.2>). Ein paar Beispiele für diese Middleware:
+
+- Json Parser
+- HTTPS Redirect
+- Database connection
+
 ##### Razor
 
 Eine von Microsoft entwickelte Template Engine.
@@ -38,7 +63,23 @@ Ein erweiterung von Razor welches erlaubt Komponenten zu entwickeln Ähnlich wie
 
 #### Giraffe
 
-Ein auf ASP.NET aufbauendes Framework welches stärker auf Funktionaler Programmierung basiert. Es verändert auch die Art wie Routen für den 
+Ein auf ASP.NET aufbauendes Framework welches stärker Funktionalen Aspekte einbringt. 
+
+Anstelle von dem Routing von ASP.Net kann eine Art Suchbaum erstellt werden.
+
+``` fsharp
+let webApp =
+    choose [
+        subRoute "/api"
+            (choose [
+                GET >=> choose [
+                    route "/Values" >=> handleGetHello
+                ]
+            ])
+        setStatusCode 404 >=> text "Not Found" ]
+```
+
+Das Routing kann komplex werden, dennoch kann auf einen Blick erkannt werden, welcher Befehl wohin gehen wird. Routen die Authentifizierung erfordern können auch direkt hier erkannt werden und nicht in einer Funktion welche nur vom Framework intern aufgerufen werden.
 
 ### Entity Framework (EF)
 
@@ -106,10 +147,6 @@ while Bedingung do
     Anweisungen
 ```
 
-``` fsharp
-while Bedingung do
-    Anweisungen
-```
 Für jedes Element 
 ``` fsharp
 for pattern in enumerable-expression do
@@ -134,7 +171,7 @@ List.iter (fun x -> printf "%i" x) [1..10]
 
 Typen sind ähnlich wie Objekte. Der größte unterschied ist das es weder Konstruktor noch Funktionen für diese Objekte gibt.
 
-``` 
+``` fsharp
 type enum = 
 	| A 
 	| B 
@@ -425,6 +462,10 @@ Visual Basic ist eine Programmiersprache mit Simplen Syntax um Typ sichere und O
 ### CLI
 
 Ein Command Line Interface in kurz CLI ist eine Anwendung die nur in der Konsole des Betriebssystems gesteuert werden kann.  
+
+**Middleware**
+
+Ein Middleware Programm kann genutzt werden um Daten von Typ a nach Typ b zu konvertieren. z.b. Json to Object und Object to Json.
 
 ## Quellen
 

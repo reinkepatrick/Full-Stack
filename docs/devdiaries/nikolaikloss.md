@@ -46,3 +46,15 @@ __23.04.2019 - 29.04.2019__
     - MVVM in Ionic
       - AngularJS reingeschaut
   - Youtube Tutorial Angular & Ionic 4
+
+## Woche 4
+__30.04.2019 - 06.05.2019__
+
+|Datum|Tätigkeit|Dauer|Zusatz|
+| - | - | - | - |
+| 30.04.2019 | Gemeinsame Erarbeitung eines Modelklassendiagramms|2 h| |
+| 03.05.2019 | Einrichten des Dokumentationsrepository |30 Min| |
+| 03.05.2019 | Nachpflegen des Devdiary |20 Min| |
+| 06.05.2019 | Modelklassendiagramm Ausarbeitung |50 Min| |
+| 06.05.2019 | Nach Merge-Problem rekonstruieren von Modelklassendiagramm |1.5 h| |
+| 06.05.2019 | Tabelle zur besseren Übersicht der Pros/Conts von App Arten | 30 min| |
