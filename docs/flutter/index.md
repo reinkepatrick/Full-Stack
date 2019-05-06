@@ -97,8 +97,14 @@ Ein **StatelessWidget** ändert sich nicht und die zugehörigen Attribute sind *
 ### Stateful
 Ein **StatefulWidget** ist dynamisch. Es kann bei Bedarf auslösen, dass es neu gerendert wird. So werden z.B. Änderungen einer Variable auf dem Bildschirm dargestellt. Der Zustand eines solchen Widgets wird in einem Objekt **State** gespeichert, um die Zustandsinformationen von der Darstellung zu trennen. **State** besteht aus veränderbaren Werten, wie z.B. der aktuelle Wert eines Sliders. Wenn sich der Zustand eines Widgets ändert, ruft **State** die Methode `setState()` auf um das entsprechende Widget neu zu rendern.
 
+## Layout
+UI-Layout werden in Flutter durch *Rows* und *Columns* realisiert. Im folgenden Beispiel wird aus einigen simplen Widgets ein komplexeres Widget geschaffen. Durch den *Container* ist es möglich dem Kind des Containers, Eigenschaften wie z.B. Abstände oder Rahmen zuzuweisen. Es gibt eine Auswahl an vorgefertigten Layout-Widgets, die viele Layoutarten abdeckt. Darunter u.a. Raster und scrollbare Listen.
+
+![Layout-Example](./img/flutter_layout.png)  
+![Layout-Tree](./img/flutter_layout_tree.png)
+
 ## Navigation und Routing
-In Flutter übernimmt der `Navigator` die Verwaltung von *Routen*. *Routen* bezeichnet dabei die verschiedenen Seiten der App. Der `Navigator` funktioniert wie ein Stack, auf dem Objekte vom Typ `Route` abgelegte werden und immer das oberste Objekt auf dem Bildschirm dargestellt wird. Der `Navigator` stellt außerdem zwei Methoden bereit `Route`-Objekte zu verwalten: `Navigator.push` und `Navigator.pop`. *Routen* können benannt werden und Werte zurückgeben. *Navigatoren* können ineinander verschachtelt werden.
+In Flutter übernimmt der `Navigator` die Verwaltung von *Routen*. *Routen* bezeichnet dabei die verschiedenen Seiten der App. Der `Navigator` funktioniert wie ein Stack, auf dem Objekte vom Typ `Route` abgelegte werden und immer das oberste Objekt auf dem Bildschirm dargestellt wird. Der `Navigator` stellt außerdem zwei Methoden bereit `Route`-Objekte zu verwalten: `Navigator.push` und `Navigator.pop`. *Routen* können benannt werden und miteinander kommunizieren. *Navigatoren* können ineinander verschachtelt werden.
 
 
 ## Flutter für Desktopanwendungen

@@ -45,4 +45,11 @@ __29.04.2019 - 05.05.2019__
 | 30.05.2019 | Projektorganisation                                | 1 h 30 min |        |
 | 04.05.2019 | GUI-Mockups für die mobile Anwendung fertigstellen | 3h 30 min  |        |
 | 05.05.2019 | Flutter für Desktopanwendungen                     | 1 h        |        |
-| 05.05.2019 | Flutter: Navigation und Routing                    | 1 h        | 17 uhr |
+| 05.05.2019 | Flutter: Navigation und Routing                    | 1 h        |        |
+
+## Woche 5 
+__06.05.2019 - 12.05.2019__
+
+| Datum      | Tätigkeit       | Dauer      | Zusatz |
+| ---------- | --------------- | ---------- | ------ |
+| 06.05.2019 | Flutter: Layout | 1 h 30 min |        |
