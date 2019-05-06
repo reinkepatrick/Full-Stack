@@ -64,3 +64,4 @@ __29.04.2019 - 05.05.2019__
 | 02.05.2019 | Erstellung eines Beispiel Projekt mit der Berücksichtigung der erlernten Themen                       | 3 h        |        |
 | 03.05.2019 | Fertigstellung des Beispiel Projektes mit den bisher erlernten Themen                                 | 2 h 30 min |        |
 | 03.05.2019 | Definition von [HTTP-Requests](react/index#http-requests)                                             | 1 h 30 min |        |
+| 05.05.2019 | Definition von [Routing](react/index#routing)                                                         | 2 h        |        |
