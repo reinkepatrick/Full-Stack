@@ -40,8 +40,7 @@
 | ---------- | ------------------------------------------------------------ | ------ | ------ |
 | 29.04.2019 | Kurzer Einblick in Manipulation von DOM Elementen durch Maus Events | 0h 40m |        |
 | 01.05.2019 | Genauere Recherche bezüglich der Funktionsweise von Komponenten und Templates | 1h     |        |
-| 03.05.2019 | Events und Unterthemen erarbeitet und der Dokumentation hinzugefügt | 1h 30m |        |
-
+| 03.05.2019 | Events und Unterthemen erarbeitet und der Dokumentation hinzugefügt | 1      |        |
 ## Woche 5 
 
 **06.05.2019 - 12.05.2019**
