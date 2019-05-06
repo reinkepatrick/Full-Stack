@@ -65,3 +65,12 @@ __29.04.2019 - 05.05.2019__
 | 03.05.2019 | Fertigstellung des Beispiel Projektes mit den bisher erlernten Themen                                 | 2 h 30 min |        |
 | 03.05.2019 | Definition von [HTTP-Requests](react/index#http-requests)                                             | 1 h 30 min |        |
 | 05.05.2019 | Definition von [Routing](react/index#routing)                                                         | 2 h        |        |
+
+## Woche 5
+
+__06.05.2019 - 12.05.2019__
+
+| Datum      | Tätigkeit                                         | Dauer      | Zusatz |
+|:-----------|:--------------------------------------------------|:-----------|:-------|
+| 06.05.2019 | Einbinden der Mockups                             | 1 h        |        |
+| 06.05.2019 | Erstellung eines Zustandsdiagramm für die Mockups | 1 h 30 min |        |
