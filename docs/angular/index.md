@@ -265,10 +265,6 @@ Durch die `*ngIf` Bedingung wird der `ng-template` Tag nur dann gerendert, wenn 
 
 Zunächst folgt ein Property binding um den Wert von lenght aus der Komponente zu laden. In den darauf folgenden Zeilen wird wie üblich eine Strukturdirektive vom Typ switch erzeugt. Es werden nur zutreffende Bereiche gerendert.
 
-## To-Do
-
-**Verdeutlichen wie Template und Komponente zusammenarbeiten.**
-
 ## Quellen
 
 [Angular University](https://angular-university.io/home)
