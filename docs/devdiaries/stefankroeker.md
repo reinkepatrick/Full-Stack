@@ -50,3 +50,6 @@ __29.04.2019 - 05.05.2019__
 | 02.05.2019 | Tests angucken. Gestoppt wegen DB Schnittstelle.                                                                                | 2h         | Es gab Komplikationen, weil der Datenbank User nicht genug Rechte hatte und das Root Passwort nicht funktionierte.       |
 | 03.05.2019 | Test zum Laufen bekommen.                                                                                                       | 30 min     | User brauch Berechtigungen um eine Datenbank zu erstellen.       |
 | 03.05.2019 | Tests erstellt Views und Models getestet.                                                                                       | 3h         |        |
+| 05.05.2019 | Gedanken darüber machen, wie ein django Projekt am besten in git gepusht wird.                                                  | 30 min     |        |
+| 06.05.2019 | Recherchieren, welche Websockets Möglichkeiten existieren.                                                                      | 30 min     |        |
+| 06.05.2019 | Mit channels auseinandersetzen.                                                                                                 | 30 min     |        |
