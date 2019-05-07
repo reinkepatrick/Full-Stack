@@ -520,4 +520,4 @@ Wasm wird generell als Zusatz zu einer bestehenden Webandwendung gesehen und som
 
 Yew ermöglicht es einem die ganze Webseite in Rust zu erstellen, sodass die `index.html` als Einstiegspunkt dient aber der Inhalt folgend durch die Wasm-Datei gefüllt wird. Zudem wird leicht ermöglicht externe JavaScript Funktionen einzubinden und auszuführen
 
-![Yew workflow](img/wasm_workflow.png)
+![Yew workflow](img/yew_workflow.png)
