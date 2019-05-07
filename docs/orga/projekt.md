@@ -1,4 +1,4 @@
-* **Querschnittsthemen**
+﻿* **Querschnittsthemen**
   * Alexander Bergmann: Cloud Deployment + Build
   * Andre Matutat: Protokolle / Datenformate
   * Pascal Turon: Authentifizierung / Security
@@ -9,7 +9,7 @@
   * Nikolai Kloß: Ionic
   * Alexander Heinisch: .dot net core
 
-* **[IOT-App](http://github.com)**
+* **[IOT-App](https://github.com/jraddatz/IoT-App-Backend)**
   * Jonas Raddatz: Backend (?-Tech) + Message Broker (MQTT,RabbitMQ)
   * Dejan Novakovic: Web Frontend (yew)
   * Daniel Räder: WebGL
