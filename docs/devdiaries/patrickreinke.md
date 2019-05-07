@@ -74,3 +74,4 @@ __06.05.2019 - 12.05.2019__
 |:-----------|:--------------------------------------------------|:-----------|:-------|
 | 06.05.2019 | Einbinden der Mockups                             | 1 h        |        |
 | 06.05.2019 | Erstellung eines Zustandsdiagramm für die Mockups | 1 h 30 min |        |
+| 07.05.2019 | Definition der API des Projekts                   | 3 h        |        |
