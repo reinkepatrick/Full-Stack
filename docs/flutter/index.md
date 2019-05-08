@@ -1,7 +1,7 @@
 # Flutter
 
 ## Was ist Flutter?
-[Flutter](https://flutter.dev/) ist ein SDK für Android und iOS Apps. Der größte Vorteil ist, dass die Apps sich eine, in [Dart](https://www.dartlang.org/) geschriebene, Codebase teilen und dann in die jeweiligen nativen Sprachen, Java und Swift, übersetzt werden. Dabei wird die Designsprache, des jeweiligen Systems, nicht verletzt. Das Resultat ist eine performante App mit plattformkonsistentem Design, die durch verhältnismäßig wenig Programmieraufwand entsteht. Flutter besteht aus C / C++, Dart und Skia (2D Grafikengine).
+[Flutter](https://flutter.dev/) ist ein SDK für Android und iOS Apps. Der größte Vorteil ist, dass die Apps sich eine, in [Dart](https://dart.dev/) geschriebene, Codebase teilen und dann in die jeweiligen nativen Sprachen, Java und Swift, übersetzt werden. Dabei wird die Designsprache, des jeweiligen Systems, nicht verletzt. Das Resultat ist eine performante App mit plattformkonsistentem Design, die durch verhältnismäßig wenig Programmieraufwand entsteht. Flutter besteht aus C / C++, Dart und Skia (2D Grafikengine).
 
 Minimale Systemanforderungen:
 + iPhones 4S mit iOS 8
