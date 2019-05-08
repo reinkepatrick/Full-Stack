@@ -60,3 +60,4 @@ __06.05.2019 - 12.05.2019__
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------- | ---------- | ------ |
 | 06.05.2019 | Recherchieren, welche Websockets Möglichkeiten existieren.                                                                      | 30 min     |        |
 | 06.05.2019 | Mit channels auseinandersetzen.                                                                                                 | 3h         | Versuch fehlgeschlagen. Hello World ist nicht super simpel. Es erfordert viele Kentnisse um ein Programm zu schreiben und ist so ähnlich wie Django selbst.        |
+| 08.05.2019 | Sequenzdiagramme gemalt.                                                                                                        | 2h     |        |
