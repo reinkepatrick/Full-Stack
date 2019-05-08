@@ -50,6 +50,9 @@ __29.04.2019 - 05.05.2019__
 ## Woche 5 
 __06.05.2019 - 12.05.2019__
 
-| Datum      | Tätigkeit       | Dauer      | Zusatz |
-| ---------- | --------------- | ---------- | ------ |
-| 06.05.2019 | Flutter: Layout | 1 h 30 min |        |
+| Datum      | Tätigkeit                          | Dauer      | Zusatz |
+| ---------- | ---------------------------------- | ---------- | ------ |
+| 06.05.2019 | Flutter: Layout                    | 1 h 30 min |        |
+| 07.05.2019 | API Definition                     | 3 h        |        |
+| 08.05.2019 | Einlesen in CI & CD für Flutter    | 20 min     |        |
+| 08.05.2019 | Einlesen in Flutter best Practices | 30 min     |        |
