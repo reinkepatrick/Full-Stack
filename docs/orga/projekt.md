@@ -15,7 +15,7 @@
   * Daniel Räder: WebGL
   * Simon Safar: React Native
 
-* **[3D Karten / Brettspiel](http://github.com)**
-  * Marti Stuwe: Mobile Frontend (Flutter)
-  * Patrick Reinke: Web Frontend (React.js)
-  * Stefan Kröker: Backend (MariaDB + django)
+* **[cardholder](https://github.com/cardholder)**
+  * Marti Stuwe: [Mobile Frontend](https://github.com/cardholder/app) (Flutter)
+  * Patrick Reinke: [Web Frontend](https://github.com/cardholder/website) (React.js)
+  * Stefan Kröker: [Backend](https://github.com/cardholder/server-side) (MariaDB + django)
