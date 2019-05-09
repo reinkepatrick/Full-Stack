@@ -26,8 +26,19 @@ __22.04.2019 - 28.04.2019__
 | 28.04.2019 | Umsetzung von Graphen aus CSV in StardustJS, mit dynamischer Darstelung & Transitions | 4 h 40 min | |
 
 ## Woche 4 
-__29.04.2019 - 05.01.2019__
+__29.04.2019 - 05.05.2019__
 
 | Datum      | Tätigkeit                                                                             | Dauer      | Zusatz |
 | ---------- | ------------------------------------------------------------------------------------- | ---------- | ------ |
 | 29.04.2019 | Aufarbeitung der Dokumentation von WebGL: weniger Code, mehr Inhalt                   | 2 h        | |
+| 03.05.2019 | Arbeit am Pflichtenheft, Annahmen der PRojektorganisation                             | 1 h        | |
+| 04.05.2019 | Einarbeiten in 3D Grafik mit StardustJS                                               | 4 h        | Größere Probleme mit Quaternions, bzw. deren Implementation in Stardust|
+| 05.05.2019 | Ärgern über 3D in Stardust                                                            | 3 h        | Probleme mit Kamerapositionen |
+
+## Woche 5 
+__06.05.2019 - 12.05.2019__
+
+| Datum      | Tätigkeit                                                                             | Dauer      | Zusatz |
+| ---------- | ------------------------------------------------------------------------------------- | ---------- | ------ |
+| 06.05.2019 | Noch mehr Ärger über Stardust                                                         | 2 h        | Keine komplexen Lichtquellen, keine vernünftige Positionsreferenz, 0 Tutorials für 3D |
+

@@ -31,3 +31,13 @@ __22.04.2019 - 28.04.2019__
 | 28.04.2019 | Recherche über OpenID              | 2 Std |                   |
 | 28.04.2019 | Einrichtung eines OpenID-Anbieters | 3 Std | nicht erfolgreich |
 
+## Woche 4
+
+__29.04.2019 - 05.05.2019__
+
+| Datum      | Tätigkeit                                                | Dauer   | Zusatz |
+| ---------- | -------------------------------------------------------- | ------- | ------ |
+| 30.04.2019 | Überarbeitung JWT                                        | 0,5 Std |        |
+| 30.04.2019 | Recherche Base64                                         | 1 Std   |        |
+| 30.04.2019 | Erstellung eines Sequenzdiagramm für OAuth Kommunikation | 1 Std   |        |
+| 05.05.2019 | Einlesen in OpenID-Anbieter Einrichtung                  | 3,5 Std |        |

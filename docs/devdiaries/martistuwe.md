@@ -37,9 +37,19 @@ __22.04.2019 - 28.04.2019__
 | 27.04.2019 | Use-Case Diagramm erstellt                                                                                                    | 30 min     |                         |
 | 28.04.2019 | GUI-Mockups für die mobile Anwendung                                                                                          | 2 h 30 min | Einarbeiten in Adobe XD |
 
-## Woche 3 
+## Woche 4 
 __29.04.2019 - 05.05.2019__
 
-| Datum | Tätigkeit | Dauer | Zusatz |
-| ----- | --------- | ----- | ------ |
-|       |           |       |        |
+| Datum      | Tätigkeit                                          | Dauer      | Zusatz |
+| ---------- | -------------------------------------------------- | ---------- | ------ |
+| 30.05.2019 | Projektorganisation                                | 1 h 30 min |        |
+| 04.05.2019 | GUI-Mockups für die mobile Anwendung fertigstellen | 3h 30 min  |        |
+| 05.05.2019 | Flutter für Desktopanwendungen                     | 1 h        |        |
+| 05.05.2019 | Flutter: Navigation und Routing                    | 1 h        |        |
+
+## Woche 5 
+__06.05.2019 - 12.05.2019__
+
+| Datum      | Tätigkeit       | Dauer      | Zusatz |
+| ---------- | --------------- | ---------- | ------ |
+| 06.05.2019 | Flutter: Layout | 1 h 30 min |        |
