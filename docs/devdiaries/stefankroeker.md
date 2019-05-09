@@ -62,3 +62,4 @@ __06.05.2019 - 12.05.2019__
 | 06.05.2019 | Mit Channels auseinandersetzen.                                                                                                 | 3h         | Versuch fehlgeschlagen. Hello World ist nicht super simpel. Es erfordert viele Kentnisse um ein Programm zu schreiben und ist so ähnlich wie Django selbst.        |
 | 07.05.2019 | Definition der API des Projekts                                                                                                 | 3h         |        |
 | 08.05.2019 | Sequenzdiagramme gemalt.                                                                                                        | 2h         |        |
+| 09.05.2019 | Projekt Kanban Board erstellt                                                                                                   | 10 min     |        |
