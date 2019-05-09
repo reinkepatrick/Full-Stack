@@ -3,7 +3,7 @@
   * Andre Matutat: Protokolle / Datenformate
   * Pascal Turon: Authentifizierung / Security
 
-* **[Trainings-App](http://github.com)**
+* **[Trainings-App](https://github.com/Ufo391/Trainings-App-Dokumentation)**
   * Patrick Poppe: State management
   * Dario Leunig: Angular
   * Nikolai Kloß: Ionic
