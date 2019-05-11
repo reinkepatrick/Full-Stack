@@ -206,7 +206,21 @@ Actions sind die Aktionen, die den State beeinflussen.
 
 ### Vorteile / Nachteile
 
-MobX ist eine sehr schlanke Variante, die es einfach macht Anwendungen zu verwalten. Zusätzlich ist sie noch mit allen Pattern kompatibel. Dadurch, dass MobX keinen eigenen Datenfluss oder eine eigene Architektur benötigt, ist MobX sehr gut skalierbar und auch für kleinere Anwendungen gedacht. Flux zu implementieren bedeutet auch, dass man einen riesigen Overhead hat. Dies kann gerade für kleinere Anwendungen zu viel sein. 
+MobX ist eine sehr schlanke Variante, die es einfach macht Anwendungen zu verwalten. Zusätzlich ist sie noch mit allen Pattern kompatibel. Dadurch, dass MobX keinen eigenen Datenfluss oder eine eigene Architektur benötigt, ist MobX nicht skalierbar und auch für kleinere Anwendungen gedacht. Flux zu implementieren bedeutet auch, dass man einen riesigen Overhead hat. Dies kann gerade für kleinere Anwendungen zu viel sein. 
+
+## NgRx
+
+### Was ist NgRx?
+
+NgRx ist ein Framework um reactive Anwendungen in Angular zu bauen. Es kümmert sich dabei um das State Managment. NgRx ist sozusagen eine Angularumsetzung des Redux-Pattern.
+
+![NgRx-Flow](./img/NgRxFlow.png)
+
+In dem Bild sehen wir dabei den Flow von NgRx. Viele Komponenten haben dabei eine große Ähnlichkeit zu dem bereits bekannten Flux-Pattern.
+
+Eine Component ist nichts anderes als eine View aus dem Flux-Pattern. Diese sendet weiterhin Actions an einen Dispatcher,hier Reducer, welcher damit den Store aktualisiert. Dieser wiederum aktualisiert die entsprechenden Components. 
+
+Jetzt gibt es hier aber noch Effects. Die Effects machen erst einmal nichts anderes wie der Reducer. Sie hören auf Actions und entscheiden dann für jede Action, ob sie reagieren müssen. Sollte das der Fall sein, wird ein Side-Effect ausgelöst. Dies ist zum Beispiel das Senden von Daten zu einer API. Sobald dies abgeschlossen ist, wird eine neue Action erzeugt, welche dann in den Reducer geht.
 
 # Zusatz
 
