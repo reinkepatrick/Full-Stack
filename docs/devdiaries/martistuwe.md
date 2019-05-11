@@ -53,6 +53,8 @@ __06.05.2019 - 12.05.2019__
 | Datum      | Tätigkeit                          | Dauer      | Zusatz |
 | ---------- | ---------------------------------- | ---------- | ------ |
 | 06.05.2019 | Flutter: Layout                    | 1 h 30 min |        |
-| 07.05.2019 | API Definition                     | 3 h        |        |
+| 07.05.2019 | Schnittstellen Definition          | 3 h        |        |
 | 08.05.2019 | Einlesen in CI & CD für Flutter    | 20 min     |        |
 | 08.05.2019 | Einlesen in Flutter best Practices | 30 min     |        |
+| 10.05.2019 | Schnittstellen Definition          | 1 h        |        |
+| 11.05.2019 | UI Implementieren                  | 2 h 30 min |        |
