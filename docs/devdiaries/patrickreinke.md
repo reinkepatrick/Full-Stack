@@ -70,11 +70,12 @@
 
 **06.05.2019 - 12.05.2019**
 
-| Datum      | Tätigkeit                                                     | Dauer      | Zusatz |
-| :--------- | :------------------------------------------------------------ | :--------- | :----- |
-| 06.05.2019 | Einbinden der Mockups                                         | 1 h        |        |
-| 06.05.2019 | Erstellung eines Zustandsdiagramm für die Mockups             | 1 h 30 min |        |
-| 07.05.2019 | Definition der API des Projekts                               | 3 h        |        |
-| 09.05.2019 | Einarbeitung in Form-Validation                               | 1 h        |        |
-| 10.05.2019 | Fertigstellung der Schnittstelle                              | 2 h 30 min |        |
-| 12.05.2019 | Definition von [Form-Validation](react/index#form-validation) | 30 min     |        |
+| Datum      | Tätigkeit                                                     | Dauer      | Zusatz                          |
+| :--------- | :------------------------------------------------------------ | :--------- | :------------------------------ |
+| 06.05.2019 | Einbinden der Mockups                                         | 1 h        |                                 |
+| 06.05.2019 | Erstellung eines Zustandsdiagramm für die Mockups             | 1 h 30 min |                                 |
+| 07.05.2019 | Definition der API des Projekts                               | 3 h        |                                 |
+| 09.05.2019 | Einarbeitung in Form-Validation                               | 1 h        |                                 |
+| 10.05.2019 | Fertigstellung der Schnittstelle                              | 2 h 30 min |                                 |
+| 12.05.2019 | Definition von [Form-Validation](react/index#form-validation) | 30 min     |                                 |
+| 12.05.2019 | Überarbeitung der React Dokumentation                         | 10 min     | Wechsel von Webstorm zu VS Code |
