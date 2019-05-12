@@ -44,12 +44,27 @@ __22.04.2019 - 28.04.2019__
 
 __29.04.2019 - 05.05.2019__
 
-| Datum | Tätigkeit                                | Dauer | Zusatz                 |
-| ----- | ---------------------------------------- | ----- | ---------------------- |
-| 04.05 | User Story und Use Case Diagramm bearbetiet | 30min |                        |
-| 05.05 | GraphQL Data Types Kurzübersicht         | 20min |                        |
-| 05.05 | GraphQL Validation verstanden und Kürzübersicht | 30min |                        |
-| 05.05 | GraphQL Frameworks recherchiert          | 30min | evtl. zu oberflächlich |
-| 05.05 | GraphQL vs REST: Wann was verwenden      | 60min | noch nicht zufrieden   |
-| 05.05 | GraphQL Zusammenfassung                  | 40min |                        |
-| 05.05      |    Beispiel Implementationen von GraphQL angeschaut| 120min | grober Überblick, verschiedener Sprachen|                                      |       |                        |
+| Datum | Tätigkeit                                | Dauer  | Zusatz                                  |
+| ----- | ---------------------------------------- | ------ | --------------------------------------- |
+| 04.05 | User Story und Use Case Diagramm bearbetiet | 30min  |                                         |
+| 05.05 | GraphQL Data Types Kurzübersicht         | 20min  |                                         |
+| 05.05 | GraphQL Validation verstanden und Kürzübersicht | 30min  |                                         |
+| 05.05 | GraphQL Frameworks recherchiert          | 30min  | evtl. zu oberflächlich                  |
+| 05.05 | GraphQL vs REST: Wann was verwenden      | 60min  | noch nicht zufrieden                    |
+| 05.05 | GraphQL Zusammenfassung                  | 40min  | noch nicht zufrieden                    |
+| 05.05 | Beispiel Implementationen von GraphQL angeschaut | 120min | grober Überblick, verschiedene Sprachen |
+
+
+## Woche 4
+
+__06.05.2019 - 12.05.2019__
+
+| Datum | Tätigkeit                            | Dauer | Zusatz                                 |
+| ----- | ------------------------------------ | ----- | -------------------------------------- |
+| 09.05 | Kurzüberblick QUIC und HTTP 3 geholt | 60min | Nichts konkretes, nur groben Überblick |
+| 12.05 | Ausführliche recherge QUIC           | 90min |                                        |
+| 12.05 | Dokumentation QUIC und HTTP 3        | 90min |                                        |
+|       |                                      |       |                                        |
+|       |                                      |       |                                        |
+|       |                                      |       |                                        |
+|       |                                      |       |                                        |
