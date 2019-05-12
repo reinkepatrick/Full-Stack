@@ -821,7 +821,18 @@ Routing ist kein Bestandteil von React und kann nur über Bibliotheken verwirkli
 
 ### react-router-dom
 `react-router-dom` ist eine Bibliothek für das Routing unter React, es verwendet die Bibliothek
-`react-router` weswegen wir diese nicht dazu installieren müssen.
+`react-router` weswegen diese nicht dazu installiert werden muss.
+
+
+## Form Validation
+Form Validation ist die Möglichkeit die Eingabe des Benutzers zu kontrollieren und ihm gegebenfalls visuell auf seine Fehler hinzuweisen. React bietet keine hauseigene Funktion oder Klasse für diese Aufgabe an. Die Validation muss also selbst implementiert werden oder durch eine externe Bibliothek übernommen werden. 
+
+Zwei Bibliotheken wären zum Beispiel:
+- [Formsy](https://github.com/formsy/formsy-react/)
+- [react-form-validator-core](https://www.npmjs.com/package/react-form-validator-core)
+- [Validate.js](https://validatejs.org)
+
+Für weitere Ideen für Validierungsansätze, siehe [hier](https://react.rocks/tag/Validation).
 
 ## Quellen
 
