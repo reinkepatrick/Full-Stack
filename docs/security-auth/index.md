@@ -290,7 +290,7 @@ echo` `'<p>Email: '.$_SESSION['email'].'</p>';
 
 #### Was ist JWT?
 
-JSON Web Token (JWT) ist ein Standard, welcher einen kompakten Weg Informationen zwischen zwei Seiten als JSON Objekt zu verschicken. Die Informationen sind vertrauenswürdig, da sie vorher digital signiert werden. JWT können mit einem secret (**HAMAC** Algorithmus) oder public/private Key signiert werden, mit **RSA** oder **ECDSA**. 
+JSON Web Token (JWT) ist ein Standard, welcher einen kompakten Weg Informationen zwischen zwei Seiten als JSON Objekt zu verschicken. Die Informationen sind vertrauenswürdig, da sie vorher digital signiert werden. JWT können mit einem secret (**HMAC** Algorithmus) oder public/private Key signiert werden, mit **RSA** oder **ECDSA**. Durch das signieren wird der JSON-String in einen binären Zeichensatz kodiert. Um diesen versenden zu können wird er in einen **base64-String** kodiert.
 
 #### Wofür benutzt man JWT?
 
@@ -309,7 +309,7 @@ Deshalb sieht ein JWT normalerweise so aus: xxxx.yyyy.zzzz
 
 ##### Header
 
-Der Header besteht aus zwei Teilen: Den Typ des Tokens und den Algorithmus, welcher zum signieren benutzt wurde. Außerdem ist dieser JSON in base64 kodiert.
+Der Header besteht aus zwei Teilen: Den Typ des Tokens und den Algorithmus, welcher zum signieren benutzt wurde. 
 
 ##### Payload
 
@@ -320,7 +320,7 @@ Der Payload enthält die claims. Claims sind Statements über z.B. den User und 
 * public claims
   * Diese werden vom Benutzer definiert. Aber um Kollisionen bei den Namen zu vermeiden, sollten sie bei der  [IANA JSON Web Token Registry](https://www.iana.org/assignments/jwt/jwt.xhtml) definiert werden oder als URI, welcher einen Kollisionsresistenten Namespace enthalten.
 * private claims
-  * Diese Claims enthalten die Inforamtionen, die von beiden Seiten benutzt werden können und keine **registered** oder **public claims** sind.
+  * Diese Claims enthalten die Informationen, die von beiden Seiten benutzt werden können und keine **registered** oder **public claims** sind.
 
 Die Namen der Claims sollen normalerweise drei Zeichen lang sein, damit das JWT so kompakt, wie möglich ist.
 
@@ -373,6 +373,33 @@ Für den Nutzer ist es einfacher eine Loginseite auf Echtheit zu überprüfen, d
 * Ein individuelles Bild anzeigen 
 * Den HTTP-Referer mit der IP des Requesters vergleichen 
 * Clientseitiges TLS-Zertifikat zur Autentifizierung nutzen
+
+## Base64
+
+### Was ist Base64?
+
+Base64 ist eine Kodierung die 8-Bit-Binärdateien in einen Zeichensatz aus 64 Zeichen übersetzt. Sie wird verwendet um binäre Dateien versendbar zu machen. Hauptsächlich wird Base64 eingesetzt um den Email Anhang, wie Bilder zu kodieren. 
+
+Der Zeichensatz kann aus folgenden Zeichen bestehen: 
+
+* A-Z 
+* a-z
+* 0-9
+* +
+* /
+* = (Als Identifier für Füllbits)
+
+### Wie wird kodiert?
+
+Es werden jeweils drei Bytes der Binärdatei in vier 6-Bits aufgeteilt. Diese Blöcke bilden jeweils eine Zahl von 0-63. Diese Zahlen können einem der 64 Zeichen, aus dem der Base64-String bestehen kann, zugeordnet.
+
+![](img\Base64-Tabelle.JPG)
+
+Ist die Länge des Bytesatzes nicht durch drei teilbar, wird der String mit aus Nullbits bestehenden Füllbytes aufgefüllt. Diese werden am Ende des Strings mit 0-2 =-Zeichen kodiert. Dies bedeutet, dass entweder kein, ein oder zwei Bytes mit Füllbytes aufgefüllt wurden. 
+
+### Große eines Base64-Strings
+
+Eine n-Byte große Binärdatei wird in einen 4 * ( n / 3 ) Byte großen Base64-String kodiert.``
 
 ## Quellen
 

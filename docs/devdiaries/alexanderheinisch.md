@@ -24,8 +24,8 @@ __15.04.2019 - 21.04.2019__
 
 | Datum      | Tätigkeit                                      | Dauer  | Zusatz                                                       |
 | ---------- | ---------------------------------------------- | ------ | ------------------------------------------------------------ |
-| 15.04.2019 | Github Repo Wartung                            | 1 h    | Nie strukturelle Änderungen machen!                          |
-| 16.04.2019 | Testen von travis CI für markdown kontrolle    | 1 h    | Ja es wäre möglich mit markdownlint dennoch sieht es sehr nach hack aus. |
+| 15.04.2019 | Github Repo Wartung                            | 60 min | Nie strukturelle Änderungen machen!                          |
+| 16.04.2019 | Testen von travis CI für markdown kontrolle    | 60 min | Ja es wäre möglich mit markdownlint dennoch sieht es sehr nach hack aus. |
 | 16.04.2019 | Variablen in F#                                | 15 min | in F# sind Variablen Immuatable, Zuweisungen werden beim deklarieren mit = zugewiesen und danach mit <- |
 | 16.04.2019 | schleifen in F#                                | 15 min |                                                              |
 | 16.04.2019 | Kontrollstrukturen in F#                       | 10 min | ein Switchcase sieht ähnlich aus wie beim Ruby               |
@@ -62,5 +62,20 @@ __29.04.2019 - 05.04.2019__
 | 02.05.2019 | Domain Driven Development angeschaut          | 120 min | Aufgrund von F# und keiner Richtigen OOP angeschaut |
 | 02.05.2019 | Routing vom Framework Giraffe angeschaut      | 60 min  |                                                     |
 | 02.05.2019 | Vergleich von ASP.NET und Giraffe vorbereitet | 30 min  |                                                     |
+| 03.05.2019 | Funktionale Test Frameworks gesucht           | 60 min  | FSUnit, Expectio                                    |
+| 04.05.2019 | Anfang Service Pipeline                       | 60 min  |                                                     |
+
+## Woche 5 
+
+__06.04.2019 - 14.04.2019__
+
+| Datum | Tätigkeit | Dauer | Zusatz |
+| --- | ---| --- | --- |
+| 09.05.2019 | Middleware pipeline | 30 min | Ähnlich wie bei nodejs |
+| 09.05.2019 | erster ansatz der API Dokumentation mithilfe von Swaggerhub erstellt | 180 min |  |
+| 09.05.2019 | dotnet core API über docker starten | 30 min | Ports werden nicht konvertiert |
+| 09.05.2019 | Service Pipeline informationen gesammelt | 120 min | |
+| 10.05.2019 | Swagger Dokumentation erweitert | 120 min | der Swagger editor verhält sich "besonders" wenn ein Path nicht richtig angelegt wurde |
+| 12.05.2019 | dotnet Microservices <https://docs.microsoft.com/de-de/dotnet/standard/microservices-architecture/> | 45 min |  |
 
 

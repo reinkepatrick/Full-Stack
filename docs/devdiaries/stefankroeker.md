@@ -8,7 +8,7 @@ __08.04.2019 - 14.04.2019__
 | 14.04.2019 | Auffrischung von MVC und MVP.                                                                                                  | 30 min     |        |
 | 14.04.2019 | Struktur von Django verstehen.                                                                                                 | 1 h        |        |
 | 14.04.2019 | Verstehen was ein ORM macht.                                                                                                   | 15 min     |        |
-| 14.04.2019 | Installieren von Django und Maria DB                                                                                           | 1h 15 min  | Probleme beim installieren von Django, da Symlink von django-admin.py nicht automatisch gesetzt wird und deswegen das Projekt nicht erstellt werden konnte. Rechner muss nach Django installation neugestartet werden.    |
+| 14.04.2019 | Installieren von Django und Maria DB.                                                                                          | 1h 15 min  | Probleme beim installieren von Django, da Symlink von django-admin.py nicht automatisch gesetzt wird und deswegen das Projekt nicht erstellt werden konnte. Rechner muss nach Django installation neugestartet werden.    |
 | 14.04.2019 | Verstehen was ein ORM macht.                                                                                                   | 15 min     |        |
 
 
@@ -50,6 +50,18 @@ __29.04.2019 - 05.05.2019__
 | 02.05.2019 | Tests angucken. Gestoppt wegen DB Schnittstelle.                                                                                | 2h         | Es gab Komplikationen, weil der Datenbank User nicht genug Rechte hatte und das Root Passwort nicht funktionierte.       |
 | 03.05.2019 | Test zum Laufen bekommen.                                                                                                       | 30 min     | User brauch Berechtigungen um eine Datenbank zu erstellen.       |
 | 03.05.2019 | Tests erstellt Views und Models getestet.                                                                                       | 3h         |        |
-| 05.05.2019 | Gedanken darüber machen, wie ein django Projekt am besten in git gepusht wird.                                                  | 30 min     |        |
+| 05.05.2019 | Gedanken darüber machen, wie ein Django Projekt am besten in Git gepusht wird.                                                  | 30 min     |        |
+
+
+## Woche 5 
+__06.05.2019 - 12.05.2019__
+
+| Datum      | Tätigkeit                                                                                                                       | Dauer      | Zusatz |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------- | ---------- | ------ |
 | 06.05.2019 | Recherchieren, welche Websockets Möglichkeiten existieren.                                                                      | 30 min     |        |
-| 06.05.2019 | Mit channels auseinandersetzen.                                                                                                 | 30 min     |        |
+| 06.05.2019 | Mit Channels auseinandersetzen.                                                                                                 | 3h         | Versuch fehlgeschlagen. Hello World ist nicht super simpel. Es erfordert viele Kenntnisse um ein Programm zu schreiben und ist so ähnlich wie Django selbst.        |
+| 07.05.2019 | Definition der API des Projekts.                                                                                                | 3h         |        |
+| 08.05.2019 | Sequenzdiagramme gemalt.                                                                                                        | 2h         |        |
+| 09.05.2019 | Projekt Kanban Board erstellt.                                                                                                  | 10 min     |        |
+| 09.05.2019 | Mich weiter mit Channels auseinandergesetzt.                                                                                    | 3h         |        |
+| 09.05.2019 | An Kommunikationsprotokoll weiter gearbeitet                                                                                    | 2h 30 min  |        |

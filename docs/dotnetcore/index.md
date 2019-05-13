@@ -20,8 +20,6 @@ Eine liste aller Änderungen sind [hier](https://docs.microsoft.com/de-de/dotnet
 
 ## Frameworks
 
-
-
 ### Web
 
 #### ASP.NET
@@ -45,13 +43,62 @@ type ValuesController () =
 Die Route ist nicht direkt lesbar ohne zu wissen das [controller] durch Values ersetzt wird.
 Trotz das Klassen verwendet werden ist keine spezielle Ordner Struktur vorgeschrieben bzw. benötigt welches ein suchen nach der zugehörigen Klasse verursacht. Da die eigentliche Route in der Datei der Klasse deklariert wird.
 
-**Http Request Pipeline**
+##### Http Request Pipeline
 
-In ASP.NET ist eine Pipeline verfügbar welche das hinzufügen von Middleware erlaubt. Eine detaillierte Beschreibung zu diesem Theme gibt es [hier](<https://docs.microsoft.com/de-de/aspnet/core/fundamentals/middleware/?view=aspnetcore-2.2>). Ein paar Beispiele für diese Middleware:
+![https://thomaslevesque.com/2018/03/27/understanding-the-asp-net-core-middleware-pipeline](.\img\Middleware_Pipeline.png)
+
+In ASP.NET ist eine Pipeline verfügbar welche das hinzufügen von Middleware erlaubt. Eine detaillierte Beschreibung zu diesem Thema gibt es [hier](<https://docs.microsoft.com/de-de/aspnet/core/fundamentals/middleware/?view=aspnetcore-2.2>). Ein paar Beispiele für diese Middleware:
 
 - Json Parser
 - HTTPS Redirect
-- Database connection
+- Database Connection
+
+**Unterschiedliche Middlewares**
+
+`Use` erstellt eine uneingeschränkte Middleware und kann von der vorherigen mithilfe von next aufgerufen werden.
+
+`Map` erstellt eine bedingte Middleware Wobei der erste Parameter beim erstellen angibt anhand welchen kriteriums die unterscheidung stattfinden soll.
+
+`Run` erstellt eine Terminale Middleware welche mithilfe von Run aus der vorherigen aufgerufen werden kann.
+
+**Middleware vs. Service**
+
+Eine Middleware und ein Service unterscheiden sich gering bis gar nicht. Unter einem Service wird verstanden der Server, Parser, Datenbankverbindung oder Framework. Während eine Middleware z.b. Logging wäre.
+
+Eine Middleware und ein Service können identisch geschrieben werden und es gibt keine Vorgabe ob erst Service oder erst Middlewares vorkommen müssen.
+
+Services bieten meist noch einen Schritt der Konfiguration an und können daher zumindest etwas erkannt werden. Diese Konfiguration kann aber auch in manchen fällen weggelassen werden.
+
+**Server**
+
+Ein **IIS** Server, ist ein Multifunktionsserver welcher sehr viele Zusatz Funktionen mitliefert.
+
+Ein **Kestrel** Server, ist ein Speziell für dotnet core entwickelter Server. Welcher auf reine Performance setzt und Sonderfunktionen außen vorlässt.
+
+Microsoft empfiehlt beim nutzen von Kestrel nach außen einen weiteren Server als Proxy vorzuschalten.
+
+![alt](./img/empfohlene-server-konfiguration.png)
+
+|                            | IIS           | Kestrel                                        |
+| -------------------------- | ------------- | ---------------------------------------------- |
+| Platform Support           | Windows/Linux | Windows/Linux/Mac                              |
+| Statische Webseiten        | Ja            | Ja                                             |
+| HTTP Access Logs           | Ja            | Nein                                           |
+| Port Sharing               | Ja            | Nein                                           |
+| SSL Zertifikat             | Ja            | Intern (Nur zwischen Proxy und Kestrel Server) |
+| Windows Authentifikation   | Ja            | Nein                                           |
+| Managment Konsole          | Ja            | Nein                                           |
+| Prozess Aktivierung        | Ja            | Nein                                           |
+| Anwendungsinitialisierung  | Ja            | Nein                                           |
+| Request Filtering & Limits | Ja            | Nein                                           |
+| IP & Domain Restrictions   | Ja            | Nein                                           |
+| HTTP Redirect Rules        | Ja            | Nein                                           |
+| WebSocket Protocol         | Ja            | Middleware                                     |
+| Response Output Caching    | Ja            | Nein                                           |
+| Compression                | Optional      | Optional                                       |
+| FTP Server                 | Ja            | Nein                                           |
+
+
 
 ##### Razor
 
@@ -59,9 +106,11 @@ Eine von Microsoft entwickelte Template Engine.
 
 ##### Razorkomponente
 
-Ein erweiterung von Razor welches erlaubt Komponenten zu entwickeln Ähnlich wie bei Angular. Diese Komponenten können sowohl auf dem Server oder mithilfe von Blazzor als Webassembly beim Clienten Aktionen ausführen.
+Ein Erweiterung von Razor welches erlaubt Komponenten zu entwickeln Ähnlich wie bei Angular. Diese Komponenten können sowohl auf dem Server oder mithilfe von Blazzor als Webassembly beim Klienten Aktionen ausführen.
 
 #### Giraffe
+
+![alt](./img/giraffe.png)
 
 Ein auf ASP.NET aufbauendes Framework welches stärker Funktionalen Aspekte einbringt. 
 
@@ -81,19 +130,32 @@ let webApp =
 
 Das Routing kann komplex werden, dennoch kann auf einen Blick erkannt werden, welcher Befehl wohin gehen wird. Routen die Authentifizierung erfordern können auch direkt hier erkannt werden und nicht in einer Funktion welche nur vom Framework intern aufgerufen werden.
 
-### Entity Framework (EF)
+### ORM
+
+#### Entity Framework (EF)
 
 Ein von Microsoft entwickeltes Framework für Datenbank Operationen für dotnet Framework. Es handelt sich beim Enity Framework um ein Objekt Relations Model. Das EF bietet grundsätzlich zwei Vorgehensweisen an Code-First und Database-First. Es bietet ein CLI Tool welches Migrationen erstellen ermöglicht. Diese Können beim Starten der Anwendung kontrolliert werden. Dies ermöglicht im Laufenden System einfache Änderungen am Datenbank Model.
 
 **Entity Framework Core (EF Core)**
 
-EF Core ist eine Open source Version vom EF. Außerdem ist EF Core kompatible mit dotnet core.
+EF Core ist eine Open source Version vom EF. EF Core ist kompatible mit dotnet core.
 
 ### Parser
 
 #### Newtonsoft JSON.NET
 
 JSON.Net von Newtonsoft ist ein Json Parser Framework welches ein Json to Object Parser beinhaltet sowie Object to Json. Es beinhaltet auch eine Service Komponente welche mit ASP.NET genutzt werden kann.
+
+### Test Frameworks
+
+|                    | NUnit                          | xUnit               | Expecto      |
+| ------------------ | ------------------------------ | ------------------- | ------------ |
+| Struktur           | OOP                            | OOP oder Funktional | Funktional   |
+| Entwickler         | Open Source                    | Open Source         | Open Source  |
+| Programmiersprache | c#, VB, f#                     | c#, VB, f#          | F#           |
+|                    | Assert.That(1, Is.EqualTo(1)); | Assert.Equal        | Expect.equal |
+
+
 
 ## F# #
 
@@ -439,9 +501,7 @@ var element = from text in list where text == "Beispiel" select text;
 
 Linq ist ein Teil der dotnet-Programmiersprachen und ermöglicht einfachen Zugriff auf Daten verschiedener Quellen( z.b. DatenbankTabellen, XML, Listen ). Unter diesen Funktionen gelten filtern, gruppieren, sortieren, selektieren. Es gibt 2 schreibformen einmal Querysyntax welcher sehr ähnlich ist wie Datenbanken query sprachen wie sql und funktionssyntax welcher identisch ist zum lambda syntax.
 
-#### IIS (Internet Information Service)
-
-Ein Service welcher Daten für das Netzwerk bereitstellen kann und mit im Grundumfang bereits einige Hilfreiche Funktionen beinhaltet z.b. HTTP, HTTPS, FTP, Acitve Directory.  
+ 
 
 #### Programmiersprachen
 
@@ -480,3 +540,9 @@ Ein Middleware Programm kann genutzt werden um Daten von Typ a nach Typ b zu kon
 [F# Github Organisation](https://github.com/fsharp)
 
 [C# Querysyntax](https://www.tutorialsteacher.com/linq/linq-query-syntax)
+
+<https://xunit.net/>
+
+<https://nunit.org/>
+
+<https://stackify.com/kestrel-web-server-asp-net-core-kestrel-vs-iis/>

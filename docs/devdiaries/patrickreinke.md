@@ -1,11 +1,11 @@
 # Patrick Reinke - Projekttagebuch
 
-## Woche 1 
+## Woche 1
 
-__08.04.2019 - 14.04.2019__
+**08.04.2019 - 14.04.2019**
 
 | Datum      | Tätigkeit                                                                                                                                                          | Dauer      | Zusatz |
-|:-----------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------|:-------|
+| :--------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------- | :----- |
 | 09.04.2019 | Auffrischung von Grundlagen über komponentenbasierte Single Page Applications                                                                                      | 45 min     |        |
 | 09.04.2019 | Auffrischung von ES6                                                                                                                                               | 1 h        |        |
 | 10.04.2019 | Festlegung von [Anforderungen und Workflow](react/index#anforderungen)                                                                                             | 1 h        |        |
@@ -19,10 +19,10 @@ __08.04.2019 - 14.04.2019__
 
 ## Woche 2
 
-__15.04.2019 - 21.04.2019__
+**15.04.2019 - 21.04.2019**
 
 | Datum      | Tätigkeit                                                                          | Dauer      | Zusatz |
-|:-----------|:-----------------------------------------------------------------------------------|:-----------|:-------|
+| :--------- | :--------------------------------------------------------------------------------- | :--------- | :----- |
 | 16.04.2019 | Definition von [Styling](react/index#styling) unter React                          | 2 h 30 min |        |
 | 16.04.2019 | Fertigstellung von [Styling](react/index#styling) unter React                      | 3 h        |        |
 | 16.04.2019 | Auseinandersetzung mit Debugging unter React                                       | 30 min     |        |
@@ -32,10 +32,10 @@ __15.04.2019 - 21.04.2019__
 
 ## Woche 3
 
-__22.04.2019 - 28.04.2019__
+**22.04.2019 - 28.04.2019**
 
 | Datum      | Tätigkeit                                                                                                                                                                                                                                | Dauer      | Zusatz                                                           |
-|:-----------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------|:-----------------------------------------------------------------|
+| :--------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------- | :--------------------------------------------------------------- |
 | 24.04.2019 | Erstellung von der [Projekt Organisation](https://github.com/cardholder), Repos und Kanban Board                                                                                                                                         | 1 h        |                                                                  |
 | 24.04.2019 | Erstellung von einem Projekt Logo                                                                                                                                                                                                        | 1 h 30 min |                                                                  |
 | 25.04.2019 | Einbinden von Docsify in das Projekt                                                                                                                                                                                                     | 30 min     |                                                                  |
@@ -54,10 +54,10 @@ __22.04.2019 - 28.04.2019__
 
 ## Woche 4
 
-__29.04.2019 - 05.05.2019__
+**29.04.2019 - 05.05.2019**
 
 | Datum      | Tätigkeit                                                                                             | Dauer      | Zusatz |
-|:-----------|:------------------------------------------------------------------------------------------------------|:-----------|:-------|
+| :--------- | :---------------------------------------------------------------------------------------------------- | :--------- | :----- |
 | 29.04.2019 | Weiterführung der Erstellung der Mockups für die Web-Anwendung                                        | 3 h        |        |
 | 30.04.2019 | Definition von der [Projektorganisation](https://cardholder.github.io/docs/#/?id=projektorganisation) | 1 h 30 min |        |
 | 30.04.2019 | Fertigstellung der Mockups für die Web-Anwendung                                                      | 2 h 30 min |        |
@@ -68,9 +68,15 @@ __29.04.2019 - 05.05.2019__
 
 ## Woche 5
 
-__06.05.2019 - 12.05.2019__
+**06.05.2019 - 12.05.2019**
 
-| Datum      | Tätigkeit                                         | Dauer      | Zusatz |
-|:-----------|:--------------------------------------------------|:-----------|:-------|
-| 06.05.2019 | Einbinden der Mockups                             | 1 h        |        |
-| 06.05.2019 | Erstellung eines Zustandsdiagramm für die Mockups | 1 h 30 min |        |
+| Datum      | Tätigkeit                                                      | Dauer      | Zusatz                          |
+| :--------- | :------------------------------------------------------------- | :--------- | :------------------------------ |
+| 06.05.2019 | Einbinden der Mockups                                          | 1 h        |                                 |
+| 06.05.2019 | Erstellung eines Zustandsdiagramm für die Mockups              | 1 h 30 min |                                 |
+| 07.05.2019 | Definition der API des Projekts                                | 3 h        |                                 |
+| 09.05.2019 | Einarbeitung in Form-Validation                                | 1 h        |                                 |
+| 10.05.2019 | Fertigstellung der Schnittstelle                               | 2 h 30 min |                                 |
+| 12.05.2019 | Definition von [Form-Validation](react/index#form-validation)  | 30 min     |                                 |
+| 12.05.2019 | Überarbeitung der React Dokumentation                          | 10 min     | Wechsel von Webstorm zu VS Code |
+| 12.05.2019 | Erstellung eines Component-Baums für die Projekt Web-Anwendung | 1 h 30 min | Nur grober Plan                 |
