@@ -58,3 +58,14 @@ __30.04.2019 - 06.05.2019__
 | 06.05.2019 | Modelklassendiagramm Ausarbeitung |50 Min| |
 | 06.05.2019 | Nach Merge-Problem rekonstruieren von Modelklassendiagramm |1.5 h| |
 | 06.05.2019 | Tabelle zur besseren Übersicht der Pros/Conts von App Arten | 30 min| |
+
+## Woche 5
+__07.05.2019 - 13.05.2019__
+
+|Datum|Tätigkeit|Dauer|Zusatz|
+| - | - | - | - |
+| 07.05.2019 | Projektbesprechung (aktueller Stand & weiteres Vorgehen) & Aufgabenverteilung |1 h| |
+| 07.05.2019 | GUI-Mockups für die mobile Anwendung entworfen |1 h| |
+| 08.05.2019 | Restlichen GUI-Mockups für die mobile Anwendung entworfen |1 h| |
+| 10.05.2019 | LoginView implementieren |3 h| |
+| 13.05.2019 | Erkenntisse notieren |1 h| |
