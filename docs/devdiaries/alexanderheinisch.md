@@ -76,5 +76,6 @@ __06.04.2019 - 14.04.2019__
 | 09.05.2019 | dotnet core API über docker starten | 30 min | Ports werden nicht konvertiert |
 | 09.05.2019 | Service Pipeline informationen gesammelt | 120 min | |
 | 10.05.2019 | Swagger Dokumentation erweitert | 120 min | der Swagger editor verhält sich "besonders" wenn ein Path nicht richtig angelegt wurde |
+| 12.05.2019 | dotnet Microservices <https://docs.microsoft.com/de-de/dotnet/standard/microservices-architecture/> | 45 min |  |
 
 
