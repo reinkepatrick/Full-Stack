@@ -116,7 +116,7 @@ Dieser Teil spezifiziert, wie viele Bytes die restliche Nachricht enthält, und 
 
 #### Variable length Header
 
-Dieser Header enthält das Topic zu dem die Nachricht gehört bzw. gehören soll. Ist also nur vorhanden, wenn ein Topic benötigt wird (z.B. bei publish).
+Dieser Header enthält das Topic zu dem die Nachricht gehört bzw. gehören soll. Ist also nur vorhanden, wenn zu der Nachricht ein Topic benötigt wird (z.B. bei publish).
 
 #### Payload
 
@@ -128,8 +128,8 @@ Enthält den eigentlichen Inhalt der Nachricht und ist auch nicht bei allen Nach
 
 AMQP steht für **Advanced Message Queuing Protocol**.
 
-- **Connection**:
-- **Session**:
+- **Connection**: Persistente Verbindung zwischen zwei Rechnerknoten (kann mehrere Sessions enthalten)
+- **Session**: Sitzung innerhalb der Daten übertragen werden
 
 - **Container**: Anwendung (App), innerhalb der AMQP zur Kommunikation verwendet wird
 - **Node**: Addressierbare Entität innerhalb der Anwendung
