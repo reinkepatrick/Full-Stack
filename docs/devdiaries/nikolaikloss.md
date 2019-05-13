@@ -68,3 +68,4 @@ __07.05.2019 - 13.05.2019__
 | 07.05.2019 | GUI-Mockups für die mobile Anwendung entworfen |1 h| |
 | 08.05.2019 | Restlichen GUI-Mockups für die mobile Anwendung entworfen |1 h| |
 | 10.05.2019 | LoginView implementieren |3 h| |
+| 13.05.2019 | Erkenntisse notieren |1 h| |

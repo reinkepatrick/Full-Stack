@@ -91,3 +91,71 @@ Als IDE bietet sich Ionic Studio an, welches auf der selben Basis wie Visual Stu
 
 ## Appflow
 Appflow dient der vereinfachten Verwaltung einer Anwendung in ihrer Entwicklung. Diese Verwaltung ist vom Open-Source-Framework getrennt. Appflow soll bei der Erstellung nativer Appbuilds helfen und Live-Code-Aktualisierungen bereitstellen.
+
+
+## Projektstruktur
+
+### CLI - "ionic generate" - Kommando
+Der Befehl "ionic generate" erlaubt das automatisierte Erzeugen von diversen Ionic Elementen. Die Ausführung des Kommandos, lässt das CLI ein Template der jeweiligen Auswahl, im Projektordner erzeugen.
+
+Der Aufbau des Kommandos ist wie folgt: 
+
+```
+$ ionic generate \<type> \<name> [options]
+```
+
+#### Page
+Bei einer "Page" handelt es sich im wesentlichen um eine View. Eine Page Komponente setzt sich aus den folgenden Elementen zusammen, welche ihr eigenes Aussehen und Verhalten definiert.
+
+* .module.ts: 
+
+* .page.html: 
+
+    * Definiert die Layoutstruktur der View in HTML.
+ 
+* .page.scss:
+    * Ermöglicht die Definition von individuellen Styles innerhalb der View. Es wird so z.B. ermöglicht, dass Buttons eine besondere Farbe aufweisen. 
+
+* .page.spec.ts:
+
+* .page.ts:
+    * Erlaubt die Implementierung von Logik innerhalb der Page. Es ist in TypeScript implementiert und liefert somit diverse Möglichkeiten aus der OOP-Welt, wie Vererbung oder die Implementierung von Interface's, desweiteren bietet es auch einen Konstruktor. "ngOnInit()" ist eine Funktion, welche beim Initialisierungsvorgang der Page ausgeführt wird.
+
+#### Service
+Ein Service sorgt für die konsistente Datenhaltung innerhalb der Applikation. Angenommen 3 Pages ermöglichen die Bearbeitung und Betrachtung von ein und dem selben Datensatz. Die Pages beziehen ihre Daten nun aus einem einzigen Service, welcher sich darum kümmert, dass die Daten korrekt in allen Pages aktualisert werden. 
+
+Ein Service besteht aus den folgenden Elementen:
+
+* service.spec.ts:
+
+* service.ts:
+    * Enthält die Logik für die Datenhaltung/Datenbeschaffung. Hier könnte man z.B. ein Modul für MySQL einbinden und somit Zugriffe auf die Datenbank ermöglichen.
+
+
+### Navigation
+
+#### Routing
+
+Die Routen der Pages werden in der "app-routing-module.ts" Datei definiert. Das Modul enthält ein Array vom Type "Routes" über dessen Eigenschaften sich die jeweiligen Routen der Pages bestimmten lassen. 
+
+Auszug: 
+
+```javascript
+const routes: Routes = [
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
+  { path: 'register', loadChildren: './register/register.module#RegisterPageModule' },
+];
+```
+
+Das Schlüssel-Wert-Paar "path" erlaubt die Bestimmung der jeweiligen Route.
+Das erste Element des Arrays verweist mit "redirectTo" auf die Login-Page der Applikation. Dies bedeutet, dass beim ersten Öffnen der Applikation direkt auf die Login-Page verwiesen wird. 
+
+#### Verknüpfung von Pages
+
+Das HTML-Attribute "routerLink" ermöglicht die einfache Navigation zwischen diversen Pages. Das Attribute lässt sich an vielen Elementen einfach hinzufügen (z.B. in Buttons) und hat als Wert die Route auf die es beim Auslösen des Elements verweisen/weiterleiten soll.
+
+Beispiel: 
+```html
+<ion-button [routerLink]="['/login']">Registrieren</ion-button>
+```
