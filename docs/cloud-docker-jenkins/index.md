@@ -115,7 +115,74 @@ Monolithische Softwaresysteme wie z. B. Eine Java-Anwendung können nur hoch ska
 
 ### Docker-Hub
 
-Der Docker-Hub ist ein öffentliches Repository für Container. Jeder kann dort seine erstellten Images veröffentlichen. Einige Softwarehersteller bieten aber Images an, die von ihnen selbst gewartet werden (z. B. MySQL) 
+Der Docker-Hub ist ein öffentliches Repository für Container. Jeder kann dort seine erstellten Images veröffentlichen. Einige Softwarehersteller bieten aber Images an, die von ihnen selbst gewartet werden (z. B. MySQL). Dafür benötigt man einen Account, den man sich unter https://hub.docker.com erstellen kann.
+
+Die Kommandozeilenbefehle ähneln denen von Git:
+
+- `docker push <repositoryname>/<imagename>:<tagname>`
+- `docker pull <repositoryname>/<imagename>:<tagname>`
+- Im Dockerfile gibt man noch den Maintainer an
+  - `MANTAINER Alexander Bergmann alex.bergmann87@gmail.com`
+
+**Registry**
+
+Ein Service, der für das Hosten und Verteilen von Images zuständig ist. Die Standard-Registry ist der Docker Hub.
+
+**Repository**
+
+Eine Sammlung zusammengehöriger Images (oft handelt es sich um verschiedene Versionen der gleichen Anwendung oder des gleichen Service)
+
+**Namespaces**
+
+Diese Verwendung von Namensräumen sorgt dafür, dass die Anwender von Namensräumen sicher sein können, woher Images kommen. Zusätzlich können Images auch kryptographisch signiert werden, um eine bessere Authentizität sicherzustellen. Dabei spricht man von Trusted Images.
+
+Root - Die Docker eigenen Repositorys z. B. debian
+
+User - Die Nutzer eigenen Repositorys z. B. abergy/cowsay
+
+Selfhosted - Selbst gehostete Repositorys, diesen geht eine IP voraus z. B. 192.168.1. 20/cowsay
+
+### Docker Compose
+
+![swarm_cluster](img/swarm_cluster.png)
+
+Docker Compose dient zur Orchestrierung/Verbindung von Container-Clustern. Dabei nutzt es **Docker Swarm**, eine native Clustering-Lösung von Docker, die zur Installaltionsumgebung gehört. Das Herzstück von Docker Compose ist eine YAML Datei, sie enthält die nötigen Informationen um die Container zu starten, zu verbinden oder zu bauen. 
+
+```yaml
+# docker-compose.yml
+mynginx:
+  image: nginx
+  ports:
+  	- "80:80"
+  	- "443:443"
+  volumes:
+  	- /var/www/my_project:/var/www/project1
+  links: myphp-fpm
+myphp-fpm:
+  image: php:fpm
+  volume-from:
+  	- mynginx
+ 
+########## BUILD ######
+nginx:
+	build: nginx/
+```
+
+**Docker Compose Befehle**
+
+| Befehl                     | Beschreibung                                                 |
+| -------------------------- | ------------------------------------------------------------ |
+| docker-compose up          | Erzeugt und startet die Container, die im YAML File definiert sind |
+| docker-compose ps          | Listet die aktiven Container auf die con Docker Compose gestartet wurden |
+| docker-compose start/ stop | Einzelne Container stoppen (docker-compose ps)               |
+| docker-compose rm          | Entfernt Container(docker-compose ps)                        |
+| docker-compose build       | Baut alle Container zusammen und tagged diese dann, sodass sie beim nächsten Starten schneller verfügbar sind. |
+
+**Kubernates**
+
+Kubernates ist ein Tool zur Containerorchestrierung von Google, dabei handelt es sich um eine ausgefeiltere Orchestrierungslösung auf höherem Niveau, die auch Failover- und Skalierungs-features mitbringt und auch auf anderen Clustering-Lösungen aufsetzen kann. Es geht seine eigenen Wege und erzwingt eine Reihe von Konzepten rund um die Organisation und das Vernetzen von Containern.
+
+ (http://kubernetes.io)
 
 ### Docker-Image erstellen
 
@@ -135,7 +202,7 @@ Der Docker-Hub ist ein öffentliches Repository für Container. Jeder kann dort 
 | ENTRYPOINT | Legt eine ausführbare Datei (und Standardargumente) fest, die beim Start des Containers laufen soll |
 | CMD        | Führt die angegebene Anweisung aus, wenn der Container gestartet wurde. Wird auch als Argument für `ENTRYPOINT` verwendet |
 | VOLUME     | Deklariert die angegebene Datei oder das Verzeichnis als Volume |
-| WORKDIR    |                                                              |
+| WORKDIR    | Setzt das Arbeitsverzeichnis für den aktuellen RUN/CMD Befehl |
 | USER       | Setzt den Benutzer (über Name oder UID), der in folgenden RUN-, CMD- oder ENTRYPOINT-Anweisungen genutzt werden soll |
 
 Weitere Befehle: `ARG ENV EXPOSE HEALTHCHECK MAINTAINER LABEL ONBUILD SHELL STOPSIGNAL`
@@ -191,8 +258,6 @@ docker run test/cowsay-dockerfile
 # oder
 docker run test/cowsay-dockerfile Hallo Muh
 ```
-
-
 
 ## Quellen
 

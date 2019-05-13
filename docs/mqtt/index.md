@@ -1,12 +1,30 @@
-# Event-Driven Architecture
+
+
+# Message Broker
+
+## Event-Driven Architecture
 
 ![Event-Driven Architecture](img/eventdriven.jpg)
 
+Die **Even-Driven Architecture** (eventgesteuerte Architektur, kurz EDA) ist ein Softwarearchitekturmodell, das die Kommunikation innerhalb eines Systems beschreibt. Anders als beim "klassischen" Request/Response-Pattern kommunizieren zwei Knoten niemals direkt miteinander, sondern immer über einen Mediator (Vermittler). Dieser Mediator kann z.B. ein Message Broker oder ein Bus sein.
 
+Wie der Name schon sagt, stehen bei der EDA Events im Vordergrund. Ein **Event** (Ereignis) kann letzendlich alles sein, solange es zu einem klar definierten Zeitpunkt geschieht und aufgezeichnet werden kann.
+
+Die Knoten lassen sich in Eventerzeuger und -verbraucher unterteilen, wobei ein und derselbe Rechner sowohl Erzeuger als auch Verbraucher sein kann.
+
+### Vorteile
 
 ![Event-Driven Architecture2](img/eventdrivenasynchron.jpg)
 
-# MQTT
+- Skalierbarkeit
+  - Es fällt kaum ins Gewicht, wenn ein weiterer Client ins System eingebunden wird.
+- Dezentralisierung
+- Asynchronität
+  - Viele Prozesse können gleichzeitig laufen und müssen nicht mehr aufeinander warten.
+- Anonymität
+  - Die Erzeuger und Verbraucher von Events müssen nichts voneinander wissen, weil der Mediator die komplette Kommunikation (und Verarbeitung) übernimmt.
+
+## MQTT
 
 ## Beschreibung
 
@@ -65,11 +83,53 @@ Je nach Anwendungszweck können einzelne Nachrichten eine sehr unterschiedliche 
 
 In einem System, wo die Sensoren dauerhaft und sehr viele Messdaten veröffentlichen, würde beispielsweise die Stufe 0 ausreichen. Wenn aber jede einzelne Nachricht für eine Auswertung nötig ist und dementsprechend eine hohe Relevanz hat, dann wird vermutlich Stufe 2 verwendet. 
 
-## Vergleich zu AMQP
+### Paketstruktur
 
-### Überblick über AMQP
+Ein MQTT-Paket hat eine variable Länge und ist mindestens zwei Bytes lang. In der Grafik und der folgenden Beschreibung gehe ich näher auf den Aufbau ein.
+
+![MQTT Beispiel](img/MQTT-Standard-Packet.jpg)
+
+#### Control Header
+
+Der Control Header besteht aus einem Byte und enthält die Informationen über den Nachrichtentyp, den Quality of Service und das Retain-Flag. 
+
+Es gibt folgende Nachrichtentypen:
+
+- CONNECT
+- CONNACK
+- PUBLISH
+- PUBACK
+- PUBREC
+- PUBREL
+- PUBCOMP
+- SUBSCRIBE
+- SUBACK
+- UNSUBSCRIBE
+- UNSUBACK
+- PINGREQ
+- PINGRESP
+- DISCONNECT
+
+#### Packet Length
+
+Dieser Teil spezifiziert, wie viele Bytes die restliche Nachricht enthält, und ist selber 1-4 Bytes lang.
+
+#### Variable length Header
+
+Dieser Header enthält das Topic zu dem die Nachricht gehört bzw. gehören soll. Ist also nur vorhanden, wenn zu der Nachricht ein Topic benötigt wird (z.B. bei publish).
+
+#### Payload
+
+Enthält den eigentlichen Inhalt der Nachricht und ist auch nicht bei allen Nachrichtentypen vorhanden.
+
+## AMQP
+
+### Bestandteile
 
 AMQP steht für **Advanced Message Queuing Protocol**.
+
+- **Connection**: Persistente Verbindung zwischen zwei Rechnerknoten (kann mehrere Sessions enthalten)
+- **Session**: Sitzung innerhalb der Daten übertragen werden
 
 - **Container**: Anwendung (App), innerhalb der AMQP zur Kommunikation verwendet wird
 - **Node**: Addressierbare Entität innerhalb der Anwendung
@@ -79,7 +139,7 @@ AMQP steht für **Advanced Message Queuing Protocol**.
 
 ![Nodes AMQP](img/amqpnodes.png)
 
-#### Ablauf
+### Ablauf
 
 ##### 1. Verbindungsaufbau
 
@@ -103,7 +163,7 @@ AMQP steht für **Advanced Message Queuing Protocol**.
 
 ![Transfer AMQP](img/amqptransfer.png)
 
-### Vergleich
+## AMQP vs. MQTT
 
 #### Vorteile:
 
@@ -128,10 +188,18 @@ In der Grafik sind die Zusammensetzungen der einzelnen Nachrichtenpakete gegenü
 ## Quellen
 
 Event-Driven Architecture vs. Request/Response: https://realtimeapi.io/hub/event-driven-apis/
+
 Synchron vs. Asynchron: https://www.slideshare.net/hamidreza-s/event-driven-architecture-concepts-in-web-technologies-part-1
+
 Topologie-Grafik: https://www.dataweek.co.za/9101a
 Topic-Grafiken:: https://www.hivemq.com/blog/mqtt-essentials-part-5-mqtt-topics-best-practices/
+
 Ablauf-Grafik: By Simon A. Eugster - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=70622928
+
 QoS: https://www.heise.de/developer/artikel/Kommunikation-ueber-MQTT-3238975.html
+
+Paketstrutkur: http://www.steves-internet-guide.com/mqtt-protocol-messages-overview/
+
 AMQP: https://onedrive.live.com/view.aspx?resid=123CCD2A7AB10107!732068&ithint=file%2cpptx&lor=shortUrl
+
 AMQP vs. MQTT: https://vasters.com/blog/From-MQTT-to-AMQP-and-back/

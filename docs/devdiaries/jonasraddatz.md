@@ -39,5 +39,25 @@ __29.04.2019 - 05.05.2019__
 | Datum      | Tätigkeit      | Dauer  | Zusatz |
 | ---------- | -------------- | ------ | ------ |
 | 29.04.2019 | Recherche und Grafiksuche zu Event-Driven-Architecture | 45 min |        |
-| 29.04.2019 | Recherche und Dokumentation AMQP | 3 h min | AMQP 0.9.1 und 1.0 sind komplett unterschiedliche Protokolle |
+| 29.04.2019 | Recherche und Dokumentation AMQP | 3 h | AMQP 0.9.1 und 1.0 sind komplett unterschiedliche Protokolle |
 | 29.04.2019 | Projekt: Entwürfe zu System- und Softwarearchitektur finalisiert | 1 h |        |
+
+## Woche 5
+
+__06.05.2019 - 12.05.2019__
+
+| Datum      | Tätigkeit      | Dauer  | Zusatz |
+| ---------- | -------------- | ------ | ------ |
+| 10.05.2019 | Absprache zu Projektdokumentation   | 1 h    |        |
+| 12.05.2019 | Recherche MQTT-Paketstruktur        | 30 min |        |
+| 12.05.2019 | Recherche Event-Driven-Architecture | 30 min |        |
+
+## Woche 6
+
+__13.05.2019 - 19.05.2019__
+
+| Datum      | Tätigkeit      | Dauer  | Zusatz |
+| ---------- | -------------- | ------ | ------ |
+| 13.05.2019 | Einpflegen und Überarbeiten der Texte | 2 h   |        |
+| 13.05.2019 | Django für Backend (HelloWorld etc.) | 2 h   |        |
+| 13.05.2019 | Recherche zu Django | 2 h |        |
