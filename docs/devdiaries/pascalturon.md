@@ -41,3 +41,20 @@ __29.04.2019 - 05.05.2019__
 | 30.04.2019 | Recherche Base64                                         | 1 Std   |        |
 | 30.04.2019 | Erstellung eines Sequenzdiagramm für OAuth Kommunikation | 1 Std   |        |
 | 05.05.2019 | Einlesen in OpenID-Anbieter Einrichtung                  | 3,5 Std |        |
+
+## Woche 5 
+
+__06.05.2019 - 12.05.2019__
+
+| Datum      | Tätigkeit          | Dauer | Zusatz |
+| ---------- | ------------------ | ----- | ------ |
+| 07.05.2019 | Gruppenbesprechung | 1 Std |        |
+
+## Woche 6
+
+__13.05.2019 - 19.05.2019__
+
+| Datum      | Tätigkeit                   | Dauer | Zusatz |
+| ---------- | --------------------------- | ----- | ------ |
+| 13.05.2019 | Recherche Signaturverfahren | 2 Std |        |
+| 13.05.2019 | Recherche Hashfunktionen    | 2 Std |        |
