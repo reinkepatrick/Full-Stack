@@ -64,7 +64,7 @@ __06.05.2019 - 12.05.2019__
 | 09.05 | Kurzüberblick QUIC und HTTP 3 geholt | 60min | Nichts konkretes, nur groben Überblick |
 | 12.05 | Ausführliche recherge QUIC           | 90min |                                        |
 | 12.05 | Dokumentation QUIC und HTTP 3        | 90min |                                        |
-|       |                                      |       |                                        |
-|       |                                      |       |                                        |
+| 12.05 | Projektdokumentation angepasst       | 90min |                                        |
+| 12.05 | Recherche GRPC                       | 60min | Noch ziemlich unklar                   |
 |       |                                      |       |                                        |
 |       |                                      |       |                                        |
