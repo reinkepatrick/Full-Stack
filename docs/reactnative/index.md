@@ -87,13 +87,13 @@ Beim Arbeiten mit Flexbox kann man sich zwei Achsen vorstellen. Die Hauptachse u
 Flex-direction kann folgende Werte annehmen:
 
 * row	 
- * Die Komponenten werden horizontal von links nach rechts angeordnet.
+  * Die Komponenten werden horizontal von links nach rechts angeordnet.
 * row-reverse
- * Die Komponenten werden horizontal von rechts nach links angeordnet.
+  * Die Komponenten werden horizontal von rechts nach links angeordnet.
 * column
- * Die Komponenten werden vertikal von oben nach unten angeordnet.
+  * Die Komponenten werden vertikal von oben nach unten angeordnet.
 * Coulmn-reverse
- * Die Komponenten werden vertikal von unten nach oben angeordnet.
+  * Die Komponenten werden vertikal von unten nach oben angeordnet.
 
 [ToDo:Bild zu Flex-direction Hauptachse]
 
