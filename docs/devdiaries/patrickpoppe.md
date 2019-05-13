@@ -42,3 +42,17 @@ __29.04.2019 - 05.05.2019__
 | 03.05.2019 | Mockups erstellen | 3,5h  |        |
 | 03.05.2019 | MobX              | 2,5h  |        |
 
+## Woche 5
+
+__06.05.2019 - 12.05.2019__
+
+| Datum      | Tätigkeit                   | Dauer | Zusatz |
+| ---------- | --------------------------- | ----- | ------ |
+| 07.05.2019 | Aktivitätsdiagramme         | 1h    |        |
+| 07.05.2019 | Team-Meeting                | 2h    |        |
+| 08.05.2019 | Enums definieren            | 0,5h  |        |
+| 08.05.2019 | NgRx                        | 2h    |        |
+| 08.05.2019 | Einrichtung Angularumgebung | 1,5h  |        |
+
+
+
