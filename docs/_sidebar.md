@@ -21,11 +21,10 @@
   * **Backend**
     * [Django](django/index)
     * [.net Core](dotnetcore/index)
-* **Projekte**
-  * [Projekte](orga/projekt)
-  
+
 
 * **Organisation**
+  * [Projekte](orga/projekt)
   * [Repository Mitarbeit](orga/projekt-organisation)
   * **Tagebücher**
     * [Alexander Bergmann](devdiaries/alexanderbergmann)
