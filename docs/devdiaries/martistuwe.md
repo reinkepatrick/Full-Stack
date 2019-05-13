@@ -50,6 +50,21 @@ __29.04.2019 - 05.05.2019__
 ## Woche 5 
 __06.05.2019 - 12.05.2019__
 
-| Datum      | Tätigkeit       | Dauer      | Zusatz |
-| ---------- | --------------- | ---------- | ------ |
-| 06.05.2019 | Flutter: Layout | 1 h 30 min |        |
+| Datum      | Tätigkeit                          | Dauer      | Zusatz                                                                                                                                                                                                     |
+| ---------- | ---------------------------------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 06.05.2019 | Flutter: Layout                    | 1 h 30 min |                                                                                                                                                                                                            |
+| 07.05.2019 | Schnittstellen Definition          | 3 h        |                                                                                                                                                                                                            |
+| 08.05.2019 | Einlesen in CI & CD für Flutter    | 20 min     |                                                                                                                                                                                                            |
+| 08.05.2019 | Einlesen in Flutter best Practices | 30 min     |                                                                                                                                                                                                            |
+| 10.05.2019 | Schnittstellen Definition          | 1 h        |                                                                                                                                                                                                            |
+| 11.05.2019 | UI Implementieren                  | 2 h 30 min |                                                                                                                                                                                                            |
+| 12.05.2019 | UI auf Gerät testen                | 2 h        | Probleme mit Xcode und Code-Signing, altes Zertifikat abgelaufen, Provisioning Profile konnte weder generiert noch heruntergeladen werden, zur Verwaltung ist eine kostenpflichtiges Dev. Enrollment nötig |
+
+
+## Woche 6 
+__13.05.2019 - 19.05.2019__
+
+| Datum      | Tätigkeit                  | Dauer  | Zusatz |
+| ---------- | -------------------------- | ------ | ------ |
+| 13.05.2019 | Google I/O Flutter News    | 1 h    |        |
+| 13.05.2019 | Plattformspezifischer Code | 40 min |        |

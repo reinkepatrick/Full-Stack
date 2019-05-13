@@ -1,7 +1,7 @@
 # Flutter
 
 ## Was ist Flutter?
-[Flutter](https://flutter.dev/) ist ein SDK für Android und iOS Apps. Der größte Vorteil ist, dass die Apps sich eine, in [Dart](https://www.dartlang.org/) geschriebene, Codebase teilen und dann in die jeweiligen nativen Sprachen, Java und Swift, übersetzt werden. Dabei wird die Designsprache, des jeweiligen Systems, nicht verletzt. Das Resultat ist eine performante App mit plattformkonsistentem Design, die durch verhältnismäßig wenig Programmieraufwand entsteht. Flutter besteht aus C / C++, Dart und Skia (2D Grafikengine).
+[Flutter](https://flutter.dev/) ist ein SDK für Android und iOS Apps. Der größte Vorteil ist, dass die Apps sich eine, in [Dart](https://dart.dev/) geschriebene, Codebase teilen und dann in die jeweiligen nativen Sprachen, Java und Swift, übersetzt werden. Dabei wird die Designsprache, des jeweiligen Systems, nicht verletzt. Das Resultat ist eine performante App mit plattformkonsistentem Design, die durch verhältnismäßig wenig Programmieraufwand entsteht. Flutter besteht aus C / C++, Dart und Skia (2D Grafikengine).
 
 Minimale Systemanforderungen:
 + iPhones 4S mit iOS 8
@@ -12,6 +12,8 @@ Minimale Systemanforderungen:
 + Native Performance
 + Eine Codebase für Android und iOS
 + Gute Dokumentation
++ Portabilität
++ Kompatibilität
 
 ### Nachteile
 + Um für jede Plattform das entsprechende Design zu realisieren, muss der Gerätetyp abgefragt und im Code unterschieden werden
@@ -106,9 +108,18 @@ UI-Layout werden in Flutter durch *Rows* und *Columns* realisiert. Im folgenden 
 ## Navigation und Routing
 In Flutter übernimmt der `Navigator` die Verwaltung von *Routen*. *Routen* bezeichnet dabei die verschiedenen Seiten der App. Der `Navigator` funktioniert wie ein Stack, auf dem Objekte vom Typ `Route` abgelegte werden und immer das oberste Objekt auf dem Bildschirm dargestellt wird. Der `Navigator` stellt außerdem zwei Methoden bereit `Route`-Objekte zu verwalten: `Navigator.push` und `Navigator.pop`. *Routen* können benannt werden und miteinander kommunizieren. *Navigatoren* können ineinander verschachtelt werden.
 
+## Plattformspezifischer Code
+Die meisten plattformspezifischen Funktionalitäten sind als Plugins verfügbar. Falls die benötigte Funktion noch nicht implementiert wurde ist es möglich plattformspezifischen Code zu schreiben. Dabei schickt die App eine Nachricht über einen sogeanannten *platform channel* an das Hostsystem. Der Host empfängt diese Nachricht und ruft die jeweiligen plattformspezifischen Funktionen auf und antwortet üder den *platform channel*.
 
-## Flutter für Desktopanwendungen
-Es ist möglich mit Flutter eine Desktopanwendung zu programmieren, die aus einer Codebase, ausführbare Programme für MacOS, Linux und Windows erzeugt (vergleichbar mit [Electron](https://electronjs.org/)). Dafür kann man auf die Projekte [Flutter Desktop Embedding](https://github.com/google/flutter-desktop-embedding) oder [Go-Flutter](https://github.com/go-flutter-desktop/go-flutter) zurückgreifen. Grundsätzlich funktionieren diese beiden Projekte gleich, sie stellen eine Schnittstelle zwischen der *Flutter Engine* und dem jeweiligen Betriebsystem bereit. Code ist mit dem mobilen Framework kompatibel und kann damit geteilt werden solange keine Hardwarefunktionen aufgerufen werden.
+
+## Flutter als Desktopanwendung
+Es ist möglich mit Flutter eine Desktopanwendung zu programmieren, die aus einer Codebase, ausführbare Programme für MacOS, Linux, Windows und ChromeOS erzeugt (vergleichbar mit [Electron](https://electronjs.org/)). Dafür kann man auf die Projekte [Flutter Desktop Embedding](https://github.com/google/flutter-desktop-embedding) oder [Go-Flutter](https://github.com/go-flutter-desktop/go-flutter) zurückgreifen. Grundsätzlich funktionieren diese beiden Projekte gleich, sie stellen eine Schnittstelle zwischen der *Flutter Engine* und dem jeweiligen Betriebsystem bereit. Code ist mit dem mobilen Framework kompatibel und kann damit geteilt werden solange keine Hardwarefunktionen aufgerufen werden.
+
+## Flutter als Webanwendung
+In Zukunft soll es möglich sein, aus der vorhanden Codebase, eine Webanwendung zu ersellen. Es ist eine technische Vorschau verfügbar, allerdings befindet sich diese Technologie noch sehr früh in der Entwicklungsphase (*Stand Mai 2019*).
+
+## Flutter für Embedded Systems
+Flutter läuft bereits auf eingebetteten Systemen wie z.B. dem Google Home Hub (bzw. Nest Hub). Um Flutter für eingebettete Systeme zu nutzen muss ein eigener Embedder, eine Schnittstelle zwischen Flutter-Engine und Zielsystem, implementiert werden. Für diesen Anwendungszweck existiert ein [Beispiel](https://medium.com/flutter-io/flutter-on-raspberry-pi-mostly-from-scratch-2824c5e7dcb1), das zeigt wie Flutter auf einem Raspberry Pi läuft. Nicht als Desktop- oder Web-Anwendung, sondern als ARM-Code.
 
 # Dart
 Dart ist eine objektorientierte Programmiersprache. Sie wird primär für mobile- und web-Apps verwendet, kann aber auch serverseitig eingesetzt werden. 
