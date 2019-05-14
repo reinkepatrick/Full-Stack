@@ -358,29 +358,21 @@ dotnet new webapi -lang F#
 
 ## Funktionen  (Platzhalter)
 
-### interesante packages
-#### System
-die Klassen für die primitiven Datentypen,
-Einige Exception Klassen,
-die Random Klasse und
-Tuppel
-
-_Beispiel werden noch hinzugefügt_
-#### System.Collections.Generics
-Unterschiedlche Generische Datenstrukturen z.b. List, Stack, Map, Queue
-
-_Beispiele werden noch hinzugefügt_
-#### System.Linq
-Das einbinden dieses Namespaces erlaubt Linq zu nutzen. Es muss nicht für Ling to sql ein anderes Namespace eingebunden werden.
-#### (System/Microsoft).EntityFrameworkCore
-Alle EntityFramework relevanten Klassen
-z.b. DBContext
 
 
+### Microservices
 
+[Micro Services Beispiel von Microsoft](https://docs.microsoft.com/de-de/dotnet/standard/microservices-architecture/)
 
+Microservices ermöglichen Programme zu schreiben welche genau eine Aufgabe erfüllen und auch Ihre eigene Datenbank dafür haben.
 
+Hier ein Beispiel mit einer gemeinsamen API für Mobile und Web App. Zusätzlich wird hier auch gezeigt wie eine ASP.NET Core Anwendung funktionieren könnte.
 
+![micro-service-1](./img/micro-service-1.png)
+
+Ein großer Vorteil von Micro Services ist, dass diese von verschiedenen Anwendungen aufgerufen werden können. 
+
+![micro-service-2](./img/micro-service-2.png)
 
 ### Codebeispiele
 
