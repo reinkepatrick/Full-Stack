@@ -81,3 +81,12 @@
 | 12.05.2019 | Überarbeitung der React Dokumentation                              | 10 min     | Wechsel von Webstorm zu VS Code |
 | 12.05.2019 | Erstellung eines Component-Baums für die Projekt Web-Anwendung     | 1 h 30 min | Nur grober Plan                 |
 | 12.05.2019 | Hinzufügen vom Layout und SideDrawer für die Projekt Web-Anwendung | 2 h        |                                 |
+
+## Woche 6
+
+**13.05.2019 - 19.05.2019**
+
+| Datum      | Tätigkeit                                                          | Dauer | Zusatz |
+| :--------- | :----------------------------------------------------------------- | :---- | :----- |
+| 13.05.2019 | Erstellung des Titels und Navigation für die Projekt Web-Anwendung | 1 h   |        |
+| 14.05.2019 | Fertigstellung des SideDrawers für die Projekt Web-Anwendung       | 3 h   |        |  
