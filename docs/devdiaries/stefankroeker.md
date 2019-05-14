@@ -64,4 +64,13 @@ __06.05.2019 - 12.05.2019__
 | 08.05.2019 | Sequenzdiagramme gemalt.                                                                                                        | 2h         |        |
 | 09.05.2019 | Projekt Kanban Board erstellt.                                                                                                  | 10 min     |        |
 | 09.05.2019 | Mich weiter mit Channels auseinandergesetzt.                                                                                    | 3h         |        |
-| 09.05.2019 | An Kommunikationsprotokoll weiter gearbeitet                                                                                    | 2h 30 min  |        |
+| 09.05.2019 | An Kommunikationsprotokoll weiter gearbeitet.                                                                                   | 2h 30 min  |        |
+
+
+## Woche 6 
+__13.05.2019 - 19.05.2019__
+
+| Datum      | Tätigkeit                                                                                                                       | Dauer      | Zusatz |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------- | ---------- | ------ |
+| 13.05.2019 | Channels verstanden und beschrieben.                                                                                            | 2h         |        |
+| 13.05.2019 | Sequenzdiagramme überarbeiten.                                                                                                  | 1h         |        |
