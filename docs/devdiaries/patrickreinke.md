@@ -93,3 +93,5 @@
 | 16.05.2019 | Verbesserung des Responsive Design des SideDrawers für die Projekt Web-Anwendung | 2 h   |                                               |
 | 16.05.2019 | Fertigstellung des Impressums für die Projekt Web-Anwendung                      | 1 h   |                                               |
 | 16.05.2019 | Fertigstellung der Landing Page für die Projekt Web-Anwendung                    | 2 h   | Ohne Überprüfung ob der Username gesetzt ist  |
+| 16.05.2019 | Verbesserung des Responsive Design für die Projekt Web-Anwendung                 |  1 h  |                                               |
+| 16.05.2019 |  Fertigstellung der Lobbyliste für die Projekt Web-Anwendung                     |  3 h  |                                               |    |
