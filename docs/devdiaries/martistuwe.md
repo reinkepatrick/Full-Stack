@@ -64,7 +64,9 @@ __06.05.2019 - 12.05.2019__
 ## Woche 6 
 __13.05.2019 - 19.05.2019__
 
-| Datum      | Tätigkeit                  | Dauer  | Zusatz |
-| ---------- | -------------------------- | ------ | ------ |
-| 13.05.2019 | Google I/O Flutter News    | 1 h    |        |
-| 13.05.2019 | Plattformspezifischer Code | 40 min |        |
+| Datum      | Tätigkeit                  | Dauer  | Zusatz                                                                             |
+| ---------- | -------------------------- | ------ | ---------------------------------------------------------------------------------- |
+| 13.05.2019 | Google I/O Flutter News    | 1 h    |                                                                                    |
+| 13.05.2019 | Plattformspezifischer Code | 40 min |                                                                                    |
+| 14.05.2019 | UI Implementieren          | 2 h    | Probleme mit Xcode behoben, dafür Problem mit Übergangsanimationen auf iOS-Geräten |
+| 16.05.2019 | UI Implementieren          | 2 h    | Problem mit Animation gelöst                                                       |
