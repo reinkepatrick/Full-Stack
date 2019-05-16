@@ -57,16 +57,17 @@ __06.05.2019 - 12.05.2019__
 | 08.05.2019 | Einlesen in CI & CD für Flutter    | 20 min     |                                                                                                                                                                                                            |
 | 08.05.2019 | Einlesen in Flutter best Practices | 30 min     |                                                                                                                                                                                                            |
 | 10.05.2019 | Schnittstellen Definition          | 1 h        |                                                                                                                                                                                                            |
-| 11.05.2019 | UI Implementieren                  | 2 h 30 min |                                                                                                                                                                                                            |
+| 11.05.2019 | UI Implementieren: Grundgerüst     | 2 h 30 min |                                                                                                                                                                                                            |
 | 12.05.2019 | UI auf Gerät testen                | 2 h        | Probleme mit Xcode und Code-Signing, altes Zertifikat abgelaufen, Provisioning Profile konnte weder generiert noch heruntergeladen werden, zur Verwaltung ist eine kostenpflichtiges Dev. Enrollment nötig |
 
 
 ## Woche 6 
 __13.05.2019 - 19.05.2019__
 
-| Datum      | Tätigkeit                  | Dauer  | Zusatz                                                                             |
-| ---------- | -------------------------- | ------ | ---------------------------------------------------------------------------------- |
-| 13.05.2019 | Google I/O Flutter News    | 1 h    |                                                                                    |
-| 13.05.2019 | Plattformspezifischer Code | 40 min |                                                                                    |
-| 14.05.2019 | UI Implementieren          | 2 h    | Probleme mit Xcode behoben, dafür Problem mit Übergangsanimationen auf iOS-Geräten |
-| 16.05.2019 | UI Implementieren          | 2 h    | Problem mit Animation gelöst                                                       |
+| Datum      | Tätigkeit                                        | Dauer  | Zusatz                                                                             |
+| ---------- | ------------------------------------------------ | ------ | ---------------------------------------------------------------------------------- |
+| 13.05.2019 | Google I/O Flutter News                          | 1 h    |                                                                                    |
+| 13.05.2019 | Plattformspezifischer Code                       | 40 min |                                                                                    |
+| 14.05.2019 | UI Implementieren: Home und Übergangsanimationen | 2 h    | Probleme mit Xcode behoben, dafür Problem mit Übergangsanimationen auf iOS-Geräten |
+| 16.05.2019 | UI Implementieren: Übergangsanimationen          | 2 h    | Problem mit Animation gelöst                                                       |
+| 16.05.2019 | UI Implementieren: Lobbyliste                    | 2 h    |                                                                                    |
