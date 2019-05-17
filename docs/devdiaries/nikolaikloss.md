@@ -77,4 +77,6 @@ __14.05.2019 - 20.05.2019__
 | - | - | - | - |
 | 14.05.2019 | Teambesprechung & Aufgabenverteilung |1 h| |
 | 14.05.2019 | Implementierung OAuth angefangen |45 min| |
-| 17.05.2019 | Zustandsdiagramm-GUI-Navigation erstellt & Modelklassendiagramm angepasst |1 h| |
+| 17.05.2019 | Modelklassendiagramm angepasst |20 min| |
+| 17.05.2019 | GUI-Mockups erweitert |40 min| |
+| 17.05.2019 | Zustandsdiagramm-GUI-Navigation erstellt |40 min| |
