@@ -86,7 +86,14 @@
 
 **13.05.2019 - 19.05.2019**
 
-| Datum      | Tätigkeit                                                          | Dauer | Zusatz |
-| :--------- | :----------------------------------------------------------------- | :---- | :----- |
-| 13.05.2019 | Erstellung des Titels und Navigation für die Projekt Web-Anwendung | 1 h   |        |
-| 14.05.2019 | Fertigstellung des SideDrawers für die Projekt Web-Anwendung       | 3 h   |        |  
+| Datum      | Tätigkeit                                                                             | Dauer   | Zusatz                                        |
+| :--------- | :------------------------------------------------------------------------------------ | :------ | :-------------------------------------------- |
+| 13.05.2019 | Erstellung des Titels und Navigation für die Projekt Web-Anwendung                    | 1 h     |                                               |
+| 14.05.2019 | Fertigstellung des SideDrawers für die Projekt Web-Anwendung                          | 3 h     |                                               |
+| 16.05.2019 | Verbesserung des Responsive Design des SideDrawers für die Projekt Web-Anwendung      | 2 h     |                                               |
+| 16.05.2019 | Fertigstellung des Impressums für die Projekt Web-Anwendung                           | 1 h     |                                               |
+| 16.05.2019 | Fertigstellung der Landing Page für die Projekt Web-Anwendung                         | 2 h     | Ohne Überprüfung ob der Username gesetzt ist  |
+| 16.05.2019 | Verbesserung des Responsive Design für die Projekt Web-Anwendung                      |  1 h    |                                               |
+| 16.05.2019 |  Fertigstellung der Lobbyliste für die Projekt Web-Anwendung                          |  3 h    |                                               |   |
+| 17.05.2019 | Hinzufügen von einer Hover Animation der LobbyListItems für die Projekt Web-Anwendung | 30 min  |                                               |
+| 17.05.2019 |  Verbesserungen an der Suchleite in der Lobbylist für die Projekt Web-Anwendung       | 30 min  |                                               |
