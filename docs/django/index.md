@@ -373,3 +373,59 @@ response = client.get('/')
 
 Der Response ist ein [HTTP Response](#http-response)
 Darauf können dann die Tests ausgeführt werden.
+
+
+## Channels
+Channels ist eine Library für Django Projekte. Da Django üblicherweise nur mit HTTP Requests kommuniziert, ermöglicht es Channels, dass Websockets verwendet werden können, ohne dabei auf die Funktionen von Django selbst zu verzichten.
+
+### Wie funktionierts?
+
+![MTV](./img/django-wsgi.png ':size=525')
+
+### Konfiguration
+
+Damit Channels verwendet werden kann, müssen bestimmte Konfigurationen durchgeführt werden. 
+
+In der `settings.py` muss in dem Array `INSTALLED_APPS` die App `channels` hinzugefügt werden. Ebenso muss angegeben werden, dass Django nun mit Websockets angesprochen wird und nicht mit HTTP Requests. Dies kann mit dieser Zeile in den Settings beschrieben werden.
+```python 
+ASGI_APPLICATION = "myproject.routing.application"
+```
+
+Nun muss noch in der root App eine Datei `routing.py` erstellt werden. Diese Datei ist das äquivalent zu den `urls.py` Dateien. Hier wird beschrieben, welcher Consumer ausgewählt werden soll, wenn eine bestimmte URL aufgerufen wird. Beispiel `routing.py`: 
+```python
+from django.conf.urls import url
+
+from . import consumers
+
+websocket_urlpatterns = [
+    url(r'^ws/chat/(?P<room_name>[^/]+)/$', consumers.ChatConsumer),
+]
+```
+
+Wenn die URL `ws/chat/<room_name>` aufgerufen wird, wird die Klasse ChatConsumer aufgerufen.
+
+### Consumer
+Consumer sind dafür da um eine Verbindung aufzubauen oder wieder zu verlassen. Ebenso senden diese Nachrichten und nehmen diese entgegen. Ein Beispiel für einen Consumer ist dieses hier.
+
+```python 
+# chat/consumers.py
+from channels.generic.websocket import WebsocketConsumer
+import json
+
+class ChatConsumer(WebsocketConsumer):
+    def connect(self):
+        self.accept()
+
+    def receive(self, text_data):
+        text_data_json = json.loads(text_data)
+        message = text_data_json['message']
+
+        self.send(text_data=json.dumps({
+            'message': message
+        }))
+```
+
+Dieser nimmt eine Verbindung entgegen und empfängt Nachrichten. Diese Nachrichten werden dann zurück zum Sender geschickt, wodurch der User die Nachrichten in seiner Textbox sieht(Dafür muss dann ein entsprechendes Template vorhanden sein).
+
+### Channel Layer
+Ein Channel Layer ist dafür da, dass die Consumer miteinander kommunizieren können. Jeder Consumer hat automatisch einen Channel Namen, mit diesem Namen kann der Consumer mit dem Channel Layer kommunizieren. Damit Channels mit einander kommunizieren können, müssen sie entweder den Namen eines anderen Channels kennen, oder in einer Gruppe von Channel sein.

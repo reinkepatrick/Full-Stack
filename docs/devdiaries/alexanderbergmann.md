@@ -47,10 +47,22 @@ __29.04.2019 - 05.05.2019__
 
 __06.05.2019 - 12.05.2019__
 
-| Datum      | Tätigkeit                                                    | Dauer | Zusatz |
-| ---------- | ------------------------------------------------------------ | ----- | ------ |
-| 07.05.2019 | Wöchentliches Meeting - Projektarbeit                        |       |        |
-|            | Docker Orchestrieren/Verbinden                               |       |        |
-|            | Docker Volumes & Docker Hub                                  |       |        |
-|            | Jenkins konfigurieren (Hello World - Java Projekt) mit Docker |       |        |
+| Datum      | Tätigkeit                                  | Dauer | Zusatz |
+| ---------- | ------------------------------------------ | ----- | ------ |
+| 07.05.2019 | Wöchentliches Meeting - Projektarbeit      | 4.5 h |        |
+| 07.05.2019 | Recherche Docker Compose                   | 1.5 h |        |
+| 08.05.2019 | Recherche und Dokumentation Docker Compose | 2,5 h |        |
+| 09.05.2019 | Recherche und Dokumentation Docker Hub     | 1,5 h |        |
+| 11.05.2019 | Dokumentation Dockerhub                    | 1 h   |        |
+
+## Woche 6
+
+__13.05.2019 - 19.05.2019__
+
+| Datum | Tätigkeit                             | Dauer | Zusatz |
+| ----- | ------------------------------------- | ----- | ------ |
+|       | Wöchentliches Meeting - Projektarbeit |       |        |
+|       | Docker Volumes                        |       |        |
+|       | Docker Orchestrieren/Verbinden        |       |        |
+|       | Jenkins Pipeline erstellen            |       |        |
 

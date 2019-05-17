@@ -1,5 +1,7 @@
 # Dario Leunig Projekt Tagebuch
 
+Zuzüglich zur Heimarbeit beinhaltet jede Woche das Seminar (1h 30m) mit anschließender Projektarbeit im Team (~3h). Auf Grund der Übersichtlichkeit bzw. Regelmäßigkeit daher nicht tabellarisch erfasst.
+
 ## Woche 1 
 
 **08.04.2019 - 14.04.2019**
@@ -41,6 +43,7 @@
 | 29.04.2019 | Kurzer Einblick in Manipulation von DOM Elementen durch Maus Events | 0h 40m |        |
 | 01.05.2019 | Genauere Recherche bezüglich der Funktionsweise von Komponenten und Templates | 1h     |        |
 | 03.05.2019 | Events und Unterthemen erarbeitet und der Dokumentation hinzugefügt | 1h     |        |
+
 ## Woche 5 
 
 **06.05.2019 - 12.05.2019**
@@ -49,3 +52,15 @@
 | ---------- | ------------------------------------------------------------ | ------ | ------ |
 | 06.05.2019 | Strukturdirektiven erarbeitet und der Dokumentation hinzugefügt | 0h 40m |        |
 | 06.05.2019 | Recherche bezüglich des Projekts                             | 1h 10m |        |
+| 07.05.2019 | Recherche zu Firebase Authentificator                        | 1h     |        |
+| 08.05.2019 | Implementierung von OAuth via. Google                        | 2h     |        |
+| 10.05.2019 | Recherche zum Thema Routing in Angular                       | 1      |        |
+| 10.05.2019 | Fertigstellung Minimalbeispiel OAuth                         | 1h     |        |
+
+## Woche 6 
+
+**13.05.2019 - 19.05.2019**
+
+| Datum | Tätigkeit | Dauer | Zusatz |
+| ----- | --------- | ----- | ------ |
+|       |           |       |        |

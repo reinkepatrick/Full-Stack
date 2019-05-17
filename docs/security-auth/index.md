@@ -374,6 +374,30 @@ Für den Nutzer ist es einfacher eine Loginseite auf Echtheit zu überprüfen, d
 * Den HTTP-Referer mit der IP des Requesters vergleichen 
 * Clientseitiges TLS-Zertifikat zur Autentifizierung nutzen
 
+## Hashfunktionen
+
+Eine Hashfunktion bildet eine große Menge auf eine kleine Zielmenge ab. Die Eingabemenge kann Elemente unterschiedlicher Länge enthalten. Die Elemente der Zielmenge haben meist eine feste Länge. Die Werte der Hashes sind meistens eine Teilmenge der Ganzen Zahlen. 
+
+Gute Hashfunktionen geben eine erwartete Eingabedaten Menge mit, damit zwei unterschiedliche Eingabedaten auch unterschiedliche Hash-Werte zugeordnet werden. Ein Kollision tritt dann auf, wenn ein Hashwert zwei Eingabedaten zugeordnet werden. Diese sind unvermeidlich da die Menge der Hash-Werte meist kleiner ist als die Menge der Eingabedaten. Daher gibt es Verfahren zur Erkennung von Kollisionen. Eine gute Hashfunktion erzeugt wenige Kollisionen. 
+
+
+
+## Digitale Signatur / Signieralgorithmen
+
+Ein digitales Signaturverfahren berechnet mithilfe eines geheimen Signaturschlüssels (Private Key) aus einer beliebigen Menge Daten einen Wert (digitale Signatur). Mit diesem Wert kann mithilfe des Verifikationsschlüssels (Public Key) absolut bestätigt werden, dass die gesendete Nachricht auch vom richtigen Absender kommt. Um eine Person zuzuordnen, muss der Public Key der Person zugeordnet sein.
+
+### Grundlagen
+
+Aus den Daten und dem Private Key wird durch eine eindeutige Rechenvorschrift die Signatur berechnet. Verschiedene Daten sollten daher mit dem gleichen Key zu einem unterschiedlichen Ergebnis führen. Eine Signatur muss auch für jeden Schlüssel einen anderen Wert ergeben. 
+
+Der Private Key wird auf den Hash-Wert angewandt und nicht auf die Daten direkt. Die Hashfunktion zum berechnen des Hash-Wertes muss kollisionsresistent sein, da es dann fast unmöglich ist aus zwei unterschiedlichen Datensätzen einen gleichen Hash-Wert zu generieren. 
+
+Sobald ein Schlüssel einer Person zugeordnet wurde, kann die Identität des Signaturerstellers über den öffentlichen Zertifikatsserver des Anbieters ermittelt werden.
+
+### Sicherheit
+
+Es ist so gut wie unmöglich, eine Signatur zu fälschen, zu verfälschen oder eine zweite Nachricht zu erzeugen, die für die Signatur auch gültig ist. Ein private Key soll auch nicht aus den Signaturen und dem dazugehörigen Public Key berechnet werden können.
+
 ## Base64
 
 ### Was ist Base64?
