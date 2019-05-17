@@ -71,3 +71,4 @@ __13.05.2019 - 19.05.2019__
 | 14.05.2019 | UI Implementieren: Home und Übergangsanimationen | 2 h    | Probleme mit Xcode behoben, dafür Problem mit Übergangsanimationen auf iOS-Geräten |
 | 16.05.2019 | UI Implementieren: Übergangsanimationen          | 2 h    | Problem mit Animation gelöst                                                       |
 | 16.05.2019 | UI Implementieren: Lobbyliste                    | 2 h    |                                                                                    |
+| 17.05.2019 | UI Implementieren: Lobby erstellen               | 3 h    |                                                                                    |
