@@ -97,3 +97,5 @@
 | 16.05.2019 |  Fertigstellung der Lobbyliste für die Projekt Web-Anwendung                          |  3 h    |                                               |   |
 | 17.05.2019 | Hinzufügen von einer Hover Animation der LobbyListItems für die Projekt Web-Anwendung | 30 min  |                                               |
 | 17.05.2019 |  Verbesserungen an der Suchleite in der Lobbylist für die Projekt Web-Anwendung       | 30 min  |                                               |
+| 18.05.2019 | Entfernen von unnötigen Dateien aus der Web-Anwendung Historie                        | 20 min  | |
+| 18.05.2019 | Einarbeitung in Redux, React-redux und Redux-thunk                                    | 3 h 30 min | |
