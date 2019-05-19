@@ -162,7 +162,8 @@ Das Routing kann komplex werden, dennoch kann auf einen Blick erkannt werden, we
 
 ### ORM
 
-|           | Entity Framework | SqlProvider | Rezoom.net | 
+| | Entity Framework | SqlProvider | Rezoom.net | 
+| --- | --- | --- | --- |
 | Sprachen | C# / VB (F# *) | F# | F# |
 | QueryType | SQL / Linq | Linq | pseudo SQL(Typechecked) |
 | Datenhandling | Kontext (Sql kann auf Kontext angewand werden) | Kontext | SQL | 
