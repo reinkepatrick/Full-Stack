@@ -67,7 +67,7 @@ __29.04.2019 - 05.04.2019__
 
 ## Woche 5 
 
-__06.04.2019 - 14.04.2019__
+__06.05.2019 - 12.05.2019__
 
 | Datum | Tätigkeit | Dauer | Zusatz |
 | --- | ---| --- | --- |
@@ -78,4 +78,14 @@ __06.04.2019 - 14.04.2019__
 | 10.05.2019 | Swagger Dokumentation erweitert | 120 min | der Swagger editor verhält sich "besonders" wenn ein Path nicht richtig angelegt wurde |
 | 12.05.2019 | dotnet Microservices <https://docs.microsoft.com/de-de/dotnet/standard/microservices-architecture/> | 45 min |  |
 
+## Woche 5 
 
+__13.05.2019 - 19.05.2019__
+
+| Datum | Tätigkeit | Dauer | Zusatz |
+| --- | ---| --- | --- |
+| 17.05.2019 | Rezoom einlesen | 120 min | Schlechte Dokumentation und schwer zu lesen |
+| 17.05.2019 | SQLProvider unter Linux einrichten | 60 min | Mysql connector läßt sich leider nicht installieren |
+| 18.05.2019 | Vergleich von orms aufstellen | 60 min | |
+| 19.05.2019 | ASP.NET C# Projekt aufgesetzt (F# reflection wird von Linux geblockt) | 60 min | |
+| 19.05.2019 | Datenmodel aufgesetzt | 120 min | |

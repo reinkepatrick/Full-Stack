@@ -61,6 +61,35 @@ In ASP.NET ist eine Pipeline verfügbar welche das hinzufügen von Middleware er
 
 `Run` erstellt eine Terminale Middleware welche mithilfe von Run aus der vorherigen aufgerufen werden kann.
 
+**Abweichung MVC und Giraffe**
+
+Bei Giraffe werden eigengeschriebene Middlewares mithilfe von Komposition eingebunden. Und werden identisch geschrieben wie zielrouten. Der einzige unterschied ist das kein Return verwendet weden darf. 
+
+Hier ein Beispiel wie man einen Datenbank zugriff ermöglichen könnte.
+
+ASP.NET
+
+``` csharp
+app.Use(async (context, next) =>
+{
+    //before Routing
+    await next.Invoke();
+    //after Routing
+});
+```
+
+
+Giraffe:
+
+```fsharp
+let connectDatabase =
+    fun (next : HttpFunc) (ctx : HttpContext) ->
+        task {
+            ctx.Items.Add("dbcontext" , dbcontext )
+            return None
+        }
+```
+
 **Middleware vs. Service**
 
 Eine Middleware und ein Service unterscheiden sich gering bis gar nicht. Unter einem Service wird verstanden der Server, Parser, Datenbankverbindung oder Framework. Während eine Middleware z.b. Logging wäre.
@@ -68,6 +97,7 @@ Eine Middleware und ein Service unterscheiden sich gering bis gar nicht. Unter e
 Eine Middleware und ein Service können identisch geschrieben werden und es gibt keine Vorgabe ob erst Service oder erst Middlewares vorkommen müssen.
 
 Services bieten meist noch einen Schritt der Konfiguration an und können daher zumindest etwas erkannt werden. Diese Konfiguration kann aber auch in manchen fällen weggelassen werden.
+
 
 **Server**
 
@@ -132,6 +162,19 @@ Das Routing kann komplex werden, dennoch kann auf einen Blick erkannt werden, we
 
 ### ORM
 
+| | Entity Framework | SqlProvider | Rezoom.net | 
+| --- | --- | --- | --- |
+| Sprachen | C# / VB (F# *) | F# | F# |
+| QueryType | SQL / Linq | Linq | pseudo SQL(Typechecked) |
+| Datenhandling | Kontext (Sql kann auf Kontext angewand werden) | Kontext | SQL | 
+| Modelierung | Klassen | Compiletime | Klassen / Compiletime |
+| Migration | C#/VB vollwertige Datenbank Migration (erstellt durchs Model) | Keine Datenbank definition | eigen Definierte Sqls |  
+| Datenbanktypen | MSSql / SQlite / InMemory / Cosmos / Postgre / Mysql / Firebird / ODBC | MSSql / Sqlite / Mysql / MsAccess / ODBC | Sqlite /  MSSql / Postgre |
+| Entwickler | Microsoft | 
+| Dokumentation | Ausführlich mit vielen guten Beispielen | Ausreichen mit genügend Beispielen | Vielleicht ausreichend schlecht Strukturiert (Beispiele sind entweder 9 Dateien oder zeigen nicht die Relevanten Code schnipsel) |
+| Connectionstring kontrolle | Laufzeit | Intellisense / Kompilier | Laufzeit |
+| Middleware für ASP.NET | Provider stellt Provider zur verfügung | Nein | Nein |
+
 #### Entity Framework (EF)
 
 Ein von Microsoft entwickeltes Framework für Datenbank Operationen für dotnet Framework. Es handelt sich beim Enity Framework um ein Objekt Relations Model. Das EF bietet grundsätzlich zwei Vorgehensweisen an Code-First und Database-First. Es bietet ein CLI Tool welches Migrationen erstellen ermöglicht. Diese Können beim Starten der Anwendung kontrolliert werden. Dies ermöglicht im Laufenden System einfache Änderungen am Datenbank Model.
@@ -139,6 +182,103 @@ Ein von Microsoft entwickeltes Framework für Datenbank Operationen für dotnet 
 **Entity Framework Core (EF Core)**
 
 EF Core ist eine Open source Version vom EF. EF Core ist kompatible mit dotnet core.
+
+```csharp
+using Microsoft.EntityFrameworkCore;
+
+public class CustomContext : DbContext
+{
+    public DbSet<User> Blogs { get; set; }
+    public DbSet<Message> Posts { get; set; }
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+        optionsBuilder.UseMySQL("ConnectionString");
+    }
+
+    public class User
+    {
+        public int UserId { get; set; }
+        public string Name { get; set; }        
+        public List<Message> Messages { get; set; }
+    }
+
+    public class Message
+    {
+        public int MessageId { get; set; }
+        public string Content { get; set; }
+
+        public int UserId { get; set; }
+        public User User { get; set; }
+    }
+}
+
+public void ConfigureServices(IServiceCollection services)
+{
+    services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+    services.AddDbContext<Models.CustomContext>();
+    new TrainingsplanerContext().Database.Migrate();
+}
+
+```
+
+
+#### SqlProvider
+
+Keine Migration vom Programm.
+
+```fsharp
+
+type sql = SqlDataProvider<Common.DatabaseProviderTypes.MYSQL,
+                connectionString>
+let context = sql.GetDataContext()
+
+let UserWithName = 
+    query {
+        for user in context.User do
+        where (user.StartWith "A")
+        select (user)
+    }
+
+let newUser = context.DatabaseName.User.Create()
+newUser.Name = "Example"
+context.SubmitUpdates()
+
+```
+
+#### Rezoom
+
+Migration wird automatisch ausgeführt wenn im Projekt gefunden. Diese müssen selbst geschrieben werden.
+
+``` sql
+// v1.model.sql
+create table User
+    ( UserId int primary key autoincrement
+    , Name string(64) null
+    );
+
+create table Message
+    ( MessageId int primary key autoincrement
+    , UserId int references Users(UserId)
+    , Content string(512)
+    );
+
+create index IX_Message_UserId on Message
+    (UserId);
+
+```
+
+``` fsharp
+
+type GetUserSQL = SQL<"""
+    select * from User a where a.Name like 'A%' 
+""">
+
+let getUser() =
+    use context = new ConnectionContext()
+    let users = GetUserSQL.Command().Execute(context)
+        
+
+```
 
 ### Parser
 

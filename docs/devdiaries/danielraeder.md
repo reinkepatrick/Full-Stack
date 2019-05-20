@@ -49,4 +49,12 @@ __13.05.2019 - 19.05.2019__
 | Datum      | Tätigkeit                                                                             | Dauer      | Zusatz |
 | ---------- | ------------------------------------------------------------------------------------- | ---------- | ------ |
 | 13.05.2019 | Performance Vergleich: three vs Babylon vs Stardust                                   | 4 h        | Stardust enttäuscht auf ganzer Linie. |
+| 18.05.2019 | Projekt: 3d Graphen Visualisierung in Babylon                                         | 2 h 45 min | |
+| 19.05.2019 | Projekt: Dynamische Texturen                                                          | 3 h        | |
 
+## Woche 7
+__20.05.2019 - 26.05.2019__
+
+| Datum      | Tätigkeit                                                                             | Dauer      | Zusatz |
+| ---------- | ------------------------------------------------------------------------------------- | ---------- | ------ |
+| 20.05.2019 | Projekt: Dynamische Texturen in ShaderMaterials                                       | 3 h 30 min | Probleme mit UV Orientation auf Babylon's Boxen|
