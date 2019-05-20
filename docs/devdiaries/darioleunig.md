@@ -61,6 +61,19 @@ Zuzüglich zur Heimarbeit beinhaltet jede Woche das Seminar (1h 30m) mit anschli
 
 **13.05.2019 - 19.05.2019**
 
-| Datum | Tätigkeit | Dauer | Zusatz |
-| ----- | --------- | ----- | ------ |
-|       |           |       |        |
+| Datum      | Tätigkeit                                  | Dauer  | Zusatz |
+| ---------- | ------------------------------------------ | ------ | ------ |
+| 13.05.2019 | Bootstrap in Project eingebunden           | 0h 45m |        |
+| 14.05.2019 | Bestehendes Projekt neu aufgesetzt         | 0h 50m |        |
+| 15.05.2019 | Recherche zum Thema Service Worker         | 1h     |        |
+| 16.05.2019 | Minimalbespiel OAuth neu implementiert     | 2h     |        |
+| 16.05.2019 | CSS Style bestehender Seiten angepasst     | 1h     |        |
+| 18.05.2019 | Videos zum Thema Authentifizierung gesehen | 1h     |        |
+
+## Woche 7 
+
+**20.05.2019 - 26.05.2019**
+
+| Datum      | Tätigkeit                                   | Dauer | Zusatz |
+| ---------- | ------------------------------------------- | ----- | ------ |
+| 20.05.2019 | Recherche zum Thema AuthGuard & AuthService | 20m   |        |
