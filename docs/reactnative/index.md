@@ -99,6 +99,7 @@ Der Verlauf der Querachse ist abhängig von der Hauptachse. Wenn die Hauptachse 
 Die Flex-Property gibt an, wie sich die Komponenten in Bezug auf ihrer Größe verhalten sollen. Ist der Wert von Flex positiv, so wir die Komponente um das Vielfache größer, sofern so viel Platz im Flex-Container frei ist. Der Flex-Container ist der Bereich, in dem Flexbox genutzt wird.  Die Komponente ist dann bezüglich ihrer Größe flexible. Ist der Wert der Property gleich 0, so bleibt die Komponente bei ihrer festen Größe. Sie ist dann nicht flexibel. Bei -1 wird die Komponente auf ihre minWidth und minHeight Werte geschrumpft, sofern nicht genügend Platz gibt im Flex-Container.
 
 ![Flexbox](img/flexbox.png)
+
 justify-content steuert die Items auf der Haupt-Achse
 align-items steuert die Items auf der Kreuz-Achse
 flex-direction dreht die Haupt-Achse
