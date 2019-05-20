@@ -63,8 +63,8 @@ __13.05.2019 - 19.05.2019__
 | 13.05.2019 | Recherche zu Django | 2 h |        |
 | 14.05.2019 | Server aufsetzen und einrichten in Azure-Cloud | 2 h |        |
 | 14.05.2019 | Datenmodell definieren | 2 h |        |
-| 19.05.2019 | MQTT-Broker aufsetzen | 2 h | Probleme mit Azure |
-| 19.05.2019 | Travis aufsetzen | 2 h |        |
+| 19.05.2019 | MQTT-Broker aufsetzen | 3 h | Probleme mit Azure |
+| 19.05.2019 | Travis aufsetzen | 1 h |        |
 
 
 ## Woche 7
@@ -75,7 +75,7 @@ __20.05.2019 - 26.05.2019__
 | ---------- | -------------- | ------ | ------ |
 | 20.05.2019 | Kommunikationsprotokoll definieren | 30 min | MQTT-Topic und Payload |
 | 20.05.2019 | Bash-Skripte um Broker zu steuern | 15 min |        |
-| 20.05.2019 | MQTT-Client in nodejs | 2,5 h | rudimentäre Demo |
+| 20.05.2019 | MQTT-Client in nodejs implementieren | 3,5 h |  |
 
 
 
