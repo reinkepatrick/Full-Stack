@@ -80,3 +80,5 @@ __14.05.2019 - 20.05.2019__
 | 17.05.2019 | Modelklassendiagramm angepasst |20 min| |
 | 17.05.2019 | GUI-Mockups erweitert |40 min| |
 | 17.05.2019 | Zustandsdiagramm-GUI-Navigation erstellt |40 min| |
+| 17.05.2019 | Implementierung von Firebase für OAuth |1 h| |
+| 20.05.2019 | Implementierung von Firebase für OAuth |1.75 h| |
