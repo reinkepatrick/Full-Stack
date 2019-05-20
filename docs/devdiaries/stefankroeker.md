@@ -77,3 +77,11 @@ __13.05.2019 - 19.05.2019__
 | 16.05.2019 | EC2 Instanz einrichten.                                                                                                         | 1h         |        |
 | 17.05.2019 | Django auf Apache deployen.                                                                                                     | 4h 30 min  | Es gab Probleme beim einrichten von Apache, da die Systemvariablen nicht übernommen worden sind und dabei dann immer ein "500 Internal Server error" Code angezeigt wurde. Nachdem ich herausgefunden habe, dass es die Systemvariablen sind, ging es recht schnell.    |
 | 17.05.2019 | Channels Beispiel auf dem Server integrieren.                                                                                   | 1h 30min   | Funktioniert nicht mit dem Apache Webserver. Es muss noch seperat ein Daphne Web Server installiert werden.       |
+| 17.05.2019 | Kommunikation zwischen REACT und Django getestet.                                                                               | 45min      |        |
+
+## Woche 7 
+__20.05.2019 - 26.05.2019__
+
+| Datum      | Tätigkeit                                                                                                                       | Dauer      | Zusatz |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------- | ---------- | ------ |
+| 20.05.2019 | Channels asynchronität und Tests erforscht.                                                                                     | 3h         |        |

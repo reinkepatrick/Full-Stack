@@ -429,3 +429,46 @@ Dieser nimmt eine Verbindung entgegen und empfängt Nachrichten. Diese Nachricht
 
 ### Channel Layer
 Ein Channel Layer ist dafür da, dass die Consumer miteinander kommunizieren können. Jeder Consumer hat automatisch einen Channel Namen, mit diesem Namen kann der Consumer mit dem Channel Layer kommunizieren. Damit Channels mit einander kommunizieren können, müssen sie entweder den Namen eines anderen Channels kennen, oder in einer Gruppe von Channel sein.
+
+### Asynchronität
+
+Channels bietet die Möglichkeit, bei den Consumer Asynchron zu arbeiten. Damit dann die Performance steigt. Es ist ziemlich simpel eine Asynchrone Methode zu definieren.
+
+```python
+# Receive message from room group
+async def chat_message(self, event):
+    message = event['message']
+
+    # Send message to WebSocket
+    await self.send(text_data=json.dumps({
+        'message': message
+    }))
+```
+
+Das `await` vor der send Methode ist notwendig, weil die Methode eine I/O Methode ist.
+
+### Testen
+
+Damit Tests mit Channels funktionieren, muss eine Bibliothek mit dem Namen `selenium` runtergeladen werden.
+Es muss außerdem der Chrome Browser installiert sein.  
+Über einem WebsocketCommunicator können dann die Websockets getestet werden. Genauso gibt es auch einen HttpCommunicator.
+
+Beispiel für Websocket Tests:  
+```python
+from channels.testing import WebsocketCommunicator
+application = URLRouter([
+    url(r"^testws/(?P<message>\w+)/$", KwargsWebSocketApp),
+])
+communicator = WebsocketCommunicator(application, "/testws/test/")
+connected, subprotocol = await communicator.connect()
+assert connected
+# Test on connection welcome message
+message = await communicator.receive_from()
+assert message == 'test'
+# Close
+await communicator.disconnect()
+```
+
+Die Tests für Http Requests ist fast identisch, es muss nur bei der Initialisierung des Objekts noch der Request Typ (GET, POST, ...) angegeben werden.
+
+
