@@ -100,9 +100,7 @@ Die Flex-Property gibt an, wie sich die Komponenten in Bezug auf ihrer Größe v
 
 ![Flexbox](img/flexbox.png)
 
-justify-content steuert die Items auf der Haupt-Achse
-align-items steuert die Items auf der Kreuz-Achse
-flex-direction dreht die Haupt-Achse
+justify-content ordnet die Items auf der Haupt-Achse, align-items ordnet die Items auf der Kreuz-Achse und flex-direction dreht die Haupt-Achse.
 
 ## Navigation/Routing
 
