@@ -81,7 +81,7 @@ Das Arrangieren der Komponenten in React Native wird durch Flexbox ermöglicht. 
 
 Flexbox funktioniert in React Native wie in CSS im Web, mit abgesehen von ein paar Ausnahmen. Zu diese Ausnahmen gehört unteranderem, dass der Default-Wert der Property flexDirection column ist und der Parameter flex nur Zahlen annimmt.
 
-Beim Arbeiten mit Flexbox kann man sich zwei Achsen vorstellen. Die Hauptachse und die Querachse. Die Hauptachse wird definiert durch die Property flex-direction.
+Beim Arbeiten mit Flexbox kann man sich zwei Achsen vorstellen. Die Hauptachse und die Kreuzachse. Die Hauptachse wird definiert durch die Property flex-direction.
 
 Flex-direction kann folgende Werte annehmen:
 
@@ -94,7 +94,7 @@ Flex-direction kann folgende Werte annehmen:
 * Coulmn-reverse
   * Die Komponenten werden vertikal von unten nach oben angeordnet.
 
-Der Verlauf der Querachse ist abhängig von der Hauptachse. Wenn die Hauptachse entlang der Zeile ausgerichtet ist, dann verläuft die Querachse entlang der Spalte. Verläuft die Hauptachse entlang der Spalte, dann verläuft die Querachse entlang der Zeile. Dieses Wissen ist nützlich, wenn man sich mit der Ausrichtung des Inhalts beschäftigt.
+Der Verlauf der Kreuzachse ist abhängig von der Hauptachse. Wenn die Hauptachse entlang der Zeile ausgerichtet ist, dann verläuft die Kreuzachse entlang der Spalte. Verläuft die Hauptachse entlang der Spalte, dann verläuft die Kreuzachse entlang der Zeile. Dieses Wissen ist nützlich, wenn man sich mit der Ausrichtung des Inhalts beschäftigt.
 
 Die Flex-Property gibt an, wie sich die Komponenten in Bezug auf ihrer Größe verhalten sollen. Ist der Wert von Flex positiv, so wir die Komponente um das Vielfache größer, sofern so viel Platz im Flex-Container frei ist. Der Flex-Container ist der Bereich, in dem Flexbox genutzt wird.  Die Komponente ist dann bezüglich ihrer Größe flexible. Ist der Wert der Property gleich 0, so bleibt die Komponente bei ihrer festen Größe. Sie ist dann nicht flexibel. Bei -1 wird die Komponente auf ihre minWidth und minHeight Werte geschrumpft, sofern nicht genügend Platz gibt im Flex-Container.
 
