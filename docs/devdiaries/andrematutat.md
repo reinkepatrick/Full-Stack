@@ -66,5 +66,18 @@ __06.05.2019 - 12.05.2019__
 | 12.05 | Dokumentation QUIC und HTTP 3        | 90min |                                        |
 | 12.05 | Projektdokumentation angepasst       | 90min |                                        |
 | 12.05 | Recherche GRPC                       | 60min | Noch ziemlich unklar                   |
-|       |                                      |       |                                        |
-|       |                                      |       |                                        |
+
+
+## Woche 5
+
+__13.05.2019 - 19.05.2019__
+
+| Datum | Tätigkeit                                | Dauer  | Zusatz                          |
+| ----- | ---------------------------------------- | ------ | ------------------------------- |
+| 14.05 | GraphQL Schema definiert, für andere Projektmitglieder | 60min  |                                 |
+| 19.05 | Überblick grapheen geholt                | 60min  | Doch auf Node.js umgestiegen    |
+| 19.05 | Einarbeiten in GraphQL mit Node.js       | 90min  |                                 |
+| 19.05 | Einrichten eines Übungsprojekts          | 120min |                                 |
+| 19.05 | Erstellen einer Beispiel MongoDB         | 30min  |                                 |
+| 19.05 | Versucht MongoDB mit GraphQL Projekt zu verbinden | 60min  | Anleitungen anders als Realität |
+
