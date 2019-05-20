@@ -55,7 +55,7 @@ __29.04.2019 - 05.05.2019__
 | 05.05 | Beispiel Implementationen von GraphQL angeschaut | 120min | grober Überblick, verschiedene Sprachen |
 
 
-## Woche 4
+## Woche 5
 
 __06.05.2019 - 12.05.2019__
 
@@ -68,7 +68,7 @@ __06.05.2019 - 12.05.2019__
 | 12.05 | Recherche GRPC                       | 60min | Noch ziemlich unklar                   |
 
 
-## Woche 5
+## Woche 6
 
 __13.05.2019 - 19.05.2019__
 
