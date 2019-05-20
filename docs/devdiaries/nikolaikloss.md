@@ -81,4 +81,6 @@ __14.05.2019 - 20.05.2019__
 | 17.05.2019 | GUI-Mockups erweitert |40 min| |
 | 17.05.2019 | Zustandsdiagramm-GUI-Navigation erstellt |40 min| |
 | 17.05.2019 | Implementierung von Firebase für OAuth |1 h| |
-| 20.05.2019 | Implementierung von Firebase für OAuth |1.75 h| |
+| 20.05.2019 | Recherche zu Services und Pflege des Ionic-Dokuments |1.75 h| |
+| 20.05.2019 | Registrierungslogik ohne OAuth implementiert |1.5 h| |
+| 20.05.2019 | Alert als Service implementiert & Dummy Login auf Teams-Page |1.5 h| |
