@@ -69,3 +69,18 @@ __07.05.2019 - 13.05.2019__
 | 08.05.2019 | Restlichen GUI-Mockups für die mobile Anwendung entworfen |1 h| |
 | 10.05.2019 | LoginView implementieren |3 h| |
 | 13.05.2019 | Erkenntisse notieren |1 h| |
+
+## Woche 6
+__14.05.2019 - 20.05.2019__
+
+|Datum|Tätigkeit|Dauer|Zusatz|
+| - | - | - | - |
+| 14.05.2019 | Teambesprechung & Aufgabenverteilung |1 h| |
+| 14.05.2019 | Implementierung OAuth angefangen |45 min| |
+| 17.05.2019 | Modelklassendiagramm angepasst |20 min| |
+| 17.05.2019 | GUI-Mockups erweitert |40 min| |
+| 17.05.2019 | Zustandsdiagramm-GUI-Navigation erstellt |40 min| |
+| 17.05.2019 | Implementierung von Firebase für OAuth |1 h| |
+| 20.05.2019 | Recherche zu Services und Pflege des Ionic-Dokuments |1.75 h| |
+| 20.05.2019 | Registrierungslogik ohne OAuth implementiert |1.5 h| |
+| 20.05.2019 | Alert als Service implementiert & Dummy Login auf Teams-Page |1.5 h| |
