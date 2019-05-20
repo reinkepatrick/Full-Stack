@@ -94,21 +94,26 @@ Flex-direction kann folgende Werte annehmen:
 * Coulmn-reverse
   * Die Komponenten werden vertikal von unten nach oben angeordnet.
 
-[ToDo:Bild zu Flex-direction Hauptachse]
-
 Der Verlauf der Querachse ist abhängig von der Hauptachse. Wenn die Hauptachse entlang der Zeile ausgerichtet ist, dann verläuft die Querachse entlang der Spalte. Verläuft die Hauptachse entlang der Spalte, dann verläuft die Querachse entlang der Zeile. Dieses Wissen ist nützlich, wenn man sich mit der Ausrichtung des Inhalts beschäftigt.
-
-[ToDo:Bild zu Flex-direction Querachse]
 
 Die Flex-Property gibt an, wie sich die Komponenten in Bezug auf ihrer Größe verhalten sollen. Ist der Wert von Flex positiv, so wir die Komponente um das Vielfache größer, sofern so viel Platz im Flex-Container frei ist. Der Flex-Container ist der Bereich, in dem Flexbox genutzt wird.  Die Komponente ist dann bezüglich ihrer Größe flexible. Ist der Wert der Property gleich 0, so bleibt die Komponente bei ihrer festen Größe. Sie ist dann nicht flexibel. Bei -1 wird die Komponente auf ihre minWidth und minHeight Werte geschrumpft, sofern nicht genügend Platz gibt im Flex-Container.
 
-[ToDo: Bilder zur Flex-Property]
+![Flexbox](img/flexbox.png)
+justify-content steuert die Items auf der Haupt-Achse
+align-items steuert die Items auf der Kreuz-Achse
+flex-direction dreht die Haupt-Achse
 
 ## Navigation/Routing
 
 Um einen Wechsel von einer View zur Anderen zu betätigen, wird eine extra Library gebraucht. In diesem Kontext bedeutet der Begriff View eine funktionale React-Komponente, die keine Geschäftslogik beinhaltet. React Native selbst bietet keine Lösung zur Navigation an. Stattdessen werden auf die React-Navigation- und React-Native-Navigation-Library hingewiesen. Die React-Native-Navigation-Library hat den Vorteil gegenüber der von React, dass diese einen nativen Eindruck hinterlässt.
 
 Im folgenden wird erläutert wie in React Native Apps mit der Library React-Native-Navigation die Navigation funktioniert. React-Native-Navigation ist in TypeScript geschrieben und unterstützt die gängigsten Statemanagement-Libraries. Damit eine Navigation von einer View zur Nächsten funktionieren kann, müssen die Views in der index.js Datei registriert werden. Dies geschieht über die Methode registerComponent(uniqueName, View). Hierbei ist zu beachten, dass jede View einen einzigartigen Namen haben muss.
+
+Die Bibliothek bietet verschiedene Möglichkeiten die Navigation zu strukturieren. Hier stehen verschiedene Layouttypen an. Der Component-Layout enthält nur eine Reactkomponente. Mit dem Stack-Layout ist es möglich beliebige Layouts zu Views zu beinhalten. Zudem existiert noch das Layout BottomTabs, wechles Icons anzeigen kann und ein Seitenmenü sideMenu-Layout.
+
+Mit React Native Navigation ist es möglich gewisse Events zu reagieren. Zu diesen gehören unteranderem der Start der App, das Hinzufügen von Views in dem Stack, das Anzeigen einer View als Modalview, beim Auswählen eines Tabs im BottomTab.
+
+Der Navigator lässt sich wie jede andee Reactkomponente stylen. Dies geschieht über das übergeben eines options Objekt. Für ein einheitliches Erscheinen, dient die Funktion setDefaultOptions, die laut den Entwicklern vor der SetRoot Methode geruft werden sollte. Das Aussehen kann im Allgemeinen für beide Plattformen gesetzt werden oder auch plattformspezifisch. Mit der Funtktionen mergeOptions kann der Navigator dynamisch zur Laufzeit angepasst werden.
 
 ## Touch and Gesture
 
