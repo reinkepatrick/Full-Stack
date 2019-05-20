@@ -60,7 +60,6 @@ __06.05.2019 - 12.05.2019__
 | 11.05.2019 | UI Implementieren: Grundgerüst     | 2 h 30 min |                                                                                                                                                                                                            |
 | 12.05.2019 | UI auf Gerät testen                | 2 h        | Probleme mit Xcode und Code-Signing, altes Zertifikat abgelaufen, Provisioning Profile konnte weder generiert noch heruntergeladen werden, zur Verwaltung ist eine kostenpflichtiges Dev. Enrollment nötig |
 
-
 ## Woche 6 
 __13.05.2019 - 19.05.2019__
 
@@ -72,3 +71,13 @@ __13.05.2019 - 19.05.2019__
 | 16.05.2019 | UI Implementieren: Übergangsanimationen          | 2 h    | Problem mit Animation gelöst                                                       |
 | 16.05.2019 | UI Implementieren: Lobbyliste                    | 2 h    |                                                                                    |
 | 17.05.2019 | UI Implementieren: Lobby erstellen               | 3 h    |                                                                                    |
+
+## Woche 7 
+__20.05.2019 - 26.05.2019__
+
+| Datum      | Tätigkeit                           | Dauer      | Zusatz |
+| ---------- | ----------------------------------- | ---------- | ------ |
+| 20.05.2019 | Styling in Flutter                  | 20 min     |        |
+| 20.05.2019 | Animationen mit Hero                | 40 min     |        |
+| 20.05.2019 | Vorteile überarbeitet               | 15 min     |        |
+| 20.05.2019 | Flutter: Performance best practices | 1 h 30 min |        |

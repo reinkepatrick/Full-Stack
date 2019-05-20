@@ -12,13 +12,19 @@ Minimale Systemanforderungen:
 + Native Performance
 + Eine Codebase für Android und iOS
 + Gute Dokumentation
-+ Portabilität
-+ Kompatibilität
++ [Portabilität](#portabilit%C3%A4t)
++ [Kompatibilität](#kompatibilit%C3%A4t)
 
 ### Nachteile
 + Um für jede Plattform das entsprechende Design zu realisieren, muss der Gerätetyp abgefragt und im Code unterschieden werden
 + Alle Designelemente sind nur Reproduktionen der nativen API-Elemente
 + Bringt keine Schnittstelle zur Hardware mit
+
+#### Portabilität
+Mit **einer** Codebase können Anwendungen für iOS, Android, Mac OS, Linux, Windows, Chrome OS, das Web und eingebettete Systeme erstellt werden.
+
+#### Kompatibilität 
+Da reproduzierte UI-Elemente verwendet werden, kann die App auch, mit modernem Design, für ältere Geräte zur Verfügung gestellt werden.
 
 ### Vergleich mit anderen Frameworks
 | Name             | Performance | Designelemente                                                              | Programmier-/Skriptsprache | Kompatibilität mit weiteren Frameworks |
@@ -105,12 +111,33 @@ UI-Layout werden in Flutter durch *Rows* und *Columns* realisiert. Im folgenden 
 ![Layout-Example](./img/flutter_layout.png)  
 ![Layout-Tree](./img/flutter_layout_tree.png)
 
+## Styling
+Das Styling funktioniert in Flutter über ein Objekt vom Typ `ThemeData`. Dieses Styling ist global. Die Felder dieses Objekts sind dann die entsprechenden Styleanweisungen für z.B. Textart, Textgröße oder Akzentfarbe. Das `ThemeData`-Objekt wird der Wurzel des Widgettrees zugewiesen und allen Kindern, durch den `context`, vererbt. Es ist natürlich auch möglich nur einem bestimmten Widget Styleanweisungen zu geben.
+
 ## Navigation und Routing
 In Flutter übernimmt der `Navigator` die Verwaltung von *Routen*. *Routen* bezeichnet dabei die verschiedenen Seiten der App. Der `Navigator` funktioniert wie ein Stack, auf dem Objekte vom Typ `Route` abgelegte werden und immer das oberste Objekt auf dem Bildschirm dargestellt wird. Der `Navigator` stellt außerdem zwei Methoden bereit `Route`-Objekte zu verwalten: `Navigator.push` und `Navigator.pop`. *Routen* können benannt werden und miteinander kommunizieren. *Navigatoren* können ineinander verschachtelt werden.
 
 ## Plattformspezifischer Code
 Die meisten plattformspezifischen Funktionalitäten sind als Plugins verfügbar. Falls die benötigte Funktion noch nicht implementiert wurde ist es möglich plattformspezifischen Code zu schreiben. Dabei schickt die App eine Nachricht über einen sogeanannten *platform channel* an das Hostsystem. Der Host empfängt diese Nachricht und ruft die jeweiligen plattformspezifischen Funktionen auf und antwortet üder den *platform channel*.
 
+## Animationen
+
+### Zwischen Routen
+Um Widgets zwischen Routen zu animieren wird das `Hero`-Widget verwendet. Das zu animierende Widget wird in ein `Hero`-Widget gewrapped und mit einem *herotag* versehen. Dann wird das selbe Widget, auch in einem `Hero`-Widget umwickelt und mit dem selben *herotag* gekennzeichnet, in einer anderen Route platziert. Sobald von der einen Route zur anderen navigiert wird, erledigt Flutter den Rest und erzeugt eine entsprechende Übergangsanimation.
+
+## Performance best practices
+
+### build() und setState()
+Es wird empfohlen keine aufwendigen oder repetitiven Aufgaben in der `build()` Methode zu haben oder riesige, aufgeblasene Widgets zu porgrammieren. Außerdem wird empfohlen die `setState()` Methode so tief im UI-Baum wie möglich zu nutzen um nur den Teil des UIs zu aktualisieren, der sich verändert hat.
+
+### Visuelle Effekte
+Einige Effekte nutzen die Methode `saveLayer()`, welche einen Offscreen-Buffer anlegt. Das Rendertarget auf diesen Buffer kann u.U. auf Geräten mit alten GPUs sehr langsam sein. `Opacity` ist einer der Effekte der diese Methode nutzt und sollte nur verwendet werden wenn dies nötig ist. Für einige Widgets wie z.B. Bilder gibt es günstigere Alternativen.
+
+### Listen und Raster
+Wenn Inhalte als Listen oder Raster dargestellt werden sollen, wird empfohlen per Lazy-Loading zunächst nur die Sichtbaren Elemente zu rendern.
+
+### Frames in 16ms bauen und anzeigen
+Frames sollen in unter 16ms auf dem Bildschrim dargestellt werden, da die Performance der App andernsfalls als negativ wahrgenommen wird. Es kann ein *Profile Build* erstellt werden um die Performance der App zu evlauieren.
 
 ## Flutter als Desktopanwendung
 Es ist möglich mit Flutter eine Desktopanwendung zu programmieren, die aus einer Codebase, ausführbare Programme für MacOS, Linux, Windows und ChromeOS erzeugt (vergleichbar mit [Electron](https://electronjs.org/)). Dafür kann man auf die Projekte [Flutter Desktop Embedding](https://github.com/google/flutter-desktop-embedding) oder [Go-Flutter](https://github.com/go-flutter-desktop/go-flutter) zurückgreifen. Grundsätzlich funktionieren diese beiden Projekte gleich, sie stellen eine Schnittstelle zwischen der *Flutter Engine* und dem jeweiligen Betriebsystem bereit. Code ist mit dem mobilen Framework kompatibel und kann damit geteilt werden solange keine Hardwarefunktionen aufgerufen werden.
