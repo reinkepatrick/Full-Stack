@@ -56,6 +56,7 @@ __13.05.2019 - 19.05.2019__
 | Datum      | Tätigkeit                                                                | Dauer      | Zusatz |
 | ---------- | ------------------------------------------------------------------------ | ---------- | ------ |
 | 13.05.2019 | Zusammenfassung React-Native-Navigator                                   | 1 h        |        |
+| 14.05.2019 | Glossar für das Pflichtenheft erstellt                                   | 1 h        |        |
 | 16.05.2019 | Lösung gesucht vom Einbinden von WebGL                                   | 1 h        |        |
 | 18.05.2019 | Zusammenfassungen von Flexbox und React-Native-Navigator verbessert      | 30 min     |        |
 
