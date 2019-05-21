@@ -110,9 +110,9 @@ Im folgenden wird erläutert wie in React Native Apps mit der Library React-Nati
 
 Die Bibliothek bietet verschiedene Möglichkeiten die Navigation zu strukturieren. Hier stehen verschiedene Layouttypen an. Der Component-Layout enthält nur eine Reactkomponente. Mit dem Stack-Layout ist es möglich beliebige Layouts zu Views zu beinhalten. Zudem existiert noch das Layout BottomTabs, wechles Icons anzeigen kann und ein Seitenmenü sideMenu-Layout.
 
-Mit React Native Navigation ist es möglich gewisse Events zu reagieren. Zu diesen gehören unteranderem der Start der App, das Hinzufügen von Views in dem Stack, das Anzeigen einer View als Modalview, beim Auswählen eines Tabs im BottomTab.
+Mit React Native Navigation ist es möglich auf gewisse Events zu reagieren. Zu diesen gehören unter anderem der Start der App, das Hinzufügen von Views in dem Stack, das Anzeigen einer View als Modalview und beim Auswählen eines Tabs im BottomTab.
 
-Der Navigator lässt sich wie jede andee Reactkomponente stylen. Dies geschieht über das übergeben eines options Objekt. Für ein einheitliches Erscheinen, dient die Funktion setDefaultOptions, die laut den Entwicklern vor der SetRoot Methode geruft werden sollte. Das Aussehen kann im Allgemeinen für beide Plattformen gesetzt werden oder auch plattformspezifisch. Mit der Funtktionen mergeOptions kann der Navigator dynamisch zur Laufzeit angepasst werden.
+Der Navigator lässt sich wie jede andere Reactkomponente stylen. Dies geschieht über das übergeben eines options Objekt. Für ein einheitliches Erscheinen, dient die Funktion setDefaultOptions, die laut den Entwicklern vor der SetRoot Methode geruft werden sollte. Das Aussehen kann im Allgemeinen für beide Plattformen gesetzt werden oder auch plattformspezifisch. Mit der Funtktionen mergeOptions kann der Navigator dynamisch zur Laufzeit angepasst werden.
 
 ## Touch and Gesture
 
