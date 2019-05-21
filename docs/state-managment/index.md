@@ -222,6 +222,32 @@ Eine Component ist nichts anderes als eine View aus dem Flux-Pattern. Diese send
 
 Jetzt gibt es hier aber noch Effects. Die Effects machen erst einmal nichts anderes wie der Reducer. Sie hören auf Actions und entscheiden dann für jede Action, ob sie reagieren müssen. Sollte das der Fall sein, wird ein Side-Effect ausgelöst. Dies ist zum Beispiel das Senden von Daten zu einer API. Sobald dies abgeschlossen ist, wird eine neue Action erzeugt, welche dann in den Reducer geht.
 
+## Akita
+
+### Was ist Akita?
+
+Akita ist wie Flux erst einmal auch ein eigenständiges Pattern. 
+
+![Akita Aufbau](./img/akitaAufbau.jpg)
+
+Akita bedient sich dabei einem objektorientierten Ansatz und nicht wie Flux einem funktionellem Ansatz. Auch hier haben wir Elemente, die wir aus anderen Pattern schon wieder erkennen. 
+
+Der Service koordiniert Anfragen zwischen der Backend API und den ausgelösten Methoden der Components. Components stellen die View-Komponente da, also unsere eigentliche Benutzeroberfläche. Der Service kann den Store updaten. Der Store übernimmt dabei die uns bereits bekannte Funktion. Er speichert die Daten. Auch hier gilt der Grundsatz, dass es nur eine Quelle der Wahrheit gibt, also auch nur einen Store.  Akita stellt hierbei zwei verschiedene Arten von Store zur Verfügung. Einen Basisstore, welcher jegliche Daten beinhalten, und einen EntityStore. Dieser wird meistens bevorzugt und bildet eine flache Sammlung von Entitäten ab. 
+
+Die beiden Arten können sogar parallel verwendet werden. Das trotzdem nur von einer Quelle der Warheit gesprochen wird, liegt daran, dass mit den beiden Stores unterschiedliche Aufgaben erfüllt werden. In dem Store liegen alle Daten, die keine Entität repräsentieren. Dazu gehören zum Beispiel Informationen über die Sitzung oder der UI.
+
+In dem Entity Store liegt jetzt alles, was eine Entität abbildet. Bei einer Studentenverwaltung also z.B den Studenten. Dieses Stores kann man sogar soweit verfeinern, dass man für jede Entität einen eigenen Store anlegt.
+
+![Akita Datenbaum](./img/AkitaDataTree.png)
+
+In dem Bild sieht man, wie so ein Datenbaum in Akita aussehen könnte. Wir haben einen Store für die Session, welcher Informationen zu dem angemeldeten Benutzer beinhaltet. Und wir haben einen Student Store. In diesem lagern verschiedene Einheiten von Studenten.
+
+Um diese Stores zu verwalten, bietet Akita verschiedene Methoden an.
+
+Ein weiteres Element in diesem Pattern sind die Queries. Diese sind vergleichbar mit den Queries aus Datenbankabfragen. Diese Queries fragen einfach die Daten aus den Stores ab. Queries können dabei mit anderen Queries verbunden werden und aus verschiedenen Stores Daten abrufen und verknüpfen. Auch bei den Queries gibt es verschiedene Arten für den Basisstore und für den Querystore. Die sind aber bis auf Kleinigkeiten gleich. Viel wichtiger ist da ein weiterer Unterschied zwischen den Queries. Es gibt einmal reaktive Queries und einmal synchronisierende Queries. Die einen können aufgerufen werden und die anderen aktualisieren sich bei Änderungen automatisch. Dafür wird das Observable Pattern benutzt.
+
+
+
 # Zusatz
 
 ## Historie
