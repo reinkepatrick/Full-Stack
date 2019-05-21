@@ -293,6 +293,7 @@ JSON.Net von Newtonsoft ist ein Json Parser Framework welches ein Json to Object
 | Struktur           | OOP                            | OOP oder Funktional | Funktional   |
 | Entwickler         | Open Source                    | Open Source         | Open Source  |
 | Programmiersprache | c#, VB, f#                     | c#, VB, f#          | F#           |
+| Asynchrone Tests   | nein                           | ja                  | ja           |
 |                    | Assert.That(1, Is.EqualTo(1)); | Assert.Equal        | Expect.equal |
 
 
