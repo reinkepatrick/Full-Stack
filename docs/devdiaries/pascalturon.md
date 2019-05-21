@@ -54,7 +54,19 @@ __06.05.2019 - 12.05.2019__
 
 __13.05.2019 - 19.05.2019__
 
-| Datum      | Tätigkeit                   | Dauer | Zusatz |
-| ---------- | --------------------------- | ----- | ------ |
-| 13.05.2019 | Recherche Signaturverfahren | 2 Std |        |
-| 13.05.2019 | Recherche Hashfunktionen    | 2 Std |        |
+| Datum      | Tätigkeit                                       | Dauer | Zusatz |
+| ---------- | ----------------------------------------------- | ----- | ------ |
+| 13.05.2019 | Recherche Signaturverfahren                     | 2 Std |        |
+| 13.05.2019 | Recherche Hashfunktionen                        | 2 Std |        |
+| 14.05.2019 | Erstellung Login + Registrierung von Coachr     | 3 Std |        |
+| 15.05.2019 | Behebung der ersten fehlgeschlagenen Testfällen | 2 Std |        |
+
+## Woche 7
+
+__20.05.2019 - 26.06.2019__
+
+| Datum      | Tätigkeit                                            | Dauer   | Zusatz |
+| ---------- | ---------------------------------------------------- | ------- | ------ |
+| 20.05.2019 | Recherche Kryptographie                              | 3 Std   |        |
+| 20.05.2019 | Versuch letzte Testfälle zum Durchlaufen zu bekommen | 2 Std   |        |
+| 20.05.2019 | Systemarchtekturdiagramm zeichnen                    | 0,5 Std |        |
