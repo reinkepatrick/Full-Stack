@@ -70,8 +70,19 @@ __13.05.2019 - 19.05.2019__
 
 __20.05.2019 - 26.05.2019__
 
+| Datum      | Tätigkeit                                 | Dauer | Zusatz |
+| ---------- | ----------------------------------------- | ----- | ------ |
+| 21.05.2019 | Wöchentliches Meeting - Projektarbeit     | 6,5 h |        |
+| 22.05.2019 | Jenkins Server in AWS EC2 Instanz starten | 3 h   |        |
+|            | Angular App in EC2 Instanz starten        |       |        |
+|            | MySQL in EC2 Instanz starten              |       |        |
+|            | ASP.NET Backend in EC2 Instanz starten    |       |        |
+
+## Woche 8
+
+__27.05.2019 - 02.06.2019__
+
 | Datum | Tätigkeit                             | Dauer | Zusatz |
 | ----- | ------------------------------------- | ----- | ------ |
 |       | Wöchentliches Meeting - Projektarbeit |       |        |
-|       | CI-Server aufsetzen                   |       |        |
-
+|       | Jenkins CI Pipeline                   |       |        |
