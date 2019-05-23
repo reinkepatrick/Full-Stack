@@ -84,3 +84,10 @@ __14.05.2019 - 20.05.2019__
 | 20.05.2019 | Recherche zu Services und Pflege des Ionic-Dokuments |1.75 h| |
 | 20.05.2019 | Registrierungslogik ohne OAuth implementiert |1.5 h| |
 | 20.05.2019 | Alert als Service implementiert & Dummy Login auf Teams-Page |1.5 h| |
+
+## Woche 7
+__21.05.2019 - 27.05.2019__
+
+| 21.05.2019 | Teambesprechung & Firebase E-Mail integration |3 h| |
+| 23.05.2019 | BugFix: Wurde auf die Mannschaftspage umgeleitet obwohl kein User gefunden wurde  |50 min| |
+| 23.05.2019 | BugFix: this-Kontext-Problematik & automatisches Umleitung auf Login-Page bei nicht eingeloggt sein  |50 min| |
