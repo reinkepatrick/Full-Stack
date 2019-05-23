@@ -84,3 +84,4 @@ __20.05.2019 - 26.05.2019__
 | 21.05.2019 | App: UI und Kommunikation mit Backend                               | 2h         |        |
 | 23.05.2019 | App: Cleanup und Refactoring                                        | 2 h        |        |
 | 23.05.2019 | App: Json Serialisierung und Kommunikation mit Backend (Lobbyliste) | 2 h        |        |
+| 23.05.2019 | UI Implementieren: Lobby erstellen                                  | 1h 30 min  |        |
