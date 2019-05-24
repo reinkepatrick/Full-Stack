@@ -94,6 +94,19 @@
 | 16.05.2019 | Fertigstellung des Impressums für die Projekt Web-Anwendung                           | 1 h     |                                               |
 | 16.05.2019 | Fertigstellung der Landing Page für die Projekt Web-Anwendung                         | 2 h     | Ohne Überprüfung ob der Username gesetzt ist  |
 | 16.05.2019 | Verbesserung des Responsive Design für die Projekt Web-Anwendung                      |  1 h    |                                               |
-| 16.05.2019 |  Fertigstellung der Lobbyliste für die Projekt Web-Anwendung                          |  3 h    |                                               |   |
+| 16.05.2019 | Fertigstellung der Lobbyliste für die Projekt Web-Anwendung                           |  3 h    |                                               |
 | 17.05.2019 | Hinzufügen von einer Hover Animation der LobbyListItems für die Projekt Web-Anwendung | 30 min  |                                               |
-| 17.05.2019 |  Verbesserungen an der Suchleite in der Lobbylist für die Projekt Web-Anwendung       | 30 min  |                                               |
+| 17.05.2019 | Verbesserungen an der Suchleite in der Lobbylist für die Projekt Web-Anwendung        | 30 min  |                                               |
+
+## Woche 7
+
+**20.05.2019 - 26.05.2019**
+
+| Datum       | Tätigkeit                                                                                                     | Dauer       | Zusatz                                                                   |
+| :---------- | :------------------------------------------------------------------------------------------------------------ | :---------- | :----------------------------------------------------------------------- |
+| 21.05.2019  | Prototyp Erstellung der Kommunikation für das Projekt                                                         |  3 h        |                                                                          |
+| 22.05.2019  | Einbindung von Websockets unter Redux mit [redux-websocket](https://github.com/giantmachines/redux-websocket) | 6 h         | Probleme mit der Einbindung von mehreren URLs, da es eine Middleware ist |
+| 22.05.2019  |  Einbindung von Docker                                                                                        |  30 min     |                                                                          |
+| 23.05.2019  |  Umstieg auf normale JavaScript Websockets                                                                    |  4 h        |  Wird nicht als Middleware verwendet                                     |
+|  24.05.2019 |  Fertigstellung der Labels                                                                                    |  1 h        |                                                                          |
+|  24.05.2019 | Einarbeitung in [chroma.js](https://gka.github.io/chroma.js/) und [react-select](https://react-select.com)    |  2 h 30 min |                                                                          |   |
