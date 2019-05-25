@@ -109,4 +109,5 @@
 | 22.05.2019  |  Einbindung von Docker                                                                                        |  30 min     |                                                                          |
 | 23.05.2019  |  Umstieg auf normale JavaScript Websockets                                                                    |  4 h        |  Wird nicht als Middleware verwendet                                     |
 |  24.05.2019 |  Fertigstellung der Labels                                                                                    |  1 h        |                                                                          |
-|  24.05.2019 | Einarbeitung in [chroma.js](https://gka.github.io/chroma.js/) und [react-select](https://react-select.com)    |  2 h 30 min |                                                                          |   |
+|  24.05.2019 | Einarbeitung in [chroma.js](https://gka.github.io/chroma.js/) und [react-select](https://react-select.com)    |  2 h 30 min |                                                                          |
+|  25.05.2019 |  Fertigstellung der Lobby Erstellung                                                                          |  1 h 30 min |                                                                          |   |
