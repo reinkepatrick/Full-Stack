@@ -75,13 +75,14 @@ __13.05.2019 - 19.05.2019__
 ## Woche 7 
 __20.05.2019 - 26.05.2019__
 
-| Datum      | Tätigkeit                                                           | Dauer      | Zusatz |
-| ---------- | ------------------------------------------------------------------- | ---------- | ------ |
-| 20.05.2019 | Styling in Flutter                                                  | 20 min     |        |
-| 20.05.2019 | Animationen mit Hero                                                | 40 min     |        |
-| 20.05.2019 | Vorteile überarbeitet                                               | 15 min     |        |
-| 20.05.2019 | Flutter: Performance best practices                                 | 1 h 30 min |        |
-| 21.05.2019 | App: UI und Kommunikation mit Backend                               | 2h         |        |
-| 23.05.2019 | App: Cleanup und Refactoring                                        | 2 h        |        |
-| 23.05.2019 | App: Json Serialisierung und Kommunikation mit Backend (Lobbyliste) | 2 h        |        |
-| 23.05.2019 | UI Implementieren: Lobby erstellen                                  | 1h 30 min  |        |
+| Datum      | Tätigkeit                                                           | Dauer      | Zusatz                                     |
+| ---------- | ------------------------------------------------------------------- | ---------- | ------------------------------------------ |
+| 20.05.2019 | Styling in Flutter                                                  | 20 min     |                                            |
+| 20.05.2019 | Animationen mit Hero                                                | 40 min     |                                            |
+| 20.05.2019 | Vorteile überarbeitet                                               | 15 min     |                                            |
+| 20.05.2019 | Flutter: Performance best practices                                 | 1 h 30 min |                                            |
+| 21.05.2019 | App: UI und Kommunikation mit Backend                               | 2h         |                                            |
+| 23.05.2019 | App: Cleanup und Refactoring                                        | 2 h        |                                            |
+| 23.05.2019 | App: Json Serialisierung und Kommunikation mit Backend (Lobbyliste) | 2 h        |                                            |
+| 23.05.2019 | UI Implementieren: Lobby erstellen                                  | 1 h 30 min |                                            |
+| 25.05.2019 | App: Lobby erstellen                                                | 4 h        | Problem mit Datentransfer zwischen Widgets |
