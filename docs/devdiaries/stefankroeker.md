@@ -88,3 +88,4 @@ __20.05.2019 - 26.05.2019__
 | 21.05.2019 | Kommunikation getestet und nächste Schritte geplant.                                                                            | 3h         |        |
 | 23.05.2019 | Daphne Server deployed.                                                                                                         | 2h         |        |
 | 24.05.2019 | Route zum erstellen einer Lobby erstellt.                                                                                       | 4h         |        |
+| 25.05.2019 | Route erstellt zum beitreten einer Lobby.                                                                                       | 4h         |        |
