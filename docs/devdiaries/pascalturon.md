@@ -70,3 +70,17 @@ __20.05.2019 - 26.06.2019__
 | 20.05.2019 | Recherche Kryptographie                              | 3 Std   |        |
 | 20.05.2019 | Versuch letzte Testfälle zum Durchlaufen zu bekommen | 2 Std   |        |
 | 20.05.2019 | Systemarchtekturdiagramm zeichnen                    | 0,5 Std |        |
+| 21.05.2019 | Fehlerbehebung Tests                                 | 2 Std   |        |
+| 21.05.2019 | Grundfunktion des Zeichnens bei Coachr               | 3 Std   |        |
+
+## Woche 8
+
+__27.05.2019 - 02.06.2019__
+
+| Datum      | Tätigkeit                       | Dauer | Zusatz |
+| ---------- | ------------------------------- | ----- | ------ |
+| 27.05.2019 | Recherche HMAC                  | 1 Std |        |
+| 27.05.2019 | Erweiterung der Zeichenfunktion | 3 Std |        |
+|            |                                 |       |        |
+|            |                                 |       |        |
+|            |                                 |       |        |
