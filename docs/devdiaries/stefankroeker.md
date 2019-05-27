@@ -89,3 +89,10 @@ __20.05.2019 - 26.05.2019__
 | 23.05.2019 | Daphne Server deployed.                                                                                                         | 2h         |        |
 | 24.05.2019 | Route zum erstellen einer Lobby erstellt.                                                                                       | 4h         |        |
 | 25.05.2019 | Route erstellt zum beitreten einer Lobby.                                                                                       | 4h         |        |
+
+## Woche 8
+__27.05.2019 - 02.06.2019__
+
+| Datum      | Tätigkeit                                                                                                                       | Dauer      | Zusatz |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------- | ---------- | ------ |
+| 27.05.2019 | Request-Response lifecycle erklärt.                                                                                             | 1h         |        |
