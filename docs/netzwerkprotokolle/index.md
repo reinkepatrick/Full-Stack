@@ -455,9 +455,41 @@ Einen guten Anhaltspunkt liefert die Fragenliste von [Phil Sturgeon](https://phi
 - Verwendest du nur einfaches CRUD mit simplen JSOM Dokumente oder braucht deine API File Upload und download?
 
 
-
-
 ## GRPC
+
+## Websockets
+
+Websockets ermöglichen eine anhaltende, bidirektionale Verbindung zwischen Webapplikation und Webserver. <br/>Genau wie beim reinen HTTP, beginnt eine Verbidnung zwischen Client und Server mit einen Handshake, dieser ähnelt den HTTP Upgrade-Header und ist abwärtskompatibel, das ermöglicht die Verwendung von Port 80 und 443  <br/>
+
+![WebSockets grafisch dargestellt](./resources/img/ws.png)
+
+Beispiel Client Anfrage:
+
+```
+GET /doku HTTP/1.1
+Host: beispiel.server.de
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Key: x3JJHMbDL1EzLkh9GBhXDw==
+Sec-WebSocket-Version: 13
+Origin: http://server.de
+```
+
+Wie beim HTTP gibt der Client an, auf welche Ressource er zugreifen möchten (/doku), welche HTTP Version verwendet wird und auf welchen Host er sich verbinden will. Außerdem fordert der Client ein Upgrade des Protokolls auf das Websocket Protokoll an. Der Sec-WebSocket-Key dient als Überprüfung, ob der Server die Anfrage wirklich gelesen hat. <br/>
+
+Antwort des Servers:
+
+```
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: HSmrc0sMlYUkAGmm5OPpG2HaGWk=
+```
+Zuerst folgt die Erklärung, das der Server mit dem Protokoll wechsel einverstanden ist. Der Schlüssel "Sec-WebSocket-Accpet" bestätigt, das der Server die Anfrage des Clients gelesen hat. Er wird mithilfe des übergebenen WebSocket-Keys und den Globally Unique Identifiert generiert.<br/>
+
+Damit eine Verbindung über Websockets überhaupt möglich ist, müssen sowohl Client als auch Server diese unterstützen. Ist die Verbindung hergestellt, können sowohl Client als auch Server diese Verbindung aktiv nutzen. Das ermöglicht beispielsweise, Push Nachrichten des Servers. Dank der bestehenden Verbindung ist kein weiterer HTTP Header nötig, es werden also, im Vergleich zu normalen HTTP, einige Bytes gespart. Websockets sind außerdem statusbehaftete Verbindungen, es kann also auf Cookies o.ä verzichtet werden.<br/>
+
+WebSockets stellen an den Server neue Skalierungsanforderungen. Hält der Server viele Verbindungen mit Clients, welche viele Anfragen stellen, kann es schnell zu Performanzproblemen kommen. Sind die Clients allerdings nur stille Zuhörer, ist die Skalierbarkeit sogar einfacher.
 
 ## QUIC und HTTP 3
 
@@ -501,7 +533,7 @@ QUIC wurde mit besonderen Fokus auf Sicherheit entwickelt, durch die starke und 
 
 - [GraphQL Wikipedia](https://de.wikipedia.org/wiki/GraphQL)
 
-- [QUIC Wikipedia(https://de.wikipedia.org/wiki/Quick_UDP_Internet_Connections)
+- [QUIC Wikipedia](https://de.wikipedia.org/wiki/Quick_UDP_Internet_Connections)
 
 - [TLS Wikipedia](https://de.wikipedia.org/wiki/Transport_Layer_Security)
 
@@ -512,6 +544,12 @@ QUIC wurde mit besonderen Fokus auf Sicherheit entwickelt, durch die starke und 
 - [QUIC vs TCP gif](https://cloudplatform.googleblog.com/2018/06/Introducing-QUIC-support-for-HTTPS-load-balancing.html)
 
 - [QUIC im Überblick](https://medium.com/@codavel/quic-vs-tcp-tls-and-why-quic-is-not-the-next-big-thing-d4ef59143efd)
+
+- [Websockets Wikipedia](https://en.wikipedia.org/wiki/WebSocket)
+
+- [HTTP Upgrade Header](https://en.wikipedia.org/wiki/HTTP/1.1_Upgrade_header)
+
+- [WebSockets Grafik](https://www.pubnub.com/websockets/)
 
   ​
 

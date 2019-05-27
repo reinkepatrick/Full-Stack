@@ -81,3 +81,15 @@ __13.05.2019 - 19.05.2019__
 | 19.05 | Erstellen einer Beispiel MongoDB         | 30min  |                                 |
 | 19.05 | Versucht MongoDB mit GraphQL Projekt zu verbinden | 60min  | Anleitungen anders als Realität |
 
+## Woche 7
+
+__20.05.2019-26.05.2019__
+
+| Datum | Tätigkeit                                | Dauer  | Zusatz                                   |
+| ----- | ---------------------------------------- | ------ | ---------------------------------------- |
+| 21.05 | MongoDB eingerichtet                     | 60min  | zusammen mit Jonas R. Nur über localhost erreichbar |
+| 21.05 | GraphQL API auf Server aufgesetzt        | 15min  | 40.89.134.226:4000/graphQL               |
+| 21.05 | GraphQL Schema debugt und erste Fehler im Schema behoben | 60min  |                                          |
+| 22.05 | letzte Fehler im  GraphQL Schema behoben | 180min |                                          |
+| 23.05 | Datum wird nicht mehr als String abgespeichert | 30min  | In der DB als Date, GraphQL liefert Zeit seit 1970 in ms zurück. Umrechnung auf Clients |
+| 26.05 | Websockets Doku                          | 60min  |                                          |
