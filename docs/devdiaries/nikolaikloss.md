@@ -91,3 +91,4 @@ __21.05.2019 - 27.05.2019__
 | 21.05.2019 | Teambesprechung & Firebase E-Mail integration |3 h| |
 | 23.05.2019 | BugFix: Wurde auf die Mannschaftspage umgeleitet obwohl kein User gefunden wurde  |50 min| |
 | 23.05.2019 | BugFix: this-Kontext-Problematik & automatisches Umleitung auf Login-Page bei nicht eingeloggt sein  |50 min| |
+| 27.05.2019 | Teams-Page: Tab-Button-Navigation implementiert & Überblick-Page generiert  |1.5 h| |
