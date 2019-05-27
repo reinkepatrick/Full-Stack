@@ -364,9 +364,9 @@ Mit `routerLinkActive` können CSS Klassen angegeben werden welche bei aktivem Z
 
 ### Services
 
-Eine einfache Möglichkeit wiederverwendbare Programmteile auszulagern oder Daten zwischen Komponenten auszutauschen sind Services. Dabei sind Services nichts weiter als Klassen, die als Abhängigkeit in anderen Komponenten injiziert werden können. Es werden zwei Arten unterschieden.
+Eine einfache Möglichkeit wieder verwendbare Programmteile auszulagern oder Daten zwischen Komponenten auszutauschen sind Services. Dabei sind Services nichts weiter als Klassen, die als Abhängigkeit in anderen Komponenten injiziert werden können. Es werden zwei Arten unterschieden.
 
-![Angular Services](/Users/dario/Documents/git/full_stack/docs/angular/img/services.jpg)
+![Angular Services](img/services.jpg)
 
 ### Dependency Injection
 
