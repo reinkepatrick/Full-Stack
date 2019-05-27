@@ -59,10 +59,19 @@ __06.05.2019 - 12.05.2019__
 
 __13.05.2019 - 19.05.2019__
 
+| Datum      | Tätigkeit                                          | Dauer | Zusatz |
+| ---------- | -------------------------------------------------- | ----- | ------ |
+| 14.05.2019 | Wöchentliches Meeting - Projektarbeit              | 4,5 h |        |
+| 16.05.2019 | Recherche und Preisvergleiche PaaS-Anbieter        | 2 h   |        |
+| 16.05.2019 | Recherche Building & Testing Angular               | 1,5 h |        |
+| 19.05.2019 | Planung des CI-Serveraufbaus (Diagramm Erstellung) | 3 h   |        |
+
+## Woche 7
+
+__20.05.2019 - 26.05.2019__
+
 | Datum | Tätigkeit                             | Dauer | Zusatz |
 | ----- | ------------------------------------- | ----- | ------ |
 |       | Wöchentliches Meeting - Projektarbeit |       |        |
-|       | Docker Volumes                        |       |        |
-|       | Docker Orchestrieren/Verbinden        |       |        |
-|       | Jenkins Pipeline erstellen            |       |        |
+|       | CI-Server aufsetzen                   |       |        |
 

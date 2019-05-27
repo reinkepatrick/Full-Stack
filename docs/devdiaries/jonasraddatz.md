@@ -61,3 +61,32 @@ __13.05.2019 - 19.05.2019__
 | 13.05.2019 | Einpflegen und Überarbeiten der Texte | 2 h   |        |
 | 13.05.2019 | Django für Backend (HelloWorld etc.) | 2 h   |        |
 | 13.05.2019 | Recherche zu Django | 2 h |        |
+| 14.05.2019 | Server aufsetzen und einrichten in Azure-Cloud | 2 h |        |
+| 14.05.2019 | Datenmodell definieren | 2 h |        |
+| 19.05.2019 | MQTT-Broker aufsetzen | 3 h | Probleme mit Azure |
+| 19.05.2019 | Travis aufsetzen | 1 h |        |
+
+
+## Woche 7
+
+__20.05.2019 - 26.05.2019__
+
+| Datum      | Tätigkeit      | Dauer  | Zusatz |
+| ---------- | -------------- | ------ | ------ |
+| 20.05.2019 | Kommunikationsprotokoll definieren | 30 min | MQTT-Topic und Payload |
+| 20.05.2019 | Bash-Skripte um Broker zu steuern | 15 min |        |
+| 20.05.2019 | MQTT-Client in nodejs implementieren | 3,5 h |  |
+| 21.05.2019 | GraphQL integrieren                     | 1,5 h | |
+| 21.05.2019 | MongoDB einrichten                      | 2 h | Erreichbarkeit von außen problematisch |
+| 21.05.2019 | Fehlersuche GraphQL-API | 2 h | |
+| 22.05.2019 | Abändern und Testen des Mutations-Query | 1,5 h | |
+
+
+## Woche 8
+
+__27.05.2019 - 02.06.2019__
+
+| Datum      | Tätigkeit      | Dauer  | Zusatz |
+| ---------- | -------------- | ------ | ------ |
+| 27.05.2019 | MQTT-Broker als Docker-Container | 1 h |  |
+| 27.05.2019 | Weiterarbeit an MQTT-Datenbank-Schnittstelle | 0,5 h | |

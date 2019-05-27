@@ -192,7 +192,8 @@ Event-Driven Architecture vs. Request/Response: https://realtimeapi.io/hub/event
 Synchron vs. Asynchron: https://www.slideshare.net/hamidreza-s/event-driven-architecture-concepts-in-web-technologies-part-1
 
 Topologie-Grafik: https://www.dataweek.co.za/9101a
-Topic-Grafiken:: https://www.hivemq.com/blog/mqtt-essentials-part-5-mqtt-topics-best-practices/
+
+Topic-Grafiken: https://www.hivemq.com/blog/mqtt-essentials-part-5-mqtt-topics-best-practices/
 
 Ablauf-Grafik: By Simon A. Eugster - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=70622928
 

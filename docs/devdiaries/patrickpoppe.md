@@ -56,3 +56,15 @@ __06.05.2019 - 12.05.2019__
 
 
 
+## Woche 6
+
+__13.05.2019 - 19.05.2019__
+
+| Datum      | Tätigkeit                             | Dauer | Zusatz                         |
+| ---------- | ------------------------------------- | ----- | ------------------------------ |
+| 14.05.2019 | Teammeeting                           | 2h    |                                |
+| 14.05.2019 | Akita                                 | 2h    |                                |
+| 17.05.2019 | Einlesen in Angular                   | 3,5h  | keine Vorkenntnisse in Angular |
+| 17.05.2019 | Erster Versuch Ngrx zu implementieren | 4h    | implementiert noch nicht       |
+| 20.05.2019 | Pflege Pflichtenheft                  | 1h    |                                |
+

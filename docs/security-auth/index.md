@@ -1,5 +1,73 @@
 # Sicherheit und Authentifizierung 
 
+## Kryptologie
+
+Kryptologie beschäftigt sich mit dem Entschlüsseln und Verschlüsseln von Informationen und dient somit der Informationssicherheit.  
+
+### Kryptographie
+
+Kryptographie beschäftigt sich mit der Sicherheit der Kommunikation gegen Entschlüsselung und Veränderung der Informationen. Es wird sich mit der Konzeption, Definition und Konstruktion von Informationssystemen befasst. Diese Systeme sollen widerstandsfähig gegen Manipulation von Unbefugten.
+
+#### Ziele der Kryptographie:
+
+* Vertraulichkeit / Zugriffsschutz
+  * Informationen dürfen nur von Befugten gelesen werden
+* Integrität/ Änderungsschutz
+  * Informationen müssen vollständig und unverändert sein
+* Authentizität/ Fälschungsschutz
+  * Urheber der Informationen muss eindeutig Identifizierbar sein 
+* Verbindlichkeit/ Nichtabstreitbarkeit
+  * Urheber und Absender der Informationen dürfen Urheberschaft nicht abstreiten können
+
+#### Verfahren der Kryptographie:
+
+Klassische Kryptographie:
+
+* Transposition
+  * Buchstaben der Botschaft werden anders angeordnet 
+* Substitution 
+  * Buchstaben werden durch einen anderen Buchstaben oder durch ein Symbol ausgetauscht. 
+
+Moderne Kryptographie:
+
+Es wird nicht mehr mit Buchstaben gearbeitet, sondern mit den einzelnen Bits der Daten, was die Anzahl der möglichen Transformationen erheblich vergrößert. Außerdem können so auch Daten verschlüsselt werden, die keinen Text repräsentieren.
+
+Klassen der modernen Kryptographie:
+
+* Symmetrische Verfahren
+  * Verwenden pro Kommunikationsbeziehung einen geheimen Schlüssel für Ver- und Entschlüsselung 
+* Asymmetrische Verfahren
+  * Verwenden pro Teilnehmer einen privaten und einen öffentlichen Schlüssel. 
+
+### Kryptoanalyse
+
+Bezeichnet die Analyse von kryptographischen Verfahren um diese zu "brechen" oder zu umgehen oder ihre Sicherheit nachzuweisen. 
+
+### Methoden der Kryptoanalyse:
+
+* Brute-Force
+  * Ausprobieren aller möglichen Schlüssel. Reihenfolge wird nach der Wahrscheinlichkeit ausgewählt. Es können mehrere Millionen Schlüssel pro Sekunde ausprobiert werden.
+* Wörterbuchangriff
+  * Passwortsammlung wird speziell für diesen Zweck angelegt und werden nacheinander ausprobiert. Auch hier wird die Reihenfolge nach der Wahrscheinlichkeit ausgewählt. 
+* Man-in-the-middle-Angriff
+  * Zwischen den Kommunikationspartnern befindet sich der Angreifer und kann Nachrichten mithören und verändern oder neue Nachrichten einfügen.
+
+## Digitale Signatur / Signieralgorithmen
+
+Ein digitales Signaturverfahren berechnet mithilfe eines geheimen Signaturschlüssels (Private Key) aus einer beliebigen Menge Daten einen Wert (digitale Signatur). Mit diesem Wert kann mithilfe des Verifikationsschlüssels (Public Key) absolut bestätigt werden, dass die gesendete Nachricht auch vom richtigen Absender kommt. Um eine Person zuzuordnen, muss der Public Key der Person zugeordnet sein.
+
+### Grundlagen
+
+Aus den Daten und dem Private Key wird durch eine eindeutige Rechenvorschrift die Signatur berechnet. Verschiedene Daten sollten daher mit dem gleichen Key zu einem unterschiedlichen Ergebnis führen. Eine Signatur muss auch für jeden Schlüssel einen anderen Wert ergeben. 
+
+Der Private Key wird auf den Hash-Wert angewandt und nicht auf die Daten direkt. Die Hashfunktion zum berechnen des Hash-Wertes muss kollisionsresistent sein, da es dann fast unmöglich ist aus zwei unterschiedlichen Datensätzen einen gleichen Hash-Wert zu generieren. 
+
+Sobald ein Schlüssel einer Person zugeordnet wurde, kann die Identität des Signaturerstellers über den öffentlichen Zertifikatsserver des Anbieters ermittelt werden.
+
+### Sicherheit
+
+Es ist so gut wie unmöglich, eine Signatur zu fälschen, zu verfälschen oder eine zweite Nachricht zu erzeugen, die für die Signatur auch gültig ist. Ein private Key soll auch nicht aus den Signaturen und dem dazugehörigen Public Key berechnet werden können.
+
 ## Authentifizierung
 
 Identitäten lassen sich im Netz nur schwer beweisen und die meisten Websites oder Dienste verwenden unterschiedliche Techniken der Authentifizierung.
@@ -379,24 +447,6 @@ Für den Nutzer ist es einfacher eine Loginseite auf Echtheit zu überprüfen, d
 Eine Hashfunktion bildet eine große Menge auf eine kleine Zielmenge ab. Die Eingabemenge kann Elemente unterschiedlicher Länge enthalten. Die Elemente der Zielmenge haben meist eine feste Länge. Die Werte der Hashes sind meistens eine Teilmenge der Ganzen Zahlen. 
 
 Gute Hashfunktionen geben eine erwartete Eingabedaten Menge mit, damit zwei unterschiedliche Eingabedaten auch unterschiedliche Hash-Werte zugeordnet werden. Ein Kollision tritt dann auf, wenn ein Hashwert zwei Eingabedaten zugeordnet werden. Diese sind unvermeidlich da die Menge der Hash-Werte meist kleiner ist als die Menge der Eingabedaten. Daher gibt es Verfahren zur Erkennung von Kollisionen. Eine gute Hashfunktion erzeugt wenige Kollisionen. 
-
-
-
-## Digitale Signatur / Signieralgorithmen
-
-Ein digitales Signaturverfahren berechnet mithilfe eines geheimen Signaturschlüssels (Private Key) aus einer beliebigen Menge Daten einen Wert (digitale Signatur). Mit diesem Wert kann mithilfe des Verifikationsschlüssels (Public Key) absolut bestätigt werden, dass die gesendete Nachricht auch vom richtigen Absender kommt. Um eine Person zuzuordnen, muss der Public Key der Person zugeordnet sein.
-
-### Grundlagen
-
-Aus den Daten und dem Private Key wird durch eine eindeutige Rechenvorschrift die Signatur berechnet. Verschiedene Daten sollten daher mit dem gleichen Key zu einem unterschiedlichen Ergebnis führen. Eine Signatur muss auch für jeden Schlüssel einen anderen Wert ergeben. 
-
-Der Private Key wird auf den Hash-Wert angewandt und nicht auf die Daten direkt. Die Hashfunktion zum berechnen des Hash-Wertes muss kollisionsresistent sein, da es dann fast unmöglich ist aus zwei unterschiedlichen Datensätzen einen gleichen Hash-Wert zu generieren. 
-
-Sobald ein Schlüssel einer Person zugeordnet wurde, kann die Identität des Signaturerstellers über den öffentlichen Zertifikatsserver des Anbieters ermittelt werden.
-
-### Sicherheit
-
-Es ist so gut wie unmöglich, eine Signatur zu fälschen, zu verfälschen oder eine zweite Nachricht zu erzeugen, die für die Signatur auch gültig ist. Ein private Key soll auch nicht aus den Signaturen und dem dazugehörigen Public Key berechnet werden können.
 
 ## Base64
 
