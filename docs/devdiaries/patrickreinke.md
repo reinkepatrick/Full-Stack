@@ -70,13 +70,32 @@
 
 **06.05.2019 - 12.05.2019**
 
-| Datum      | Tätigkeit                                                      | Dauer      | Zusatz                          |
-| :--------- | :------------------------------------------------------------- | :--------- | :------------------------------ |
-| 06.05.2019 | Einbinden der Mockups                                          | 1 h        |                                 |
-| 06.05.2019 | Erstellung eines Zustandsdiagramm für die Mockups              | 1 h 30 min |                                 |
-| 07.05.2019 | Definition der API des Projekts                                | 3 h        |                                 |
-| 09.05.2019 | Einarbeitung in Form-Validation                                | 1 h        |                                 |
-| 10.05.2019 | Fertigstellung der Schnittstelle                               | 2 h 30 min |                                 |
-| 12.05.2019 | Definition von [Form-Validation](react/index#form-validation)  | 30 min     |                                 |
-| 12.05.2019 | Überarbeitung der React Dokumentation                          | 10 min     | Wechsel von Webstorm zu VS Code |
-| 12.05.2019 | Erstellung eines Component-Baums für die Projekt Web-Anwendung | 1 h 30 min | Nur grober Plan                 |
+| Datum      | Tätigkeit                                                          | Dauer      | Zusatz                          |
+| :--------- | :----------------------------------------------------------------- | :--------- | :------------------------------ |
+| 06.05.2019 | Einbinden der Mockups                                              | 1 h        |                                 |
+| 06.05.2019 | Erstellung eines Zustandsdiagramm für die Mockups                  | 1 h 30 min |                                 |
+| 07.05.2019 | Definition der API des Projekts                                    | 3 h        |                                 |
+| 09.05.2019 | Einarbeitung in Form-Validation                                    | 1 h        |                                 |
+| 10.05.2019 | Fertigstellung der Schnittstelle                                   | 2 h 30 min |                                 |
+| 12.05.2019 | Definition von [Form-Validation](react/index#form-validation)      | 30 min     |                                 |
+| 12.05.2019 | Überarbeitung der React Dokumentation                              | 10 min     | Wechsel von Webstorm zu VS Code |
+| 12.05.2019 | Erstellung eines Component-Baums für die Projekt Web-Anwendung     | 1 h 30 min | Nur grober Plan                 |
+| 12.05.2019 | Hinzufügen vom Layout und SideDrawer für die Projekt Web-Anwendung | 2 h        |                                 |
+
+## Woche 6
+
+**13.05.2019 - 19.05.2019**
+
+| Datum      | Tätigkeit                                                                             | Dauer   | Zusatz                                        |
+| :--------- | :------------------------------------------------------------------------------------ | :------ | :-------------------------------------------- |
+| 13.05.2019 | Erstellung des Titels und Navigation für die Projekt Web-Anwendung                    | 1 h     |                                               |
+| 14.05.2019 | Fertigstellung des SideDrawers für die Projekt Web-Anwendung                          | 3 h     |                                               |
+| 16.05.2019 | Verbesserung des Responsive Design des SideDrawers für die Projekt Web-Anwendung      | 2 h     |                                               |
+| 16.05.2019 | Fertigstellung des Impressums für die Projekt Web-Anwendung                           | 1 h     |                                               |
+| 16.05.2019 | Fertigstellung der Landing Page für die Projekt Web-Anwendung                         | 2 h     | Ohne Überprüfung ob der Username gesetzt ist  |
+| 16.05.2019 | Verbesserung des Responsive Design für die Projekt Web-Anwendung                      |  1 h    |                                               |
+| 16.05.2019 |  Fertigstellung der Lobbyliste für die Projekt Web-Anwendung                          |  3 h    |                                               |   |
+| 17.05.2019 | Hinzufügen von einer Hover Animation der LobbyListItems für die Projekt Web-Anwendung | 30 min  |                                               |
+| 17.05.2019 |  Verbesserungen an der Suchleite in der Lobbylist für die Projekt Web-Anwendung       | 30 min  |                                               |
+| 18.05.2019 | Entfernen von unnötigen Dateien aus der Web-Anwendung Historie                        | 20 min  | |
+| 18.05.2019 | Einarbeitung in Redux, React-redux und Redux-thunk                                    | 3 h 30 min | |

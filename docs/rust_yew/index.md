@@ -382,6 +382,36 @@ hosts = [
 <details>
     <summary> Das Aufbauen einer Webseite mit Hilfe von WebAssembly und Yew in Rust </summary>
 
+### Warum soll man Wasm benutzen?
+
+#### Nicht nur JavaScript
+
+Bis etwa Ende 2017 war die einzige Möglichkeit des Programmierens auf der Clientseite im Web nur mit JavaScript möglich. Wasm ermöglicht es eine Systemprogrammiersprache, wie C/C++ oder Rust, in einem Assembely-ähnlichem Datenformat zu Kompilieren, welches dann vom Browser ausgefürht werden kann. Wasm soll aber nicht als Ersatz für JS gesehen werden, sondern als erweiterung für Use-Cases die von den Vorteilen von Wasm profitieren.
+
+![When to use Wasm Chart](img/when_to_use.png)
+
+#### Schnelligkeit
+
+Da Wasm Dateiformat binär ist, lädt und fürht der Browser die Dekodierung der Datei schneller aus als das Parsen einer JavaScript-Datei. Die Kompilierung kann in Fällen schneller als die Just-In-Time Kompilierung der JavaScript-Datei sein und muss nicht nachträglich in der Laufzeit optimiert werden, da dies schon bei der Generierung der Datei passiert. Generell wird die Ausführung von Wasm 20x schneller als JS gesehen und nur 20% langsamer als die Ausführung von nativem Code
+
+![Yew.rs compared to popular JS frameworks (outdated)](img/yew_speed_comparison.png)
+
+#### Übertragbarkeit
+
+Ein wichtiger Punkt bei dem Design von WebAssembly war es, dass die Software auf jedem Endgerät läuft, egal welcher Prozessor oder Betriebssystem auf dem Gerät läuft. Somit kann die Software auf x86, x64 und ARM sowie auf MacOS, Windows und linuxbasierten Systemen ausgeführt werden.
+
+### Wasm Workflow
+
+Wasm wird generell als Zusatz zu einer bestehenden Webandwendung gesehen und somit kann dann zum Beispiel eine Webseite ein Spiel einbinden, das in Wasm umgewandelt wurde, aber der Rest kann HTML und JS sein.
+
+![Regular Wasm workflow](img/wasm_workflow.png)
+
+#### Unterscheid zu yew.rs
+
+Yew ermöglicht es einem die ganze Webseite in Rust zu erstellen, sodass die `index.html` als Einstiegspunkt dient aber der Inhalt folgend durch die Wasm-Datei gefüllt wird. Zudem wird leicht ermöglicht externe JavaScript Funktionen einzubinden und auszuführen
+
+![Yew workflow](img/yew_workflow.png)
+
 ### MVC mit Yew
 
 Der grundlegende Aufbau für eine Webseite mit Wasm und einem MVC Ansatz ist, dass man ein `struct Model` Implementiert, indem Services (FetchService, ConsoleService, LocalStorageService) oder reguläre Variablen definiert werden. Um diese zu Initialisieren muss man ein `Component` für das `Model` Implementieren, welches die Methoden `create` und `update` beinhalten muss. 
@@ -492,32 +522,31 @@ Hier kann man auch sehen, wie für `Message::Bulk()` ein `vector` erstellt wird,
 
 </details>
 
-## Warum soll man Wasm benutzen?
+## Routing
 
-### Nicht nur JavaScript
+Das Routing mit yew with durch eine Crate vereinfacht, das "yew_routing" heißt. Um dann ein Routing anzuwenden, muss man lediglich `Routable` für das Component Implementieren, welches aus zwei Methoden besteht. Eine davon wertet die Route aus und die andere versucht sie anzuwenden. Um das Routing dann anzuwenden, benöting die Hauptseite den Tag `<YewRouter: with router_props, />`, bei dem folgend das Component passend zur Route dargestellt wird.
 
-Bis etwa Ende 2017 war die einzige Möglichkeit des Programmierens auf der Clientseite im Web nur mit JavaScript möglich. Wasm ermöglicht es eine Systemprogrammiersprache, wie C/C++ oder Rust, in einem Assembely-ähnlichem Datenformat zu Kompilieren, welches dann vom Browser ausgefürht werden kann. Wasm soll aber nicht als Ersatz für JS gesehen werden, sondern als erweiterung für Use-Cases die von den Vorteilen von Wasm profitieren.
+## Dynamische HTML Generierung
 
-![When to use Wasm Chart](img/when_to_use.png)
+Für die dynamische HTML Generierung braucht man zunächst ein Struct das man darstellen möchte. Ebenfalls muss man für das Struct eine View mit dem HTML Macro Implementieren. Möchte man folgend für mehrere Elemente des Typs die HTML generieren, dann müssen diese in einer Datenstruktur gespeichert sein, die man Iterieren und Mappen kann. Zuletzt führt man in einem HTML die Iterierung der Datenstruktur durch und mapped die Elemente des Structs mit der View.
 
-### Schnelligkeit
+```
+<div>
+    { for self.keywords.iter().map(Keyword::view) }
+</div>
 
-Da Wasm Dateiformat binär ist, lädt und fürht der Browser die Dekodierung der Datei schneller aus als das Parsen einer JavaScript-Datei. Die Kompilierung kann in Fällen schneller als die Just-In-Time Kompilierung der JavaScript-Datei sein und muss nicht nachträglich in der Laufzeit optimiert werden, da dies schon bei der Generierung der Datei passiert. Generell wird die Ausführung von Wasm 20x schneller als JS gesehen und nur 20% langsamer als die Ausführung von nativem Code
+impl Renderable<Model> for Keyword {
+    fn view(&self) -> Html<Model> {
+        let uuid: KeywordUuid = self.uuid;
+        html! {
+            <div>
+                { &self.title }
+            </div>
+        }
+    }
+}
+```
 
-![Yew.rs compared to popular JS frameworks (outdated)](img/yew_speed_comparison.png)
+## Multi Threading via Web Worker
 
-### Übertragbarkeit
-
-Ein wichtiger Punkt bei dem Design von WebAssembly war es, dass die Software auf jedem Endgerät läuft, egal welcher Prozessor oder Betriebssystem auf dem Gerät läuft. Somit kann die Software auf x86, x64 und ARM sowie auf MacOS, Windows und linuxbasierten Systemen ausgeführt werden.
-
-## Wasm Workflow
-
-Wasm wird generell als Zusatz zu einer bestehenden Webandwendung gesehen und somit kann dann zum Beispiel eine Webseite ein Spiel einbinden, das in Wasm umgewandelt wurde, aber der Rest kann HTML und JS sein.
-
-![Regular Wasm workflow](img/wasm_workflow.png)
-
-### Unterscheid zu yew.rs
-
-Yew ermöglicht es einem die ganze Webseite in Rust zu erstellen, sodass die `index.html` als Einstiegspunkt dient aber der Inhalt folgend durch die Wasm-Datei gefüllt wird. Zudem wird leicht ermöglicht externe JavaScript Funktionen einzubinden und auszuführen
-
-![Yew workflow](img/yew_workflow.png)
+Da es sehr hilfreich ist, zum Beispiel Daten im Hintergrund zu senden oder empfangen, werden Web Worker benutzt. Im Yew Kontext ist die Implementierung eines funktionfähgen Web Workers relativ simpel. Um den Web Worker zu starten wird nur ein `link` zu der Umgebung benötigt, in dem sich der Agent befindet. Der Worker kann auf innere Nachrichten antworten, die durch den `send_back` callback verursacht werden oder Nachrichten von Komponenten anderer Agenten. Man kann bei der Initialisierung definieren, in welchem Kontext er sich befindet und wer auf ihn zugreifen kann.

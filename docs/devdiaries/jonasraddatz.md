@@ -39,5 +39,43 @@ __29.04.2019 - 05.05.2019__
 | Datum      | Tätigkeit      | Dauer  | Zusatz |
 | ---------- | -------------- | ------ | ------ |
 | 29.04.2019 | Recherche und Grafiksuche zu Event-Driven-Architecture | 45 min |        |
-| 29.04.2019 | Recherche und Dokumentation AMQP | 3 h min | AMQP 0.9.1 und 1.0 sind komplett unterschiedliche Protokolle |
+| 29.04.2019 | Recherche und Dokumentation AMQP | 3 h | AMQP 0.9.1 und 1.0 sind komplett unterschiedliche Protokolle |
 | 29.04.2019 | Projekt: Entwürfe zu System- und Softwarearchitektur finalisiert | 1 h |        |
+
+## Woche 5
+
+__06.05.2019 - 12.05.2019__
+
+| Datum      | Tätigkeit      | Dauer  | Zusatz |
+| ---------- | -------------- | ------ | ------ |
+| 10.05.2019 | Absprache zu Projektdokumentation   | 1 h    |        |
+| 12.05.2019 | Recherche MQTT-Paketstruktur        | 30 min |        |
+| 12.05.2019 | Recherche Event-Driven-Architecture | 30 min |        |
+
+## Woche 6
+
+__13.05.2019 - 19.05.2019__
+
+| Datum      | Tätigkeit      | Dauer  | Zusatz |
+| ---------- | -------------- | ------ | ------ |
+| 13.05.2019 | Einpflegen und Überarbeiten der Texte | 2 h   |        |
+| 13.05.2019 | Django für Backend (HelloWorld etc.) | 2 h   |        |
+| 13.05.2019 | Recherche zu Django | 2 h |        |
+| 14.05.2019 | Server aufsetzen und einrichten in Azure-Cloud | 2 h |        |
+| 14.05.2019 | Datenmodell definieren | 2 h |        |
+| 19.05.2019 | MQTT-Broker aufsetzen | 3 h | Probleme mit Azure |
+| 19.05.2019 | Travis aufsetzen | 1 h |        |
+
+
+## Woche 7
+
+__20.05.2019 - 26.05.2019__
+
+| Datum      | Tätigkeit      | Dauer  | Zusatz |
+| ---------- | -------------- | ------ | ------ |
+| 20.05.2019 | Kommunikationsprotokoll definieren | 30 min | MQTT-Topic und Payload |
+| 20.05.2019 | Bash-Skripte um Broker zu steuern | 15 min |        |
+| 20.05.2019 | MQTT-Client in nodejs implementieren | 3,5 h |  |
+
+
+

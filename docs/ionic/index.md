@@ -122,15 +122,72 @@ Bei einer "Page" handelt es sich im wesentlichen um eine View. Eine Page Kompone
     * Erlaubt die Implementierung von Logik innerhalb der Page. Es ist in TypeScript implementiert und liefert somit diverse Möglichkeiten aus der OOP-Welt, wie Vererbung oder die Implementierung von Interface's, desweiteren bietet es auch einen Konstruktor. "ngOnInit()" ist eine Funktion, welche beim Initialisierungsvorgang der Page ausgeführt wird.
 
 #### Service
-Ein Service sorgt für die konsistente Datenhaltung innerhalb der Applikation. Angenommen 3 Pages ermöglichen die Bearbeitung und Betrachtung von ein und dem selben Datensatz. Die Pages beziehen ihre Daten nun aus einem einzigen Service, welcher sich darum kümmert, dass die Daten korrekt in allen Pages aktualisert werden. 
+Ein Service beinhaltet selbstdefinierbare Funktionalitäten, welche an mehreren Stellen in der Applikation wiederverwendet werden können. So sorgt ein Service z.B. für die konsistente Datenhaltung über mehrere Pages. Der Vorteil ist, dass so redundanter Code, für die eine Funktionalität, auf mehreren Pages, vermieden werden kann. 
 
 Ein Service besteht aus den folgenden Elementen:
 
 * service.spec.ts:
 
 * service.ts:
-    * Enthält die Logik für die Datenhaltung/Datenbeschaffung. Hier könnte man z.B. ein Modul für MySQL einbinden und somit Zugriffe auf die Datenbank ermöglichen.
+    * Enthält die Logik, welche über mehrere Komponenten geteilt werden kann.
 
+Ein Service verwendet das Dekorierer-Muster und referenziert stets auf die "@Injectable()" Methode.
+
+Beispie service.ts:
+```javascript
+import { Injectable } from '@angular/core';
+
+@Injectable()
+export class SomeService {
+
+	constructor() {
+
+	}
+
+	someFunction(){
+		console.log("I do something useful!");
+	}
+
+}
+```
+
+##### Decorator-Muster
+
+![Alt text](img/Dekorierer.svg.png "Title")
+
+Ein Dekorierer bietet den Vorteil, dass große Vererbungshierarchien vermieden werden. Aber vorallem ermöglicht es in diesem Zusammenhang, dass Funktionalitäten zur Laufzeit durch den "Dekorierer" flexibel ausgetauscht werden können. 
+
+##### Einbinden des Services
+
+1) Importieren des Services: 
+```typescript 
+import { SomeService } from './../../services/some.service';
+```
+2) Instanzieren im Konstruktor:
+```typescript 
+constructor(private someService: SomeService) { }
+```
+3) Verwenden der bereitgestellten Methode:
+```typescript 
+this.someService.someFunction();
+```
+
+Beispiel:
+```typescript
+import { SomeService } from './../../services/some.service';
+import { Component, OnInit } from '@angular/core';
+ 
+export class SomePage implements OnInit {
+ 
+  constructor(private someService: SomeService) { }
+ 
+  ngOnInit() { }
+ 
+  runService() {    
+    this.someService.someFunction();
+  }
+}
+```
 
 ### Navigation
 
