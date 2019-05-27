@@ -120,6 +120,7 @@
 
 **27.05.2019 - 02.06.2019**
 
-| Datum       | Tätigkeit                                          | Dauer | Zusatz |
-| :---------- | :------------------------------------------------- | :---- | :----- |
-|  27.05.2019 | Einarbeitung in Test für React mit Jest und Enzyme | 2 h   |        |
+| Datum       | Tätigkeit                                          | Dauer | Zusatz              |
+| :---------- | :------------------------------------------------- | :---- | :------------------ |
+|  27.05.2019 | Einarbeitung in Test für React mit Jest und Enzyme | 2 h   |                     |
+| 27.05.2019  | Erstellung von Tests für die Projekt Web-Anwendung | 2 h   |  Nicht Komplettiert | 
