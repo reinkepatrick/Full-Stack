@@ -246,6 +246,15 @@ Um diese Stores zu verwalten, bietet Akita verschiedene Methoden an.
 
 Ein weiteres Element in diesem Pattern sind die Queries. Diese sind vergleichbar mit den Queries aus Datenbankabfragen. Diese Queries fragen einfach die Daten aus den Stores ab. Queries können dabei mit anderen Queries verbunden werden und aus verschiedenen Stores Daten abrufen und verknüpfen. Auch bei den Queries gibt es verschiedene Arten für den Basisstore und für den Querystore. Die sind aber bis auf Kleinigkeiten gleich. Viel wichtiger ist da ein weiterer Unterschied zwischen den Queries. Es gibt einmal reaktive Queries und einmal synchronisierende Queries. Die einen können aufgerufen werden und die anderen aktualisieren sich bei Änderungen automatisch. Dafür wird das Observable Pattern benutzt.
 
+## Vergleich Frameworks
+
+| Name  | Pattern          | Sprachen | Programmieransatz | Vorteile                    | Nachteile                             | Doku                                 |
+| ----- | ---------------- | -------- | ----------------- | --------------------------- | ------------------------------------- | ------------------------------------ |
+| Redux | Flux             | React    | funktionell       | Single-Direction-Data-Flow  | großer Overhead                       | <https://redux.js.org/>              |
+| MobX  | Observable       | React    | funktionell       | schmale Lösung              | unübersichtlich bei großen Programmen | <https://mobx.js.org/>               |
+| NgRx  | Flux             | Angular  | funktionell       | Single-Direction-Data-Flow  | großer Overhead                       | <https://ngrx.io/>                   |
+| Akita | Flux, Observable | Angular  | objektorientiert  | vereint Flux und Observable | kaum Doku vorhanden                   | <https://netbasal.gitbook.io/akita/> |
+
 
 
 # Zusatz
