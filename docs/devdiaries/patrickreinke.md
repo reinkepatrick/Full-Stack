@@ -110,4 +110,14 @@
 | 23.05.2019  |  Umstieg auf normale JavaScript Websockets                                                                    |  4 h        |  Wird nicht als Middleware verwendet                                     |
 |  24.05.2019 |  Fertigstellung der Labels                                                                                    |  1 h        |                                                                          |
 |  24.05.2019 | Einarbeitung in [chroma.js](https://gka.github.io/chroma.js/) und [react-select](https://react-select.com)    |  2 h 30 min |                                                                          |
-|  25.05.2019 |  Fertigstellung der Lobby Erstellung                                                                          |  1 h 30 min |                                                                          |   |
+|  25.05.2019 |  Fertigstellung des Designs der Lobby Erstellung                                                              |  1 h 30 min |                                                                          |
+| 25.05.2019  | Fertigstellung der Lobby Erstellung mit WebSockets                                                            |  2 h        |                                                                          |
+|  26.05.2019 |  Einarbeitung in HTTPS unter Docker                                                                           |  2 h        | Kein Erfolg, da ich Probleme mit dem Zertifikat unter Docker hatte       |
+
+## Woche 8
+
+**27.05.2019 - 02.06.2019**
+
+| Datum       | Tätigkeit                                          | Dauer | Zusatz |
+| :---------- | :------------------------------------------------- | :---- | :----- |
+|  27.05.2019 | Einarbeitung in Test für React mit Jest und Enzyme | 2 h   |        | 
