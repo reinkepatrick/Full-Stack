@@ -86,3 +86,12 @@ __20.05.2019 - 26.05.2019__
 | 23.05.2019 | App: Json Serialisierung und Kommunikation mit Backend (Lobbyliste) | 2 h        |                                            |
 | 23.05.2019 | UI Implementieren: Lobby erstellen                                  | 1 h 30 min |                                            |
 | 25.05.2019 | App: Lobby erstellen                                                | 4 h        | Problem mit Datentransfer zwischen Widgets |
+
+## Woche 8 
+__27.05.2019 - 02.06.2019__
+
+| Datum      | Tätigkeit                                                   | Dauer  | Zusatz |
+| ---------- | ----------------------------------------------------------- | ------ | ------ |
+| 27.05.2019 | App: Speicherung der Einstellungen für eine Lobby angepasst | 30 min |        |
+| 27.05.2019 | App: Lobby im Backend erstellen                             | 2 h    |        |
+| 27.05.2019 | Travis einrichten und Beispieltest erstellen                | 1 h    |        |
