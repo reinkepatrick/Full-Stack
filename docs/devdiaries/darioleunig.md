@@ -74,6 +74,18 @@ Zuzüglich zur Heimarbeit beinhaltet jede Woche das Seminar (1h 30m) mit anschli
 
 **20.05.2019 - 26.05.2019**
 
-| Datum      | Tätigkeit                                   | Dauer | Zusatz |
-| ---------- | ------------------------------------------- | ----- | ------ |
-| 20.05.2019 | Recherche zum Thema AuthGuard & AuthService | 20m   |        |
+| Datum      | Tätigkeit                                        | Dauer | Zusatz |
+| ---------- | ------------------------------------------------ | ----- | ------ |
+| 20.05.2019 | Recherche zum Thema AuthGuard & AuthService      | 20m   |        |
+| 22.05.2019 | Optimierung am Login                             | 1h    |        |
+| 22.05.2019 | Implementierung von AuthGuard (fehlerhaft)       | 2h    |        |
+| 25.05.2019 | Recherche zum Thema Dependency Injection         | 45m   |        |
+| 26.05.2019 | Kleinere Änderungen am Source-Code (refactoring) | 30m   |        |
+
+## Woche 8 
+
+**27.05.2019 - 02.06.2019**
+
+| Datum | Tätigkeit | Dauer | Zusatz |
+| ----- | --------- | ----- | ------ |
+|       |           |       |        |
