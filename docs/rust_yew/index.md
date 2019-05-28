@@ -550,3 +550,21 @@ impl Renderable<Model> for Keyword {
 ## Multi Threading via Web Worker
 
 Da es sehr hilfreich ist, zum Beispiel Daten im Hintergrund zu senden oder empfangen, werden Web Worker benutzt. Im Yew Kontext ist die Implementierung eines funktionfähgen Web Workers relativ simpel. Um den Web Worker zu starten wird nur ein `link` zu der Umgebung benötigt, in dem sich der Agent befindet. Der Worker kann auf innere Nachrichten antworten, die durch den `send_back` callback verursacht werden oder Nachrichten von Komponenten anderer Agenten. Man kann bei der Initialisierung definieren, in welchem Kontext er sich befindet und wer auf ihn zugreifen kann.
+
+## FetchService und Fetch
+
+Das FetchService ermöglicht es einem HTTP Requests zu senden. Bei einer Anfrage wird eine FetchTask erstellt, die Folgend von dem Service bearbeitet wird. Um so eine Task zu erstellen wird ein Request und ein Callback der Funktion `fetch` übergeben, welches dann die Request ausführt und das Response dem Callback übergibt. Zudem wird eine URL gebraucht, an dem das Request gesendet wird
+```rust
+fn function(fetch_service: &mut FetchService) -> FetchTask {
+    let url = "https://some.url/api".to_string();
+    let closure = move |response: Response<Result<String,Error>> | {
+        //handling
+    }
+    let callback = Callback::from(closure);
+    let request = Request::get(url)
+        .header("key","value")
+        .body(Nothing)
+        .unwrap
+    fetch_service.fetch(request, callback);
+} 
+```
