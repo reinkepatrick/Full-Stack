@@ -71,6 +71,11 @@ INSTALLED_APPS = [
 ]
 ```
 
+## Request-Response lifecycle
+
+![MTV](./img/django_cycle.png ':size=525')
+
+Der übliche Request-Response lifecycle in Django sieht so aus. Der Client, üblicherweise ein Browser, sendet einen Request an den Webserver. Dieser leitet den Request an die Middleware weiter. Hat der Request die Middleware erfolgreich verlassen, wird der Request an den URL Router geschickt. Jetzt wird der Request zu der entsprechenden View weitergeleitet. Die View holt üblicherweise Daten aus einer Datenbank mithilfe vom ORM. Dies ist, aber nicht zwingend notwendig. Nachdem die View die Daten verarbeitet hat, werden die Daten in den Context Processor gepackt, welche dem Template ermöglicht auf die Daten von der View zu zugreifen. Das Template wird mit den Daten zur Middleware geschickt, wo alle Schichten der Middleware erneut durchdrungen werden. Dies leitet es dann zu dem Webserver und der wiederrum leitet es zum Client. Somit hat der Client dann seine angeforderten Daten bekommen.
 
 ## Views
 Views sind für die Trennung zwischen Logik und Frontend zuständig. Jede App besitzt eine View. Die einfachste View ist diese hier:
