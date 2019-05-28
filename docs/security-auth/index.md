@@ -68,6 +68,14 @@ Sobald ein Schlüssel einer Person zugeordnet wurde, kann die Identität des Sig
 
 Es ist so gut wie unmöglich, eine Signatur zu fälschen, zu verfälschen oder eine zweite Nachricht zu erzeugen, die für die Signatur auch gültig ist. Ein private Key soll auch nicht aus den Signaturen und dem dazugehörigen Public Key berechnet werden können.
 
+## HMAC
+
+HMAC = Hash-based Message Authentication Code / Keyed-Hash Message Authentication Code
+
+HMAC sorgt dafür, dass Client und Server jeweils über einen private und einen public Key verfügen. Der private Key darf nur dem jeweiligen Server oder Client bekannt sein. Der public Key darf jedoch weitergegeben werden. Dadurch kann genau bewiesen werden, ob der Client berechtigt ist auf den Server zuzugreifen und stellt auch sicher, dass die Nachrichten nicht verändert wurden.
+
+Der Client stellt eine Anfrage an den Server. Dabei berechnet er einen einzigartigen HMAC. Um diesen Wert zu berechnen benutzt der Client die Nachricht, den geheimen Schlüssel und eine Hashfunktion. Nachdem der Server die Anfrage erhalten hat berechnet auch er einen HMAC. Diese beiden Werte werden danach vom Server verglichen. Sind sie identisch, wird der Client als vertrauenswürdig eingestuft und die Anfrage kann ausgeführt werden.
+
 ## Authentifizierung
 
 Identitäten lassen sich im Netz nur schwer beweisen und die meisten Websites oder Dienste verwenden unterschiedliche Techniken der Authentifizierung.
