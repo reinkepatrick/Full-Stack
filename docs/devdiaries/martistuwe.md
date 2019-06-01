@@ -95,3 +95,4 @@ __27.05.2019 - 02.06.2019__
 | 27.05.2019 | App: Speicherung der Einstellungen für eine Lobby angepasst | 30 min |        |
 | 27.05.2019 | App: Lobby im Backend erstellen                             | 2 h    |        |
 | 27.05.2019 | Travis einrichten und Beispieltest erstellen                | 1 h    |        |
+| 01.06.2019 | App: Errorhandling in Lobbyliste und UI der Lobby           | 3 h    |        |
