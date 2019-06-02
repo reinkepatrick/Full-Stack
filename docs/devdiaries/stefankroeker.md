@@ -96,4 +96,8 @@ __27.05.2019 - 02.06.2019__
 | Datum      | Tätigkeit                                                                                                                       | Dauer      | Zusatz |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------- | ---------- | ------ |
 | 27.05.2019 | Request-Response lifecycle erklärt.                                                                                             | 1h         |        |
+| 27.05.2019 | Travis CI einrichten                                                                                                            | 2h         | Probleme mit vault vars |
 | 28.05.2019 | Travis mit Django aufgesetzt.                                                                                                   | 3h 30min   |        |
+| 01.06.2019 | An Lobby funktionen gearbeitet.                                                                                                 | 3h         |        |
+| 02.06.2019 | Datenbank erstellt.                                                                                                             | 2h         |        |
+| 02.06.2019 | An Lobby funktionen gearbeitet.                                                                                                 | 5h         |        |
