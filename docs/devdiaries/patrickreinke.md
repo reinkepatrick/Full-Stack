@@ -128,3 +128,4 @@
 | 02.06.2019 | Trennen von Lobby-Reducer und Create-Reducer                   | 1 h   |                     |   |
 | 02.06.2019 | Reagieren auf Lobbylist Events                                 | 1 h   |                     |   |
 | 02.06.2019 | Beheben von Bugs in der Verwendung des WebSockets in der Lobby | 2 h   |                     |
+| 02.06.2019 | Fertigstellen der Lobbylist Events                             | 1 h   |                     |
