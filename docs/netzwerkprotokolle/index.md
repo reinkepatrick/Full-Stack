@@ -455,7 +455,48 @@ Einen guten Anhaltspunkt liefert die Fragenliste von [Phil Sturgeon](https://phi
 - Verwendest du nur einfaches CRUD mit simplen JSOM Dokumente oder braucht deine API File Upload und download?
 
 
-## GRPC
+## gRPC
+
+gRPC ist ein, von Google entwickeltes, RPC Framework. </br>
+
+### Was ist RPC?
+
+RPC steht für Remote Procedure Call und dient als Programmierschnittstelle um Prozesse auf entfernten Geräten zu starten. Im Grunde geht es darum, Methoden und Funktionen vom Client auf einen Server auszulagern. <br/>Der Client sendet eine Rad-Nachricht an den Server. Der Server empfängt diese Rad-Nachricht, liest die Daten über die Anwendung aus und leitet sie dann, an die jeweilige Server Anwendung weiter. Die Server Anwendung bearbeitet die Anfrage und schickt das Ergebnis an den Client zurück.
+
+Man unterscheidet grundlegend zwischen Synchronen und A-Synchronen RPC Anfragen. <br/>Bei Synchronen Anfragen muss der Client auf die Antwort des Servers warten und darf keine weiteren Aufgaben erledigen. Bei A-Synchronen Anfragen, ist es den Client möglich, weitere Operationen durchzuführen.
+
+### Google RPC
+
+gRPC ist ein RPC Framework, welches full duplex streaming erlaubt. Das ermöglicht grundlegend vier Arten von Schnittstellen mit gRPC.
+
+#### Unary
+
+![](./resources/img/grpcun.png)
+
+Die klassische Client-Server Architektur. Der Client sendet eine Anfrage und der Server sendet eine Antwort.
+
+#### Server Streaming
+
+![](./resources/img/grpcses.png)
+
+Beim Server Streaming, sendet der Client eine Anfrage und der Server antwortet mit einem Stream. Mithilfe dieses Streams kann der Server mehrere Antworten in beliebiger Zeit verschicken.
+
+#### Client Streaming
+
+![](./resources/img/grpccs.png)
+
+Hier stellt der Client eine Anfrage Stream und kann mehrere Anfragen in beliebiger Zeit verschicken. Wenn der Server antwortet, ist die Verbindung beendet.
+
+#### Bi Directional Streaming
+
+![](./resources/img/grpcbi.png)
+
+Beim Bi Directional Streaming sendet der Client einen Anfrage Stream und der Server antwortet mit einem Stream.
+
+### Anwendunge
+
+gRPC befindet sich derzeit noch in Enwicklung, aber bereits viele große Firmen wie [Square](https://corner.squareup.com/2015/02/grpc.html), [Netflix](https://github.com/Netflix/ribbon), [CoreOS](https://blog.gopheracademy.com/advent-2015/etcd-distributed-key-value-store-with-grpc-http2/), [Docker](https://blog.docker.com/2015/12/containerd-daemon-to-control-runc/), [CockroachDB](https://github.com/cockroachdb/cockroach), [Cisco](https://github.com/CiscoDevNet/grpc-getting-started), [Juniper Networks](https://github.com/Juniper/open-nti) verwebdeb gRPC. 
+
 
 ## Websockets
 
@@ -550,6 +591,8 @@ QUIC wurde mit besonderen Fokus auf Sicherheit entwickelt, durch die starke und 
 - [HTTP Upgrade Header](https://en.wikipedia.org/wiki/HTTP/1.1_Upgrade_header)
 
 - [WebSockets Grafik](https://www.pubnub.com/websockets/)
+
+- [GRPC](https://grpc.io/)
 
   ​
 
