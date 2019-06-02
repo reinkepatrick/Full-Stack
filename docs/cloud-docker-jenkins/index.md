@@ -30,7 +30,7 @@ Ziel der Continuous Delivery ist eine Codebasis, die jederzeit für die Implemen
 
 Die abschließende Phase ermöglicht es den geprüften Code an den Kunden direkt auszuliefern. Diese Pipeline kann somit z. B. eine App direkt und voll automatisch in den Store laden.
 
-### Tools
+### Tools + Vergleich
 
 Es folgt eine Liste von CI-Tools mit einer kurzen Beschreibung und einigen Vor- bzw. Nachteilen. Es wurden nur frei nutzbare Tools in die Liste aufgenommen, da es ein schier grenzenlose Zahl von kommerziellen CI-Versionen gibt, die sich nur wenig unterscheiden oder spezielle Build Systeme bereitstellen.
 
@@ -67,15 +67,55 @@ Gitlab CI stellt auch eine Cloud-basierte Lösung dar, bei der allerdings die Se
 
 **Möglichkeiten Jenkins aufzusetzen**
 
-Man kann Jenkins auf allen Systemen installieren, dafür benötigt man nur ein OS mit einem installierten Java (7 oder 8, mit 9 läuft es wohl noch nicht). Möchte man die Builds mit Docker-Containern ausführen, benötigt man natürlich auch noch eine lauffähige Docker-Umgebung.
-
-### Hello World - Java Projekt
+Man kann Jenkins auf allen Systemen installieren, dafür benötigt man nur ein OS mit einem installierten Java (7 oder 8). Möchte man ein Build mit Docker-Containern ausführen, benötigt man natürlich auch noch eine lauffähige Docker-Umgebung.
 
 ### Pipelines
 
+In Jenkins arbeitet man mit sogenannten Pipelines. Sie können sehr flexibel eingesetzt und mit Plugins erweitert werden. Einfach gesagt führen sie die Schritte automatisch aus, die für ein Test-Build-Deploy-Prozess nötig sind. Es gibt zwei Möglichkeiten eine Pipeline zu benutzten:
+
+**Jenkinsfile (Declarative Pipeline)**
+
+```groovy
+pipeline {
+    agent none 
+    stages {
+        stage('Example Build') {
+            agent { docker 'maven:3-alpine' } 
+            steps {
+                echo 'Hello, Maven'
+                sh 'mvn --version'
+            }
+        }
+        stage('Example Test') {
+            agent { docker 'openjdk:8-jre' } 
+            steps {
+                echo 'Hello, JDK'
+                sh 'java -version'
+            }
+        }
+    }
+}
+```
+
+**Jenkinsfile (Scripted Pipeline)**
+
+```groovy
+node {
+    stage('Example') {
+        if (env.BRANCH_NAME == 'master') {
+            echo 'I only execute on the master branch'
+        } else {
+            echo 'I execute elsewhere'
+        }
+    }
+}
+```
+
+Note: Liegt das Jenkinsfile im Wurzelverzeichnis des Repositorys, erkennt Jenkins das und für diese Schritte aus.
+
 ### Plugins
 
-### Jenkinsfile
+Es gibt unzählige Erweiterungen für Jenkins (mehr unter [Jenkins Plugins](https://plugins.jenkins.io/)). Als Anfänger sollte man allerdings die empfohlenen Plugins wählen. Erwähnenswert ist das Plugin **Blue Ocean**, dass eine sehr ansprechende Oberfläche bietet und den CI-CD Prozess übersichtlich darstellt.
 
 ## Docker
 
@@ -178,9 +218,9 @@ nginx:
 | docker-compose rm          | Entfernt Container(docker-compose ps)                        |
 | docker-compose build       | Baut alle Container zusammen und tagged diese dann, sodass sie beim nächsten Starten schneller verfügbar sind. |
 
-**Kubernates**
+**Kubernetes**
 
-Kubernates ist ein Tool zur Containerorchestrierung von Google, dabei handelt es sich um eine ausgefeiltere Orchestrierungslösung auf höherem Niveau, die auch Failover- und Skalierungs-features mitbringt und auch auf anderen Clustering-Lösungen aufsetzen kann. Es geht seine eigenen Wege und erzwingt eine Reihe von Konzepten rund um die Organisation und das Vernetzen von Containern.
+Kubernetes ist ein Tool zur Containerorchestrierung von Google, dabei handelt es sich um eine ausgefeiltere Orchestrierungslösung auf höherem Niveau, die auch Failover- und Skalierungs-features mitbringt und auch auf anderen Clustering-Lösungen aufsetzen kann. Es geht seine eigenen Wege und erzwingt eine Reihe von Konzepten rund um die Organisation und das Vernetzen von Containern.
 
  (http://kubernetes.io)
 
@@ -261,7 +301,7 @@ docker run test/cowsay-dockerfile Hallo Muh
 
 ## coachr
 
-![Coachr_CI_CD](img/Coachr_CI_CD.png)
+![coachr_CI_CD](img\coachr_CI_CD.jpg)
 
 ## Quellen
 
