@@ -82,15 +82,17 @@ __20.05.2019 - 26.05.2019__
 
 __27.05.2019 - 02.06.2019__
 
-| Datum      | Tätigkeit                             | Dauer | Zusatz |
-| ---------- | ------------------------------------- | ----- | ------ |
-| 27.05.2019 | Jenkins Pipeline Fehler beheben       | 2,5 h |        |
-| 28.05.2019 | Wöchentliches Meeting - Projektarbeit |       |        |
-|            |                                       |       |        |
+| Datum      | Tätigkeit                                       | Dauer | Zusatz |
+| ---------- | ----------------------------------------------- | ----- | ------ |
+| 27.05.2019 | Jenkins Pipeline Fehler beheben                 | 2,5 h |        |
+| 28.05.2019 | Wöchentliches Meeting - Projektarbeit           | 4,5 h |        |
+| 28.05.2019 | Backend-API eingerichtet und zugreifbar gemacht | 2,5 h |        |
+| 01.06.2019 | coachr-Diagramm erstellen mit Draw.io           | 2 h   |        |
+| 02.06.2019 | Arbeitet an der Dokumentation                   | 1 h   |        |
 
 ## Woche 9
 
-__03.05.2019 - 09.06.2019__
+__03.06.2019 - 09.06.2019__
 
 | Datum | Tätigkeit                             | Dauer | Zusatz |
 | ----- | ------------------------------------- | ----- | ------ |
