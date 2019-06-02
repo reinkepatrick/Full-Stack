@@ -93,3 +93,14 @@ __20.05.2019-26.05.2019__
 | 22.05 | letzte Fehler im  GraphQL Schema behoben | 180min |                                          |
 | 23.05 | Datum wird nicht mehr als String abgespeichert | 30min  | In der DB als Date, GraphQL liefert Zeit seit 1970 in ms zurück. Umrechnung auf Clients |
 | 26.05 | Websockets Doku                          | 60min  |                                          |
+
+## Woche 8
+
+__27.05.2019-02.06.2019__
+
+| Datum | Tätigkeit                                | Dauer  | Zusatz                                   |
+| ----- | ---------------------------------------- | ------ | ---------------------------------------- |
+| 02.06 | gRPC Vortrag angesheen                   | 60min  | <https://www.youtube.com/watch?v=ZDUA5pD50Ok&t=2236s> |
+| 02.06 | Versucht automatische ID vergabe in die GraphQL API zu implementieren | 120min | MongoDB liefert keine implementierung, typische realisierung über zwischen Tabelle, Befehl .findAndModify wirft fehler. Suche geht weiter |
+| 02.06 | Recherche RPC und gRPC v2                | 120min |                                          |
+| 02.06 | Dokumentation gRPC                       | 60min  |                                          |
