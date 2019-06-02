@@ -120,7 +120,11 @@
 
 **27.05.2019 - 02.06.2019**
 
-| Datum       | Tätigkeit                                          | Dauer | Zusatz              |
-| :---------- | :------------------------------------------------- | :---- | :------------------ |
-|  27.05.2019 | Einarbeitung in Test für React mit Jest und Enzyme | 2 h   |                     |
-| 27.05.2019  | Erstellung von Tests für die Projekt Web-Anwendung | 2 h   |  Nicht Komplettiert | 
+| Datum      | Tätigkeit                                                      | Dauer | Zusatz              |
+| :--------- | :------------------------------------------------------------- | :---- | :------------------ |
+| 27.05.2019 | Einarbeitung in Test für React mit Jest und Enzyme             | 2 h   |                     |
+| 27.05.2019 | Erstellung von Tests für die Projekt Web-Anwendung             | 2 h   |  Nicht Komplettiert |
+| 30.05.2019 | Fertigstellung der Benutzername Eingabe                        | 4 h   |                     |
+| 02.06.2019 | Trennen von Lobby-Reducer und Create-Reducer                   | 1 h   |                     |   |
+| 02.06.2019 | Reagieren auf Lobbylist Events                                 | 1 h   |                     |   |
+| 02.06.2019 | Beheben von Bugs in der Verwendung des WebSockets in der Lobby | 2 h   |                     |
