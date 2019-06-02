@@ -59,10 +59,40 @@ __06.05.2019 - 12.05.2019__
 
 __13.05.2019 - 19.05.2019__
 
+| Datum      | Tätigkeit                                          | Dauer | Zusatz |
+| ---------- | -------------------------------------------------- | ----- | ------ |
+| 14.05.2019 | Wöchentliches Meeting - Projektarbeit              | 4,5 h |        |
+| 16.05.2019 | Recherche und Preisvergleiche PaaS-Anbieter        | 2 h   |        |
+| 16.05.2019 | Recherche Building & Testing Angular               | 1,5 h |        |
+| 19.05.2019 | Planung des CI-Serveraufbaus (Diagramm Erstellung) | 3 h   |        |
+
+## Woche 7
+
+__20.05.2019 - 26.05.2019__
+
+| Datum      | Tätigkeit                                        | Dauer | Zusatz |
+| ---------- | ------------------------------------------------ | ----- | ------ |
+| 21.05.2019 | Wöchentliches Meeting - Projektarbeit            | 6,5 h |        |
+| 22.05.2019 | Jenkins Server in AWS EC2 Instanz starten        | 3 h   |        |
+| 24.05.2019 | ASP.NET Backend und MySQL in EC2 Instanz starten | 6,5 h |        |
+| 25.05.2019 | Angular App und Jenkins in EC2 Instanz starten   | 1,5 h |        |
+| 25.05.2019 | Jenkins Pipeline einrichten                      | 6 h   |        |
+
+## Woche 8
+
+__27.05.2019 - 02.06.2019__
+
+| Datum      | Tätigkeit                             | Dauer | Zusatz |
+| ---------- | ------------------------------------- | ----- | ------ |
+| 27.05.2019 | Jenkins Pipeline Fehler beheben       | 2,5 h |        |
+| 28.05.2019 | Wöchentliches Meeting - Projektarbeit |       |        |
+|            |                                       |       |        |
+
+## Woche 9
+
+__03.05.2019 - 09.06.2019__
+
 | Datum | Tätigkeit                             | Dauer | Zusatz |
 | ----- | ------------------------------------- | ----- | ------ |
 |       | Wöchentliches Meeting - Projektarbeit |       |        |
-|       | Docker Volumes                        |       |        |
-|       | Docker Orchestrieren/Verbinden        |       |        |
-|       | Jenkins Pipeline erstellen            |       |        |
-
+|       |                                       |       |        |
