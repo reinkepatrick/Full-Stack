@@ -108,4 +108,4 @@ __03.06.2019 - 09.06.2019__
 
 | Datum      | Tätigkeit                                                                                                                       | Dauer      | Zusatz                        |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------- | ---------- | ----------------------------- |
-| 27.05.2019 | An Lobby funktionen gearbeitet.                                                                                                 | 3h         | Es gab noch Bugs in der Liste |
+| 27.05.2019 | An Lobby funktionen gearbeitet.                                                                                                 | 4h         | Es gab noch Bugs in der Liste |
