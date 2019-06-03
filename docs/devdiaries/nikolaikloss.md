@@ -97,6 +97,7 @@ __21.05.2019 - 27.05.2019__
 
 ## Woche 8
 __28.05.2019 - 03.06.2019__
+
 |Datum|Tätigkeit|Dauer|Zusatz|
 | - | - | - | - |
 | 28.05.2019 | Planer-Gui grob implementiert | 35 min | |
