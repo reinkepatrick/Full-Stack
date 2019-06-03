@@ -114,18 +114,26 @@
 | 24.05.2019 | Einarbeitung in [chroma.js](https://gka.github.io/chroma.js/) und [react-select](https://react-select.com)    | 2 h 30 min |                                                                          |
 | 25.05.2019 | Fertigstellung des Designs der Lobby Erstellung                                                               | 1 h 30 min |                                                                          |
 | 25.05.2019 | Fertigstellung der Lobby Erstellung mit WebSockets                                                            | 2 h        |                                                                          |
-| 26.05.2019 | Einarbeitung in HTTPS unter Docker                                                                            | 2 h        | Kein Erfolg, da ich Probleme mit dem Zertifikat unter Docker hatte       |
+| 26.05.2019 | Einarbeitung in HTTPS unter Docker                                                                            | 2 h        | Kein Erfolg, da ich Probleme mit dem Zertifikat unter Docker hatte       |
 
 ## Woche 8
 
 **27.05.2019 - 02.06.2019**
 
-| Datum      | Tätigkeit                                                      | Dauer | Zusatz              |
-| :--------- | :------------------------------------------------------------- | :---- | :------------------ |
-| 27.05.2019 | Einarbeitung in Test für React mit Jest und Enzyme             | 2 h   |                     |
-| 27.05.2019 | Erstellung von Tests für die Projekt Web-Anwendung             | 2 h   |  Nicht Komplettiert |
-| 30.05.2019 | Fertigstellung der Benutzername Eingabe                        | 4 h   |                     |
-| 02.06.2019 | Trennen von Lobby-Reducer und Create-Reducer                   | 1 h   |                     |   |
-| 02.06.2019 | Reagieren auf Lobbylist Events                                 | 1 h   |                     |   |
-| 02.06.2019 | Beheben von Bugs in der Verwendung des WebSockets in der Lobby | 2 h   |                     |
-| 02.06.2019 | Fertigstellen der Lobbylist Events                             | 1 h   |                     |
+| Datum      | Tätigkeit                                                      | Dauer | Zusatz             |
+| :--------- | :------------------------------------------------------------- | :---- | :----------------- |
+| 27.05.2019 | Einarbeitung in Test für React mit Jest und Enzyme             | 2 h   |                    |
+| 27.05.2019 | Erstellung von Tests für die Projekt Web-Anwendung             | 2 h   | Nicht Komplettiert |
+| 30.05.2019 | Fertigstellung der Benutzername Eingabe                        | 4 h   |                    |
+| 02.06.2019 | Trennen von Lobby-Reducer und Create-Reducer                   | 1 h   |                    |
+| 02.06.2019 | Reagieren auf Lobbylist Events                                 | 1 h   |                    |
+| 02.06.2019 | Beheben von Bugs in der Verwendung des WebSockets in der Lobby | 2 h   |                    |
+| 02.06.2019 | Fertigstellen der Lobbylist Events                             | 1 h   |                    |
+
+## Woche 9
+
+**03.06.2019 - 09.06.2019**
+
+| Datum      | Tätigkeit                     | Dauer      | Zusatz |
+| :--------- | :---------------------------- | :--------- | :----- |
+| 03.06.2019 | Fertigstellung der Lobbyliste | 3 h 30 min |        |
