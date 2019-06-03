@@ -99,4 +99,18 @@ __20.05.2019 - 26.05.2019__
 | --- | ---| --- | --- |
 | 20.05.2019 | NUnit für ASP.NET testen | 60 min | Leider durch fehlende Asynchronität nicht geeignet | 
 | 20.05.2019 | XUnit für ASP.NET testen | 60 min | |
+| 21.05.2019 | Coachr Login Route eingerichtet | 10 min | | 
+| 21.05.2019 | Coachr Logout Route eingerichtet | 10 min | | 
+| 21.05.2019 | Coachr Register Route eingerichtet | 10 min | |
+| 23.05.2019 | ViewModele entwickelt | 120 min | |
+| 23.05.2019 | Coachr Merkmal Routen eingerichtet | 30 min | | 
+| 23.05.2019 | Coachr Spieler Routen eingerichtet | 30 min | | 
+| 24.05.2019 | Coachr Team Routen eingerichtet | 30 min | | 
+| 24.05.2019 | Coachr Uebungselement Routen eingerichtet | 30 min | |
+| 24.05.2019 | Coachr Uebung Routen eingerichtet | 30 min | |
+| 24.05.2019 | Coachr Trainer Routen eingerichtet | 30 min | |
+| 24.05.2019 | Klassendiagram Backend Digitalisiert | 60 min | |
+| 24.05.2019 | Klassendiagram um ViewModels erweitert | 180 min | |
+| 24.05.2019 | Enums in Klassendiagram aktualisiert | 20 min | |
+
 

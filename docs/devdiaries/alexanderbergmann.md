@@ -70,8 +70,31 @@ __13.05.2019 - 19.05.2019__
 
 __20.05.2019 - 26.05.2019__
 
+| Datum      | Tätigkeit                                        | Dauer | Zusatz |
+| ---------- | ------------------------------------------------ | ----- | ------ |
+| 21.05.2019 | Wöchentliches Meeting - Projektarbeit            | 6,5 h |        |
+| 22.05.2019 | Jenkins Server in AWS EC2 Instanz starten        | 3 h   |        |
+| 24.05.2019 | ASP.NET Backend und MySQL in EC2 Instanz starten | 6,5 h |        |
+| 25.05.2019 | Angular App und Jenkins in EC2 Instanz starten   | 1,5 h |        |
+| 25.05.2019 | Jenkins Pipeline einrichten                      | 6 h   |        |
+
+## Woche 8
+
+__27.05.2019 - 02.06.2019__
+
+| Datum      | Tätigkeit                                       | Dauer | Zusatz |
+| ---------- | ----------------------------------------------- | ----- | ------ |
+| 27.05.2019 | Jenkins Pipeline Fehler beheben                 | 2,5 h |        |
+| 28.05.2019 | Wöchentliches Meeting - Projektarbeit           | 4,5 h |        |
+| 28.05.2019 | Backend-API eingerichtet und zugreifbar gemacht | 2,5 h |        |
+| 01.06.2019 | coachr-Diagramm erstellen mit Draw.io           | 2 h   |        |
+| 02.06.2019 | Arbeitet an der Dokumentation                   | 1 h   |        |
+
+## Woche 9
+
+__03.06.2019 - 09.06.2019__
+
 | Datum | Tätigkeit                             | Dauer | Zusatz |
 | ----- | ------------------------------------- | ----- | ------ |
 |       | Wöchentliches Meeting - Projektarbeit |       |        |
-|       | CI-Server aufsetzen                   |       |        |
-
+|       |                                       |       |        |
