@@ -123,8 +123,12 @@ npm install apollo-client apollo-link-http apollo-cache-inmemory graphql-tag rea
 
 ## Touch and Gesture
 
-## PushNotification
+## Push-Benachrichtigung
+Eine Push-Benachrichtigung ist eine Mitteilung vom App-Betreiber an dem Nutzer gesendet wird. 
 
+React-Native bietet zur Zeit nur eine API für IOs Push-Benachrichtigungen. Wenn auf den Androidgeräten auch Push-Benachrichtigungen angezeigt werden sollen, so muss auf nativer Code zugegriffen werden.
+
+Die Bibliothek react-native-push-notficaiton von zo0r bietet die möglichkeit mit einem Code das Feature umzusetzen.
 ## HTTP-Request
 
 ## Components
