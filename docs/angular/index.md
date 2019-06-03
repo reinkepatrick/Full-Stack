@@ -362,7 +362,11 @@ Mit `routerLinkActive` können CSS Klassen angegeben werden welche bei aktivem Z
 <li routerLinkActive="active current"><a routerLink="/foo">...</a></li>
 ```
 
-### AuthServices
+### Dependency Injection
+
+Das Konzept der Dependency Injection sieht vor, Abhängigkeiten von außen in eine Instanz zu übergeben und diese darin zu nutzen. Das Konzept besitzt Ähnlichkeiten mit den aus anderen Programmiersprachen bekannten *Singletons*. Bei Singletons wird innerhalb der Applikation eine Instanz, wenn diese noch nicht existiert, erzeugt. Diese wird dann an verschiedenen Stellen der Applikation genutzt. Dabei wird immer auf dieselbe Instanz zurückgegriffen, sofern diese noch existiert.
+
+### Services
 
 Eine einfache Möglichkeit wieder verwendbare Programmteile auszulagern oder Daten zwischen Komponenten auszutauschen sind Services. Dabei sind Services nichts weiter als Klassen, die als Abhängigkeit in anderen Komponenten injiziert werden können. Es werden zwei Arten unterschieden.
 
@@ -371,10 +375,6 @@ Eine einfache Möglichkeit wieder verwendbare Programmteile auszulagern oder Dat
 ### AuthGuard
 
 Dieses Angular 2 Feature ist gerade bei sicherheitsrelevanten Daten oder Views sinnvoll, da man aufgrund eines Tokens oder eines bestimmten Claims im Token prüfen kann, ob der derzeitige Benutzer mit dem Token x auf eine bestimmte Route zugreifen darf.
-
-### Dependency Injection
-
-Das Konzept der Dependency Injection sieht vor, Abhängigkeiten von außen in eine Instanz zu übergeben und diese darin zu nutzen. Das Konzept besitzt Ähnlichkeiten mit den aus anderen Programmiersprachen bekannten *Singletons*. Bei Singletons wird innerhalb der Applikation eine Instanz, wenn diese noch nicht existiert, erzeugt. Diese wird dann an verschiedenen Stellen der Applikation genutzt. Dabei wird immer auf dieselbe Instanz zurückgegriffen, sofern diese noch existiert.
 
 ## Quellen
 
