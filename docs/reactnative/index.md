@@ -114,6 +114,13 @@ Mit React Native Navigation ist es möglich auf gewisse Events zu reagieren. Zu 
 
 Der Navigator lässt sich wie jede andere Reactkomponente stylen. Dies geschieht über das übergeben eines options Objekt. Für ein einheitliches Erscheinen, dient die Funktion setDefaultOptions, die laut den Entwicklern vor der SetRoot Methode geruft werden sollte. Das Aussehen kann im Allgemeinen für beide Plattformen gesetzt werden oder auch plattformspezifisch. Mit der Funtktionen mergeOptions kann der Navigator dynamisch zur Laufzeit angepasst werden.
 
+## GraphQL unter React-Native
+Installation über
+´´´
+npm install apollo-client apollo-link-http apollo-cache-inmemory graphql-tag react-apollo --save
+´´´
+//Todo Erfahrungen zusammenfassen und aus anderen Quellen erweitern
+
 ## Touch and Gesture
 
 ## PushNotification
