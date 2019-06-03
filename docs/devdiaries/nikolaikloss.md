@@ -109,10 +109,4 @@ __28.05.2019 - 03.06.2019__
 | 03.06.2019 | Refactoring: Ordnerstruktur verbessert - alle Views befinden sich nun im "pages" Ordner | 15 min | |
 | 03.06.2019 | Recherche zu Callbacks, Promise und Observerables | 35 min | |
 | 03.06.2019 | Implementierung: Überblick Page zeigt nun Anschrift des ausgewählten Spielers & blendet die Auswahl erst bei Selektion ein | 70 min | |
-| 03.06.2019 | Notieren bisheriger Erkenntnisse | 30 min | |
-
-https://www.lise.de/blog/article/angular2-und-der-einstieg-in-die-welt-von-rxjs/
-
-https://rathes.me/blog/de/javascript-promise-introduction
-
-https://wiki.selfhtml.org/wiki/JavaScript/Promise
+| 03.06.2019 | Notieren bisheriger Erkenntnisse | 40 min | |
