@@ -92,3 +92,12 @@ __21.05.2019 - 27.05.2019__
 | 23.05.2019 | BugFix: Wurde auf die Mannschaftspage umgeleitet obwohl kein User gefunden wurde  |50 min| |
 | 23.05.2019 | BugFix: this-Kontext-Problematik & automatisches Umleitung auf Login-Page bei nicht eingeloggt sein  |50 min| |
 | 27.05.2019 | Teams-Page: Tab-Button-Navigation implementiert & Überblick-Page generiert  |1.5 h| |
+
+## Woche 8
+__28.05.2019 - 03.06.2019__
+| 28.05.2019 | Planer-Gui grob implementiert | 35 min | |
+| 28.05.2019 | BugFix: Routing wurde auch bei fehlerhaften Google Login ausgeführt | 10 min | |
+| 28.05.2019 | Teambesprechung & Fusballfeld integriert in Planer-Page | 60 min | |
+| 02.06.2019 | Projekt Datein und Ordner aufgeräumt & API-Call aus Web-Frontend implementiert  | 60 min | |
+| 02.06.2019 | API Call auf Fehler untersucht & Benutzer Anschrift Dummy Funktion implementiert  | 40 min | |
+| 02.06.2019 | Player Model überarbeitet & Overview-Page mit Dummy Playern instanziert und versucht deren Adressen zu zeigen   | 80 min | |
