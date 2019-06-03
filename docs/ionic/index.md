@@ -216,3 +216,78 @@ Beispiel:
 ```html
 <ion-button [routerLink]="['/login']">Registrieren</ion-button>
 ```
+
+### Asynchrone Programmierung
+
+Die asynchrone Programmierung ist ein elementarer Bestandteil moderner Webtechnologien. Sie ermöglicht eine effiziente und parallele Abarbeitung von Algorithmen. So würde ein System ohne diese Möglichkeit, z.B. bei einer HTTP-GET-Anfrage ohne asynchrone Implementierung, bis zum Zeitpunkt einer Antwort, auf weitere Interaktionen des Benutzers, nicht reagieren werden können.
+
+Ein Problem das hieraus resultert ist, dass es einen größeren Implementierungsaufwand erfordert, denn es muss ein Mechanismus geschaffen werden, welcher auf das Fertigstellen einer Aufgabe reagieren kann.
+
+### Callbacks
+
+Ein Callback ist die einfachste Lösung, um mit der Fertigstellung einer asynchronen Aufgabe umzugehen. Die Idee ist hierbei, dass eine Funktion als Parameter übergeben wird, welche beim
+Abschließen der Aufgabe aufgerufen wird.
+
+Beispiel:
+```javascript
+downloadPhoto('http://coolcats.com/cat.gif', handlePhoto)
+
+function handlePhoto (error, photo) {
+  if (error) console.error('Download error!', error)
+  else console.log('Download finished', photo)
+}
+
+console.log('Download started')
+```
+
+Vorteil:
+* einfach zu implementieren
+
+Nachteil:
+* kann schnell unübersichtlich werden
+
+Negativ Beispiel:
+```javascript
+fs.readdir(source, function (err, files) {
+  if (err) {
+    console.log('Error finding files: ' + err)
+  } else {
+    files.forEach(function (filename, fileIndex) {
+      console.log(filename)
+      gm(source + filename).size(function (err, values) {
+        if (err) {
+          console.log('Error identifying file size: ' + err)
+        } else {
+          console.log(filename + ' : ' + values)
+          aspect = (values.width / values.height)
+          widths.forEach(function (width, widthIndex) {
+            height = Math.round(width / aspect)
+            console.log('resizing ' + filename + 'to ' + height + 'x' + height)
+            this.resize(width, height).write(dest + 'w' + width + '_' + filename, function(err) {
+              if (err) console.log('Error writing file: ' + err)
+            })
+          }.bind(this))
+        }
+      })
+    })
+  }
+})
+```
+
+### Promise
+
+
+
+### Observerables
+
+Notizen:
+
+https://rathes.me/blog/de/javascript-promise-introduction
+
+https://wiki.selfhtml.org/wiki/JavaScript/Promise
+
+https://medium.com/@abampakos/from-callback-hell-to-observable-heaven-769a95c1e289
+
+https://www.lise.de/blog/article/angular2-und-der-einstieg-in-die-welt-von-rxjs/
+
+https://www.buschmais.de/2018/05/08/einfuehrung-in-rxjs/
