@@ -95,3 +95,13 @@ __27.05.2019 - 02.06.2019__
 | 27.05.2019 | App: Speicherung der Einstellungen für eine Lobby angepasst | 30 min |        |
 | 27.05.2019 | App: Lobby im Backend erstellen                             | 2 h    |        |
 | 27.05.2019 | Travis einrichten und Beispieltest erstellen                | 1 h    |        |
+| 01.06.2019 | App: Errorhandling in Lobbyliste und UI der Lobby           | 3 h    |        |
+
+## Woche 9 
+__03.06.2019 - 09.06.2019__
+
+| Datum      | Tätigkeit                                               | Dauer  | Zusatz |
+| ---------- | ------------------------------------------------------- | ------ | ------ |
+| 03.06.2019 | App: Update und Remove von Einträgen auf der Lobbyliste | 2 h    |        |
+| 03.06.2019 | App: Lobby beitreten und Infos der Mitspieler abrufen   | 4 h    |        |
+| 03.06.2019 | App: kleinere Bugs fixen                                | 30 min |        |
