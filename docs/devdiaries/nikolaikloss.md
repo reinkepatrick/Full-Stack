@@ -111,3 +111,13 @@ __28.05.2019 - 03.06.2019__
 | 03.06.2019 | Recherche zu Callbacks, Promise und Observerables | 35 min | |
 | 03.06.2019 | Implementierung: Überblick Page zeigt nun Anschrift des ausgewählten Spielers & blendet die Auswahl erst bei Selektion ein | 70 min | |
 | 03.06.2019 | Notieren bisheriger Erkenntnisse zu Callbacks | 40 min | |
+
+## Woche 8
+__04.06.2019 - 10.06.2019__
+
+|Datum|Tätigkeit|Dauer|Zusatz|
+| - | - | - | - |
+| 04.06.2019 | Address-Model: von Interface in Klasse umgewandelt, um Methoden implementieren zu können. | 50 min | |
+| 04.06.2019 | Teambesprechung über weiteres Vorgehen & Implementierung von Enums als Service angefangen |  80 min | |
+| 04.06.2019 | API-Service erzeugt und HTTPClient Modul eingepflegt. |  60 min | |
+| 04.06.2019 | Versucht API-Service "login-Methode" als Promise zu implementieren |  30 min | |
