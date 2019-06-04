@@ -128,13 +128,21 @@ Microsoft empfiehlt beim nutzen von Kestrel nach außen einen weiteren Server al
 | Compression                | Optional      | Optional                                       |
 | FTP Server                 | Ja            | Nein                                           |
 
+##### Frontends
 
+möglich sind 
+ - react
+  - mit und ohne redux 
+ - angular 
+  - einbinden mithilfe von SinglepageApplication Service
+ - razor
+  - einbinden mithilfe von SinglepageApplication Service
 
-##### Razor
+**Razor**
 
-Eine von Microsoft entwickelte Template Engine.
+Eine von Microsoft entwickelte Template Engine. Welche die Programmiersprache der Wahl nutzen kann. Es kann ein Model übergeben werden dieses muss in der ersten Zeile des Dokumentes Definiert sein. Es können weitere Daten übergeben werden mithilfe von Viewbag und  
 
-##### Razorkomponente
+**Razorkomponente**
 
 Ein Erweiterung von Razor welches erlaubt Komponenten zu entwickeln Ähnlich wie bei Angular. Diese Komponenten können sowohl auf dem Server oder mithilfe von Blazzor als Webassembly beim Klienten Aktionen ausführen.
 
@@ -169,7 +177,7 @@ Das Routing kann komplex werden, dennoch kann auf einen Blick erkannt werden, we
 | Datenhandling | Kontext (Sql kann auf Kontext angewand werden) | Kontext | SQL | 
 | Modelierung | Klassen | Compiletime | Klassen / Compiletime |
 | Migration | C#/VB vollwertige Datenbank Migration (erstellt durchs Model) | Keine Datenbank definition | eigen Definierte Sqls |  
-| Datenbanktypen | MSSql / SQlite / InMemory / Cosmos / Postgre / Mysql / Firebird / ODBC | MSSql / Sqlite / Mysql / MsAccess / ODBC | Sqlite /  MSSql / Postgre |
+| Datenbanktypen | MSSql (Keine Migrationen*nicht dokumentiert*) / SQlite / InMemory / Cosmos / Postgre / Mysql / Firebird / ODBC | MSSql / Sqlite / Mysql / MsAccess / ODBC | Sqlite /  MSSql / Postgre |
 | Entwickler | Microsoft | 
 | Dokumentation | Ausführlich mit vielen guten Beispielen | Ausreichen mit genügend Beispielen | Vielleicht ausreichend schlecht Strukturiert (Beispiele sind entweder 9 Dateien oder zeigen nicht die Relevanten Code schnipsel) |
 | Connectionstring kontrolle | Laufzeit | Intellisense / Kompilier | Laufzeit |
@@ -296,6 +304,33 @@ JSON.Net von Newtonsoft ist ein Json Parser Framework welches ein Json to Object
 | Asynchrone Tests   | nein                           | ja                  | ja           |
 |                    | Assert.That(1, Is.EqualTo(1)); | Assert.Equal        | Expect.equal |
 
+#### xunit
+
+**Fact**
+
+Ein Test der immer gültig ist und nicht Parameterisiert ist. 
+
+**Theory**
+
+Eine Thorie ist ein Test welcher in bestimmten Fällen erfolgreich ist. 
+Testfälle Können auf drei Vraianten deklariert werden:
+ - InlineData (einmalig vor dem Test definiert) 
+ - ClassData (Eine Klasse von Testdaten)
+ - MemberData (Eine methode welche Testdaten generieren kann)
+
+**setup**
+
+Der Konstruktor wird vor jeden Testausgeführt.
+Wenn die Testklasse das Interface IDisposable implementiert wird diese nach jedem Test aausgeführt.
+
+Um für die gesammten Tests einen Context zu erstellen gibt es IClassfixtures welche ermöglichen für eine Klasse einmalig etwas zu erstellen und nach allen Tests dieser Klasse wird dies wieeder aufgeräumt.
+
+**Parralelitär**
+
+Der XUnit test runner lässt tests unterschiedlicher Klassen parralel laufen. Um bestimmte Tests dazu zubringen das Tests nacheinander ausgeführt werden gibt es Collections welche den Vorteil haben Tests nacheinander auszuführen sowie einen Context zu teilen.
+
+Um Collections einen Context zu geben wird eine CollectionDefinition benötigt.
+<https://xunit.net/docs/shared-context>
 
 
 ## F# #
