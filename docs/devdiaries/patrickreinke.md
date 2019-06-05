@@ -134,9 +134,10 @@
 
 **03.06.2019 - 09.06.2019**
 
-| Datum      | Tätigkeit                     | Dauer      | Zusatz |
-| :--------- | :---------------------------- | :--------- | :----- |
-| 03.06.2019 | Fertigstellung der Lobbyliste | 3 h 30 min |        |
-| 03.06.2019 | Verbessern der Benutzbarkeit  | 1 h        |        |
-| 03.06.2019 | Weiterführung der Lobby       | 1 h 30 min |        |
-| 05.06.2019 | Fertigstellung der Lobby      | 2 h 30 min |        |
+| Datum      | Tätigkeit                                                            | Dauer      | Zusatz |
+| :--------- | :------------------------------------------------------------------- | :--------- | :----- |
+| 03.06.2019 | Fertigstellung der Lobbyliste                                        | 3 h 30 min |        |
+| 03.06.2019 | Verbessern der Benutzbarkeit                                         | 1 h        |        |
+| 03.06.2019 | Weiterführung der Lobby                                              | 1 h 30 min |        |
+| 05.06.2019 | Fertigstellung der Lobby                                             | 2 h 30 min |        |
+| 05.06.2019 | Beheben von Grammatik und Rechtschreibfehler der React Dokumentation | 1 h        |        |
