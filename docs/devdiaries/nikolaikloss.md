@@ -121,3 +121,6 @@ __04.06.2019 - 10.06.2019__
 | 04.06.2019 | Teambesprechung über weiteres Vorgehen & Implementierung von Enums als Service angefangen |  80 min | |
 | 04.06.2019 | API-Service erzeugt und HTTPClient Modul eingepflegt. |  60 min | |
 | 04.06.2019 | Versucht API-Service "login-Methode" als Promise zu implementieren |  30 min | |
+| 06.06.2019 | Implementierung von State-Management in Web-Front-End angeschaut | 35  min | |
+| 06.06.2019 | API-Call nach SwaggerHub implementiert für Login | 45  min | |
+| 06.06.2019 | Model-Datenstruktur nach Modellklassendiagramm implementiert. | 60  min | |
