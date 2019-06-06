@@ -1,4 +1,8 @@
-# Cloud-Docker-Jenkins
+# Continuous Integration und Deployment
+
+## Einleitung
+
+Dieses Dokument enthält eine Zusammenfassung der wichtigsten Begriffe in Bezug auf automatische Build Prozesse der Softwareentwicklung. Als erstes gibt es eine Einführung in **Cloud Computing** und eine Erläuterung der Begriffe CI und CD. Darauf folgt die Vorstellung von den wichtigsten Tools in diesem Gebiet, sowie die jeweiligen Vor und Nachteile. In der Lehrveranstaltung "Fullstackdevelopment" wurde **Jenkins als CI/CD Tool** ausgewählt. Um automatische Build Prozesse auszuführen ist es hilfreich sich mit **Docker und der Containerisierung** zu beschäftigen, diese ermöglichen es eine flexible, leichtgewichtige  und saubere Build Umgebung zu erzeugen. Grundbegriffe und die wichtigsten Funktionen von Docker und Jenkins werden erläutert und abschließend am **Beispiel der Anwendung "coachr",** die auch Teil der Lehrveranstaltung ist, angewendet.
 
 ## Cloud Computing
 
@@ -10,7 +14,7 @@ Die Spannweite der Dienstleistungen die in einer Cloud angebotenen werden, umfas
 
 - **SaaS** (Anwendung) - z.B. GoogleDocs, GoogleMaps ...
 - **PaaS** (Plattform) -  z.B. CI und CD
-- **IaaS**  (Infrastruktur) - z.B. Digital Ocean
+- **IaaS**  (Infrastruktur) - z.B. Digital Ocean, AWS, Azure
 
 ## CI und CD
 
@@ -69,9 +73,11 @@ Gitlab CI stellt auch eine Cloud-basierte Lösung dar, bei der allerdings die Se
 
 Man kann Jenkins auf allen Systemen installieren, dafür benötigt man nur ein OS mit einem installierten Java (7 oder 8). Möchte man ein Build mit Docker-Containern ausführen, benötigt man natürlich auch noch eine lauffähige Docker-Umgebung.
 
+[Getting started with Jenkins](https://jenkins.io/download/)
+
 ### Pipelines
 
-In Jenkins arbeitet man mit sogenannten Pipelines. Sie können sehr flexibel eingesetzt und mit Plugins erweitert werden. Einfach gesagt führen sie die Schritte automatisch aus, die für ein Test-Build-Deploy-Prozess nötig sind. Es gibt zwei Möglichkeiten eine Pipeline zu benutzten:
+In Jenkins arbeitet man mit sogenannten Pipelines. Sie können sehr flexibel eingesetzt und mit Plugins erweitert werden. Einfach gesagt führen sie die Schritte automatisch aus, die für ein Test-Build-Deploy-Prozess benötig werden. Es gibt zwei Möglichkeiten eine Pipeline zu benutzten:
 
 **Jenkinsfile (Declarative Pipeline)**
 
@@ -122,6 +128,8 @@ Es gibt unzählige Erweiterungen für Jenkins (mehr unter [Jenkins Plugins](http
 Docker biete eine einfache Lösung den Softwareentwicklungsprozess schneller, ressourcenschonender und flexibler zu machen. Konfigurationsmanagement, einrichten einer Entwicklungsumgebung, Beachtung von Abhängigkeiten, Isolierung von Prozessen etc., sind Arbeiten die in jedem neuen oder auch bestehenden Projekt anfallen. Docker bietet die Möglichkeit diese in Containern zu verpacken und gleichzeitig transportabel und wiederverwendbar zu machen.  
 
 Die Docker-Plattform besteht vereinfacht gesagt aus zwei getrennten Komponenten: der **Docker Engine**, die für das Erstellen und Ausführen von Containern verantwortlich ist, sowie dem **Docker Hub**, einem Cloud Service, um Container-Images zu verteilen.
+
+[Docker CE installieren](https://docs.docker.com/install/)
 
 ### Containerisierung
 
@@ -299,9 +307,90 @@ docker run test/cowsay-dockerfile
 docker run test/cowsay-dockerfile Hallo Muh
 ```
 
-## coachr
+## Beispiel: coachr 
 
 ![coachr_CI_CD](img\coachr_CI_CD.jpg)
+
+### Server einrichten
+
+Die Serverinstanzen wurden mit AWS erstellt, die Einrichtung und Konfiguration hier aufzuführen würde den Rahmen diese Beispiels sprengen. Nachfolgend werden die Kommandozeilenbefehle der einzelnen Instanzen aufgelistet, nach dem man sich erfolgreich per SSH darauf verbunden hat.
+
+*Note*: Der Befehl `sudo yum update -y` wird in jeder Instanz als erstes ausgeführt.
+
+**EC2-instance-coachr-frontend**
+
+```bash
+# Docker installieren
+sudo amazon-linux-extras install docker -y
+sudo service docker start
+sudo usermod -a -G docker ec2-user
+docker info
+# Funktioniert der Befehl docker info ohne sudo nicht, dann muss die Instanz neustarten werden 
+# nach dem Neustart muss der Docker-Daemon wieder gestartet werden
+```
+
+```bash
+# Container starten
+docker run -p 80:80 -d --name coachr -v /home/ec2-user/app/dist:/usr/share/nginx/html -t nginx
+# Die erfolgreich getestete und gebaute Anwendung wird von Jenkins in den Ordner ~/app deployed und an den Contanier weitergereicht 
+```
+
+**EC2-instance-Jenkins**
+
+```bash
+# Jenkins installieren
+sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins.io/redhat/jenkins.repo
+sudo rpm --import https://pkg.jenkins.io/redhat/jenkins.io.key      
+sudo yum install jenkins -y
+# Jenkins ist eine Java Anwendung und benötigt mindestens Java 7, nutzt man Pipeline mit Git muss auch das installiert werden
+sudo yum install java-1.8.0-openjdk.x86_64 -y
+# Git
+sudo yum install git -y
+
+########### Docker installieren --> EC2-instance-coachr-frontend ###########
+
+# Jenkins User brachen Zugriff auf den docker Befehl
+sudo usermod -a -G docker jenkins
+# Anschließend Jenkins starten und sich das Initialpasswort anzeigen lassen
+sudo service jenkins start
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+# Jetzt ist der Server per http://<server-url>:8080 zu erreichen
+```
+
+**EC2-instance-backend**
+
+```bash
+# TODO:
+docker run -p 5432:5432 --rm --name coachr-db -e POSTGRES_PASSWORD=testsystem -d postgres
+```
+
+**Dotnet Umgebung**
+
+```bash
+git clone http://www.github.com/AHeinisch/coachr-backend
+
+docker run -it --rm -v ~/coachr-backend:/coachr-backend -p 80:80 --name coachr-api mcr.microsoft.com/dotnet/core/sdk
+
+docker cp appsettings.json bdec403902e3:/coachr-backend/src
+
+dotnet restore
+
+dotnet bin/ ... /coachr-backend.dll
+```
+
+### Jenkins
+
+#### Konfiguration
+
+#### Pipelines einrichten
+
+#### Github Hok einrichten 
+
+### Continuous Integration in Aktion
+
+
+
+
 
 ## Quellen
 

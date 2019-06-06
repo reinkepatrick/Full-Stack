@@ -94,7 +94,7 @@ __27.05.2019 - 02.06.2019__
 
 __03.06.2019 - 09.06.2019__
 
-| Datum | Tätigkeit                             | Dauer | Zusatz |
-| ----- | ------------------------------------- | ----- | ------ |
-|       | Wöchentliches Meeting - Projektarbeit |       |        |
-|       |                                       |       |        |
+| Datum      | Tätigkeit                             | Dauer | Zusatz |
+| ---------- | ------------------------------------- | ----- | ------ |
+| 04.06.2019 | Wöchentliches Meeting - Projektarbeit | 5,5 h |        |
+| 06.06.2019 | Dokumentation bearbeiten              |       |        |
