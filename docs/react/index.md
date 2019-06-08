@@ -684,6 +684,23 @@ Das Testen unter React benötigt zwei Dinge, einmal eine Möglichkeit die Tests 
 |  Emzyme    |  Utility Testing |  [Link](https://airbnb.io/enzyme/) |
 |  Sinon     |  Test Spy        |  [Link](https://sinonjs.org/)      |
 
+## Redux
+
+Redux ist eine eigenständige JavaScript Bibliothek. Es gibt Einen die Möglichkeit den Zustand einer kompletten Anwendung zusammenzuführen. Redux benutzt dafür drei Dinge, die **Actions**, die **Reducers** und, den eigentlichen Ort wo die Daten gespeichert werden, den **Store**.
+
+> Redux is a predictable state container for JavaScript apps.
+
+Der Ablauf ist wie folgt:
+
+![redux](./img/redux.png)
+
+
+### Asyn­chro­ni­tät
+Redux selbst bietet keine Möglichkeit für die Verwendung von Asyn­chro­ni­tät. Um diese zu verwenden, benötigt man Action Creators und Thunk. Thunk ist eine Middleware, diese liegen zwischen den Actions und dem Reducer und Action Creators sind quasi Funktionen, die das Component aufruft. Die Action Creator haben die Möglichkeit durch Thunk asynchron Funktionen aufzurufen und mit dem Callback die dazugehörige Action an den Reducer zu senden (dispatch).
+
+> With a plain basic Redux store, you can only do simple synchronous updates by dispatching an action. Middleware extend the store's abilities, and let you write async logic that interacts with the store.
+
 ## Quellen
 
 - [Inline Styling with Radium, Aphrodite & Emotion](https://blog.logrocket.com/the-best-react-inline-style-libraries-comparing-radium-aphrodite-emotion-849ef148c473)
+- [Redux Ablauf](https://commons.wikimedia.org/wiki/File:Ngrx-redux-pattern-diagram.png)
