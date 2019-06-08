@@ -141,3 +141,5 @@
 | 03.06.2019 | Weiterführung der Lobby                                              | 1 h 30 min |        |
 | 05.06.2019 | Fertigstellung der Lobby                                             | 2 h 30 min |        |
 | 05.06.2019 | Beheben von Grammatik und Rechtschreibfehler der React Dokumentation | 1 h        |        |
+| 07.06.2019 | Hinzufügen vom Entfernen eines Spielers                              | 1 h 30 min |        |
+| 08.06.2019 | Definition von Redux und Asyn­chro­ni­tät unter Redux                   | 2 h        |        |
