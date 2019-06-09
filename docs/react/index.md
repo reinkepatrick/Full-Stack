@@ -2,7 +2,7 @@
 
 ## Was ist React?
 
-[React](https://reactjs.org/) ist ein JavaScript Framework, von Facebook, für die Erstellung von Benutzeroberflächen. Es ist eins der größten JavaScript Frameworks neben Angular und Vue.js. React steht aktuell bei der Version 16.8.6 vom 27. März 2019, die neusten Neuerungen sind die sogenannten Hooks welche später genauer erläutert werden.
+[React](https://reactjs.org/) ist ein JavaScript Framework, von Facebook, für die Erstellung von Benutzeroberflächen. Es ist eins der größten JavaScript Frameworks neben Angular und Vue.js. React steht aktuell bei der Version 16.8.6 vom 27. März 2019, die neusten Neuerungen sind die sogenannten Hooks, welche später genauer erläutert werden.
 
 ## Anforderungen
 
@@ -10,14 +10,14 @@ React bietet große Möglichkeiten SPA (_Singe Page Application_) und MPA (_Mult
 
 ## Workflow
 
-Die Dependencies spielen eine große Rolle in der heutigen Zeit von JavaScript um dort den Überblick und den bestmöglichen Komfort zu bieten wird einen sogenanntes Dependency Management Tool empfohlen. In diesem Fall wird der Node Package Manager (_npm_) genutzt. Es wird ein Bundler, der aus allen Dateien ein kompaktes Produkt formt, genutzt. React verwendet dafür Webpack. Um wie oben, in den [Anforderungen](#anforderungen) angesprochen, ES6 verwenden zu können wird ein Compiler genutzt, dieser sorgt dafür das aus ES6 gängiges JavaScript wird das für jeden modernen Browser verständlich ist. Diese Arbeit nimmt bei React ein Tool ab, dieses Tool nennt sich [create-react-app](https://github.com/facebook/create-react-app).
+Die Dependencies spielen eine große Rolle in der heutigen Zeit von JavaScript um dort den Überblick und den bestmöglichen Komfort zu bieten, wird einen sogenanntes Dependency Management Tool empfohlen. In diesem Fall wird der Node Package Manager (_npm_) genutzt. Es wird ein Bundler, der aus allen Dateien ein kompaktes Produkt formt, genutzt. React verwendet dafür Webpack. Um wie oben, in den [Anforderungen](#anforderungen) angesprochen, ES6 verwenden zu können, wird ein Compiler genutzt, dieser sorgt dafür das aus ES6 gängiges JavaScript wird das für jeden modernen Browser verständlich ist. Diese Arbeit nimmt bei React ein Tool ab, dieses Tool nennt sich [create-react-app](https://github.com/facebook/create-react-app).
 
 ```bash
 npm install -g create-react-app
 create-react-app test-react-app
 ```
 
-Um die App im Browser richtig darstellen zu können wird der mitgebrachten Webserver über npm gestartet, die App ist dann über [localhost:3000](http://localhost:3000) erreichbar. **Bei einer Änderung an der App wird diese automatisch neu erstellt.**
+Um die App im Browser richtig darstellen zu können, wird der mitgebrachten Webserver über npm gestartet, die App ist dann über [localhost:3000](http://localhost:3000) erreichbar. **Bei einer Änderung an der App wird diese automatisch neu erstellt.**
 
 ```bash
 npm start
@@ -50,7 +50,7 @@ export default App;
 
 ### Funktionale Components
 
-Diese bezeichnet man als Präsentations- oder zustandslose Components, da sie in den meisten Fällen nur JSX zurückgeben. Diese Art sollte so oft wie nur möglich verwendet werden und gilt als Best-Practice, diese bieten durch React Hooks fast die selben Möglichkeiten wie klassenbasierte Components.
+Diese bezeichnet man als Präsentations- oder zustandslose Components, da sie in den meisten Fällen nur JSX zurückgeben. Diese Art sollte so oft wie nur möglich verwendet werden und gilt als Best Practice, diese bieten durch React Hooks fast dieselben Möglichkeiten wie Klassen-basierte Components.
 
 ```jsx
 import React from "react";
@@ -62,9 +62,9 @@ const foobar = () => {
 export default foobar;
 ```
 
-### Klassenbasierte Components
+### Klassen-basierte Components
 
-Diese bezeichnet man als Container- oder Zustandscomponents, diese verwendet man wie der Name schon sagt, wenn man Zustände in einem Component speichern möchte. Um eigene Components dann zu verwenden, kann man diese einfach einbinden und aufrufen. Hier zu wird das funktionale Component aus dem oberen Beispiel genutzt und es in die `App.js` importiert.
+Diese bezeichnet man als Container- oder Zustandscomponents, diese verwendet man, wie der Name schon sagt, wenn man Zustände in einem Component speichern möchte. Um eigene Components dann zu verwenden, kann man diese einfach einbinden und aufrufen. Hier zu wird das funktionale Component aus dem oberen Beispiel genutzt und es in die `App.js` importiert.
 
 ```jsx
 import React, { Component } from "react";
@@ -87,7 +87,7 @@ export default App;
 
 ## JSX
 
-JSX ist die Sprache die zum darstellen von Components verwendet wird, um genauer zu sagen der Teil der in die `render()`-Methode geschrieben wird, man kann natürlich auch einfach so JSX-Code zurückgeben ohne eine `render()`-Methode.
+JSX ist die Sprache, die zum Darstellen von Components verwendet wird, um genauer zu sagen der Teil der in die `render()`-Methode geschrieben wird, man kann natürlich auch einfach so JSX-Code zurückgeben ohne eine `render()`-Methode.
 
 ```jsx
 render() {
@@ -99,7 +99,7 @@ render() {
 }
 ```
 
-Damit JSX verwendet werden kann, wird auch `React` in ein Component importiert. React erstellt dann aus dem JSX für den Browser lesbares JavaScript. Als Beispiel wird gezeigt wie der obere Code als normales JavaScript aussieht und was React intern mit JSX macht.
+Damit JSX verwendet werden kann, wird auch `React` in ein Component importiert. React erstellt dann aus dem JSX für den Browser lesbares JavaScript. Als Beispiel wird gezeigt, wie der obere Code als normales JavaScript aussieht und was React intern mit JSX macht.
 
 ```jsx
 render() {
@@ -122,7 +122,7 @@ render() {
 }
 ```
 
-Aus diesem Grund packt man um ein Component immer ein HTML-Element und fügt seinen Kontent in dieses HTML-Element ein oder man nutzt `React.Fragment` anstatt es in ein `<div></div>` zupacken.
+Aus diesem Grund packt man um ein Component immer ein HTML-Element und fügt seinen Content in dieses HTML-Element ein oder man nutzt `React.Fragment` anstatt es in ein `<div></div>` zupacken.
 
 ## Properties
 
@@ -136,7 +136,7 @@ Eigenschaften, auch **Properties** oder **Props** genannt, bieten uns die Mögli
 ![components](./img/props.svg)
 
 Properties kann man dann einfach innerhalb des Components verwenden. Im zweiten Aufruf, im Beispiel, wird es nicht als Attribut übergeben, dies kann man einfach über `.children` abrufen.  
-**Wichtig:** Sollte man dasselbe bei einem klassenbasierten Component machen, dann muss man es wie in dem unten gezeigten Beispiel, `this.props.foo` verwenden.
+**Wichtig:** Sollte man dasselbe bei einem Klassen-basierten Component machen, dann muss man es wie in dem unten gezeigten Beispiel, `this.props.foo` verwenden.
 
 ```jsx
 import React from "react";
@@ -155,7 +155,7 @@ export default foobar;
 
 ### State-Property
 
-Die State-Property ist eine besondere Art von Property in React, sie funktioniert wie ein Objekt in JavaScript, du kannst Sachen drin speichern und abrufen. Das besondere daran ist, wenn man den Inhalt ändert löst das ein neues Rendern im UI aus.
+Die State-Property ist eine besondere Art von Property in React, sie funktioniert wie ein Objekt in JavaScript, du kannst Sachen drin speichern und abrufen. Das Besondere daran ist, wenn man den Inhalt ändert, löst das ein neues Rendern im UI aus.
 
 ```jsx
 class App extends Component {
@@ -174,13 +174,13 @@ class App extends Component {
 }
 ```
 
-Um dafür zu sorgen das React das Ändern des State-Property mitbekommt biete uns React, durch die Vererbung von `Component`, die Methode `this.setState`. Diese Methode fügt dann das alte State-Property und das neue State-Property zusammen, es werden nur die Objekte verändert die auch wirklich durch `this.setState` verändert wurden.
+Um dafür zu sorgen, das React das Ändern des State-Property mitbekommt, biete uns React, durch die Vererbung von `Component`, die Methode `this.setState`. Diese Methode fügt dann das alte State-Property und das neue State-Property zusammen, es werden nur die Objekte verändert die auch wirklich durch `this.setState` verändert wurden.
 
-Um States unter funktionalen Components verwenden zu können benutzt man `useState`, hier ist aber wichtig das das neue State-Property das alte **überschreibt**. `useState` kann dafür beliebig oft verwendet werden.
+Um States unter funktionalen Components verwenden zu können benutzt man `useState`, hier ist, aber wichtig, dass das neue State-Property das alte **überschreibt**. `useState` kann dafür beliebig oft verwendet werden.
 
 ### PropTypes
 
-ProTypes ist eine Bibliothek, die es ermöglicht festzulegen welche Typen die zu übergebenden Properties haben sollen und warnt den Entwickler, wenn diese nicht eingehalten werden. Diese Bibliothek ist von der React Community entwickelt worden und muss nachinstalliert (`prop-types`) werden.
+PropTypes ist eine Bibliothek, die es ermöglicht festzulegen welche Typen die zu übergebenden Properties haben sollen und warnt den Entwickler, wenn diese nicht eingehalten werden. Diese Bibliothek ist von der React Community entwickelt worden und muss nachinstalliert (`prop-types`) werden.
 
 ```js
 Greeting.propTypes = {
@@ -188,8 +188,7 @@ Greeting.propTypes = {
 };
 ```
 
-Für weitere Typen die PropTypes mitliefert, siehe
-[hier](https://reactjs.org/docs/typechecking-with-proptypes.html).
+Für weitere Typen die PropTypes mitliefert, siehe [hier](https://reactjs.org/docs/typechecking-with-proptypes.html).
 
 ### Context
 
@@ -227,7 +226,7 @@ Das Bereitstellen des Context geschieht in einem übergeordneten Component über
 Das Verwenden vom Context ist mit `contextType` oder `useContext()`
 möglich.
 
-Klassenbasierte Components:
+Klassen-basierte Components:
 
 ```jsx
 static contextType = AuthContext;
@@ -243,7 +242,7 @@ console.log(authContext.authenticated);
 
 ## Event-Handling
 
-Event Handling ist unter React relativ ähnlich zum Event-Handling unter JavaScript. Am folgenden Beispiel wird gezeigt wie das Event-Handling unter React im Allgemeinen aussieht. Event-Handler können auch über Properties weitergegeben werden.
+Event Handling ist unter React relativ ähnlich zum Event-Handling unter JavaScript. Am folgenden Beispiel wird gezeigt, wie das Event-Handling unter React im Allgemeinen aussieht. Event-Handler können auch über Properties weitergegeben werden.
 
 ```jsx
 class App extends Component {
@@ -266,13 +265,13 @@ Für weitere Events siehe
 
 ## Lists
 
-In diesem Teil wird erklären wie man Werte von Forms verändern kann, wie If-Bedingungen und For-Schleifen unter React verwendet werden können.
+In diesem Teil wird erklären, wie man Werte von Forms verändern kann, wie If-Bedingungen und For-Schleifen unter React verwendet werden können.
 
 ### Two-Way Databinding
 
 Im Vergleich zu Angular besitzt React kein ngModel, welches einem die Arbeit dafür abnimmt. Das heißt man müssen selbst auf Änderungen reagieren und Werte setzen.
 
-Als erstes wird ein Event-Handler um auf diese Aktion reagieren benötigt, also wenn etwas in das Input-Feld eingetragen wird, in dem Beispiel wird ein Name im State-Property geändert.
+Als Erstes wird ein Event-Handler um auf diese Aktion reagieren benötigt, also wenn etwas in das Input-Feld eingetragen wird, in dem Beispiel wird ein Name im State-Property geändert.
 
 ```jsx
 nameChangedHandler = (event, id) => {
@@ -293,7 +292,7 @@ nameChangedHandler = (event, id) => {
 };
 ```
 
-Diese Methode wird nun beim Rendern der Person Component übergeben, hier ist wichtig das ein `Key` Attribut mit übergeben wird, das hilft React dabei nur die geänderten Teile neu zu rendern.
+Diese Methode wird nun beim Rendern der Person Component übergeben, hier ist wichtig, dass ein `Key` Attribut mit übergeben wird, das hilft React dabei nur die geänderten Teile neu zu rendern.
 
 ```jsx
 <Person
@@ -355,7 +354,7 @@ if (this.state.showPersons) {
 
 ### Refs
 
-**Refs** sind eine Möglichkeit von React auf die Elemente zuzugreifen ohne die standardmäßige JavaScript-Funktion zuverwenden. Wichtig hier bei ist es, Refs nicht für alles zu verwenden.
+**Refs** sind eine Möglichkeit von React auf die Elemente zuzugreifen ohne die standardmäßige JavaScript-Funktion zu verwenden. Wichtig hierbei ist es, Refs nicht für alles zu verwenden.
 
 Gute Möglichkeiten Refs zu verwenden sind:
 
@@ -388,7 +387,7 @@ Für eine genauere Dokumentation, siehe
 
 ## Styling
 
-Wie unter normalen HTML gibt es auch hier die Möglichkeit Inline Styling oder via externe `.css`-File Stylings vorzunehmen. Als erstes wird das Styling via `.css`-File an dargestellt.
+Wie unter normalen HTML gibt es auch hier die Möglichkeit Inline Styling oder via externe `.css`-File Stylings vorzunehmen. Als Erstes wird das Styling via `.css`-File an dargestellt.
 
 Hier für muss nur die `.css`-File importiert werden.
 
@@ -397,9 +396,9 @@ import React from "react";
 ```
 
 Nun kann man die Klassen via `className` verwenden.  
-**Wichtig hier bei ist das alle Änderungen in der `.css`-File global
+**Wichtig hierbei ist das alle Änderungen in der `.css`-File global
 sind.**  
-Für das Inline Styling muss eine Anweisung in JavaScript verfasst
+Für das Inline Styling, muss eine Anweisung in JavaScript verfasst,
 werden.
 
 ```jsx
@@ -423,7 +422,7 @@ return (
 
 Radium ist eine Reihe an Tools, die die Möglichkeit bieten Inline Styles in einem React Component zu verbessern. Diese bauen außerdem auch Pseudo Selektoren, Media Queries und vieles mehr als Inline Styling ein.
 
-Um es aber nun auch verwenden zu können muss es in der Datei, wo es verwendet werden soll, noch eingebunden und das Component beim zurückgeben darin eingepackt (_wrapping_) werden.
+Um es aber nun auch verwenden zu können muss es in der Datei, wo es verwendet werden soll, noch eingebunden und das Component beim Zurückgeben darin eingepackt (_wrapping_) werden.
 
 ```jsx
 import Radium from "radium";
@@ -446,7 +445,7 @@ const style = {
 };
 ```
 
-Als nächstes wird dargestellt wie man Media Queries unter Radium und React verwendet, als Inline Styling.
+Als Nächstes wird dargestellt wie man Media Queries unter Radium und React verwendet, als Inline Styling.
 
 ```jsx
 const style = {
@@ -584,7 +583,7 @@ Lifecycle Hooks sind eine Möglichkeit Code auszuführen, zu bestimmten Zuständ
 
 ### Mounting
 
-Diese Lifecycle Hooks werden aufgerufen wenn eine Instanz eines Components erstellt und zum DOM hinzugefügt wird, in der unten aufgeführten Reihenfolge.
+Diese Lifecycle Hooks werden aufgerufen, wenn eine Instanz eines Components erstellt und zum DOM hinzugefügt wird, in der unten aufgeführten Reihenfolge.
 
 - [**`constructor()`**](https://reactjs.org/docs/react-component.html#constructor)
 - [**`static getDerivedStateFromProps()`**](https://reactjs.org/docs/react-component.html#static-getderivedstatefromprops)
@@ -651,11 +650,11 @@ HTTP-Request sind unter React eine wichtige Möglichkeit um Daten von einem Serv
 
 ### Axios
 
-[Axios](https://github.com/axios/axios) ist eine Bibliothek für das Senden von HTTP-Requests, diese hilft einem dabei auf leichtem Wege solche Requests zu senden. Die Requests werden asynchron
+[Axios](https://github.com/axios/axios) ist eine Bibliothek für das Senden von HTTP-Requests, diese hilft einem dabei auf leichtem Wege solche Requests zu senden. Die Requests werden asynchron.
 
 ## Routing
 
-Routing ist ein wichtiger Bestandteil von _Singe Page Applications_, es gibt einem die Möglichkeit zwischen den Componenten hin und her zu switchen, ohne das der Benutzer die Seite neu lädt. Es gibt die Möglichkeit Routen einzurichten und diese dann auf Components leiten zu lassen. Routing ist kein Bestandteil von React und kann nur über Bibliotheken verwirklicht werden.
+Routing ist ein wichtiger Bestandteil von _Singe Page Applications_, es gibt einem die Möglichkeit zwischen den Components hin und her zu switchen, ohne das der Benutzer die Seite neu lädt. Es gibt die Möglichkeit Routen einzurichten und diese dann auf Components leiten zu lassen. Routing ist kein Bestandteil von React und kann nur über Bibliotheken verwirklicht werden.
 
 ![routing](./img/routing.svg)
 
@@ -665,7 +664,7 @@ Routing ist ein wichtiger Bestandteil von _Singe Page Applications_, es gibt ein
 
 ## Form Validation
 
-Form Validation ist die Möglichkeit die Eingabe des Benutzers zu kontrollieren und ihm gegebenfalls visuell auf seine Fehler hinzuweisen. React bietet keine hauseigene Funktion oder Klasse für diese Aufgabe an. Die Validation muss also selbst implementiert werden oder durch eine externe Bibliothek übernommen werden.
+Form Validation ist die Möglichkeit die Eingabe des Benutzers zu kontrollieren und ihm gegebenenfalls visuell auf seine Fehler hinzuweisen. React bietet keine hauseigene Funktion oder Klasse für diese Aufgabe an. Die Validation muss also selbst implementiert werden oder durch eine externe Bibliothek übernommen werden.
 
 Zwei Bibliotheken wären zum Beispiel:
 
@@ -677,7 +676,7 @@ Für weitere Ideen für Validierungsansätze, siehe [hier](https://react.rocks/t
 
 ## Testing
 
-Das Testen unter React benötigt zwei Dinge, einmal eine Möglichkeit die Tests laufen zu lassen und eine Möglichkeit die React Werkzeuge so emulieren. Hier zu bieten sich Bibliotheken an. React bietet eine eigene Möglichkeit um die React Werkzeuge zu emulieren, die wird hier aber nicht verwendet. Ebenfalls wird empfohlen eine Bibliothek für Events einzubinden, diese sorgt dafür die Events zu überwachen und nicht um sie auszuführen. Jest wird mit *create-react-app* mitgeliefert.
+Das Testen unter React benötigt zwei Dinge, einmal eine Möglichkeit die Tests laufen zu lassen und eine Möglichkeit die React Werkzeuge zu emulieren. Hierbei bieten sich Bibliotheken an. React bietet eine eigene Möglichkeit um die React Werkzeuge zu emulieren, diese wird hier aber nicht verwendet. Ebenfalls wird empfohlen eine Bibliothek für Events einzubinden, diese sorgt dafür die Events zu überwachen und nicht um sie auszuführen. Jest wird mit *create-react-app* mitgeliefert.
 
 | Bibliothek | Funktion         |  Link                              |
 | :--------- | ---------------- | ---------------------------------- |
@@ -685,6 +684,23 @@ Das Testen unter React benötigt zwei Dinge, einmal eine Möglichkeit die Tests 
 |  Emzyme    |  Utility Testing |  [Link](https://airbnb.io/enzyme/) |
 |  Sinon     |  Test Spy        |  [Link](https://sinonjs.org/)      |
 
+## Redux
+
+Redux ist eine eigenständige JavaScript Bibliothek. Es gibt Einen die Möglichkeit den Zustand einer kompletten Anwendung zusammenzuführen. Redux benutzt dafür drei Dinge, die **Actions**, die **Reducers** und, den eigentlichen Ort wo die Daten gespeichert werden, den **Store**.
+
+> Redux is a predictable state container for JavaScript apps.
+
+Der Ablauf ist wie folgt:
+
+![redux](./img/redux.png)
+
+
+### Asyn­chro­ni­tät
+Redux selbst bietet keine Möglichkeit für die Verwendung von Asyn­chro­ni­tät. Um diese zu verwenden, benötigt man Action Creators und Thunk. Thunk ist eine Middleware, diese liegen zwischen den Actions und dem Reducer und Action Creators sind quasi Funktionen, die das Component aufruft. Die Action Creator haben die Möglichkeit durch Thunk asynchron Funktionen aufzurufen und mit dem Callback die dazugehörige Action an den Reducer zu senden (dispatch).
+
+> With a plain basic Redux store, you can only do simple synchronous updates by dispatching an action. Middleware extend the store's abilities, and let you write async logic that interacts with the store.
+
 ## Quellen
 
 - [Inline Styling with Radium, Aphrodite & Emotion](https://blog.logrocket.com/the-best-react-inline-style-libraries-comparing-radium-aphrodite-emotion-849ef148c473)
+- [Redux Ablauf](https://commons.wikimedia.org/wiki/File:Ngrx-redux-pattern-diagram.png)
