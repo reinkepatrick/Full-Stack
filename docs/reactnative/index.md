@@ -3,33 +3,33 @@
 ## Inhaltsverzeichnis
 
  * [Einleitung](#Einleitung)
-   * [Was ist React-Native](#Was%20ist%20React-Native)
-   * [Wie funktioniert React-Native](#Wie%20funktioniert%20React-Native)
+   * [Was ist React-Native](#Was-ist-React-Native)
+   * [Wie funktioniert React-Native](#Wie-funktioniert-React-Native)
 
- * [Grundlegende Konzepte](#Grundlegende%20Konzepte)
-   * [Native Code](#Native%20Code)
+ * [Grundlegende Konzepte](#Grundlegende-Konzepte)
+   * [Native Code](#Native-Code)
    * [Navigation](#Navigation)
    * [Components](#Components)
 
- * [User Interfaces](#User%20Interfaces)
-   * [Touch and Gesture](#Touch%20and%20Gesture)
+ * [User Interfaces](#User-Interfaces)
+   * [Touch and Gesture](#Touch-and-Gesture)
    * [Animations](#Animations)
    * [Layouting](#Layouting)
    * [Styles](#Styles)
    * [JSX](#JSX)
 
- * [State Management](#State%20Management)
+ * [State Management](#State-Management)
    * [State](#State)
    * [Props](#Props)
      * [PropType](#PropType)
-   * [Redux](#Redux%20unter%20React%20Native)
-   * [React Context](#React%20Context)
+   * [Redux](#Redux-unter-React-Native)
+   * [React Context](#React-Context)
 
  * [Services](#Services)
    * [Push-Benachrichtigung](#Push-Benachrichtigung)
    * [Http-Request](#HTTP-Request)
    * [Websockets](#Websockets)
-   * [Datenbank/Persistener%20Speicher](#Datenbank/Persistener%20Speicher)
+   * [Datenbank/Persistener%20Speicher](#Datenbank/Persistener-Speicher)
 
  * [Tooling](#Tooling)
   
