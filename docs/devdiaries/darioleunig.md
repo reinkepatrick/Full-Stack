@@ -99,6 +99,17 @@ Zuzüglich zur Heimarbeit beinhaltet jede Woche das Seminar (1h 30m) mit anschli
 
 **03.06.2019 - 09.06.2019**
 
-| Datum      | Tätigkeit                       | Dauer  | Zusatz |
-| ---------- | ------------------------------- | ------ | ------ |
-| 03.06.2019 | Live API Anbindung (fehlerhaft) | 1h 30m |        |
+| Datum      | Tätigkeit                                            | Dauer  | Zusatz |
+| ---------- | ---------------------------------------------------- | ------ | ------ |
+| 03.06.2019 | Live API Anbindung (fehlerhaft)                      | 1h 30m |        |
+| 04.06.2019 | Videoreihe fortgesetzt                               | 45m    |        |
+| 04.06.2019 | Trainigsplaner UI implementiert (ohne Funtionalität) | 1h 30m |        |
+| 06.06.2019 | Diverse Anpassungen                                  | 50m    |        |
+
+## Woche 10
+
+**10.06.2019 - 16.06.2019**
+
+| Datum | Tätigkeit | Dauer | Zusatz |
+| ----- | --------- | ----- | ------ |
+|       |           |       |        |
