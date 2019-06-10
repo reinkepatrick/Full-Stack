@@ -21,7 +21,7 @@
  * [State Management](#State-Management)
    * [State](#State)
    * [Props](#Props)
-     * [PropType](#PropTypes)
+     * [PropTypes](#PropTypes)
    * [Redux](#Redux-unter-React-Native)
    * [React Context](#React-Context)
 
