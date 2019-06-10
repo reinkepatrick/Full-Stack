@@ -124,3 +124,4 @@ __04.06.2019 - 10.06.2019__
 | 06.06.2019 | Implementierung von State-Management in Web-Front-End angeschaut | 35  min | |
 | 06.06.2019 | API-Call nach SwaggerHub implementiert für Login | 45  min | |
 | 06.06.2019 | Model-Datenstruktur nach Modellklassendiagramm implementiert. | 60  min | |
+| 07.06.2019 | Mocking-Service implementiert um vorerst unabhängig von API zu sein. | 60  min | |
