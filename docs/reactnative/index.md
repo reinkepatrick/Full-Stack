@@ -48,7 +48,7 @@ JSX in React-Native verfügbar. Des weiteren ist es möglich über Javascript-Sc
 bereitgestellt werden, auf die API, der jeweiligen Plattform zu zugreifen. Dadurch ist es beispielsweise möglich,
 auf die Kamera zu zugreifen.
 
-Da React-Native auf React basiert, empfiehlt es sich in [React](https://github.com/AHeinisch/Full-Stack/blob/master/docs/react/index.md) einzulesen.
+Da React-Native auf React basiert, ist die Ausarbeitung zur [React](https://github.com/AHeinisch/Full-Stack/blob/master/docs/react/index.md) empfehlenswert.
 
 ### Wie funktioniert React-Native
 
@@ -191,12 +191,13 @@ myComponent.defaultProps = {
 Mit Apollo Client lassen sich GraphQl Anfragen versenden. 
 
 Die Installation erfolgt über den folgenden NPM-Befehl:
-´´´
+```
 npm install apollo-client apollo-link-http apollo-cache-inmemory graphql-tag react-apollo --save
+```
 
 Der ApolloClient wird wie folgt initialisiert.
 
-´´´
+```
 import { ApolloClient } from 'apollo-client';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { HttpLink } from 'apollo-link-http';
@@ -210,10 +211,11 @@ const client = new ApolloClient({
   cache,
   link
 })
+```
 
 Die folgende Anfrage, fragt über deviceQeuery nach einer DeviceID. Wenn die Anfrage erfolgreich war, stehen im Response unter Data die DeviceIDs.
 
-´´´
+```
 client.query({
   query: gql`
   {
@@ -223,7 +225,7 @@ client.query({
   }
   `
 }).then(response => console.log(response.data)); 
-´´´
+```
 
 ### Push-Benachrichtigung
 
@@ -258,13 +260,12 @@ Die Websocket Api verfügt über zwei Methoden und einigen Properties. Mit der c
 
 Über die Properties onopen, onclose, onerror und onmessage ist es mögich bestimmte Events abzufangen. Dazu wird den genannten Properties eine Funktion zugewiesen. Wenn das Event auftretet wird die zugewiesene Funktion ausgeführt.
  
-´´´
+```
 var webSocket = new WebSocket('ws://host.com/path');
 webSocket.onmessage = (event) => {
   console.log(event.message);
 };
-
-´´´
+```
 
 ### Datenbank/Persistenter Speicher
 
