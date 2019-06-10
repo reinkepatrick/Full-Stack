@@ -106,3 +106,10 @@ __03.06.2019 - 09.06.2019__
 | 03.06.2019 | App: Lobby beitreten und Infos der Mitspieler abrufen    | 4 h    |        |
 | 03.06.2019 | App: kleinere Bugs fixen                                 | 30 min |        |
 | 08.06.2019 | App: Spieler rausschmeißen und Indikator für Lobbyleiter | 3 h    |        |
+
+## Woche 10 
+__10.06.2019 - 16.06.2019__
+
+| Datum      | Tätigkeit            | Dauer | Zusatz |
+| ---------- | -------------------- | ----- | ------ |
+| 10.06.2019 | App: Tests schreiben | 1 h   |        |
