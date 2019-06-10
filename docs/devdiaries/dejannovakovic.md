@@ -47,10 +47,11 @@ __06.05.2019 - 12.05.2019__
 
 | Datum | Tätigkeit | Dauer | Zusatz |
 | ----- | --------- | ----- | ------ |
-| 09.05.19 | Einlesen in Routing mit yew | 45 min | |
+| 09.05.19 | Einlesen in Routing mit yew | 45min | |
 | 09.05.19 | Verstehen des Beispiels von Routing | 3h | |
 | 09.05.19 | Routing Beispiel einer anderen Webseite mit yew verstehen | 3h | |
 | 12.05.19 | Eigene Beispiele Ausprobieren | 3h | Es hat nicht wirklich funktioniert aber ich bin später auf ein Paket gestoßen das es ermöglicht hat |
+
 ## Woche 6 
 __13.05.2019 - 19.05.2019__
 
@@ -69,3 +70,23 @@ __20.05.2019 - 26.05.2019__
 | ----- | --------- | ----- | ------ |
 | 20.05.19 | Routing mit yew_routing ermoglichen | 2h | |
 | 20.05.19 | Anfänge mit Web Worker | 1h | |
+| 25.05.19 | Fetch und FetchService | 3h 10min | |
+| 26.05.19 | JavaScript in yew mit js! macro | 1h 20min | |
+
+## Woche 8 
+__27.05.2019 - 02.06.2019__
+
+| Datum | Tätigkeit | Dauer | Zusatz |
+| ----- | --------- | ----- | ------ |
+| 31.05.19 | Verbesserung vom Fetch in der App | 4h 15min | |
+| 01.06.19 | Problemsuche bei der Benutzung von Events | 3h 50min | |
+| 01.06.19 | Fetch cont. | 2h | |
+
+## Woche 9 
+__03.05.2019 - 09.06.2019__
+
+| Datum | Tätigkeit | Dauer | Zusatz |
+| ----- | --------- | ----- | ------ |
+| 05.06.19 | Fetch cont. | 1h 15min | |
+| 07.06.19 | Problemsuche Events cont. | 4h | |
+| 08.06.19 | Routing erste ansätze | 3h 20min | |
