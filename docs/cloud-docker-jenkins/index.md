@@ -331,8 +331,19 @@ docker info
 
 ```bash
 # Container starten
-docker run -p 80:80 -d --name coachr -v /home/ec2-user/app/dist:/usr/share/nginx/html -t nginx
+docker run -p 80:80 -d --name coachr -v /home/ec2-user/app/dist/coachr:/usr/share/nginx/html -t nginx
 # Die erfolgreich getestete und gebaute Anwendung wird von Jenkins in den Ordner ~/app deployed und an den Contanier weitergereicht 
+```
+
+**EC2-instance-backend**
+
+```bash
+########### Docker installieren --> EC2-instance-coachr-frontend ###########
+
+# Datenbank starten
+docker run -p 5432:5432 --rm --name coachr-db -e POSTGRES_PASSWORD=testsystem -d postgres
+# Dotnet API starten
+docker run -it --rm -v ~/app/src/bin/Debug/netcoreapp2.2/:/ --link coachr-db:coachr-db-p 80:80 --name coachr-api mcr.microsoft.com/dotnet/core/sdk
 ```
 
 **EC2-instance-Jenkins**
@@ -342,7 +353,7 @@ docker run -p 80:80 -d --name coachr -v /home/ec2-user/app/dist:/usr/share/nginx
 sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins.io/redhat/jenkins.repo
 sudo rpm --import https://pkg.jenkins.io/redhat/jenkins.io.key      
 sudo yum install jenkins -y
-# Jenkins ist eine Java Anwendung und benötigt mindestens Java 7, nutzt man Pipeline mit Git muss auch das installiert werden
+# Jenkins ist eine Java Anwendung und benötigt mindestens Java 7, nutzt man Pipelines mit Git, muss auch das installiert werden
 sudo yum install java-1.8.0-openjdk.x86_64 -y
 # Git
 sudo yum install git -y
@@ -353,44 +364,33 @@ sudo yum install git -y
 sudo usermod -a -G docker jenkins
 # Anschließend Jenkins starten und sich das Initialpasswort anzeigen lassen
 sudo service jenkins start
-sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 # Jetzt ist der Server per http://<server-url>:8080 zu erreichen
-```
+# Damit das Initialpasswort generiert wird muss man einmal die URL ansteuern
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
-**EC2-instance-backend**
-
-```bash
-# TODO:
-docker run -p 5432:5432 --rm --name coachr-db -e POSTGRES_PASSWORD=testsystem -d postgres
-```
-
-**Dotnet Umgebung**
-
-```bash
-git clone http://www.github.com/AHeinisch/coachr-backend
-
-docker run -it --rm -v ~/coachr-backend:/coachr-backend -p 80:80 --name coachr-api mcr.microsoft.com/dotnet/core/sdk
-
-docker cp appsettings.json bdec403902e3:/coachr-backend/src
-
-dotnet restore
-
-dotnet bin/ ... /coachr-backend.dll
 ```
 
 ### Jenkins
 
+TODO: Woche 10
+
 #### Konfiguration
+
+- Plugins installieren 
+  - Publish Over SSH
+- SSH Server anlegen
+- GitHub Hook einrichten
+- Benutzer erstellen 
 
 #### Pipelines einrichten
 
-#### Github Hok einrichten 
+- Jenkinsfile erstellen
+- Geheime-Dateien zu den Repos hinzufügen
+- SSH File Transfer
 
 ### Continuous Integration in Aktion
 
-
-
-
+TODO: Woche 10
 
 ## Quellen
 
