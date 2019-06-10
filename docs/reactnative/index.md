@@ -2,8 +2,8 @@
 
 ## Inhaltsverzeichnis
 
- * [Einleitung](## Einleitung)
-   * [Was ist React-Native](### Was%20ist%20React-Native)
+ * [Einleitung](##Einleitung)
+   * [Was ist React-Native](###Was%20ist%20React-Native)
    * [Wie funktioniert React-Native](###Wie%20funktioniert%20React-Native)
 
  * [Grundlegende Konzepte](###Grundlegende%20Konzepte)
