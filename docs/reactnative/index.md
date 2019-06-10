@@ -29,7 +29,7 @@
    * [Push-Benachrichtigung](#Push-Benachrichtigung)
    * [Http-Request](#HTTP-Request)
    * [Websockets](#Websockets)
-   * [Datenbank/Persistener Speicher](#Datenbank/Persistener-Speicher)
+   * [Datenbank/Persistener Speicher](#datenbankpersistenter-speicher)
 
  * [Tooling](#Tooling)
   
