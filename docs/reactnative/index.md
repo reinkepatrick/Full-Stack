@@ -22,8 +22,7 @@
    * [States](#States)
    * [Props](#Props)
      * [PropTypes](#PropTypes)
-   * [Redux](#Redux-unter-React-Native)
-   * [React Context](#React-Context)
+   * [Redux unter React-native](##redux-unter-react-native)
 
  * [Services](#Services)
    * [Push-Benachrichtigung](#Push-Benachrichtigung)
@@ -182,10 +181,6 @@ myComponent.defaultProps = {
 ```
 
 ### Redux unter React Native
-
---TODO--
-
-### React Context
 
 --TODO--
 
