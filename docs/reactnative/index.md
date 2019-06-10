@@ -19,7 +19,7 @@
    * [JSX](#JSX)
 
  * [State Management](#State-Management)
-   * [State](#State)
+   * [States](#States)
    * [Props](#Props)
      * [PropTypes](#PropTypes)
    * [Redux](#Redux-unter-React-Native)
