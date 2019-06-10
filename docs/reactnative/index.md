@@ -22,7 +22,7 @@
    * [States](#States)
    * [Props](#Props)
      * [PropTypes](#PropTypes)
-   * [Redux unter React-native](##redux-unter-react-native)
+   * [Redux unter React-native](#redux-unter-react-native)
 
  * [Services](#Services)
    * [Push-Benachrichtigung](#Push-Benachrichtigung)
