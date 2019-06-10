@@ -230,7 +230,8 @@ client.query({
 
 Eine Push-Benachrichtigung ist eine Mitteilung, die vom App-Betreiber an dem Nutzer gesendet wird. React-Native bietet zur Zeit nur eine API für IOs Push-Benachrichtigungen. Wenn auf den Androidgeräten auch Push-Benachrichtigungen angezeigt werden sollen, so muss auf nativer Code zugegriffen werden oder auf eine externe Bibliothek. 
 
-Ablauf von Push-Benachrichtigungen
+#### Ablauf von Push-Benachrichtigungen
+
 ![Push-Benachrichtigung](img/Push-benachrichtung-ablauf.png)
 
 1. Sobald die App gestartet wurde, registriert sie sich beim jeweiligen Service an. Dieser kann entweder FCM(Google) oder APN(Apple) sein.
@@ -257,7 +258,7 @@ Die Websocket Api verfügt über zwei Methoden und einigen Properties. Mit der c
 * Blob
 * ArrayBufferView
 
-Über die Properties onopen, onclose, onerror und onmessage ist es mögich bestimmte Events abzufangen. Dazu wird den genannten Properties eine Funktion zugewiesen. Wenn das Event auftretet wird die zugewiesene Funktion ausgeführt.
+Über die Properties onopen, onclose, onerror und onmessage ist es mögich bestimmte Events abzufangen. Dazu wird den genannten Properties eine Funktion zugewiesen. Wenn das Event auftretet, wird die zugewiesene Funktion ausgeführt.
  
 ```
 var webSocket = new WebSocket('ws://host.com/path');
