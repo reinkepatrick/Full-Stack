@@ -77,3 +77,11 @@ __03.06.2019 - 09.06.2019__
 | Datum      | Tätigkeit                                                                             | Dauer      | Zusatz |
 | ---------- | ------------------------------------------------------------------------------------- | ---------- | ------ |
 | 09.06.2019 | Projekt: Experimente mit Babylon Gui, Anfängliche Implementation von Text             | 2 h        | |
+
+## Woche 10
+__10.06.2019 - 16.06.2019__
+
+| Datum      | Tätigkeit                                                                             | Dauer      | Zusatz |
+| ---------- | ------------------------------------------------------------------------------------- | ---------- | ------ |
+| 10.06.2019 | Größe der Frameworks in Performance einbezogen                                        | 1 h        | |
+| 10.06.2019 | Projekt: Babylon GUI vorerst verworfen, evtl Ansatz mit dynamischer Textur, Cleanup   | 1 h 45 min | |
