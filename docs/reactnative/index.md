@@ -143,7 +143,6 @@ Die Styles können bedingt gestetzt werden.
 
 ## State Management
 
-Im folgenden wird 
 Für einen allgemeinen Einblick ins State Management wird die Ausarbeitung [State Management](https://github.com/AHeinisch/Full-Stack/blob/master/docs/state-managment/index.md) empfohlen. 
 
 ### States
