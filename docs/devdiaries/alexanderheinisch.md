@@ -113,4 +113,26 @@ __20.05.2019 - 26.05.2019__
 | 24.05.2019 | Klassendiagram um ViewModels erweitert | 180 min | |
 | 24.05.2019 | Enums in Klassendiagram aktualisiert | 20 min | |
 
+## Woche 8
+
+__27.05.2019 - 02.06.2019__
+
+| Datum | Tätigkeit | Dauer | Zusatz |
+| --- | ---| --- | --- |
+| 28.05.2019 | XUnit Test verfahren | 120 min | |
+| 29.05.2019 | Unit Tests für die Enums | 120 min | Parameterisierte Tests für Enums kompliziert |
+| 30.05.2019 | Unit Tests erweitert | 120 min | |
+| 01.06.2019 | Integration Tests informationen gesammelt |  |
+| 02.06.2019 | Integration Tests fehlerhaft entwickelt | 180 min | Testserver weigert sich zu starten. Tests werden nicht mehr erkannt |
+
+## Woche 9
+
+__03.06.2019 - 09.06.2019__
+
+| Datum | Tätigkeit | Dauer | Zusatz |
+| --- | ---| --- | --- |
+| 03.06.2019 | XUnit Dokument erweitern | 60 min | |
+| 03.06.2019 | Angular als Frontend in dotnet core | 30 min | |
+| 03.06.2019 | Erster Integrationstest | 90 min | |
+
 

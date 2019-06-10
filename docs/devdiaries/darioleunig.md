@@ -86,6 +86,19 @@ Zuzüglich zur Heimarbeit beinhaltet jede Woche das Seminar (1h 30m) mit anschli
 
 **27.05.2019 - 02.06.2019**
 
-| Datum | Tätigkeit | Dauer | Zusatz |
-| ----- | --------- | ----- | ------ |
-|       |           |       |        |
+| Datum      | Tätigkeit                                                    | Dauer  | Zusatz |
+| ---------- | ------------------------------------------------------------ | ------ | ------ |
+| 27.05.2019 | Videoreihe fortgesetzt                                       | 1h 10m |        |
+| 29.05.2019 | Eingelesen zum Thema HTTP Client                             | 1h     |        |
+| 30.05.2019 | Implementierung der Mannschaften Darstellung                 | 1h 30  |        |
+| 30.05.2019 | Swagger Hub API Aufruf implementiert (Mannschaften darstellen) | 1h 50m |        |
+| 01.06.2019 | Implementierung der Funktion zur Erstellung neuer Mannschaft | 0h 30m |        |
+| 02.06.201  | Kleinere Änderungen am Source-Code (refactoring)             | 0h 20m |        |
+
+## Woche 9 
+
+**03.06.2019 - 09.06.2019**
+
+| Datum      | Tätigkeit                       | Dauer  | Zusatz |
+| ---------- | ------------------------------- | ------ | ------ |
+| 03.06.2019 | Live API Anbindung (fehlerhaft) | 1h 30m |        |
