@@ -3,15 +3,15 @@
 ## Inhaltsverzeichnis
 
  * [Einleitung](#Einleitung)
-   * [Was ist React-Native](#was%20ist%20React-Native)
+   * [Was ist React-Native](#Was%20ist%20React-Native)
    * [Wie funktioniert React-Native](#Wie%20funktioniert%20React-Native)
 
- * [Grundlegende Konzepte](###Grundlegende%20Konzepte)
+ * [Grundlegende Konzepte](#Grundlegende%20Konzepte)
    * [Native Code](###Native%20Code)
    * [Navigation](###Navigation)
    * [Components](###Components)
 
- * [User Interfaces](##User%20Interfaces)
+ * [User Interfaces](#User%20Interfaces)
    * [Touch and Gesture](###Touch%20and%20Gesture)
    * [Animations](###Animations)
    * [Layouting](###Layouting)
