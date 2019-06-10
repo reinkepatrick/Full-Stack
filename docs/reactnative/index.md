@@ -2,40 +2,40 @@
 
 ## Inhaltsverzeichnis
 
- * [Einleitung](##Einleitung)
-  * [Was ist React-Native](##Was%20ist%20React-Native)
-  * [Wie funktioniert React-Native](##Wie%20funktioniert%20React-Native)
+ * [Einleitung](#Einleitung)
+   * [Was ist React-Native](#Was-ist-React-Native)
+   * [Wie funktioniert React-Native](#Wie-funktioniert-React-Native)
 
- * [Grundlegende Konzepte](##Grundlegende%20Konzepte)
-  * [Native Code](##Native%20Code)
-  * [Navigation](##Navigation)
-  * [Components](##Components)
+ * [Grundlegende Konzepte](#Grundlegende-Konzepte)
+   * [Native Code](#Native-Code)
+   * [Navigation](#Navigation)
+   * [Components](#Components)
 
- * [User Interfaces](##User%20Interfaces)
-  * [Touch and Gesture](##Touch%20and%20Gesture)
-  * [Animations](##Animations)
-  * [Layouting](##Layouting)
-  * [Styles](##Styles)
-  * [JSX](##JSX)
+ * [User Interfaces](#User-Interfaces)
+   * [Touch and Gesture](#Touch-and-Gesture)
+   * [Animations](#Animations)
+   * [Layouting](#Layouting)
+   * [Styles](#Styles)
+   * [JSX](#JSX)
 
- * [State Management](##State%20Management)
-  * [State](##State)
-  * [Props](##Props)
-   * [PropType](##PropType)
-  * [Redux](##Redux%20unter%20React%20Native)
-  * [React Context](##React%20Context)
+ * [State Management](#State-Management)
+   * [States](#States)
+   * [Props](#Props)
+     * [PropTypes](#PropTypes)
+   * [Redux](#Redux-unter-React-Native)
+   * [React Context](#React-Context)
 
- * [Services](##Services)
-  * [Push-Benachrichtigung](#Push-Benachrichtigung)
-  * [Http-Request](#HTTP-Request)
-  * [Websockets](#Websockets)
-  * [Datenbank/Persistener%20Speicher](#Datenbank/Persistener%20Speicher)
+ * [Services](#Services)
+   * [Push-Benachrichtigung](#Push-Benachrichtigung)
+   * [Http-Request](#HTTP-Request)
+   * [Websockets](#Websockets)
+   * [Datenbank/Persistener Speicher](#datenbankpersistenter-speicher)
 
- * [Tooling](##Tooling)
+ * [Tooling](#Tooling)
   
- * [Testing](##Testing)
-  * [Unit-Test](##Unit-Test)
- * [Quellen](##Quellen)
+ * [Testing](#Testing)
+   * [Unit-Test](#Unit-Test)
+ * [Quellen](#Quellen)
 
 ## Einleitung
 
