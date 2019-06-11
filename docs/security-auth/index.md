@@ -78,6 +78,41 @@ Der Client stellt eine Anfrage an den Server. Dabei berechnet er einen einzigart
 
 ## Authentifizierung
 
+### Authentifizierungsverfahren
+
++ **Einweg-Authentifizierung**
+  + ![](img\Einweg-Auth.png)
+  + Alice generiert eine Nachticht M=(TA, RA, IB, d)
+    + TA: Zeitstempel von Alice
+    + RA: Zufallszahl
+    + IB: Identität von Bob
+    + d: beliebige Information
+    + Daten können zur Sicherheit noch mit dem Public Key von Bob EB verschlüsselt werden
+  + Alice sendet (CA, DA(M)) an Bob
+    + CA: Zertifikat von Alice 
+    + DA: Private Key von Alice 
+  + Bob zertifizeirt CA und erhält EA und überprüft ob der Schlüssel abgelaufen ist. 
+    + EA: Public Key von Alice
+  + Bob entschlüsselt DA(M) mit EA
+  + Bob überprüft ob IB in M korrekt ist und TA in M ob Nachricht aktuell ist. 
+  + Bob kann nach Bedarf in einer Datenbank nachsehen ob RA schoneinal gesendet wurde um zu überprüfen ob es sich um eine alte Nachricht handelt die erneut gesendet wurde.
++ **Zweiweg-Authentifizierung**
+  + ![](img\Zweiweg-Auth.png)
+  + Bob generiert eine Nachricht M' = (TB, RA, IA, d)
+    + TB: Zeitstempel von Bob 
+    + IA: Identität von Alice
+    + RA: Zufallszahl aus Schritt 1
+    + Daten können noch einmal mit Alices Public Key EA verschlüsselt werden
+  + Bob sendet Nachricht DB(M') mit EB um Integrität und Unterschift von Bob zu verfizieren
+  + Alice überprüft ob IA in M' korrekt ist 
+  + Alice überprüft TB ob Nachricht aktuell ist und kann bei Bedarf auch Zufallszahl überprüfen
++ **Dreiweg-Authentifizierung**
+  + ![](img\Dreiweg-Auth.png)
+  + Alice vergleicht empfangene RA mit der gesendeten RA 
+  + Alice sendet DA(RB) an Bob
+  + Bob dechiffriert DA(RB) mit EA
+  + Bob vergleicht empfangene RB mit gesendeter RB 
+
 Identitäten lassen sich im Netz nur schwer beweisen und die meisten Websites oder Dienste verwenden unterschiedliche Techniken der Authentifizierung.
 
 Meistens kann man die Identität einer Person über drei Faktoren bestimmen: 
@@ -489,4 +524,6 @@ Eine n-Byte große Binärdatei wird in einen 4 * ( n / 3 ) Byte großen Base64-S
 * https://de.wikipedia.org/wiki/Zwei-Faktor-Authentisierung
 * https://de.wikipedia.org/wiki/OAuth
 * https://www.oauth.com/oauth2-servers/getting-ready/
-* https://www.ibm.com/support/knowledgecenter/de/SS7K4U_liberty/com.ibm.websphere.wlp.zseries.doc/ae/cwlp_authentication.html#cwlp_authentication__OpenID
+* https://www.ibm.com/support/knowledgecenter/de/SS7K4U_liberty/com.ibm.websphere.wlp.zseries.doc/ae/cwlp_authentication.html#cwlp_authentication
+* https://www.techfak.uni-bielefeld.de/~walter/vpn/ch08s04.html
+
