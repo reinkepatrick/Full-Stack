@@ -141,11 +141,11 @@ __03.06.2019 - 09.06.2019__
 | 07.06.2019 | Write basic Spielertests | 60 min | |
 | 07.06.2019 | Write Merkmaltests | 60 min | |
 | 08.06.2019 | erweitern von Teamtests | 30 min | |
-| 09.06.2019 | Swaggerhub dokumentation angepasst | |
+| 09.06.2019 | Swaggerhub dokumentation angepasst | 50 min | | 
 
 ## Woche 10
 
-__ 10.06.2019 - 16.06.2019 __
+__10.06.2019 - 16.06.2019__
 
 | Datum | Tätigkeit | Dauer | Zusatz |
 | --- | --- | --- | --- |
