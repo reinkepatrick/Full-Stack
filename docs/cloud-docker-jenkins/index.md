@@ -2,7 +2,7 @@
 
 ## Einleitung
 
-Dieses Dokument enthält eine Zusammenfassung der wichtigsten Begriffe in Bezug auf automatische Build Prozesse der Softwareentwicklung. Als erstes gibt es eine Einführung in **Cloud Computing** und eine Erläuterung der Begriffe CI und CD. Darauf folgt die Vorstellung von den wichtigsten Tools in diesem Gebiet, sowie die jeweiligen Vor und Nachteile. In der Lehrveranstaltung "Fullstackdevelopment" wurde **Jenkins als CI/CD Tool** ausgewählt. Um automatische Build Prozesse auszuführen ist es hilfreich sich mit **Docker und der Containerisierung** zu beschäftigen, diese ermöglichen es eine flexible, leichtgewichtige  und saubere Build Umgebung zu erzeugen. Grundbegriffe und die wichtigsten Funktionen von Docker und Jenkins werden erläutert und abschließend am **Beispiel der Anwendung "coachr",** die auch Teil der Lehrveranstaltung ist, angewendet.
+Dieses Dokument enthält eine Zusammenfassung der wichtigsten Begriffe in Bezug auf automatische Build Prozesse der Softwareentwicklung. Als erstes gibt es eine Einführung in **Cloud Computing** und eine Erläuterung der Begriffe CI und CD. Darauf folgt die Vorstellung von den wichtigsten Tools in diesem Gebiet, sowie die jeweiligen Vor und Nachteile. In der Lehrveranstaltung "Fullstackdevelopment" wurde **Jenkins als CI/CD Tool** ausgewählt. Um automatische Build Prozesse auszuführen, ist es hilfreich sich mit **Docker und der Containerisierung** zu beschäftigen. Diese ermöglichen es eine flexible, leichtgewichtige  und saubere Build Umgebung zu erzeugen. Grundbegriffe und die wichtigsten Funktionen von Docker und Jenkins werden erläutert und abschließend am **Beispiel der Anwendung "coachr",** die auch Teil der Lehrveranstaltung ist, angewendet.
 
 ## Cloud Computing
 
@@ -30,25 +30,31 @@ Wenn mehrere Entwickler an einem Code arbeiten, ermöglicht CI diesen eine einfa
 
 Ziel der Continuous Delivery ist eine Codebasis, die jederzeit für die Implementierung in einer Produktionsumgebung bereit ist. Der Entwicklercode wird dadurch dem Business-Team übergeben, der eine Grundlage zur Implementierung in der Produktion darstellt. 
 
-**Continuous Deplyment**
+**Continuous Deployment**
 
 Die abschließende Phase ermöglicht es den geprüften Code an den Kunden direkt auszuliefern. Diese Pipeline kann somit z. B. eine App direkt und voll automatisch in den Store laden.
 
+**CI+CD Pipeline Beispiel von Google**
+
+Dies ist ein beispielhafter und sehr allgemeiner Ablauf einer CI/CD Umgebung. Ein konkretes Beispiel folgt im Abschnitt "**Beispiel coachr**".
+
+![Google Pipeline](https://cloud.google.com/solutions/images/jenkins-cd-container-engine.svg)
+
 ### Tools + Vergleich
 
-Es folgt eine Liste von CI-Tools mit einer kurzen Beschreibung und einigen Vor- bzw. Nachteilen. Es wurden nur frei nutzbare Tools in die Liste aufgenommen, da es ein schier grenzenlose Zahl von kommerziellen CI-Versionen gibt, die sich nur wenig unterscheiden oder spezielle Build Systeme bereitstellen.
+Es folgt eine Liste von CI-Tools mit einer kurzen Beschreibung und einigen Vor- bzw. Nachteilen. Es wurden nur frei nutzbare Tools in die Liste aufgenommen, da es ein schier grenzenlose Zahl von kommerziellen CI-Tools gibt, die sich nur wenig unterscheiden oder spezielle Build Systeme bereitstellen.
 
 **Jenkins**
 
 Jenkins ist bei nahezu jeder CI-Tool-Liste die Nummer eins. Es ist frei zugänglich, sprich Open-Source und bietet durch seine Plugin-Infrastruktur die Möglichkeit seine Konfiguration an viele verschiedene Projekte (und Sprachen) anzupassen. Jenkins ist eine Java Applikation und hat auch seine Wurzeln bei der Firma "Sun Microsystems" die 2010 von Oracle aufgekauft wurde.
 
-| Vorteile                                                   | Nachteile                                               | Abhängigkeiten                         |
-| ---------------------------------------------------------- | ------------------------------------------------------- | -------------------------------------- |
-| Sehr flexible an verschiedene Projekte anpassbar (Plugins) | Hoher Konfigurationsaufwand und Eigenleistung notwendig | Java Runtime Environment (Java 7 o. 8) |
+| Vorteile                                                   | Nachteile                                               | Abhängigkeiten                                          |
+| ---------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------- |
+| Sehr flexible an verschiedene Projekte anpassbar (Plugins) | Hoher Konfigurationsaufwand und Eigenleistung notwendig | Java Runtime Environment (Java 7 oder 8, stand 05/2019) |
 
 **Travis CI / Circle CI**
 
-Die beiden CI-Tools stellen ein Cloud-basierte Lösung eines Build und Deploysystem dar. Travis sowie Circle bieten die Nutzung für Open-Source-Projekte umsonst an die auf Github gehostet werden. Aber auch diese sind auf Build-Anzahl etc. beschränkt. Diese Tools nehmen einem sehr viel Denkarbeit ab und man kann sich aufs Wesentliche konzentrieren.
+Die beiden CI-Tools stellen ein Cloud-basierte Lösung eines Build und Deploysystem dar. Travis sowie Circle bieten die Nutzung für Open-Source-Projekte von Github umsonst an. Aber auch diese sind auf Build-Anzahl etc. beschränkt. Diese Tools nehmen einem sehr viel Denkarbeit ab und man kann sich aufs Wesentliche konzentrieren.
 
 | Vorteile                                                     | Nachteile                                       | Abhängigkeiten |
 | ------------------------------------------------------------ | ----------------------------------------------- | -------------- |
@@ -58,12 +64,12 @@ Die beiden CI-Tools stellen ein Cloud-basierte Lösung eines Build und Deploysys
 
 **Gitlab CI Community**
 
-Gitlab CI stellt auch eine Cloud-basierte Lösung dar, bei der allerdings die Self-Hosted-Core Version gratis ist. Entwickelt wird Gitlab in Ruby und Go.
+Gitlab CI stellt, genau wie Travis/Circle CI eine Cloud-basierte Lösung dar, bei der allerdings ein Versionsverwaltungssystem integriert ist. Es lässt sich auch eine Self-Hosted-Core Version aufsetzen, alle weiteren Serverversionen kosten Geld. Entwickelt wird Gitlab in Ruby und Go.
 
 | Vorteile                                              | Nachteile                                     | Abhängigkeiten                                               |
 | ----------------------------------------------------- | --------------------------------------------- | ------------------------------------------------------------ |
 | Self-Hosted Git Server mit Issue Tracker, CI, CD .... | Höherer Konfigurationsaufwand bei Self-Hosted | Keine wenn PaaS                                              |
-| Integrierter GitHub-Ersatz                            |                                               | Sonst siehe [Gitlab Install](https://about.gitlab.com/install/) |
+| Integrierter GitHub/SVN-Ersatz                        |                                               | Sonst siehe [Gitlab Install](https://about.gitlab.com/install/) |
 
 ## Jenkins
 
@@ -79,27 +85,27 @@ Man kann Jenkins auf allen Systemen installieren, dafür benötigt man nur ein O
 
 In Jenkins arbeitet man mit sogenannten Pipelines. Sie können sehr flexibel eingesetzt und mit Plugins erweitert werden. Einfach gesagt führen sie die Schritte automatisch aus, die für ein Test-Build-Deploy-Prozess benötig werden. Es gibt zwei Möglichkeiten eine Pipeline zu benutzten:
 
+- [Pipeline Syntax Übersicht](https://jenkins.io/doc/book/pipeline/#pipeline-syntax-overview)
+
 **Jenkinsfile (Declarative Pipeline)**
 
 ```groovy
 pipeline {
-    agent none 
-    stages {
-        stage('Example Build') {
-            agent { docker 'maven:3-alpine' } 
-            steps {
-                echo 'Hello, Maven'
-                sh 'mvn --version'
-            }
-        }
-        stage('Example Test') {
-            agent { docker 'openjdk:8-jre' } 
-            steps {
-                echo 'Hello, JDK'
-                sh 'java -version'
-            }
-        }
+	agent none 
+	stage('Example Build') {
+  	agent { docker 'maven:3-alpine' } 
+    steps {
+        echo 'Hello, Maven'
+        sh 'mvn --version'
     }
+	}
+  stage('Example Test') {
+  	agent { docker 'openjdk:8-jre' } 
+    steps {
+      echo 'Hello, JDK'
+      sh 'java -version'
+    }
+  }
 }
 ```
 
@@ -107,13 +113,13 @@ pipeline {
 
 ```groovy
 node {
-    stage('Example') {
-        if (env.BRANCH_NAME == 'master') {
-            echo 'I only execute on the master branch'
-        } else {
-            echo 'I execute elsewhere'
-        }
+  stage('Example') {
+    if (env.BRANCH_NAME == 'master') {
+      echo 'I only execute on the master branch'
+    } else {
+      echo 'I execute elsewhere'
     }
+  }
 }
 ```
 
@@ -313,7 +319,7 @@ docker run test/cowsay-dockerfile Hallo Muh
 
 ### Server einrichten
 
-Die Serverinstanzen wurden mit AWS erstellt, die Einrichtung und Konfiguration hier aufzuführen würde den Rahmen diese Beispiels sprengen. Nachfolgend werden die Kommandozeilenbefehle der einzelnen Instanzen aufgelistet, nach dem man sich erfolgreich per SSH darauf verbunden hat.
+Die Serverinstanzen wurden mit AWS erstellt, die Einrichtung und Konfiguration hier aufzuführen würde den Rahmen diese Beispiels sprengen. Es handelt sich hier bei um "**Elastic Cloud 2**" Instanzen. Nachfolgend werden die Kommandozeilenbefehle der einzelnen Instanzen aufgelistet, nach dem man sich erfolgreich per SSH darauf verbunden hat.
 
 *Note*: Der Befehl `sudo yum update -y` wird in jeder Instanz als erstes ausgeführt.
 
@@ -372,25 +378,25 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
 ### Jenkins
 
-TODO: Woche 10
-
 #### Konfiguration
 
 - Plugins installieren 
   - Publish Over SSH
+- Credentials erstellen
 - SSH Server anlegen
 - GitHub Hook einrichten
-- Benutzer erstellen 
+- Benutzer erstellen
 
 #### Pipelines einrichten
 
 - Jenkinsfile erstellen
 - Geheime-Dateien zu den Repos hinzufügen
+- Webhook Trigger erstellen
 - SSH File Transfer
 
 ### Continuous Integration in Aktion
 
-TODO: Woche 10
+TODO: Woche 11 - coachr-CI in GIFs
 
 ## Quellen
 
@@ -400,6 +406,7 @@ TODO: Woche 10
 - [Jenkins in Docker und mit Docker und für Docker](https://www.oose.de/blogpost/jenkins-in-docker-und-mit-docker-und-fuer-docker/)
 - [CircleCI vs Travis CI vs Jenkins](https://hackernoon.com/continuous-integration-circleci-vs-travis-ci-vs-jenkins-41a1c2bd95f5)
 - [Wikipedia](https://de.wikipedia.org/wiki/Cloud_Computing)
+- [Google Jenkins-Kubernetes-Pipeline](https://cloud.google.com/solutions/continuous-delivery-jenkins-kubernetes-engine)
 
 **Jenkins**
 
