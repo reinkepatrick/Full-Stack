@@ -110,3 +110,5 @@ __10.06.2019 - 16.06.2019__
 | ---------- | -------------- | ------ | ------ |
 | 10.06.2019 | MQTT-Funktionen | 1,5 h | Last will, Persistent sessions, Retained messages  |
 | 10.06.2019 | Recherche zur Inbetriebnahme der Sensoren | 0,5 h | |
+| 12.06.2019 | Inbetriebnahme Raspberry Pi | 2 h | Konfiguration, MQTT, Sensoren |
+| 14.06.2019 | Sequenzdiagramm neue Messung | 2 h |  |
