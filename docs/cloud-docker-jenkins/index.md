@@ -380,23 +380,113 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
 #### Konfiguration
 
-- Plugins installieren 
+Nach der Installation muss Jenkins noch konfiguriert werden, um die Bedürfnisse für das Beispiel **coachr** zu erfüllen. Es folgen die nötigen Einstellungen mit Konfigurationspfad .
+
+**Plugins** 
+
+- Jenkins verwalten => Plugins verwalten => Reiter: Verfügbar
+- Im Suchfeld mach dem Plugin suche und installieren (benötigte Abhängigkeiten werden automatisch installiert)
+- Zu installierende Plugins
   - Publish Over SSH
-- Credentials erstellen
-- SSH Server anlegen
-- GitHub Hook einrichten
-- Benutzer erstellen
+
+**Credentials** 
+
+- Zugangsdaten => Scope: global => Zugangsdaten hinzufügen
+  - Es können sechs verschiedene Arten von Zugangsdaten gewählt werden 
+- Zu erstellende Zugangsdaten
+  - Github-Logindaten für Zugriff auf die Repositorys (Benutzername und Passwort)
+  - GitHub-Token für die Nutzung von Webhooks (Secret text)
+
+**SSH Server**
+
+- Jenkins verwalten => System Konfiguration => Abschnitt: Publish over SSH
+
+  ![PoverSSHt](img\PoverSSHt.PNG)
+
+- Es müssen Frontend und Backend Server angelegt werden
+
+**GitHub Hook**
+
+- Jenkins verwalten => System Konfiguration => Abschnitt: GitHub
+
+  ![GitHubServer](img\GitHubServer.PNG)
 
 #### Pipelines einrichten
 
-- Jenkinsfile erstellen
-- Geheime-Dateien zu den Repos hinzufügen
-- Webhook Trigger erstellen
-- SSH File Transfer
+Für für Frontend und Backend müssen jeweils zwei Pipelines erstellt werden. Hier folgt das Beispiel anhand der Frontend-Pipelines. 
+
+**Jenkinsfile erstellen**
+
+```groovy
+pipeline {
+    agent none
+    stages {
+        stage('Fetch dependencies') {
+            agent {
+                docker {
+        			image 'circleci/node'
+        			args '--privileged=true -u root:root'
+        		}
+            }
+            steps {
+                sh 'npm install'
+            }
+        }
+        stage('Build') {
+            agent {
+                docker {
+                    image 'circleci/node'
+                    args '--privileged=true -u root:root -v /home/ec2-user:/home/root'
+                }
+            }
+            steps {
+                sh 'yarn build'
+            }
+        }
+        stage('Prepare Deployment') {
+            agent any 
+            steps {
+                sh 'tar cfv dist.tar dist/'
+                sh 'cp dist.tar ../coachr-deploy/'
+            }    
+        }
+    }
+}
+```
+
+**Geheime-Dateien hinzufügen**
+
+Im Fall von coachr dürfen sicherheitskritische Konfigurationsdateien nicht im Repository gehalten werden und müssen den Projekten manuell zugeführt werden, in unserem Fall geschiet das über den SecureCopie-Befehl `scp` geschehen. [Mehr zu scp](https://linuxize.com/post/how-to-use-scp-command-to-securely-transfer-files/)
+
+**Build-Pipeline erstellen**
+
+- Element anlegen => Pipeline => OK
+- Abschnitt: Build Triggers
+  - Dort den Haken bei `GitHub hook trigger for GitScm polling` setzen
+- Abschnitt: Pipeline
+  - `Pipeline script from SCM` auswählen
+  - Git als SCM auswählen 
+  - Repository URL eintragen und Credentials auswählen
+  - Branch auswählen (default: */master)
+  - Das zuvor erstellte Jenkinsfile im Wurzelverzeichnis des Repos ablegen 
+  - Speichern
+
+**Deploy-Pipeline erstellen**
+
+- Element anlegen => "Freestyle"-Softwareprojekt bauen => OK
+- Abschnitt: Build Auslöser
+  - Dort den Haken bei `Starte Build, nachdem andere Projekte gebaut wurden` setzen
+  - Bei `zu überwachende Projekte` den Namen der Build-Pipeline eintragen, so das sie nur ausgelöst wird wenn der Build stabil ist
+- Abschnitt: Post-Build-Aktionen
+  - SSH-Server auswählen
+    - Source files: Hier werden Dateien aufgeführt die per SSH zum angegeben Server übertragen werden (Remote Directory)
+    - Exec command: Hier werden Zeilenweise Befehle ausgeführt die nach dem Übertragen angestoßen werden
 
 ### Continuous Integration in Aktion
 
-TODO: Woche 11 - coachr-CI in GIFs
+TODO: Woche 11-12 - coachr-CI in GIFs
+
+TODO: Teststages in den Jenkinsfiles
 
 ## Quellen
 
