@@ -110,6 +110,9 @@ __03.06.2019 - 09.06.2019__
 ## Woche 10 
 __10.06.2019 - 16.06.2019__
 
-| Datum      | Tätigkeit            | Dauer | Zusatz |
-| ---------- | -------------------- | ----- | ------ |
-| 10.06.2019 | App: Tests schreiben | 1 h   |        |
+| Datum      | Tätigkeit                                                           | Dauer      | Zusatz |
+| ---------- | ------------------------------------------------------------------- | ---------- | ------ |
+| 10.06.2019 | App: Tests schreiben                                                | 1 h        |        |
+| 11.06.2019 | App: Warnung bei Kicken von Spielern                                | 30 min     |        |
+| 11.06.2019 | App: Dialogfenster für Benutzernameneingabe erstellt                | 1 h 30 min |        |
+| 14.06.2019 | App: Benutzernameneingabe komplett überarbeitet und fertig gestellt | 3 h        |        |
