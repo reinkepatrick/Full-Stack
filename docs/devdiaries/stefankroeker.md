@@ -120,4 +120,9 @@ __10.06.2019 - 16.06.2019__
 
 | Datum      | Tätigkeit                                                                                                                       | Dauer      | Zusatz |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------- | ---------- | ------ |
-| 03.06.2019 | Mau Mau implementiert.                                                                                                          | 5h         |        |
+| 10.06.2019 | Mau Mau implementiert.                                                                                                          | 5h         |        |
+| 11.06.2019 | Weiteres Vorgehen mit der Gruppe besprochen.                                                                                    | 2h         |        |
+| 13.06.2019 | Erste Game Tests. Integrieren von Daten in die Testdatenbank herausgefunden.                                                    | 2h         |        |
+| 14.06.2019 | Game Tests geschrieben.                                                                                                         | 4h         |        |
+| 15.06.2019 | Game Tests geschrieben.                                                                                                         | 2h         |        |
+| 15.06.2019 | Kommunikation ziehen von Karten implementiert.                                                                                  | 3h         |        |
