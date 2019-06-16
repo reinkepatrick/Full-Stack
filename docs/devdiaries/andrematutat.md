@@ -127,3 +127,4 @@ __10.06.2019-16.06.2019__
 |16.06|Implementieren der ObjectID|90min||
 |16.06|Umstrukturierung des Quellcodes|20min|| 
 |16.06|Implementieren von Querys mit Datumsabfrage|120min||   
+|16.06|Weiteres, erfolgloses, rumtesten mit GraphQL Subs| 120min|evtl. API nochmal neu aufbauen| 
