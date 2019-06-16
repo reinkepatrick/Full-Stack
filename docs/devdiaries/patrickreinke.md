@@ -142,4 +142,14 @@
 | 05.06.2019 | Fertigstellung der Lobby                                             | 2 h 30 min |        |
 | 05.06.2019 | Beheben von Grammatik und Rechtschreibfehler der React Dokumentation | 1 h        |        |
 | 07.06.2019 | Hinzufügen vom Entfernen eines Spielers                              | 1 h 30 min |        |
-| 08.06.2019 | Definition von Redux und Asyn­chro­ni­tät unter Redux                   | 2 h        |        |
+| 08.06.2019 | Definition von Redux und Asyn­chro­ni­tät unter Redux                | 2 h        |        |
+
+## Woche 10
+
+**10.06.2019 - 16.06.2019**
+
+| Datum      | Tätigkeit                                   | Dauer      | Zusatz                                                |
+| :--------- | :------------------------------------------ | :--------- | :---------------------------------------------------- |
+| 11.06.2019 | Hinzufügen von einer Benachrichtigung       | 1 h        | wenn der Spieler gekickt wird oder die Lobby voll ist |
+| 11.06.2019 | Beheben von grafischen Fehlern              | 1 h 30 min | Beim hovern von den einzelnen LobbyListItems          |
+| 11.06.2019 | Hinzufügen vom Design einer einzelnen Karte | 1 h 3 min  |                                                       |
