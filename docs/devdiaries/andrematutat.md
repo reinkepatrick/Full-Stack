@@ -116,3 +116,14 @@ __03.06.2019-09.06.2019__
 | 09.06 | Erste (erfolglose) versuche WebSockets zu implementieren | 120min | Es gibt graphql-ws, allerdings noch WiP und ehr mäßig dokumentiert. Aktueller Ansatz: GraphQL Subscriptions |
 | 09.06 | Einlesen in GraphQL Subscriptions        | 60min  |                                          |
 |       |                                          |        |                                          |
+
+
+## Woche 10
+__10.06.2019-16.06.2019__
+
+| Datum | Tätigkeit                                | Dauer  | Zusatz                                   |
+| ----- | ---------------------------------------- | ------ | ---------------------------------------- |
+|16.06|Entfernen des eigenen AutoInc|30min||  
+|16.06|Implementieren der ObjectID|90min||
+|16.06|Umstrukturierung des Quellcodes|20min|| 
+|16.06|Implementieren von Querys mit Datumsabfrage|120min||   
