@@ -83,3 +83,26 @@ Interessant wird Stardust besonders in Kombination mit D3.js, eine Bibliothek di
 
 *Hybride Graphendarstellung eines Datensets mit StardustJS und D3.js*
 
+## Performance: three.js vs BabylonJS vs StardustJS
+Um besser bewerten zu können welche Bibliothek sich für gewisse Projekte eignet, habe ih mich entschlossen einen kleinen Vergleich aufzustellen.
+Dabei ist eine Aufgabe mit Ziel vorgegeben die in der jeweiligen Render-Bibliothek möglichst effizient umgesetzt wird. Danach wird die Laufzeit in ms gemessen und die Anzahl der Codezeilen gezählt und aus diesen Werten ein Vergleich erstellt.
+
+### Die Aufgabe:
+Darstellung eines Graphen samt mit Koordinatensystem, jedoch ohne Beschriftung. Gegeben dafür sind: Das Datenset, die X- und Y-Keys für Werte im Set und zwei Skalierungsfunktionen um die Werte auf den Achsen zu bestimmen.
+
+### Ergebnisse:
+![Output der Funktion](img/performance_1.png)
+*Ergebnis des Renders, L>R: three.js, BabylonJS, StardustJS*
+
+Laufzeit wurde gemessen über 50 Versuche und dann der Durchschnitt ermittelt.
+
+| Bibliothek | Laufzeit (Ø) | Laufzeit (Best) | Laufzeit (Worst) | Codezeilen | Größe des Frameworks |
+|---------|-------|-------|-------|-------|-------|
+| three.js | 64,45 ms | 55 ms | 84 ms | 12 | 571 kB |
+| BabylonJS | 81 ms | 72 ms | 94 ms | 13 | 2,56 MB |
+| StardustJS | 158,5 ms | 150 ms | 201 ms | 12 | 403 kB |
+
+### Fazit: 
+
+Die Anzahl der Codezeilen und der eigentliche Aufbau des Codes ist für alle drei Bibliotheken ähnlich, bei three und Babylon sogar nahezu gleich. Stardust definitiert seine Marks etwas anders.
+In der Laufzeit entäuscht StardustJS, weswegen ich derzeit keinen Vorteil in ihrer Verwendung sehe. Babylon unterscheidet sich letztendlich in seiner Dateigröße stark von three, was für gewisse Seiten ein Effizienzkriterium sein könnte.

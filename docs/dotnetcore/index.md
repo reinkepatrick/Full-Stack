@@ -43,7 +43,9 @@ type ValuesController () =
 Die Route ist nicht direkt lesbar ohne zu wissen das [controller] durch Values ersetzt wird.
 Trotz das Klassen verwendet werden ist keine spezielle Ordner Struktur vorgeschrieben bzw. benötigt welches ein suchen nach der zugehörigen Klasse verursacht. Da die eigentliche Route in der Datei der Klasse deklariert wird.
 
-**Http Request Pipeline**
+##### Http Request Pipeline
+
+![https://thomaslevesque.com/2018/03/27/understanding-the-asp-net-core-middleware-pipeline](.\img\Middleware_Pipeline.png)
 
 In ASP.NET ist eine Pipeline verfügbar welche das hinzufügen von Middleware erlaubt. Eine detaillierte Beschreibung zu diesem Thema gibt es [hier](<https://docs.microsoft.com/de-de/aspnet/core/fundamentals/middleware/?view=aspnetcore-2.2>). Ein paar Beispiele für diese Middleware:
 
@@ -51,11 +53,57 @@ In ASP.NET ist eine Pipeline verfügbar welche das hinzufügen von Middleware er
 - HTTPS Redirect
 - Database Connection
 
+**Unterschiedliche Middlewares**
+
+`Use` erstellt eine uneingeschränkte Middleware und kann von der vorherigen mithilfe von next aufgerufen werden.
+
+`Map` erstellt eine bedingte Middleware Wobei der erste Parameter beim erstellen angibt anhand welchen kriteriums die unterscheidung stattfinden soll.
+
+`Run` erstellt eine Terminale Middleware welche mithilfe von Run aus der vorherigen aufgerufen werden kann.
+
+**Abweichung MVC und Giraffe**
+
+Bei Giraffe werden eigengeschriebene Middlewares mithilfe von Komposition eingebunden. Und werden identisch geschrieben wie zielrouten. Der einzige unterschied ist das kein Return verwendet weden darf. 
+
+Hier ein Beispiel wie man einen Datenbank zugriff ermöglichen könnte.
+
+ASP.NET
+
+``` csharp
+app.Use(async (context, next) =>
+{
+    //before Routing
+    await next.Invoke();
+    //after Routing
+});
+```
+
+
+Giraffe:
+
+```fsharp
+let connectDatabase =
+    fun (next : HttpFunc) (ctx : HttpContext) ->
+        task {
+            ctx.Items.Add("dbcontext" , dbcontext )
+            return None
+        }
+```
+
+**Middleware vs. Service**
+
+Eine Middleware und ein Service unterscheiden sich gering bis gar nicht. Unter einem Service wird verstanden der Server, Parser, Datenbankverbindung oder Framework. Während eine Middleware z.b. Logging wäre.
+
+Eine Middleware und ein Service können identisch geschrieben werden und es gibt keine Vorgabe ob erst Service oder erst Middlewares vorkommen müssen.
+
+Services bieten meist noch einen Schritt der Konfiguration an und können daher zumindest etwas erkannt werden. Diese Konfiguration kann aber auch in manchen fällen weggelassen werden.
+
+
 **Server**
 
 Ein **IIS** Server, ist ein Multifunktionsserver welcher sehr viele Zusatz Funktionen mitliefert.
 
-Ein **Kestrel* Server, ist ein Speziell für dotnet core entwickelter Server. Welcher auf reine Performance setzt und Sonderfunktionen außen vorlässt.
+Ein **Kestrel** Server, ist ein Speziell für dotnet core entwickelter Server. Welcher auf reine Performance setzt und Sonderfunktionen außen vorlässt.
 
 Microsoft empfiehlt beim nutzen von Kestrel nach außen einen weiteren Server als Proxy vorzuschalten.
 
@@ -80,13 +128,21 @@ Microsoft empfiehlt beim nutzen von Kestrel nach außen einen weiteren Server al
 | Compression                | Optional      | Optional                                       |
 | FTP Server                 | Ja            | Nein                                           |
 
+##### Frontends
 
+möglich sind 
+ - react
+  - mit und ohne redux 
+ - angular 
+  - einbinden mithilfe von SinglepageApplication Service
+ - razor
+  - einbinden mithilfe von SinglepageApplication Service
 
-##### Razor
+**Razor**
 
-Eine von Microsoft entwickelte Template Engine.
+Eine von Microsoft entwickelte Template Engine. Welche die Programmiersprache der Wahl nutzen kann. Es kann ein Model übergeben werden dieses muss in der ersten Zeile des Dokumentes Definiert sein. Es können weitere Daten übergeben werden mithilfe von Viewbag und  
 
-##### Razorkomponente
+**Razorkomponente**
 
 Ein Erweiterung von Razor welches erlaubt Komponenten zu entwickeln Ähnlich wie bei Angular. Diese Komponenten können sowohl auf dem Server oder mithilfe von Blazzor als Webassembly beim Klienten Aktionen ausführen.
 
@@ -114,6 +170,19 @@ Das Routing kann komplex werden, dennoch kann auf einen Blick erkannt werden, we
 
 ### ORM
 
+| | Entity Framework | SqlProvider | Rezoom.net | 
+| --- | --- | --- | --- |
+| Sprachen | C# / VB (F# *) | F# | F# |
+| QueryType | SQL / Linq | Linq | pseudo SQL(Typechecked) |
+| Datenhandling | Kontext (Sql kann auf Kontext angewand werden) | Kontext | SQL | 
+| Modelierung | Klassen | Compiletime | Klassen / Compiletime |
+| Migration | C#/VB vollwertige Datenbank Migration (erstellt durchs Model) | Keine Datenbank definition | eigen Definierte Sqls |  
+| Datenbanktypen | MSSql (Keine Migrationen*nicht dokumentiert*) / SQlite / InMemory / Cosmos / Postgre / Mysql / Firebird / ODBC | MSSql / Sqlite / Mysql / MsAccess / ODBC | Sqlite /  MSSql / Postgre |
+| Entwickler | Microsoft | 
+| Dokumentation | Ausführlich mit vielen guten Beispielen | Ausreichen mit genügend Beispielen | Vielleicht ausreichend schlecht Strukturiert (Beispiele sind entweder 9 Dateien oder zeigen nicht die Relevanten Code schnipsel) |
+| Connectionstring kontrolle | Laufzeit | Intellisense / Kompilier | Laufzeit |
+| Middleware für ASP.NET | Provider stellt Provider zur verfügung | Nein | Nein |
+
 #### Entity Framework (EF)
 
 Ein von Microsoft entwickeltes Framework für Datenbank Operationen für dotnet Framework. Es handelt sich beim Enity Framework um ein Objekt Relations Model. Das EF bietet grundsätzlich zwei Vorgehensweisen an Code-First und Database-First. Es bietet ein CLI Tool welches Migrationen erstellen ermöglicht. Diese Können beim Starten der Anwendung kontrolliert werden. Dies ermöglicht im Laufenden System einfache Änderungen am Datenbank Model.
@@ -121,6 +190,103 @@ Ein von Microsoft entwickeltes Framework für Datenbank Operationen für dotnet 
 **Entity Framework Core (EF Core)**
 
 EF Core ist eine Open source Version vom EF. EF Core ist kompatible mit dotnet core.
+
+```csharp
+using Microsoft.EntityFrameworkCore;
+
+public class CustomContext : DbContext
+{
+    public DbSet<User> Blogs { get; set; }
+    public DbSet<Message> Posts { get; set; }
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+        optionsBuilder.UseMySQL("ConnectionString");
+    }
+
+    public class User
+    {
+        public int UserId { get; set; }
+        public string Name { get; set; }        
+        public List<Message> Messages { get; set; }
+    }
+
+    public class Message
+    {
+        public int MessageId { get; set; }
+        public string Content { get; set; }
+
+        public int UserId { get; set; }
+        public User User { get; set; }
+    }
+}
+
+public void ConfigureServices(IServiceCollection services)
+{
+    services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+    services.AddDbContext<Models.CustomContext>();
+    new TrainingsplanerContext().Database.Migrate();
+}
+
+```
+
+
+#### SqlProvider
+
+Keine Migration vom Programm.
+
+```fsharp
+
+type sql = SqlDataProvider<Common.DatabaseProviderTypes.MYSQL,
+                connectionString>
+let context = sql.GetDataContext()
+
+let UserWithName = 
+    query {
+        for user in context.User do
+        where (user.StartWith "A")
+        select (user)
+    }
+
+let newUser = context.DatabaseName.User.Create()
+newUser.Name = "Example"
+context.SubmitUpdates()
+
+```
+
+#### Rezoom
+
+Migration wird automatisch ausgeführt wenn im Projekt gefunden. Diese müssen selbst geschrieben werden.
+
+``` sql
+// v1.model.sql
+create table User
+    ( UserId int primary key autoincrement
+    , Name string(64) null
+    );
+
+create table Message
+    ( MessageId int primary key autoincrement
+    , UserId int references Users(UserId)
+    , Content string(512)
+    );
+
+create index IX_Message_UserId on Message
+    (UserId);
+
+```
+
+``` fsharp
+
+type GetUserSQL = SQL<"""
+    select * from User a where a.Name like 'A%' 
+""">
+
+let getUser() =
+    use context = new ConnectionContext()
+    let users = GetUserSQL.Command().Execute(context)
+        
+
+```
 
 ### Parser
 
@@ -135,8 +301,36 @@ JSON.Net von Newtonsoft ist ein Json Parser Framework welches ein Json to Object
 | Struktur           | OOP                            | OOP oder Funktional | Funktional   |
 | Entwickler         | Open Source                    | Open Source         | Open Source  |
 | Programmiersprache | c#, VB, f#                     | c#, VB, f#          | F#           |
+| Asynchrone Tests   | nein                           | ja                  | ja           |
 |                    | Assert.That(1, Is.EqualTo(1)); | Assert.Equal        | Expect.equal |
 
+#### xunit
+
+**Fact**
+
+Ein Test der immer gültig ist und nicht Parameterisiert ist. 
+
+**Theory**
+
+Eine Thorie ist ein Test welcher in bestimmten Fällen erfolgreich ist. 
+Testfälle Können auf drei Vraianten deklariert werden:
+ - InlineData (einmalig vor dem Test definiert) 
+ - ClassData (Eine Klasse von Testdaten)
+ - MemberData (Eine methode welche Testdaten generieren kann)
+
+**setup**
+
+Der Konstruktor wird vor jeden Testausgeführt.
+Wenn die Testklasse das Interface IDisposable implementiert wird diese nach jedem Test aausgeführt.
+
+Um für die gesammten Tests einen Context zu erstellen gibt es IClassfixtures welche ermöglichen für eine Klasse einmalig etwas zu erstellen und nach allen Tests dieser Klasse wird dies wieeder aufgeräumt.
+
+**Parralelitär**
+
+Der XUnit test runner lässt tests unterschiedlicher Klassen parralel laufen. Um bestimmte Tests dazu zubringen das Tests nacheinander ausgeführt werden gibt es Collections welche den Vorteil haben Tests nacheinander auszuführen sowie einen Context zu teilen.
+
+Um Collections einen Context zu geben wird eine CollectionDefinition benötigt.
+<https://xunit.net/docs/shared-context>
 
 
 ## F# #
@@ -340,29 +534,21 @@ dotnet new webapi -lang F#
 
 ## Funktionen  (Platzhalter)
 
-### interesante packages
-#### System
-die Klassen für die primitiven Datentypen,
-Einige Exception Klassen,
-die Random Klasse und
-Tuppel
-
-_Beispiel werden noch hinzugefügt_
-#### System.Collections.Generics
-Unterschiedlche Generische Datenstrukturen z.b. List, Stack, Map, Queue
-
-_Beispiele werden noch hinzugefügt_
-#### System.Linq
-Das einbinden dieses Namespaces erlaubt Linq zu nutzen. Es muss nicht für Ling to sql ein anderes Namespace eingebunden werden.
-#### (System/Microsoft).EntityFrameworkCore
-Alle EntityFramework relevanten Klassen
-z.b. DBContext
 
 
+### Microservices
 
+[Micro Services Beispiel von Microsoft](https://docs.microsoft.com/de-de/dotnet/standard/microservices-architecture/)
 
+Microservices ermöglichen Programme zu schreiben welche genau eine Aufgabe erfüllen und auch Ihre eigene Datenbank dafür haben.
 
+Hier ein Beispiel mit einer gemeinsamen API für Mobile und Web App. Zusätzlich wird hier auch gezeigt wie eine ASP.NET Core Anwendung funktionieren könnte.
 
+![micro-service-1](./img/micro-service-1.png)
+
+Ein großer Vorteil von Micro Services ist, dass diese von verschiedenen Anwendungen aufgerufen werden können. 
+
+![micro-service-2](./img/micro-service-2.png)
 
 ### Codebeispiele
 

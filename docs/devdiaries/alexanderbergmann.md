@@ -47,10 +47,69 @@ __29.04.2019 - 05.05.2019__
 
 __06.05.2019 - 12.05.2019__
 
-| Datum      | Tätigkeit                                                    | Dauer | Zusatz |
-| ---------- | ------------------------------------------------------------ | ----- | ------ |
-| 07.05.2019 | Wöchentliches Meeting - Projektarbeit                        |       |        |
-|            | Docker Orchestrieren/Verbinden                               |       |        |
-|            | Docker Volumes & Docker Hub                                  |       |        |
-|            | Jenkins konfigurieren (Hello World - Java Projekt) mit Docker |       |        |
+| Datum      | Tätigkeit                                  | Dauer | Zusatz |
+| ---------- | ------------------------------------------ | ----- | ------ |
+| 07.05.2019 | Wöchentliches Meeting - Projektarbeit      | 4.5 h |        |
+| 07.05.2019 | Recherche Docker Compose                   | 1.5 h |        |
+| 08.05.2019 | Recherche und Dokumentation Docker Compose | 2,5 h |        |
+| 09.05.2019 | Recherche und Dokumentation Docker Hub     | 1,5 h |        |
+| 11.05.2019 | Dokumentation Dockerhub                    | 1 h   |        |
+
+## Woche 6
+
+__13.05.2019 - 19.05.2019__
+
+| Datum      | Tätigkeit                                          | Dauer | Zusatz |
+| ---------- | -------------------------------------------------- | ----- | ------ |
+| 14.05.2019 | Wöchentliches Meeting - Projektarbeit              | 4,5 h |        |
+| 16.05.2019 | Recherche und Preisvergleiche PaaS-Anbieter        | 2 h   |        |
+| 16.05.2019 | Recherche Building & Testing Angular               | 1,5 h |        |
+| 19.05.2019 | Planung des CI-Serveraufbaus (Diagramm Erstellung) | 3 h   |        |
+
+## Woche 7
+
+__20.05.2019 - 26.05.2019__
+
+| Datum      | Tätigkeit                                        | Dauer | Zusatz |
+| ---------- | ------------------------------------------------ | ----- | ------ |
+| 21.05.2019 | Wöchentliches Meeting - Projektarbeit            | 6,5 h |        |
+| 22.05.2019 | Jenkins Server in AWS EC2 Instanz starten        | 3 h   |        |
+| 24.05.2019 | ASP.NET Backend und MySQL in EC2 Instanz starten | 6,5 h |        |
+| 25.05.2019 | Angular App und Jenkins in EC2 Instanz starten   | 1,5 h |        |
+| 25.05.2019 | Jenkins Pipeline einrichten                      | 6 h   |        |
+
+## Woche 8
+
+__27.05.2019 - 02.06.2019__
+
+| Datum      | Tätigkeit                                       | Dauer | Zusatz |
+| ---------- | ----------------------------------------------- | ----- | ------ |
+| 27.05.2019 | Jenkins Pipeline Fehler beheben                 | 2,5 h |        |
+| 28.05.2019 | Wöchentliches Meeting - Projektarbeit           | 4,5 h |        |
+| 28.05.2019 | Backend-API eingerichtet und zugreifbar gemacht | 2,5 h |        |
+| 01.06.2019 | coachr-Diagramm erstellen mit Draw.io           | 2 h   |        |
+| 02.06.2019 | Arbeitet an der Dokumentation                   | 1 h   |        |
+
+## Woche 9
+
+__03.06.2019 - 09.06.2019__
+
+| Datum      | Tätigkeit                                     | Dauer | Zusatz |
+| ---------- | --------------------------------------------- | ----- | ------ |
+| 04.06.2019 | Wöchentliches Meeting - Projektarbeit         | 5,5 h |        |
+| 06.06.2019 | Dokumentation bearbeiten                      | 2 h   |        |
+| 07.06.2019 | Deploy Pipeline coachr-Frontend               | 3 h   |        |
+| 09.06.2019 | Deploy Pipeline Coach-Backend                 | 2 h   |        |
+| 09.06.2019 | Berechtigung Plugin für Jenkins konfigurieren | 1 h   |        |
+
+## Woche 10
+
+__10.06.2019 - 16.06.2019__
+
+| Datum      | Tätigkeit                             | Dauer | Zusatz |
+| ---------- | ------------------------------------- | ----- | ------ |
+| 10.06.2019 | Delpoy Pipeline Coach-Backend         | 3 h   |        |
+| 10.06.2019 | Dokumentation bearbeiten              | 0,5 h |        |
+| 11.06.2019 | Wöchentliches Meeting - Projektarbeit |       |        |
+|            |                                       |       |        |
 

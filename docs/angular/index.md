@@ -286,6 +286,96 @@ FOO
 "FOO"
 ```
 
+## Class Binding
+
+Damit CSS Klassen innerhalb einer Komponente gesetzt bzw. gesteuert werden können, bietet Angular verschiedene Möglichkeiten.
+
+```html
+<p [class.red]="isRed">Foo...</p>
+```
+
+Somit ist es möglich, innerhalb der Komponente der Wahrheitswert von `isRed` zu beeinflussen. Dies hat zur Folge, dass die Klasse aktiviert bzw. deaktiviert wird.
+
+Hat ein Tag mehrere CSS Klassen die gesteuert werden sollen, biete Angular die Möglichkeit mit `ngClass` mehrere gleichzeitig zu setzen.
+
+```html
+<p [ngClass]="{klassenName1: isDisabled, green: isGreenActive, ...}"
+```
+
+## Routing
+
+Damit Komponenten bzw. Inhalte durch Aufruf einer bestimmten URL gerendert werden können, muss in der `app.module.ts` zunächst das erforderliche Modul importiert werden.
+
+```typescript
+import { RouterModule } from '@angular/router';
+```
+
+Unter `imports` können dann Routen definiert werden, indem der Pfad und die aufzurufende Komponente angegeben wird.
+
+```typescript
+imports: [
+    ...,
+    RouterModule.forRoot([
+      {
+        path: '',
+        component: SignInComponent
+      },
+      {
+        path: '/foo',
+        component: FooComponent
+      },
+      {
+        path: '**',
+        component: NotFoundComponent
+      }
+    ])
+  ]
+```
+
+### Statisch
+
+Damit beim Aufruf eines Links die Ressourcen der Seite nicht bei jeden Aufruf erneut geladen werden muss, gibt es bei Angular einige Änderungen. Statt `href` wird nun ein eigenes Attribut `routerLink` verwendet. Somit werden nur neue Ressourcen geladen.
+
+Im Beispiel wird die Komponente `FooComponent` aufgerufen.
+
+```html
+<a routerLink="/foo">...</a>
+```
+
+### Dynamisch
+
+Damit Links dynamisch erzeugt werden, wird auf Property Binding zurück gegriffen.
+
+```html
+<a [routerLink]="['/foo', user.id]">...</a>
+```
+
+In diesem Beispiel wird die Route `/foo` mit der Komponente `FooComponent` aufgerufen. Außerdem folgt mit einem weiteren `/` die ID der Users.
+
+`localhost:4200/foo/1234`
+
+#### Links
+
+Mit `routerLinkActive` können CSS Klassen angegeben werden welche bei aktivem Zustand aktiviert werden. In folgendem Beispiel werden zwei Klassen verwendet.
+
+```html
+<li routerLinkActive="active current"><a routerLink="/foo">...</a></li>
+```
+
+### Dependency Injection
+
+Das Konzept der Dependency Injection sieht vor, Abhängigkeiten von außen in eine Instanz zu übergeben und diese darin zu nutzen. Das Konzept besitzt Ähnlichkeiten mit den aus anderen Programmiersprachen bekannten *Singletons*. Bei Singletons wird innerhalb der Applikation eine Instanz, wenn diese noch nicht existiert, erzeugt. Diese wird dann an verschiedenen Stellen der Applikation genutzt. Dabei wird immer auf dieselbe Instanz zurückgegriffen, sofern diese noch existiert.
+
+### Services
+
+Eine einfache Möglichkeit wieder verwendbare Programmteile auszulagern oder Daten zwischen Komponenten auszutauschen sind Services. Dabei sind Services nichts weiter als Klassen, die als Abhängigkeit in anderen Komponenten injiziert werden können. Es werden zwei Arten unterschieden.
+
+![Angular Services](img/services.jpg)
+
+### AuthGuard
+
+Dieses Angular 2 Feature ist gerade bei sicherheitsrelevanten Daten oder Views sinnvoll, da man aufgrund eines Tokens oder eines bestimmten Claims im Token prüfen kann, ob der derzeitige Benutzer mit dem Token x auf eine bestimmte Route zugreifen darf.
+
 ## Quellen
 
 [Angular University](https://angular-university.io/home)

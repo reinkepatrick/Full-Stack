@@ -31,7 +31,7 @@ __29.04.2019 - 05.05.2019__
 | Datum      | Tätigkeit                                                                             | Dauer      | Zusatz |
 | ---------- | ------------------------------------------------------------------------------------- | ---------- | ------ |
 | 29.04.2019 | Aufarbeitung der Dokumentation von WebGL: weniger Code, mehr Inhalt                   | 2 h        | |
-| 03.05.2019 | Arbeit am Pflichtenheft, Annahmen der PRojektorganisation                             | 1 h        | |
+| 03.05.2019 | Arbeit am Pflichtenheft, Annahmen der Projektorganisation                             | 1 h        | |
 | 04.05.2019 | Einarbeiten in 3D Grafik mit StardustJS                                               | 4 h        | Größere Probleme mit Quaternions, bzw. deren Implementation in Stardust|
 | 05.05.2019 | Ärgern über 3D in Stardust                                                            | 3 h        | Probleme mit Kamerapositionen |
 
@@ -41,4 +41,47 @@ __06.05.2019 - 12.05.2019__
 | Datum      | Tätigkeit                                                                             | Dauer      | Zusatz |
 | ---------- | ------------------------------------------------------------------------------------- | ---------- | ------ |
 | 06.05.2019 | Noch mehr Ärger über Stardust                                                         | 2 h        | Keine komplexen Lichtquellen, keine vernünftige Positionsreferenz, 0 Tutorials für 3D |
+| 12.05.2019 | Einlesen in three.js, das übliche HelloWorld, Würfel rendern, etc.                    | 3 h        | |
 
+## Woche 6 
+__13.05.2019 - 19.05.2019__
+
+| Datum      | Tätigkeit                                                                             | Dauer      | Zusatz |
+| ---------- | ------------------------------------------------------------------------------------- | ---------- | ------ |
+| 13.05.2019 | Performance Vergleich: three vs Babylon vs Stardust                                   | 4 h        | Stardust enttäuscht auf ganzer Linie. |
+| 18.05.2019 | Projekt: 3d Graphen Visualisierung in Babylon                                         | 2 h 45 min | |
+| 19.05.2019 | Projekt: Dynamische Texturen                                                          | 3 h        | |
+
+## Woche 7
+__20.05.2019 - 26.05.2019__
+
+| Datum      | Tätigkeit                                                                             | Dauer      | Zusatz |
+| ---------- | ------------------------------------------------------------------------------------- | ---------- | ------ |
+| 20.05.2019 | Projekt: Dynamische Texturen in ShaderMaterials                                       | 3 h 30 min | Probleme mit UV Orientation auf Babylon's Boxen |
+| 21.05.2019 | Projekt: Custom Mesh um UV Probleme zu umgehen                                        | 2 h        | |
+| 23.05.2019 | Projekt: Umstellung von DynamicTextures auf RenderTargetTextures                      | 2 h 30 min | |
+| 25.05.2019 | Projekt: Kombination von Dynamic + RenderTargetTextures, Texture-pointing             | 3 h        | |
+| 26.05.2019 | Projekt: Ausarbeitung der Schnittstelle für Frontends, WebGL Modul Grundlage komplett | 6 h 25 min | |
+
+## Woche 8
+__27.05.2019 - 02.06.2019__
+
+| Datum      | Tätigkeit                                                                             | Dauer      | Zusatz |
+| ---------- | ------------------------------------------------------------------------------------- | ---------- | ------ |
+| 27.05.2019 | Projekt: Implementation von Update Methode für Graphen                                | 2 h 30 min | |
+| 02.06.2019 | Projekt: Recherche, Implementation von overlay Text                                   | 2 h        | noch keine konkrete Lösung |
+
+## Woche 9
+__03.06.2019 - 09.06.2019__
+
+| Datum      | Tätigkeit                                                                             | Dauer      | Zusatz |
+| ---------- | ------------------------------------------------------------------------------------- | ---------- | ------ |
+| 09.06.2019 | Projekt: Experimente mit Babylon Gui, Anfängliche Implementation von Text             | 2 h        | |
+
+## Woche 10
+__10.06.2019 - 16.06.2019__
+
+| Datum      | Tätigkeit                                                                             | Dauer      | Zusatz |
+| ---------- | ------------------------------------------------------------------------------------- | ---------- | ------ |
+| 10.06.2019 | Größe der Frameworks in Performance einbezogen                                        | 1 h        | |
+| 10.06.2019 | Projekt: Babylon GUI vorerst verworfen, evtl Ansatz mit dynamischer Textur, Cleanup   | 1 h 45 min | |

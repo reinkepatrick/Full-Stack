@@ -71,6 +71,11 @@ INSTALLED_APPS = [
 ]
 ```
 
+## Request-Response lifecycle
+
+![MTV](./img/django_cycle.png ':size=525')
+
+Der übliche Request-Response lifecycle in Django sieht so aus. Der Client, üblicherweise ein Browser, sendet einen Request an den Webserver. Dieser leitet den Request an die Middleware weiter. Hat der Request die Middleware erfolgreich verlassen, wird der Request an den URL Router geschickt. Jetzt wird der Request zu der entsprechenden View weitergeleitet. Die View holt üblicherweise Daten aus einer Datenbank mithilfe vom ORM. Dies ist, aber nicht zwingend notwendig. Nachdem die View die Daten verarbeitet hat, werden die Daten in den Context Processor gepackt, welche dem Template ermöglicht auf die Daten von der View zu zugreifen. Das Template wird mit den Daten zur Middleware geschickt, wo alle Schichten der Middleware erneut durchdrungen werden. Dies leitet es dann zu dem Webserver und der wiederrum leitet es zum Client. Somit hat der Client dann seine angeforderten Daten bekommen.
 
 ## Views
 Views sind für die Trennung zwischen Logik und Frontend zuständig. Jede App besitzt eine View. Die einfachste View ist diese hier:
@@ -373,3 +378,102 @@ response = client.get('/')
 
 Der Response ist ein [HTTP Response](#http-response)
 Darauf können dann die Tests ausgeführt werden.
+
+
+## Channels
+Channels ist eine Library für Django Projekte. Da Django üblicherweise nur mit HTTP Requests kommuniziert, ermöglicht es Channels, dass Websockets verwendet werden können, ohne dabei auf die Funktionen von Django selbst zu verzichten.
+
+### Wie funktionierts?
+
+![MTV](./img/django-wsgi.png ':size=525')
+
+### Konfiguration
+
+Damit Channels verwendet werden kann, müssen bestimmte Konfigurationen durchgeführt werden. 
+
+In der `settings.py` muss in dem Array `INSTALLED_APPS` die App `channels` hinzugefügt werden. Ebenso muss angegeben werden, dass Django nun mit Websockets angesprochen wird und nicht mit HTTP Requests. Dies kann mit dieser Zeile in den Settings beschrieben werden.
+```python 
+ASGI_APPLICATION = "myproject.routing.application"
+```
+
+Nun muss noch in der root App eine Datei `routing.py` erstellt werden. Diese Datei ist das äquivalent zu den `urls.py` Dateien. Hier wird beschrieben, welcher Consumer ausgewählt werden soll, wenn eine bestimmte URL aufgerufen wird. Beispiel `routing.py`: 
+```python
+from django.conf.urls import url
+
+from . import consumers
+
+websocket_urlpatterns = [
+    url(r'^ws/chat/(?P<room_name>[^/]+)/$', consumers.ChatConsumer),
+]
+```
+
+Wenn die URL `ws/chat/<room_name>` aufgerufen wird, wird die Klasse ChatConsumer aufgerufen.
+
+### Consumer
+Consumer sind dafür da um eine Verbindung aufzubauen oder wieder zu verlassen. Ebenso senden diese Nachrichten und nehmen diese entgegen. Ein Beispiel für einen Consumer ist dieses hier.
+
+```python 
+# chat/consumers.py
+from channels.generic.websocket import WebsocketConsumer
+import json
+
+class ChatConsumer(WebsocketConsumer):
+    def connect(self):
+        self.accept()
+
+    def receive(self, text_data):
+        text_data_json = json.loads(text_data)
+        message = text_data_json['message']
+
+        self.send(text_data=json.dumps({
+            'message': message
+        }))
+```
+
+Dieser nimmt eine Verbindung entgegen und empfängt Nachrichten. Diese Nachrichten werden dann zurück zum Sender geschickt, wodurch der User die Nachrichten in seiner Textbox sieht(Dafür muss dann ein entsprechendes Template vorhanden sein).
+
+### Channel Layer
+Ein Channel Layer ist dafür da, dass die Consumer miteinander kommunizieren können. Jeder Consumer hat automatisch einen Channel Namen, mit diesem Namen kann der Consumer mit dem Channel Layer kommunizieren. Damit Channels mit einander kommunizieren können, müssen sie entweder den Namen eines anderen Channels kennen, oder in einer Gruppe von Channel sein.
+
+### Asynchronität
+
+Channels bietet die Möglichkeit, bei den Consumer Asynchron zu arbeiten. Damit dann die Performance steigt. Es ist ziemlich simpel eine Asynchrone Methode zu definieren.
+
+```python
+# Receive message from room group
+async def chat_message(self, event):
+    message = event['message']
+
+    # Send message to WebSocket
+    await self.send(text_data=json.dumps({
+        'message': message
+    }))
+```
+
+Das `await` vor der send Methode ist notwendig, weil die Methode eine I/O Methode ist.
+
+### Testen
+
+Damit Tests mit Channels funktionieren, muss eine Bibliothek mit dem Namen `selenium` runtergeladen werden.
+Es muss außerdem der Chrome Browser installiert sein.  
+Über einem WebsocketCommunicator können dann die Websockets getestet werden. Genauso gibt es auch einen HttpCommunicator.
+
+Beispiel für Websocket Tests:  
+```python
+from channels.testing import WebsocketCommunicator
+application = URLRouter([
+    url(r"^testws/(?P<message>\w+)/$", KwargsWebSocketApp),
+])
+communicator = WebsocketCommunicator(application, "/testws/test/")
+connected, subprotocol = await communicator.connect()
+assert connected
+# Test on connection welcome message
+message = await communicator.receive_from()
+assert message == 'test'
+# Close
+await communicator.disconnect()
+```
+
+Die Tests für Http Requests ist fast identisch, es muss nur bei der Initialisierung des Objekts noch der Request Typ (GET, POST, ...) angegeben werden.
+
+

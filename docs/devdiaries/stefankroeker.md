@@ -8,7 +8,7 @@ __08.04.2019 - 14.04.2019__
 | 14.04.2019 | Auffrischung von MVC und MVP.                                                                                                  | 30 min     |        |
 | 14.04.2019 | Struktur von Django verstehen.                                                                                                 | 1 h        |        |
 | 14.04.2019 | Verstehen was ein ORM macht.                                                                                                   | 15 min     |        |
-| 14.04.2019 | Installieren von Django und Maria DB                                                                                           | 1h 15 min  | Probleme beim installieren von Django, da Symlink von django-admin.py nicht automatisch gesetzt wird und deswegen das Projekt nicht erstellt werden konnte. Rechner muss nach Django installation neugestartet werden.    |
+| 14.04.2019 | Installieren von Django und Maria DB.                                                                                          | 1h 15 min  | Probleme beim installieren von Django, da Symlink von django-admin.py nicht automatisch gesetzt wird und deswegen das Projekt nicht erstellt werden konnte. Rechner muss nach Django installation neugestartet werden.    |
 | 14.04.2019 | Verstehen was ein ORM macht.                                                                                                   | 15 min     |        |
 
 
@@ -59,8 +59,56 @@ __06.05.2019 - 12.05.2019__
 | Datum      | Tätigkeit                                                                                                                       | Dauer      | Zusatz |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------- | ---------- | ------ |
 | 06.05.2019 | Recherchieren, welche Websockets Möglichkeiten existieren.                                                                      | 30 min     |        |
-| 06.05.2019 | Mit Channels auseinandersetzen.                                                                                                 | 3h         | Versuch fehlgeschlagen. Hello World ist nicht super simpel. Es erfordert viele Kentnisse um ein Programm zu schreiben und ist so ähnlich wie Django selbst.        |
+| 06.05.2019 | Mit Channels auseinandersetzen.                                                                                                 | 3h         | Versuch fehlgeschlagen. Hello World ist nicht super simpel. Es erfordert viele Kenntnisse um ein Programm zu schreiben und ist so ähnlich wie Django selbst.        |
 | 07.05.2019 | Definition der API des Projekts.                                                                                                | 3h         |        |
 | 08.05.2019 | Sequenzdiagramme gemalt.                                                                                                        | 2h         |        |
 | 09.05.2019 | Projekt Kanban Board erstellt.                                                                                                  | 10 min     |        |
-| 09.05.2019 | Mich weiter mit Channels auseinander gesetzt.                                                                                   | 3h         |        |
+| 09.05.2019 | Mich weiter mit Channels auseinandergesetzt.                                                                                    | 3h         |        |
+| 09.05.2019 | An Kommunikationsprotokoll weiter gearbeitet.                                                                                   | 2h 30 min  |        |
+
+
+## Woche 6 
+__13.05.2019 - 19.05.2019__
+
+| Datum      | Tätigkeit                                                                                                                       | Dauer      | Zusatz |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------- | ---------- | ------ |
+| 13.05.2019 | Channels verstanden und beschrieben.                                                                                            | 2h         |        |
+| 13.05.2019 | Sequenzdiagramme überarbeiten.                                                                                                  | 1h         |        |
+| 16.05.2019 | EC2 Instanz einrichten.                                                                                                         | 1h         |        |
+| 17.05.2019 | Django auf Apache deployen.                                                                                                     | 4h 30 min  | Es gab Probleme beim einrichten von Apache, da die Systemvariablen nicht übernommen worden sind und dabei dann immer ein "500 Internal Server error" Code angezeigt wurde. Nachdem ich herausgefunden habe, dass es die Systemvariablen sind, ging es recht schnell.    |
+| 17.05.2019 | Channels Beispiel auf dem Server integrieren.                                                                                   | 1h 30min   | Funktioniert nicht mit dem Apache Webserver. Es muss noch seperat ein Daphne Web Server installiert werden.       |
+| 17.05.2019 | Kommunikation zwischen REACT und Django getestet.                                                                               | 45min      |        |
+
+## Woche 7 
+__20.05.2019 - 26.05.2019__
+
+| Datum      | Tätigkeit                                                                                                                       | Dauer      | Zusatz |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------- | ---------- | ------ |
+| 20.05.2019 | Channels asynchronität und Tests erforscht.                                                                                     | 3h         |        |
+| 21.05.2019 | Kommunikation getestet und nächste Schritte geplant.                                                                            | 3h         |        |
+| 23.05.2019 | Daphne Server deployed.                                                                                                         | 2h         |        |
+| 24.05.2019 | Route zum erstellen einer Lobby erstellt.                                                                                       | 4h         |        |
+| 25.05.2019 | Route erstellt zum beitreten einer Lobby.                                                                                       | 4h         |        |
+
+## Woche 8
+__27.05.2019 - 02.06.2019__
+
+| Datum      | Tätigkeit                                                                                                                       | Dauer      | Zusatz |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------- | ---------- | ------ |
+| 27.05.2019 | Request-Response lifecycle erklärt.                                                                                             | 1h         |        |
+| 27.05.2019 | Travis CI einrichten                                                                                                            | 2h         | Probleme mit vault vars |
+| 28.05.2019 | Travis mit Django aufgesetzt.                                                                                                   | 3h 30min   |        |
+| 01.06.2019 | An Lobby funktionen gearbeitet.                                                                                                 | 3h         |        |
+| 02.06.2019 | Datenbank erstellt.                                                                                                             | 2h         |        |
+| 02.06.2019 | An Lobby funktionen gearbeitet.                                                                                                 | 6h         |        |
+
+## Woche 9
+__03.06.2019 - 09.06.2019__
+
+
+| Datum      | Tätigkeit                                                                                                                       | Dauer      | Zusatz                        |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------- | ---------- | ----------------------------- |
+| 03.06.2019 | An Lobby funktionen gearbeitet.                                                                                                 | 4h         | Es gab noch Bugs in der Liste |
+| 04.06.2019 | Getestet wie Websockets getestet werden können.                                                                                 | 3h         | Es funktioniert nicht, da die Dokumentation nicht ausreichend ist für Django Tests |
+| 06.06.2019 | Tests geschrieben.                                                                                                              | 2h         |                               | 
+| 07.06.2019 | Tests geschrieben.                                                                                                              | 2h         |                               |
