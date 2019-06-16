@@ -89,3 +89,4 @@ __10.06.2019 - 16.06.2019__
 | 14.06.2019 | Projekt: Raspberry - Sensoren anschließen und testen                                  | 2 h        | |
 | 15.06.2019 | Projekt: Raspberry - Konfigurationswebsite einrichten                                 | 3 h        | PhP ist Mist |
 | 15.06.2019 | Projekt: Raspberry - Haupt Python Skript erstellt, Konfiguration geladen              | 2 h 10 min | |
+| 16.06.2019 | Projekt: Raspberry - Python Skript ausgearbeitet, Vollständige Funktionalität         | 4 h        | |
