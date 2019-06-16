@@ -148,8 +148,10 @@
 
 **10.06.2019 - 16.06.2019**
 
-| Datum      | Tätigkeit                                   | Dauer      | Zusatz                                                |
-| :--------- | :------------------------------------------ | :--------- | :---------------------------------------------------- |
-| 11.06.2019 | Hinzufügen von einer Benachrichtigung       | 1 h        | wenn der Spieler gekickt wird oder die Lobby voll ist |
-| 11.06.2019 | Beheben von grafischen Fehlern              | 1 h 30 min | Beim hovern von den einzelnen LobbyListItems          |
-| 11.06.2019 | Hinzufügen vom Design einer einzelnen Karte | 1 h 3 min  |                                                       |
+| Datum      | Tätigkeit                                       | Dauer      | Zusatz                                                |
+| :--------- | :---------------------------------------------- | :--------- | :---------------------------------------------------- |
+| 11.06.2019 | Hinzufügen von einer Benachrichtigung           | 1 h        | wenn der Spieler gekickt wird oder die Lobby voll ist |
+| 11.06.2019 | Beheben von grafischen Fehlern                  | 1 h 30 min | Beim hovern von den einzelnen LobbyListItems          |
+| 11.06.2019 | Hinzufügen vom Design einer einzelnen Karte     | 1 h 30 min |                                                       |
+| 11.06.2019 | Hinzufügen vom Design der Rückseite einer Karte | 30 min     |                                                       |
+| 11.06.2019 | Grafischer Ausbau eines Spielbretts             | 3 h 30 min |                                                       |
