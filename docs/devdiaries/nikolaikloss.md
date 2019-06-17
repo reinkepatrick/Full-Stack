@@ -150,3 +150,4 @@
 | 12.06.2019 | Teams lassen sich nun erstellen und werden ins Mock eingefügt.                                                | 30 min |        |
 | 12.06.2019 | Service für aktive User und seine Teams implementiert & GUI Logik implementiert                               | 40 min |        |
 | 12.06.2019 | Overview-Page: stellt nun die echten Teammitglieder einer ausgewählten Mannschaft zu Auswahl                  | 60 min |        |
+| 17.06.2019 | Overview-Page: GUI Elemente zum erzeugen eines neuen Team-Mitglieds implementiert                             | 50 min |        |
