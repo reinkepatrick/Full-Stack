@@ -150,7 +150,15 @@ __10.06.2019 - 16.06.2019__
 | Datum | Tätigkeit | Dauer | Zusatz |
 | --- | --- | --- | --- |
 | 11.06.2019 | Uebungstests angefangen | 10 min | |
+| 13.06.2019 | Tests zu ende gebaut | 80 min | |
+| 15.06.2019 | Thema aufbereitet | 60 min | |
 
+## Woche 11
 
+__17.06.2019 - 24.06.2019__
+
+| Datum | Tätigkeit | Dauer | Zusatz |
+| --- | --- | --- | --- |
+| 17.06.2019 | Thema aufbereitung | 30 min | |
 
 
