@@ -30,7 +30,7 @@ __22.04.2019 - 28.04.2019__
 | 25.04.2019 | States                                                                   | 30 min     |        |
 | 27.04.2019 | Styles                                                                   | 30 min     |        |
 
-## Woche 3
+## Woche 4
 __29.04.2019 - 05.05.2019__
 
 | Datum      | Tätigkeit                                                                | Dauer      | Zusatz |
@@ -40,7 +40,7 @@ __29.04.2019 - 05.05.2019__
 | 03.05.2019 | In Flexbox eingelesen                                                    | 1 h        |        |
 | 05.05.2019 | In Flexbox eingelesen                                                    | 1 h        |        |
 
-## Woche 4
+## Woche 5
 __06.05.2019 - 12.05.2019__
 
 | Datum      | Tätigkeit                                                                | Dauer      | Zusatz |
@@ -50,7 +50,7 @@ __06.05.2019 - 12.05.2019__
 | 11.05.2019 | Eingelesen in WebSockets, Pushnotification, HTTP-Request und Listen      | 3 h        |        |
 | 12.05.2019 | Zusammenfassung React-Native-Navigator                                   | 2 h        |        |
 
-## Woche 5
+## Woche 6
 __13.05.2019 - 19.05.2019__
 
 | Datum      | Tätigkeit                                                                | Dauer      | Zusatz |
@@ -60,10 +60,41 @@ __13.05.2019 - 19.05.2019__
 | 16.05.2019 | Lösung gesucht vom Einbinden von WebGL                                   | 1 h        |        |
 | 18.05.2019 | Zusammenfassungen von Flexbox und React-Native-Navigator verbessert      | 30 min     |        |
 
-
-## Woche 6
+## Woche 7
 __20.05.2019 - 26.05.2019__
 
 | Datum      | Tätigkeit                                                                | Dauer      | Zusatz |
 | ---------- | ------------------------------------------------------------------------ | ---------- | ------ |
 | 20.05.2019 | Bild erstellt für Flexbox                                                | 20 min     |        |
+| 20.05.2019 | Angefangen den MVP zu entwickeln                                         | 3 h        |        |
+| 23.05.2019 | MVP weiter implementiert                                                 | 4 h        |        |
+| 26.05.2019 | MVP weiter implementiert                                                 | 2 h        |        |
+
+## Woche 8
+__27.05.2019 - 02.06.2019__
+
+| Datum      | Tätigkeit                                                                | Dauer      | Zusatz |
+| ---------- | ------------------------------------------------------------------------ | ---------- | ------ |
+| 27.05.2019 | MVP weiter implementiert                                                 | 2 h        |        |
+| 28.05.2019 | MVP kleine Fehler behoben                                                | 1 h        |        |
+| 29.05.2019 | GraphQL-Anfragen versucht zu fixen                                       | 1 h        |        |
+| 29.05.2019 | Einarbeitung in PushNotification(Theorie)                                | 1 h        |        |
+| 30.05.2019 | GraphQL-Anfragen nach Lösungen gesucht                                   | 30 min     |        |
+| 01.06.2019 | GraphQL-Anfragen gefixed                                                 | 30 min     |        |
+
+## Woche 9
+__03.06.2019 - 09.06.2019__
+
+| Datum      | Tätigkeit                                                                | Dauer      | Zusatz |
+| ---------- | ------------------------------------------------------------------------ | ---------- | ------ |
+| 07.06.2019 | Mit Refactoring angefangen                                               | 1 h        |        |
+| 08.06.2019 | Refactoring                                                              | 30 min     |        |
+| 09.06.2019 | Refactoring                                                              | 45 min     |        |
+
+## Woche 10
+__10.06.2019 - 16.06.2019__
+
+| Datum      | Tätigkeit                                                                | Dauer      | Zusatz |
+| ---------- | ------------------------------------------------------------------------ | ---------- | ------ |
+| 10.06.2019 | Ausarbeitung aufgeräumt und strukturiert                                 | 1 h        |        |
+| 10.06.2019 | Zusammenfassung zur Websockekts, HTTP-Request und Pushnotification ausgeschrieben | 1 h        |        |

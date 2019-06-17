@@ -83,3 +83,18 @@ __20.05.2019 - 26.05.2019__
 | 27.05.2019 | Überarbeitung Pflichtenheft           | 0,5h  |                                                              |
 | 27.05.2019 | Vergleich Frameworks                  | 0,5h  |                                                              |
 
+## Woche 8
+
+| Datum      | Tätigkeit | Dauer | Zusatz                                  |
+| ---------- | --------- | ----- | --------------------------------------- |
+| 02.06.2019 | Vuex      | 2,5h  | Anschließend verhindert wegen Krankheit |
+
+## Woche 9
+
+| Datum      | Tätigkeit                                                  | Dauer | Zusatz                       |
+| ---------- | ---------------------------------------------------------- | ----- | ---------------------------- |
+| 04.06.2019 | Umbau der Models                                           | 1,5h  |                              |
+| 04.06.2016 | User Effects eingebaut                                     | 3h    |                              |
+| 07.06.2019 | Team Effects versucht einzubinden                          | 2h    | Daten nicht aus Store lesbar |
+| 10.06.2016 | Weitere Effects eingebaut, Versuch selektoren zu schreiben | 3h    |                              |
+

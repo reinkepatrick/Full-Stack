@@ -96,13 +96,13 @@ Darstellung eines Graphen samt mit Koordinatensystem, jedoch ohne Beschriftung. 
 
 Laufzeit wurde gemessen über 50 Versuche und dann der Durchschnitt ermittelt.
 
-| Bibliothek | Laufzeit (Ø) | Laufzeit (Best) | Laufzeit (Worst) | Codezeilen |
-|---------|-------|-------|-------|-------|
-| three.js | 64,45 ms | 55 ms | 84 ms | 12 |
-| BabylonJS | 81 ms | 72 ms | 94 ms | 13 |
-| StardustJS | 158,5 ms | 150 ms | 201 ms | 12 |
+| Bibliothek | Laufzeit (Ø) | Laufzeit (Best) | Laufzeit (Worst) | Codezeilen | Größe des Frameworks |
+|---------|-------|-------|-------|-------|-------|
+| three.js | 64,45 ms | 55 ms | 84 ms | 12 | 571 kB |
+| BabylonJS | 81 ms | 72 ms | 94 ms | 13 | 2,56 MB |
+| StardustJS | 158,5 ms | 150 ms | 201 ms | 12 | 403 kB |
 
 ### Fazit: 
 
 Die Anzahl der Codezeilen und der eigentliche Aufbau des Codes ist für alle drei Bibliotheken ähnlich, bei three und Babylon sogar nahezu gleich. Stardust definitiert seine Marks etwas anders.
-In der Laufzeit entäuscht StardustJS, weswegen ich derzeit keinen Vorteil in ihrer Verwendung sehe. Babylon liegt etwas hinter three, jedoch ist der Abstand gering im vergleich zu Stardust. Ich denke sowohl three als auch Babylon sind sinnvolle Ansätze in diesem Beispiel.
+In der Laufzeit entäuscht StardustJS, weswegen ich derzeit keinen Vorteil in ihrer Verwendung sehe. Babylon unterscheidet sich letztendlich in seiner Dateigröße stark von three, was für gewisse Seiten ein Effizienzkriterium sein könnte.

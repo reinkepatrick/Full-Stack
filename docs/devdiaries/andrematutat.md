@@ -104,3 +104,15 @@ __27.05.2019-02.06.2019__
 | 02.06 | Versucht automatische ID vergabe in die GraphQL API zu implementieren | 120min | MongoDB liefert keine implementierung, typische realisierung über zwischen Tabelle, Befehl .findAndModify wirft fehler. Suche geht weiter |
 | 02.06 | Recherche RPC und gRPC v2                | 120min |                                          |
 | 02.06 | Dokumentation gRPC                       | 60min  |                                          |
+
+
+
+## Woche 9
+__03.06.2019-09.06.2019__
+
+| Datum | Tätigkeit                                | Dauer  | Zusatz                                   |
+| ----- | ---------------------------------------- | ------ | ---------------------------------------- |
+| 03.06 | Erfolgreiche Implementation automatischer ID vergabe | 180min | Mutations returnen, aufgrund von Asynchronen Methodenaufrufen, jetzt keine Ergebnisse mehr an den Client. Problem erstmal hingenommen, fix folgt. |
+| 09.06 | Erste (erfolglose) versuche WebSockets zu implementieren | 120min | Es gibt graphql-ws, allerdings noch WiP und ehr mäßig dokumentiert. Aktueller Ansatz: GraphQL Subscriptions |
+| 09.06 | Einlesen in GraphQL Subscriptions        | 60min  |                                          |
+|       |                                          |        |                                          |

@@ -73,6 +73,8 @@ Zwischendurch veröffentlich Client A selber noch einen Temperaturwert unter dem
 
 ![MQTT Beispiel](img/MQTT_protocol_example_without_QoS.svg)
 
+### Funktionen
+
 #### QoS - Quality of Service
 
 Je nach Anwendungszweck können einzelne Nachrichten eine sehr unterschiedliche Relevanz haben. Dafür sind im MQTT-Protokoll drei unterschiedliche **Qualities of Service** definiert:
@@ -82,6 +84,18 @@ Je nach Anwendungszweck können einzelne Nachrichten eine sehr unterschiedliche 
 - In der höchsten Stufe 2 garantiert der Broker sogar *exactly-once*: die Nachricht wird also genau einmal abgelegt, nicht öfter und nicht weniger
 
 In einem System, wo die Sensoren dauerhaft und sehr viele Messdaten veröffentlichen, würde beispielsweise die Stufe 0 ausreichen. Wenn aber jede einzelne Nachricht für eine Auswertung nötig ist und dementsprechend eine hohe Relevanz hat, dann wird vermutlich Stufe 2 verwendet. 
+
+#### Last will
+
+Der letzte Willen ermöglicht es einem Client beim Verbindungsaufbau eine Nachricht beim Broker zu hinterlegen. Wenn die Verbindung zu diesem Client daraufhin unerwartet getrennt wird, wird diese Nachricht an alle Abonnenten gesendet. Dadurch kann innerhalb eines größeren Systems direkt auf Ausfälle einzelner Geräte reagiert werden.
+
+#### Retained messages
+
+Ein Broker kann so konfiguriert werden, dass die jeweils letzte gesendete Nachricht in einem Topic hinterlegt wird und an einen neuen Subscriber gesendet wird. Das ermöglicht es einem neu verbundenen Client, direkt einen Status (z.B. Messwert) zu erhalten, ohne auf die nächste Nachricht warten zu müssen.
+
+#### Persistent sessions
+
+Mit persistenten Sessions speichert der Broker sich zu jedem Client die abonnierten Topics. Nach einem Abbruch und Wiederaufbau der Verbindung werden diese also direkt wiederhergestellt und alle verpassten Nachrichten in diesen Topics an den Client gesendet. Diese Funktion ist besonders in Umgebungen interessant, in denen mit häufigeren Verbindungsabbrüchen zu rechnen ist.
 
 ### Paketstruktur
 
