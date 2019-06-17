@@ -116,3 +116,12 @@ Zuzüglich zur Heimarbeit beinhaltet jede Woche das Seminar (1h 30m) mit anschli
 | 12.06.2019 | Videoreihe forgesetzt                      | 1h 30m |        |
 | 14.06.2019 | Dokumentation erweitert (Guards)           | 1h 10m |        |
 | 15.06.2019 | Dokumentation erweitert (Auxiliary Routes) | 40m    |        |
+
+## Woche 10
+
+**17.06.2019 - 23.06.2019**
+
+| Datum | Tätigkeit | Dauer | Zusatz |
+| ----- | --------- | ----- | ------ |
+|       |           |       |        |
+
