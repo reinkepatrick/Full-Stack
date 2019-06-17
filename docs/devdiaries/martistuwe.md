@@ -120,7 +120,8 @@ __10.06.2019 - 16.06.2019__
 ## Woche 11 
 __17.06.2019 - 23.06.2019__
 
-| Datum      | Tätigkeit                                             | Dauer      | Zusatz |
-| ---------- | ----------------------------------------------------- | ---------- | ------ |
-| 17.06.2019 | Recherche zur Umsetzung des Kartenspiels              | 1 h 30 min |        |
-| 17.06.2019 | Beispiel für plattformkonsistentes Design mit Flutter | 1 h 30 min |        |
+| Datum      | Tätigkeit                                             | Dauer      | Zusatz                             |
+| ---------- | ----------------------------------------------------- | ---------- | ---------------------------------- |
+| 17.06.2019 | Recherche zur Umsetzung des Kartenspiels              | 1 h 30 min |                                    |
+| 17.06.2019 | Beispiel für plattformkonsistentes Design mit Flutter | 1 h 30 min |                                    |
+| 17.06.2019 | Cardholder als WebApp                                 | 2 h        | Problem mit inkompatiblen Packages |
