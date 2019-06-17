@@ -471,25 +471,25 @@ gRPC ist ein RPC Framework, welches full duplex streaming erlaubt. Das ermöglic
 
 #### Unary
 
-![](./resources/img/grpcun.png)
+![](./resources/img/grpcun.PNG)
 
 Die klassische Client-Server Architektur. Der Client sendet eine Anfrage und der Server sendet eine Antwort.
 
 #### Server Streaming
 
-![](./resources/img/grpcses.png)
+![](./resources/img/grpcses.PNG)
 
 Beim Server Streaming, sendet der Client eine Anfrage und der Server antwortet mit einem Stream. Mithilfe dieses Streams kann der Server mehrere Antworten in beliebiger Zeit verschicken.
 
 #### Client Streaming
 
-![](./resources/img/grpccs.png)
+![](./resources/img/grpccs.PNG)
 
 Hier stellt der Client eine Anfrage Stream und kann mehrere Anfragen in beliebiger Zeit verschicken. Wenn der Server antwortet, ist die Verbindung beendet.
 
 #### Bi Directional Streaming
 
-![](./resources/img/grpcbi.png)
+![](./resources/img/grpcbi.PNG)
 
 Beim Bi Directional Streaming sendet der Client einen Anfrage Stream und der Server antwortet mit einem Stream.
 

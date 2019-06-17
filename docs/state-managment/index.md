@@ -246,14 +246,33 @@ Um diese Stores zu verwalten, bietet Akita verschiedene Methoden an.
 
 Ein weiteres Element in diesem Pattern sind die Queries. Diese sind vergleichbar mit den Queries aus Datenbankabfragen. Diese Queries fragen einfach die Daten aus den Stores ab. Queries können dabei mit anderen Queries verbunden werden und aus verschiedenen Stores Daten abrufen und verknüpfen. Auch bei den Queries gibt es verschiedene Arten für den Basisstore und für den Querystore. Die sind aber bis auf Kleinigkeiten gleich. Viel wichtiger ist da ein weiterer Unterschied zwischen den Queries. Es gibt einmal reaktive Queries und einmal synchronisierende Queries. Die einen können aufgerufen werden und die anderen aktualisieren sich bei Änderungen automatisch. Dafür wird das Observable Pattern benutzt.
 
+## Vuex
+
+### Was ist Vuex?
+
+Vuex ist die State-Managment-Bibliothek für Vue.js und implementiert auch das Flux-Pattern. Es ist dabei relativ nah mit Redux verwandt. Der größte Vorteil gegenüber Redux, welches man auch für Vue.js verwenden kann, ist das die Bibliothek deutlich besser in das Framework eingebunden ist. Vuex greift aber auch auf einen One-Way-Data-Flow zurück. Es gibt also auch hier eine View, welche immer eine Action auslöst, welche den State beeinflusst. Und der State wird letztendlich wieder in der View dargestellt.
+
+![Aufbau Vuex](./img/vuex.png)
+
+Vuex benutzt für die Abbildung des States einen Single-State-Tree. Das entspricht den Konzepten, die wir bereits kennen. Auch Vuex entspricht also dem Konzept, dass es nur eine Quelle der Wahrheit gibt.
+
+
+
+Actions sind Funktionen, die Änderungen an dem State aufrufen sollen. Hier werden zum Beispiel Api-Calls aufgerufen. Wichtig ist dabei, dass die Funktionen hier zwar aufgerufen werden, eine Änderung des Datensatzes geschieht hier allerdings noch nicht. Diese Änderungen werden jetzt in den Mutations umgesetzt. Actions senden also nach einem erfolgreichen Aufruf eine Mutation ab. Und nur diese Mutation darf jetzt den Datenbestand verändern. Mutationen sind sehr ähnlich zu Actions. Der Unterschied besteht darin, dass Mutationen den Datenbestand verändern. Dafür werden Asynchrone Aufrufe in den Actions umgesetzt.
+
+
+
+Bei Vuex gibt es noch die Möglichkeit von Gettern. Diese liefern sozusagen berechnete Werte aus dem Store. Zum Beispiel, wenn nur erledigte Aufgaben ausgegeben werden sollen.
+
 ## Vergleich Frameworks
 
-| Name  | Pattern          | Sprachen | Programmieransatz | Vorteile                    | Nachteile                             | Doku                                 |
-| ----- | ---------------- | -------- | ----------------- | --------------------------- | ------------------------------------- | ------------------------------------ |
-| Redux | Flux             | React    | funktionell       | Single-Direction-Data-Flow  | großer Overhead                       | <https://redux.js.org/>              |
-| MobX  | Observable       | React    | funktionell       | schmale Lösung              | unübersichtlich bei großen Programmen | <https://mobx.js.org/>               |
-| NgRx  | Flux             | Angular  | funktionell       | Single-Direction-Data-Flow  | großer Overhead                       | <https://ngrx.io/>                   |
-| Akita | Flux, Observable | Angular  | objektorientiert  | vereint Flux und Observable | kaum Doku vorhanden                   | <https://netbasal.gitbook.io/akita/> |
+| Name  | Pattern          | Sprachen | Programmieransatz | Vorteile                                               | Nachteile                             | Doku                                 |
+| ----- | ---------------- | -------- | ----------------- | ------------------------------------------------------ | ------------------------------------- | ------------------------------------ |
+| Redux | Flux             | React    | funktionell       | Single-Direction-Data-Flow                             | großer Overhead                       | <https://redux.js.org/>              |
+| MobX  | Observable       | React    | funktionell       | schmale Lösung                                         | unübersichtlich bei großen Programmen | <https://mobx.js.org/>               |
+| NgRx  | Flux             | Angular  | funktionell       | Single-Direction-Data-Flow                             | großer Overhead                       | <https://ngrx.io/>                   |
+| Akita | Flux, Observable | Angular  | objektorientiert  | vereint Flux und Observable                            | kaum Doku vorhanden                   | <https://netbasal.gitbook.io/akita/> |
+| Vuex  | Flux             | Vue.js   | funktionell       | Single-Direction-Data-Flow, gute Integration in vue.js | großer Overhead                       | <https://vuex.vuejs.org/>            |
 
 
 

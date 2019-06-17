@@ -1,30 +1,53 @@
 # Dotnet Core
 
-## Einleitung
-
-### Was ist dotnet Core?  
-
 ![ersatz text](./img/dotnetcore-overview.svg)
 
-dotnet Core ist ein Opensource Plattform. Diese Plattform soll in Zukunft das dotnet Framework ersetzen. Eine große Änderung ist es Plattformunabhängig zu werden. Das dotnet Team stellt eine CLI zur Verfügung um ein Projekt zu erstellen, Kompilieren und testen. Die dotnet core Plattform kann mit VB, C# und F# genutzt werden. Außerdem wurden die einzelnen Komponenten von dem Grundsystem endkapselt.
+## Was ist dotnet Core?  
 
-### Wer entwickelt dotnet core?
+dotnet Core ist eine Opensource Plattform. Die Leitung des Projektes wird von Richard Lander (Programm Manager bei Microsoft) übernommen. Diese Plattform soll in Zukunft das dotnet Framework ersetzen. Eine große Änderung im vergleich zu dem dotnet Framework ist die Plattformunabhängigkeit. Um mit dotnet core arbeiten zu können stellt das dotnet Team eine CLI zur Verfügung. Welche das erstellen von Projekten, kompilieren und testen ermöglicht. Die dotnet core Plattform kann mit VB, C# und F# genutzt werden. Außerdem wurden die einzelnen Komponenten von dem Grundsystem endkapselt.
 
-Die Entwicklung wird von Microsoft koordiniert der Programm Manager ist Richard Lander. Es handelt sich bei dotnet core um ein Opensource Produkt somit kann jeder Nutzer an der Entwicklung teilnehmen.
+**Projektstruktur**
 
-### Weiter Entwicklung
+Dotnet core nutzt die selbe organisationseinheiten wie das dotnet Framework. Es gibt Solutions welche Projekte enthält und es gibt Projekte welche referenzen(Verknüpfungen von Projekten und Libarys). Die Quellcode Dateien müssen nicht in den Projektdateien eingetragen werden.
 
-Das dotnet Core Team hat für die Version 3.0 die in der zweiten Hälfte 2019 veröffentlicht werden soll vorgesehen Desktop Gui Entwicklung, Razorkomponenten , c# 8.0 support und noch vieles mehr.
+**Paketmanager**
 
-Eine liste aller Änderungen sind [hier](https://docs.microsoft.com/de-de/dotnet/core/whats-new/dotnet-core-3-0) erhältlich.
+Als Paketmanager wird nuget verwendet welches mithilfe von der dotnet CLI einfach zu bedienen ist. Um sich über Packages besser informieren zu können gibt es die adresse: <https://www.nuget.org/packages/>
 
-## Frameworks
 
-### Web
+## Programmiersprache
 
-#### ASP.NET
+## F# #
 
-Ein Framework welches genutzt werden kann um dynamische Webseiten und Webservices zu entwickeln. Es bietet eine eigene Templateengine an mit dem Namen Razor. 
+F# ist eine Plattform unabhängige funktionale Programmiersprache. Welche außerdem ein Open-Source Projekt ist. F# kann genutzt werden um Objekt Orientiert oder Imperativ zu programmieren.
+
+F# und funktionale Programmiersprachen versuchen die Arbeit des Programmierers zu vereinfachen indem dieser weniger schreiben muss sowie sich weniger sorgen um Datentypen zu machen.
+
+Beim programmieren mit F# kann man dennoch den Typen angeben um selbst Einschränkungen vorzunehmen sonst erfüllt diese Aufgabe der Compiler. Für eine Liste aller Datentypen stellt Microsoft [Hier](https://docs.microsoft.com/de-de/dotnet/fsharp/language-reference/fsharp-types) eine Liste zur Verfügung.
+
+| Vorteile | Nachteile |
+| --- | --- |
+| Einfacher zu testen | Kein vollständiges OOP möglich |
+| Leicht zu schreibener Code | Pattern matching kann komplex werden |
+| Zeit kann sinnvoller eingesetzt werden | |
+| Pattern matching | |
+
+## C# #
+
+C# ist eine Simple und Moderne Objekt Orierntierte Programmiersprache die Typsicher ist. Beim Programmieren mit C# kann man viele nützliche Konstrukte Nutzen z.b. delegates, Lambdas, Dynamische Objekte. C# selbst ist ebenfalls Plattformunabhängig. Die meisten Programmierer kennen C# nur im zusammenhang mit dem .Net Framework. Die Programmiersprache c# kann für verschiedenste Anwendungen genutzt werden. Ein paar dieser Möglichkeiten wären:
+- Web (.net Framework, .net core)
+- Mobile (Xamarin)
+- Desktop (.net Framework, .net core)
+
+## VB (Visual Basic) #
+
+Visual Basic ist eine Programmiersprache mit Simplen Syntax um Typ sichere und Objekt Orientierte Anwendungen zu entwickeln. Die bekanntheit von VB ist aus der Microsoft Office Welt wo eine leichte abwandlung von VB verwendet wird mit den namen Visual Basic for Application. 
+
+## Web
+
+### ASP.NET
+
+Ein Framework welches genutzt werden kann um dynamische Webseiten und Webservices zu entwickeln. Es bietet eine eigene Templateengine an mit dem Namen Razor.
 
 ASP.Net nutzt Klassen und Attribute für das Routing.
 
@@ -43,7 +66,7 @@ type ValuesController () =
 Die Route ist nicht direkt lesbar ohne zu wissen das [controller] durch Values ersetzt wird.
 Trotz das Klassen verwendet werden ist keine spezielle Ordner Struktur vorgeschrieben bzw. benötigt welches ein suchen nach der zugehörigen Klasse verursacht. Da die eigentliche Route in der Datei der Klasse deklariert wird.
 
-##### Http Request Pipeline
+#### Http Request Pipeline
 
 ![https://thomaslevesque.com/2018/03/27/understanding-the-asp-net-core-middleware-pipeline](.\img\Middleware_Pipeline.png)
 
@@ -63,7 +86,7 @@ In ASP.NET ist eine Pipeline verfügbar welche das hinzufügen von Middleware er
 
 **Abweichung MVC und Giraffe**
 
-Bei Giraffe werden eigengeschriebene Middlewares mithilfe von Komposition eingebunden. Und werden identisch geschrieben wie zielrouten. Der einzige unterschied ist das kein Return verwendet weden darf. 
+Bei Giraffe werden eigengeschriebene Middlewares mithilfe von Komposition eingebunden. Und werden identisch geschrieben wie zielrouten. Der einzige unterschied ist das kein Return verwendet weden darf.
 
 Hier ein Beispiel wie man einen Datenbank zugriff ermöglichen könnte.
 
@@ -128,12 +151,12 @@ Microsoft empfiehlt beim nutzen von Kestrel nach außen einen weiteren Server al
 | Compression                | Optional      | Optional                                       |
 | FTP Server                 | Ja            | Nein                                           |
 
-##### Frontends
+#### Frontends
 
-möglich sind 
+möglich sind
  - react
-  - mit und ohne redux 
- - angular 
+  - mit und ohne redux
+ - angular
   - einbinden mithilfe von SinglepageApplication Service
  - razor
   - einbinden mithilfe von SinglepageApplication Service
@@ -146,11 +169,11 @@ Eine von Microsoft entwickelte Template Engine. Welche die Programmiersprache de
 
 Ein Erweiterung von Razor welches erlaubt Komponenten zu entwickeln Ähnlich wie bei Angular. Diese Komponenten können sowohl auf dem Server oder mithilfe von Blazzor als Webassembly beim Klienten Aktionen ausführen.
 
-#### Giraffe
+### Giraffe
 
 ![alt](./img/giraffe.png)
 
-Ein auf ASP.NET aufbauendes Framework welches stärker Funktionalen Aspekte einbringt. 
+Ein auf ASP.NET aufbauendes Framework welches stärker Funktionalen Aspekte einbringt.
 
 Anstelle von dem Routing von ASP.Net kann eine Art Suchbaum erstellt werden.
 
@@ -168,22 +191,28 @@ let webApp =
 
 Das Routing kann komplex werden, dennoch kann auf einen Blick erkannt werden, welcher Befehl wohin gehen wird. Routen die Authentifizierung erfordern können auch direkt hier erkannt werden und nicht in einer Funktion welche nur vom Framework intern aufgerufen werden.
 
-### ORM
+## Desktop
 
-| | Entity Framework | SqlProvider | Rezoom.net | 
+Dotnet core wird immer als ein Webframework gesehen. Dies kommt daher das dotnet core als erstes Feature die möglichkeit bekommen hat als Web backend zu dienen. Dotnet core ist keine reine Webbackend Plattform sondern bietet bereits die möglichkeit eine Konsolen anwendung ohne IIS, Kestrel zu erstellen.
+
+Für die Version 3.0 ist angekündigt UWP Anwendungen zu schreiben. Außerdem gibt es Avalonia welches ein wahres Plattformunabhängiges Desktop Framework ist.
+
+## ORM
+
+| | Entity Framework | SqlProvider | Rezoom.net |
 | --- | --- | --- | --- |
 | Sprachen | C# / VB (F# *) | F# | F# |
 | QueryType | SQL / Linq | Linq | pseudo SQL(Typechecked) |
-| Datenhandling | Kontext (Sql kann auf Kontext angewand werden) | Kontext | SQL | 
+| Datenhandling | Kontext (Sql kann auf Kontext angewand werden) | Kontext | SQL |
 | Modelierung | Klassen | Compiletime | Klassen / Compiletime |
 | Migration | C#/VB vollwertige Datenbank Migration (erstellt durchs Model) | Keine Datenbank definition | eigen Definierte Sqls |  
 | Datenbanktypen | MSSql (Keine Migrationen*nicht dokumentiert*) / SQlite / InMemory / Cosmos / Postgre / Mysql / Firebird / ODBC | MSSql / Sqlite / Mysql / MsAccess / ODBC | Sqlite /  MSSql / Postgre |
-| Entwickler | Microsoft | 
+| Entwickler | Microsoft |
 | Dokumentation | Ausführlich mit vielen guten Beispielen | Ausreichen mit genügend Beispielen | Vielleicht ausreichend schlecht Strukturiert (Beispiele sind entweder 9 Dateien oder zeigen nicht die Relevanten Code schnipsel) |
 | Connectionstring kontrolle | Laufzeit | Intellisense / Kompilier | Laufzeit |
 | Middleware für ASP.NET | Provider stellt Provider zur verfügung | Nein | Nein |
 
-#### Entity Framework (EF)
+### Entity Framework (EF)
 
 Ein von Microsoft entwickeltes Framework für Datenbank Operationen für dotnet Framework. Es handelt sich beim Enity Framework um ein Objekt Relations Model. Das EF bietet grundsätzlich zwei Vorgehensweisen an Code-First und Database-First. Es bietet ein CLI Tool welches Migrationen erstellen ermöglicht. Diese Können beim Starten der Anwendung kontrolliert werden. Dies ermöglicht im Laufenden System einfache Änderungen am Datenbank Model.
 
@@ -230,7 +259,7 @@ public void ConfigureServices(IServiceCollection services)
 ```
 
 
-#### SqlProvider
+### SqlProvider
 
 Keine Migration vom Programm.
 
@@ -240,7 +269,7 @@ type sql = SqlDataProvider<Common.DatabaseProviderTypes.MYSQL,
                 connectionString>
 let context = sql.GetDataContext()
 
-let UserWithName = 
+let UserWithName =
     query {
         for user in context.User do
         where (user.StartWith "A")
@@ -253,7 +282,7 @@ context.SubmitUpdates()
 
 ```
 
-#### Rezoom
+### Rezoom
 
 Migration wird automatisch ausgeführt wenn im Projekt gefunden. Diese müssen selbst geschrieben werden.
 
@@ -278,21 +307,29 @@ create index IX_Message_UserId on Message
 ``` fsharp
 
 type GetUserSQL = SQL<"""
-    select * from User a where a.Name like 'A%' 
+    select * from User a where a.Name like 'A%'
 """>
 
 let getUser() =
     use context = new ConnectionContext()
     let users = GetUserSQL.Command().Execute(context)
-        
+
 
 ```
 
-### Parser
+## Serialisierung
 
-#### Newtonsoft JSON.NET
+### Newtonsoft JSON.NET
 
 JSON.Net von Newtonsoft ist ein Json Parser Framework welches ein Json to Object Parser beinhaltet sowie Object to Json. Es beinhaltet auch eine Service Komponente welche mit ASP.NET genutzt werden kann.
+
+## Tests
+
+Ein sauber unter dotnet core strukturiertes Projekt ist es für jede Art von Tests (Unit, Integration, End to End) ein eigenes Projekt anzulegen und in diesen das Hauptprojekt zu verlinken.
+
+![Beispiel eines Testsystems](./img/test-pyramid.jpg)
+
+Die Wertigkeit der einzelnen Tests können sehr stark abweichen. Wird z.b. eine Blog software geschrieben dann sind wahrscheinlich weniger Unit Tests notwendig sondern mehr Integrationstests. Gibt es eine Sehr komplexe UI würde ein hoher Wert auf UI tests gelegt.
 
 ### Test Frameworks
 
@@ -308,13 +345,13 @@ JSON.Net von Newtonsoft ist ein Json Parser Framework welches ein Json to Object
 
 **Fact**
 
-Ein Test der immer gültig ist und nicht Parameterisiert ist. 
+Ein Test der immer gültig ist und nicht Parameterisiert ist.
 
 **Theory**
 
-Eine Thorie ist ein Test welcher in bestimmten Fällen erfolgreich ist. 
+Eine Thorie ist ein Test welcher in bestimmten Fällen erfolgreich ist.
 Testfälle Können auf drei Vraianten deklariert werden:
- - InlineData (einmalig vor dem Test definiert) 
+ - InlineData (einmalig vor dem Test definiert)
  - ClassData (Eine Klasse von Testdaten)
  - MemberData (Eine methode welche Testdaten generieren kann)
 
@@ -325,187 +362,22 @@ Wenn die Testklasse das Interface IDisposable implementiert wird diese nach jede
 
 Um für die gesammten Tests einen Context zu erstellen gibt es IClassfixtures welche ermöglichen für eine Klasse einmalig etwas zu erstellen und nach allen Tests dieser Klasse wird dies wieeder aufgeräumt.
 
-**Parralelitär**
+**Parralelität**
 
 Der XUnit test runner lässt tests unterschiedlicher Klassen parralel laufen. Um bestimmte Tests dazu zubringen das Tests nacheinander ausgeführt werden gibt es Collections welche den Vorteil haben Tests nacheinander auszuführen sowie einen Context zu teilen.
 
 Um Collections einen Context zu geben wird eine CollectionDefinition benötigt.
 <https://xunit.net/docs/shared-context>
 
+### Integration tests
 
-## F# #
-
-F# ist eine Plattform unabhängige funktionale Programmiersprache. Welche außerdem ein Open-Source Projekt ist. F# kann genutzt werden um Objekt Orientiert oder Imperativ zu programmieren.
-
-F# und funktionale Programmiersprachen versuchen die Arbeit des Programmierers zu vereinfachen indem dieser weniger schreiben muss sowie sich weniger sorgen um Datentypen zu machen.
-
-Beim programmieren mit F# kann man dennoch den Typen angeben um selbst Einschränkungen vorzunehmen sonst erfüllt diese Aufgabe der Compiler. Für eine Liste aller Datentypen stellt Microsoft [Hier](https://docs.microsoft.com/de-de/dotnet/fsharp/language-reference/fsharp-types) eine Liste zur Verfügung.
-
-| Vorteile | Nachteile |
-| --- | --- |
-| Einfacher zu testen | Kein vollständiges OOP möglich |
-| Leicht zu schreibener Code | Pattern matching kann komplex werden |
-| Zeit kann sinnvoller eingesetzt werden | |
-| Pattern matching | |
-
-### Variablen
-
-Der F# Compiler lägt fest welcher Datentyp benutzt werden muss. Es gibt außerdem kein implizites Casting. Der Name für eine Variable oder Funktion kann jeden Buchstaben enthalten. Außerdem ist es möglich mit 2 Backticks am Anfang auch Sonderzeichen zu verwenden. 
-
-``` fsharp
-let Name = Wert
-let ``besonderer Name`` = Wert
-
-let zahl:int = 0
-
-let funktion a = 
-	let x = a * 2 in // lokale Variable
-	x
-
-let rec fib i = 
-   match i with
-   | 1 -> 1
-   | 2 -> 1
-   | n -> fib(n-1) + fib(n-2)
-```
-
-### Schleifen
-
-In F# gibt es drei arten von schleifen Zähler gesteuerte Schleife, Kopfgesteuerte Schleife und für jedes Element Schleife. Diese Schleifen existieren zwar sind aber in der Funktionalen Programmierung selten bis gar nicht verwendet.
-
-``` fsharp
-for i = 1 to 10 do
-    printf "%d " i
-for i = 10 downto 1 do
-	printf "%d " i
-```
-
-``` fsharp
-while Bedingung do
-    Anweisungen
-```
-
-Für jedes Element 
-``` fsharp
-for pattern in enumerable-expression do
-    body-expression
-
-for (i,j) in [(1,2),(3,4)] do
-	printf "first: %i" i
-    printf "second: %i" j
-    
-let sum = 0
-for (_,_) in [(1,2),(3,4)] do
-	printf "Parameter werden nicht benötigt"
-    sum += 1
-
-```
-### Funktional Iterieren
-``` fsharp
-List.iter (fun x -> printf "%i" x) [1..10] 
-```
-
-### Enum / Typen
-
-Typen sind ähnlich wie Objekte. Der größte unterschied ist das es weder Konstruktor noch Funktionen für diese Objekte gibt.
-
-``` fsharp
-type enum = 
-	| A 
-	| B 
-	| C
-
-type Typ = { Vorname:string ; Nachname:string; alter:int }
-let beispielNutzer:Typ = { Vorname = "Beispiel"; Nachname = ""; alter = 0 }
-```
-
-### Funktionen
-
-Funktionen in F# haben immer mindestens einen Parameter und immer einen Rückgabe wert. Um eine Funktion ohne Parameter zu erstellen kann der typ unit benutzt werden welcher das äquivalent zu null in anderen Sprachen ist.
-
-```fsharp
-let readInput() = 
-    printfn ":"
-    Console.ReadLine()
-
-let parse a = double a
-
-let calc a = a ** a
-
-let print a = printfn "Die Zahl ist %f" a
-```
-
-Parameter und Rückgabewerte benötigen keinen Typen diese Aufgabe übernimmt der Compiler. 
-
-| Funktion  | Parameter | Rückgabewert |
-| --------- | --------- | ------------ |
-| readInput | unit      | string       |
-| parse     | string    | double       |
-| calc      | double    | double       |
-| print     | string    | unit         |
+In dieser Phase werden zusammengehörige Komponenten bzw. Schnittstellen getestet. Dafür werden meist einzelne Komponenten Simuliert(gemocked). Für Asp.Net gibt es bereits ein Package welches einen Testserver enthält. Mithilfe dieses Testservers kann ein lightweight Server gestartet werden, dieser Server benötigt keinen Port. Mit einen erstellten Klienten für den Server können Anfragen als Json oder Xml versandt werden. Ein Großer Vorteil von diesem System ist es das die selbe Start konfiguration verwendet werden kann wie für das Produktiv System womit Services und Middlewares nur einmal strukturiert werden.
 
 
+### Ende zu Ende tests
 
-#### Pipelining
-
-Pipelining dient dazu lesbare aneinander Reihungen von Funktionen zu schreiben.
-
-``` fsharp
-let reihenfolge  = readInput |> parse |> calc |> print
-
-reihenfolge 
-```
-
-#### rekursive Funktionen
-
-In der Grundkonfiguration kann eine Funktion nicht von sich selbst aufgerufen werden. Um diese Funktionalität zu gewähren muss das Keyword **rec** vor dem Funktionsnamen geschrieben werden.
-
-Hier ein Beispiel mit der [McCarthy91](https://en.wikipedia.org/wiki/McCarthy_91_function) Funktion
-
-``` fsharp
-let rec McCarthy91 a = 
-    if a > 100 then a - 10 
-    else McCarthy91 (McCarthy91 (a + 11))
-```
-### Pattern Matching
-
-Pattern matching kann wie ein Switchcase genutzt werden.
-
-```fsharp
-match i with
-    | 0 -> 0 
-    | 1 -> 1
-    | 2 -> 4
-    | n -> n*n
-```
-
-Es gibt eine Erweiterung welche Active Pattern heißt und es erlaubt Funktionen oder Bedingungen als Case zu definieren.
-
-```fsharp
-let rec McCarthy91 a = 
-	match a with
-    | n when a > 100 -> n-10
-    | n -> McCarthy91 (McCarthy91 (n + 11))
-```
-
-
-
-### F# Magie Active Pattern
-
-Hier ein Umgekehrte polnische Notation Rechner welcher einen String erhält und alle Grundrechenarten auf diesen anwenden kann. [Hier](<https://de.wikipedia.org/wiki/Umgekehrte_polnische_Notation>) gibt es eine Erklärung der Notation.
-
-``` fsharp
-let RPNcalculator(s : string) = 
-    let solve items current = 
-        match (current, items) with
-        | "+", y::x::t -> (x + y)::t
-        | "-", y::x::t -> (x - y)::t
-        | "*", y::x::t -> (x * y)::t
-        | "/", y::x::t -> (x / y)::t
-        | _ -> (float current)::items
-    (s.Split(' ') |> Seq.fold solve []).Head
-```
-
+Bei Ende zu Ende tests wird normalerweise immer der Server komplett hochgefahren und das Testen dauert somit am längsten.
+Mithilfe von Selenium kann eine Webanwendung auf verhalten in der UI getestet werden. Elemente können direkt über position angesprochen oder über den Dokumentenbaum(Dom). Eine der wichtigen Informationen ist das Selenium nicht ein eigener Browser ist sondern nur eine möglichkeit ist gängige Browser fernzusteuern. Der große Vorteil von Tests mit Selenium ist das nicht nur das Dokument angezeigt wird sondern das auch Verhalten von Steuerelementen getestet werden kann.
 
 
 ## getting started with dotnet core
@@ -514,7 +386,7 @@ Download und Installation kann [hier](<https://dotnet.microsoft.com/download>) g
 
 nach der Installation söllte die dotnet CLI verfügbar sein.
 
-Um jetzt zu beginnen bietet die CLI die Funktion ein Projekt anhand eines Templates vorzubereiten. Um eine Liste aller Templates zu erhalten gibt es den Befehl: 
+Um jetzt zu beginnen bietet die CLI die Funktion ein Projekt anhand eines Templates vorzubereiten. Um eine Liste aller Templates zu erhalten gibt es den Befehl:
 
 ``` bash
 dotnet new --list
@@ -546,7 +418,7 @@ Hier ein Beispiel mit einer gemeinsamen API für Mobile und Web App. Zusätzlich
 
 ![micro-service-1](./img/micro-service-1.png)
 
-Ein großer Vorteil von Micro Services ist, dass diese von verschiedenen Anwendungen aufgerufen werden können. 
+Ein großer Vorteil von Micro Services ist, dass diese von verschiedenen Anwendungen aufgerufen werden können.
 
 ![micro-service-2](./img/micro-service-2.png)
 
@@ -556,19 +428,19 @@ Ein großer Vorteil von Micro Services ist, dass diese von verschiedenen Anwendu
 
 ##### Linq
 
-F# unterstützt nur den Querysyntax und nicht den Funktionssyntax. 
+F# unterstützt nur den Querysyntax und nicht den Funktionssyntax.
 
 ``` F#
 let list = ["Beispiel"; "Text"; "ab"]
-let abfrage = query { 
-    for text in list do 
-    where (text.Length > 3) 
-    select text 
+let abfrage = query {
+    for text in list do
+    where (text.Length > 3)
+    select text
     }
 abfrage |> Seq.iter (fun x -> printfn "%s" x)
 ```
 
-Für eine Sammlung aller Keywords und 
+Für eine Sammlung aller Keywords und
 
 #### Entity Framework
 ```c#
@@ -645,7 +517,7 @@ Funktionssyntax ist nicht zu verwechseln mit lambda welches in etwa zur selben z
 var list = new List<string>();
 list.foreach((x) => Console.WriteLine(x))
 ```
-Besonders Interessant ist auch dieser eigentliche Select der aber Lambda ist und nicht Query 
+Besonders Interessant ist auch dieser eigentliche Select der aber Lambda ist und nicht Query
 ```c#
 var list = new List<string>();
 list.FirstOrDefault((x) => x.length)
@@ -669,25 +541,21 @@ var element = from text in list where text == "Beispiel" select text;
 
 Linq ist ein Teil der dotnet-Programmiersprachen und ermöglicht einfachen Zugriff auf Daten verschiedener Quellen( z.b. DatenbankTabellen, XML, Listen ). Unter diesen Funktionen gelten filtern, gruppieren, sortieren, selektieren. Es gibt 2 schreibformen einmal Querysyntax welcher sehr ähnlich ist wie Datenbanken query sprachen wie sql und funktionssyntax welcher identisch ist zum lambda syntax.
 
- 
 
-#### Programmiersprachen
+## künftige Funktionen
 
-##### C# #
+Es gibt eine grosse Liste an neuen funktionen und verbesserungen für 3.0 einige interessante sind:
 
-C# ist eine Simple und Moderne Objekt Orierntierte Programmiersprache die Typ sicher ist.
+- UWP Anwendungen
+- c# 8.0
+- Razorkomponente
+- Singe file application
 
-##### F# #
-
-F# ist eine Plattform unabhängige funktionale Programmiersprache. Welche außerdem ein Open-Source Projekt ist. F# kann genutzt werden um Objekt Orientiert oder Imperativ zu programmieren.
-
-##### VB (Visual Basic)
-
-Visual Basic ist eine Programmiersprache mit Simplen Syntax um Typ sichere und Objekt Orientierte Anwendungen zu entwickeln.
+Eine liste aller Änderungen sind [hier](https://docs.microsoft.com/de-de/dotnet/core/whats-new/dotnet-core-3-0) erhältlich.
 
 ## Glossar
 
-### CLI
+**CLI**
 
 Ein Command Line Interface in kurz CLI ist eine Anwendung die nur in der Konsole des Betriebssystems gesteuert werden kann.  
 
@@ -714,3 +582,7 @@ Ein Middleware Programm kann genutzt werden um Daten von Typ a nach Typ b zu kon
 <https://nunit.org/>
 
 <https://stackify.com/kestrel-web-server-asp-net-core-kestrel-vs-iis/>
+
+<http://avaloniaui.net/>
+
+<https://www.symbio.com/solutions/quality-assurance/test-automation/>

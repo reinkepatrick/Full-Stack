@@ -70,3 +70,18 @@ __27.05.2019 - 02.06.2019__
 | ---------- | ------------------------------------------------------------------------------------- | ---------- | ------ |
 | 27.05.2019 | Projekt: Implementation von Update Methode für Graphen                                | 2 h 30 min | |
 | 02.06.2019 | Projekt: Recherche, Implementation von overlay Text                                   | 2 h        | noch keine konkrete Lösung |
+
+## Woche 9
+__03.06.2019 - 09.06.2019__
+
+| Datum      | Tätigkeit                                                                             | Dauer      | Zusatz |
+| ---------- | ------------------------------------------------------------------------------------- | ---------- | ------ |
+| 09.06.2019 | Projekt: Experimente mit Babylon Gui, Anfängliche Implementation von Text             | 2 h        | |
+
+## Woche 10
+__10.06.2019 - 16.06.2019__
+
+| Datum      | Tätigkeit                                                                             | Dauer      | Zusatz |
+| ---------- | ------------------------------------------------------------------------------------- | ---------- | ------ |
+| 10.06.2019 | Größe der Frameworks in Performance einbezogen                                        | 1 h        | |
+| 10.06.2019 | Projekt: Babylon GUI vorerst verworfen, evtl Ansatz mit dynamischer Textur, Cleanup   | 1 h 45 min | |

@@ -134,5 +134,31 @@ __03.06.2019 - 09.06.2019__
 | 03.06.2019 | XUnit Dokument erweitern | 60 min | |
 | 03.06.2019 | Angular als Frontend in dotnet core | 30 min | |
 | 03.06.2019 | Erster Integrationstest | 90 min | |
+| 04.06.2019 | Change API Login with tests | 90 min | |
+| 06.06.2019 | Write basic Teamtests | 60 min | | 
+| 06.06.2019 | Fix EF Loading | 30 min | |
+| 06.06.2019 | Refactor extrahieren von Texten | 20 min  | |
+| 07.06.2019 | Write basic Spielertests | 60 min | |
+| 07.06.2019 | Write Merkmaltests | 60 min | |
+| 08.06.2019 | erweitern von Teamtests | 30 min | |
+| 09.06.2019 | Swaggerhub dokumentation angepasst | 50 min | | 
+
+## Woche 10
+
+__10.06.2019 - 16.06.2019__
+
+| Datum | Tätigkeit | Dauer | Zusatz |
+| --- | --- | --- | --- |
+| 11.06.2019 | Uebungstests angefangen | 10 min | |
+| 13.06.2019 | Tests zu ende gebaut | 80 min | |
+| 15.06.2019 | Thema aufbereitet | 60 min | |
+
+## Woche 11
+
+__17.06.2019 - 24.06.2019__
+
+| Datum | Tätigkeit | Dauer | Zusatz |
+| --- | --- | --- | --- |
+| 17.06.2019 | Thema aufbereitung | 30 min | |
 
 

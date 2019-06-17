@@ -90,3 +90,23 @@ __27.05.2019 - 02.06.2019__
 | ---------- | -------------- | ------ | ------ |
 | 27.05.2019 | MQTT-Broker als Docker-Container | 1 h |  |
 | 27.05.2019 | Weiterarbeit an MQTT-Datenbank-Schnittstelle | 0,5 h | |
+
+
+## Woche 9
+
+__03.06.2019 - 09.06.2019__
+
+| Datum      | Tätigkeit      | Dauer  | Zusatz |
+| ---------- | -------------- | ------ | ------ |
+| 03.06.2019 | Auswahl und Bestellung von Sensoren | 1 h |  |
+| 07.06.2019 | Weiterarbeit an MQTT-Datenbank-Schnittstelle | 3 h | u.a. Änderungen an GraphQL-Schema einpflegen |
+
+
+## Woche 10
+
+__10.06.2019 - 16.06.2019__
+
+| Datum      | Tätigkeit      | Dauer  | Zusatz |
+| ---------- | -------------- | ------ | ------ |
+| 10.06.2019 | MQTT-Funktionen | 1,5 h | Last will, Persistent sessions, Retained messages  |
+| 10.06.2019 | Recherche zur Inbetriebnahme der Sensoren | 0,5 h | |

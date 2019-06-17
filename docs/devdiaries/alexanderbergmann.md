@@ -94,7 +94,22 @@ __27.05.2019 - 02.06.2019__
 
 __03.06.2019 - 09.06.2019__
 
-| Datum | Tätigkeit                             | Dauer | Zusatz |
-| ----- | ------------------------------------- | ----- | ------ |
-|       | Wöchentliches Meeting - Projektarbeit |       |        |
-|       |                                       |       |        |
+| Datum      | Tätigkeit                                     | Dauer | Zusatz |
+| ---------- | --------------------------------------------- | ----- | ------ |
+| 04.06.2019 | Wöchentliches Meeting - Projektarbeit         | 5,5 h |        |
+| 06.06.2019 | Dokumentation bearbeiten                      | 2 h   |        |
+| 07.06.2019 | Deploy Pipeline coachr-Frontend               | 3 h   |        |
+| 09.06.2019 | Deploy Pipeline Coach-Backend                 | 2 h   |        |
+| 09.06.2019 | Berechtigung Plugin für Jenkins konfigurieren | 1 h   |        |
+
+## Woche 10
+
+__10.06.2019 - 16.06.2019__
+
+| Datum      | Tätigkeit                             | Dauer | Zusatz |
+| ---------- | ------------------------------------- | ----- | ------ |
+| 10.06.2019 | Delpoy Pipeline Coach-Backend         | 3 h   |        |
+| 10.06.2019 | Dokumentation bearbeiten              | 0,5 h |        |
+| 11.06.2019 | Wöchentliches Meeting - Projektarbeit |       |        |
+|            |                                       |       |        |
+

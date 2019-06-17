@@ -108,4 +108,21 @@ __03.06.2019 - 09.06.2019__
 
 | Datum      | Tätigkeit                                                                                                                       | Dauer      | Zusatz                        |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------- | ---------- | ----------------------------- |
-| 27.05.2019 | An Lobby funktionen gearbeitet.                                                                                                 | 4h         | Es gab noch Bugs in der Liste |
+| 03.06.2019 | An Lobby funktionen gearbeitet.                                                                                                 | 4h         | Es gab noch Bugs in der Liste |
+| 04.06.2019 | Getestet wie Websockets getestet werden können.                                                                                 | 3h         | Es funktioniert nicht, da die Dokumentation nicht ausreichend ist für Django Tests |
+| 06.06.2019 | Tests geschrieben.                                                                                                              | 2h         |                               | 
+| 07.06.2019 | Tests geschrieben.                                                                                                              | 2h         |                               |
+| 07.06.2019 | Spieler von Lobby kicken.                                                                                                       | 2h         |                               |
+
+## Woche 10
+__10.06.2019 - 16.06.2019__
+
+
+| Datum      | Tätigkeit                                                                                                                       | Dauer      | Zusatz |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------- | ---------- | ------ |
+| 10.06.2019 | Mau Mau implementiert.                                                                                                          | 5h         |        |
+| 11.06.2019 | Weiteres Vorgehen mit der Gruppe besprochen.                                                                                    | 2h         |        |
+| 13.06.2019 | Erste Game Tests. Integrieren von Daten in die Testdatenbank herausgefunden.                                                    | 2h         |        |
+| 14.06.2019 | Game Tests geschrieben.                                                                                                         | 4h         |        |
+| 15.06.2019 | Game Tests geschrieben.                                                                                                         | 2h         |        |
+| 15.06.2019 | Kommunikation ziehen von Karten implementiert.                                                                                  | 3h         |        |
