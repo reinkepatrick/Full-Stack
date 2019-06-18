@@ -118,7 +118,7 @@
 | 03.06.2019 | Implementierung: Überblick Page zeigt nun Anschrift des ausgewählten Spielers & blendet die Auswahl erst bei Selektion ein | 70 min |        |
 | 03.06.2019 | Notieren bisheriger Erkenntnisse zu Callbacks                                                                              | 40 min |        |
 
-## Woche 8
+## Woche 9
 
 **04.06.2019 - 10.06.2019**
 
@@ -133,3 +133,29 @@
 | 06.06.2019 | Model-Datenstruktur nach Modellklassendiagramm implementiert.                             | 60 min |        |
 | 07.06.2019 | Mocking-Service implementiert um vorerst unabhängig von API zu sein.                      | 60 min |        |
 | 10.06.2019 | Typescript: Kapitel zu Callbacks, Promise, Async-Await und Oberservable ausgearbeitet.    | 90 min |        |
+
+## Woche 10
+
+**11.06.2019 - 17.06.2019**
+
+| Datum      | Tätigkeit                                                                                                     | Dauer  | Zusatz |
+| ---------- | ------------------------------------------------------------------------------------------------------------- | ------ | ------ |
+| 11.06.2019 | API-Service-Interface geschrieben.                                                                            | 60 min |        |
+| 11.06.2019 | Refactoring: Abstrakte Klasse für Mocking API implementiert                                                   | 90 min |        |
+| 11.06.2019 | TeamPage: Mannschaft hinzufügen und Spieler hinzufügen angefangen                                             | 60 min |        |
+| 12.06.2019 | TeamPage: Eingabemasken neues Team - Name & Altersklasse implementiert                                        | 50 min |        |
+| 12.06.2019 | Enums-Service: Angefangen Enums in HashMap zu packen um einfacher zugreifbar für Pages zu machen              | 50 min |        |
+| 12.06.2019 | Enums-Service: Altersklassen in ion-selector zur Auswahl implementiert --> umständliches HashMapping umgangen | 50 min |        |
+| 12.06.2019 | TeamsPage: GUI Funktionalitäten für Mannschaft erstellen implementiert.                                       | 30 min |        |
+| 12.06.2019 | Teams lassen sich nun erstellen und werden ins Mock eingefügt.                                                | 30 min |        |
+| 12.06.2019 | Service für aktive User und seine Teams implementiert & GUI Logik implementiert                               | 40 min |        |
+| 12.06.2019 | Overview-Page: stellt nun die echten Teammitglieder einer ausgewählten Mannschaft zu Auswahl                  | 60 min |        |
+| 17.06.2019 | Overview-Page: GUI Elemente zum erzeugen eines neuen Team-Mitglieds implementiert                             | 50 min |        |
+
+## Woche 11
+
+**18.06.2019 - 24.06.2019**
+
+| Datum      | Tätigkeit                                                        | Dauer  | Zusatz |
+| ---------- | ---------------------------------------------------------------- | ------ | ------ |
+| 18.06.2019 | BugFix: Overview --> es standen die falschen Spieler zur Auswahl | 20 min |        |
