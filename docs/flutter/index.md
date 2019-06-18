@@ -114,6 +114,38 @@ UI-Layout werden in Flutter durch *Rows* und *Columns* realisiert. Im folgenden 
 ## Styling
 Das Styling funktioniert in Flutter über ein Objekt vom Typ `ThemeData`. Dieses Styling ist global. Die Felder dieses Objekts sind dann die entsprechenden Styleanweisungen für z.B. Textart, Textgröße oder Akzentfarbe. Das `ThemeData`-Objekt wird der Wurzel des Widgettrees zugewiesen und allen Kindern, durch den `context`, vererbt. Es ist natürlich auch möglich nur einem bestimmten Widget Styleanweisungen zu geben.
 
+## Plattformkonsistentes Design
+Um mit Flutter eine App zu entwickeln, die die jeweiligen Designsprachen von Android und iOS (Material Design und Human Interface Guidelines) spricht, ist es notwendig im Code die Zielplattform abzufragen und die entsprechenden, plattformkonsistenten Designelemente, zu verwenden. Im folgenden Beispiel ist eine Unterscheidung der Zielplattform, der Aufbau eines, der Plattform entsprechenden, Layoutbaums und die daraus entstehende App zu sehen. Das komplette Beispiel ist [hier](https://github.com/martistuwe/flutterexample) zu finden.
+
+```dart
+if (Theme.of(context).platform == TargetPlatform.android) {
+  appTheme = MaterialApp(
+    home: Scaffold(
+      appBar: AppBar(title: Text('Android App')),
+      body: Center(
+        child: RaisedButton(
+          child: Text('Button'),
+          onPressed: () {},
+        ),
+      ),
+    ),
+  );
+} else if (Theme.of(context).platform == TargetPlatform.iOS) {
+  appTheme = CupertinoApp(
+    home: CupertinoPageScaffold(
+      navigationBar: CupertinoNavigationBar(middle: Text('iOS App')),
+      child: Center(
+        child: CupertinoButton.filled(
+          child: Text('Button'),
+          onPressed: () {},
+        ),
+      ),
+    ),
+  );
+}
+```
+![iOS, Android Desgin](./img/flutter_design.png)
+
 ## Navigation und Routing
 In Flutter übernimmt der `Navigator` die Verwaltung von *Routen*. *Routen* bezeichnet dabei die verschiedenen Seiten der App. Der `Navigator` funktioniert wie ein Stack, auf dem Objekte vom Typ `Route` abgelegte werden und immer das oberste Objekt auf dem Bildschirm dargestellt wird. Der `Navigator` stellt außerdem zwei Methoden bereit `Route`-Objekte zu verwalten: `Navigator.push` und `Navigator.pop`. *Routen* können benannt werden und miteinander kommunizieren. *Navigatoren* können ineinander verschachtelt werden.
 
