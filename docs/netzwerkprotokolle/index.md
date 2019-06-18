@@ -253,6 +253,52 @@ Antwort:
 }
 ```
 
+##### Fragments und Aliase
+
+Gehen wir davon aus, wir möchten zwei Studenten und dessen Wahlfächer abfragen. Das können wir mithilfe von Aliase machen.
+
+```
+{
+student_one: Student (id: 1){
+ 	name, 
+    Wahlfach{
+        name
+    }
+  }
+  student_two: Student (id: 2){
+ 	name, 
+    Wahlfach{
+        name
+    }
+  }
+}
+```
+
+Mithilfe von Fragmenten können wir die Abfrage noch etwas übersichtlicher gestalten.
+
+```
+{
+    student_one: Student (id: 1){
+     	...studFragment
+    }
+     student_one: Student (id: 2){
+     	...studFragment
+    }
+ }
+ fragment studFragment on Student {
+     name,
+     Wahlfach{
+         name
+     }
+ }
+```
+
+Die beiden Abfragen sind äquivalent.
+
+
+
+
+
 ##### Variabeln
 
 Im obigen Beispiel haben wir unsere Argumente statisch in die Abfrage geschrieben. In der Praxis kommt es aber häufig dazu, dass wir Abfragen dynamisch gestalten müssen, beispielsweise wenn bestimmte Einstellungen in der UI getätigt werden. <br/>Theoretisch könnte man seine Abfragen natürlich dynamisch zusammenbauen, dies würde aber gegen das Konzept der einfachen Implementierung sprechen. Deswegen ist es in GraphQL möglich, Argumente mithilfe von Variablen zu füllen.
@@ -381,9 +427,9 @@ Neben dem Objekttypen ist auch der Query Typ besonders wichtig. Von diesen besit
 
 ```
 type Query {
-  dozent (name: String): Dozent 
-  wahlfach (name: String): Wahlfach
-  Student (id: ID): Student
+  dozent (name: String!): Dozent
+  wahlfach (name: String): Wahlfach[]
+  Student (id: ID!): Student
 }
 ```
 
@@ -594,7 +640,7 @@ QUIC wurde mit besonderen Fokus auf Sicherheit entwickelt, durch die starke und 
 
 - [GRPC](https://grpc.io/)
 
-  ​
+  
 
-  ​
+  
 
