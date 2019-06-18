@@ -122,3 +122,4 @@ __17.06.2019 - 23.06.2019__
 | ---------- | -------------- | ------ | ------ |
 | 17.06.2019 | Implementierung MQTT-Client | 3 h |  |
 | 17.06.2019 | Tests definieren und schreiben | 1 h |  |
+| 18.06.2019 | Abfangen und Ausgeben von Netzwerkfehlern (MQTT-Client) | 2 h | |
