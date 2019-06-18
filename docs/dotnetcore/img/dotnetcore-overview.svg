@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generiert durch Microsoft Visio, SVG Export dotnetcore-overview.svg Page-1 -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"
+		xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="11.6929in" height="8.26772in"
+		viewBox="0 0 841.89 595.276" xml:space="preserve" color-interpolation-filters="sRGB" class="st11">
+	<v:documentProperties v:langID="1031" v:metric="true" v:viewMarkup="false">
+		<v:userDefs>
+			<v:ud v:nameU="msvSubprocessMaster" v:prompt="" v:val="VT4(Rectangle)"/>
+			<v:ud v:nameU="msvNoAutoConnect" v:val="VT0(1):26"/>
+		</v:userDefs>
+	</v:documentProperties>
+
+	<style type="text/css">
+	<![CDATA[
+		.st1 {fill:#bdd0e9;stroke:#3c63ac;stroke-width:0.75}
+		.st2 {fill:url(#grad0-6);stroke:#2d5171;stroke-width:0.75}
+		.st3 {fill:#feffff;font-family:Calibri;font-size:1.99999em}
+		.st4 {font-size:1em}
+		.st5 {fill:#ffffff;stroke:#e8ebf4;stroke-width:0.75}
+		.st6 {fill:#4672c4;font-family:Calibri;font-size:1.5em}
+		.st7 {fill:none;stroke:none;stroke-width:0.25}
+		.st8 {fill:#002060;font-family:Calibri;font-size:1.00001em}
+		.st9 {fill:#002060;font-family:Calibri;font-size:1.33333em}
+		.st10 {fill:#c00000;font-family:Calibri;font-size:1.00001em}
+		.st11 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<defs id="Patterns_And_Gradients">
+		<linearGradient id="grad0-6" x1="0" y1="0" x2="1" y2="0" gradientTransform="rotate(250 0.5 0.5)">
+			<stop offset="0" stop-color="#386288" stop-opacity="1"/>
+			<stop offset="0.48" stop-color="#386288" stop-opacity="1"/>
+			<stop offset="0.82" stop-color="#41719c" stop-opacity="1"/>
+		</linearGradient>
+	</defs>
+	<g v:mID="0" v:index="1" v:groupContext="foregroundPage">
+		<v:userDefs>
+			<v:ud v:nameU="msvThemeOrder" v:val="VT0(0):26"/>
+		</v:userDefs>
+		<title>Zeichenblatt-1</title>
+		<v:pageProperties v:drawingScale="0.0393701" v:pageScale="0.0393701" v:drawingUnits="24" v:shadowOffsetX="8.50394"
+				v:shadowOffsetY="-8.50394"/>
+		<g id="shape56-1" v:mID="56" v:groupContext="shape" transform="translate(127.559,-14.1732)">
+			<title>Kreis.56</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<path d="M0 311.81 A283.465 283.465 0 0 1 566.93 311.81 A283.465 283.465 0 1 1 -0 311.81 Z" class="st1"/>
+		</g>
+		<g id="shape1-3" v:mID="1" v:groupContext="shape" transform="translate(354.331,-240.945)">
+			<title>Kreis</title>
+			<desc>Dotnet Core</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="56.6929" cy="538.583" width="99.22" height="85.0394"/>
+			<path d="M0 538.58 A56.6929 56.6929 0 0 1 113.39 538.58 A56.6929 56.6929 0 1 1 0 538.58 Z" class="st2"/>
+			<text x="22.67" y="531.38" class="st3" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Dotnet <tspan
+						x="33.81" dy="1.2em" class="st4">Core</tspan></text>		</g>
+		<g id="group43-9" transform="translate(198.425,-382.677)" v:mID="43" v:groupContext="group">
+			<title>Tabelle.43</title>
+			<g id="shape5-10" v:mID="5" v:groupContext="shape">
+				<title>Kreis.5</title>
+				<desc>Web</desc>
+				<v:userDefs>
+					<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				</v:userDefs>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="56.6929" cy="538.583" width="99.22" height="85.0394"/>
+				<path d="M0 538.58 A56.6929 56.6929 0 0 1 113.39 538.58 A56.6929 56.6929 0 1 1 0 538.58 Z" class="st5"/>
+				<text x="39.48" y="543.98" class="st6" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Web</text>			</g>
+			<g id="shape3-13" v:mID="3" v:groupContext="shape" transform="translate(0,-73.5433)">
+				<title>Tabelle.3</title>
+				<desc>ASP.NET</desc>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="42.5197" cy="585.276" width="85.04" height="20"/>
+				<rect x="0" y="575.276" width="85.0394" height="20" class="st7"/>
+				<text x="21.95" y="588.88" class="st8" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>ASP.NET</text>			</g>
+			<g id="shape4-16" v:mID="4" v:groupContext="shape" transform="translate(56.6929,-22.6772)">
+				<title>Tabelle.4</title>
+				<desc>Giraffe</desc>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="28.3465" cy="585.276" width="56.7" height="20"/>
+				<rect x="0" y="575.276" width="56.6929" height="20" class="st7"/>
+				<text x="11.57" y="588.88" class="st8" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Giraffe</text>			</g>
+		</g>
+		<g id="group44-19" transform="translate(170.079,-240.945)" v:mID="44" v:groupContext="group">
+			<title>Tabelle.44</title>
+			<g id="shape28-20" v:mID="28" v:groupContext="shape">
+				<title>Kreis.28</title>
+				<desc>Desktop</desc>
+				<v:userDefs>
+					<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				</v:userDefs>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="56.6929" cy="538.583" width="99.22" height="85.0394"/>
+				<path d="M0 538.58 A56.6929 56.6929 0 0 1 113.39 538.58 A56.6929 56.6929 0 1 1 0 538.58 Z" class="st5"/>
+				<text x="26.58" y="543.98" class="st6" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Desktop</text>			</g>
+			<g id="shape29-23" v:mID="29" v:groupContext="shape" transform="translate(12.2137,-78.0315)">
+				<title>Tabelle.29</title>
+				<desc>Avalonia</desc>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="44.4792" cy="585.276" width="88.96" height="20"/>
+				<rect x="0" y="575.276" width="88.9584" height="20" class="st7"/>
+				<text x="16.48" y="590.08" class="st9" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Avalonia</text>			</g>
+			<g id="shape30-26" v:mID="30" v:groupContext="shape" transform="translate(34.0157,-17.1654)">
+				<title>Tabelle.30</title>
+				<desc>UWP</desc>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="28.3465" cy="585.276" width="56.7" height="20"/>
+				<rect x="0" y="575.276" width="56.6929" height="20" class="st7"/>
+				<text x="11.96" y="590.08" class="st9" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>UWP</text>			</g>
+		</g>
+		<g id="group45-29" transform="translate(255.118,-90.7087)" v:mID="45" v:groupContext="group">
+			<title>Tabelle.45</title>
+			<g id="shape14-30" v:mID="14" v:groupContext="shape">
+				<title>Kreis.14</title>
+				<desc>ORM</desc>
+				<v:userDefs>
+					<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				</v:userDefs>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="56.6929" cy="538.583" width="99.22" height="85.0394"/>
+				<path d="M0 538.58 A56.6929 56.6929 0 0 1 113.39 538.58 A56.6929 56.6929 0 1 1 0 538.58 Z" class="st5"/>
+				<text x="38.15" y="543.98" class="st6" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>ORM</text>			</g>
+			<g id="shape2-33" v:mID="2" v:groupContext="shape" transform="translate(1.59872E-13,-71.4961)">
+				<title>Tabelle.2</title>
+				<desc>Entity Framework</desc>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="56.6929" cy="585.276" width="113.39" height="20"/>
+				<rect x="0" y="575.276" width="113.386" height="20" class="st7"/>
+				<text x="13.37" y="588.88" class="st8" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Entity Framework</text>			</g>
+			<g id="shape15-36" v:mID="15" v:groupContext="shape" transform="translate(14.1732,-25.4331)">
+				<title>Tabelle.15</title>
+				<desc>Type Provider</desc>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="42.5197" cy="585.276" width="85.04" height="20"/>
+				<rect x="0" y="575.276" width="85.0394" height="20" class="st7"/>
+				<text x="8.71" y="588.88" class="st8" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Type Provider</text>			</g>
+		</g>
+		<g id="group46-39" transform="translate(425.197,-62.3622)" v:mID="46" v:groupContext="group">
+			<title>Tabelle.46</title>
+			<g id="shape39-40" v:mID="39" v:groupContext="shape">
+				<title>Kreis.39</title>
+				<desc>Serialisierung</desc>
+				<v:userDefs>
+					<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				</v:userDefs>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="70.8661" cy="524.409" width="124.02" height="106.299"/>
+				<path d="M0 524.41 A70.8661 70.8661 0 0 1 141.73 524.41 A70.8661 70.8661 0 1 1 0 524.41 Z" class="st5"/>
+				<text x="21.71" y="529.81" class="st6" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Serialisierung</text>			</g>
+			<g id="shape41-43" v:mID="41" v:groupContext="shape" transform="translate(14.1732,-95.3858)">
+				<title>Tabelle.41</title>
+				<desc>Newtonsoft Json.net</desc>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="56.6929" cy="585.276" width="113.39" height="20"/>
+				<rect x="0" y="575.276" width="113.386" height="20" class="st7"/>
+				<text x="6.27" y="588.88" class="st8" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Newtonsoft Json.net</text>			</g>
+		</g>
+		<g id="group47-46" transform="translate(473.386,-368.504)" v:mID="47" v:groupContext="group">
+			<title>Tabelle.47</title>
+			<g id="shape19-47" v:mID="19" v:groupContext="shape">
+				<title>Kreis.19</title>
+				<desc>Linq</desc>
+				<v:userDefs>
+					<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				</v:userDefs>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="70.8661" cy="524.409" width="124.02" height="106.299"/>
+				<path d="M0 524.41 A70.8661 70.8661 0 0 1 141.73 524.41 A70.8661 70.8661 0 1 1 0 524.41 Z" class="st5"/>
+				<text x="55.56" y="529.81" class="st6" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Linq</text>			</g>
+			<g id="shape20-50" v:mID="20" v:groupContext="shape" transform="translate(14.1732,-36.6929)">
+				<title>Tabelle.20</title>
+				<desc>toSQL</desc>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="28.3465" cy="585.276" width="56.7" height="20"/>
+				<rect x="0" y="575.276" width="56.6929" height="20" class="st7"/>
+				<text x="13.86" y="588.88" class="st10" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>toSQL</text>			</g>
+			<g id="shape22-53" v:mID="22" v:groupContext="shape" transform="translate(42.5197,-103.386)">
+				<title>Tabelle.22</title>
+				<desc>toXML</desc>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="28.3465" cy="585.276" width="56.7" height="20"/>
+				<rect x="0" y="575.276" width="56.6929" height="20" class="st7"/>
+				<text x="12.41" y="588.88" class="st10" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>toXML</text>			</g>
+			<g id="shape23-56" v:mID="23" v:groupContext="shape" transform="translate(-5.9952E-14,-79.2126)">
+				<title>Tabelle.23</title>
+				<desc>toObject</desc>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="35.5703" cy="585.276" width="71.15" height="20"/>
+				<rect x="0" y="575.276" width="71.1406" height="20" class="st7"/>
+				<text x="14.3" y="588.88" class="st10" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>toObject</text>			</g>
+			<g id="shape25-59" v:mID="25" v:groupContext="shape" transform="translate(85.0394,-79.2126)">
+				<title>Tabelle.25</title>
+				<desc>Query</desc>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="28.3465" cy="585.276" width="56.7" height="20"/>
+				<rect x="0" y="575.276" width="56.6929" height="20" class="st7"/>
+				<text x="13.36" y="588.88" class="st10" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Query</text>			</g>
+			<g id="shape26-62" v:mID="26" v:groupContext="shape" transform="translate(70.8661,-36.6929)">
+				<title>Tabelle.26</title>
+				<desc>Function</desc>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="28.3465" cy="585.276" width="56.7" height="20"/>
+				<rect x="0" y="575.276" width="56.6929" height="20" class="st7"/>
+				<text x="7.04" y="588.88" class="st10" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Function</text>			</g>
+		</g>
+		<g id="group48-65" transform="translate(347.244,-439.37)" v:mID="48" v:groupContext="group">
+			<title>Tabelle.48</title>
+			<g id="shape9-66" v:mID="9" v:groupContext="shape">
+				<title>Kreis.9</title>
+				<desc>Programmier-sprachen</desc>
+				<v:userDefs>
+					<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				</v:userDefs>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="63.7795" cy="538.583" width="111.62" height="85.0394"/>
+				<path d="M0 538.58 A63.7795 56.6929 0 0 1 127.56 538.58 A63.7795 56.6929 0 0 1 0 538.58 Z" class="st5"/>
+				<text x="12.75" y="533.18" class="st6" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Programmier-<tspan
+							x="30.34" dy="1.2em" class="st4">sprachen</tspan></text>			</g>
+			<g id="shape10-70" v:mID="10" v:groupContext="shape" transform="translate(25.5118,-85.7874)">
+				<title>Tabelle.10</title>
+				<desc>C#</desc>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="15.9449" cy="585.276" width="31.89" height="20"/>
+				<rect x="0" y="575.276" width="31.8898" height="20" class="st7"/>
+				<text x="9.76" y="588.88" class="st10" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>C#</text>			</g>
+			<g id="shape11-73" v:mID="11" v:groupContext="shape" transform="translate(47.8346,-78.189)">
+				<title>Tabelle.11</title>
+				<desc>VB</desc>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="31.8898" cy="585.276" width="63.78" height="20"/>
+				<rect x="0" y="575.276" width="63.7795" height="20" class="st7"/>
+				<text x="25.22" y="588.88" class="st10" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>VB</text>			</g>
+			<g id="shape12-76" v:mID="12" v:groupContext="shape" transform="translate(31.8898,-17.3228)">
+				<title>Tabelle.12</title>
+				<desc>F#</desc>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="31.8898" cy="585.276" width="63.78" height="20"/>
+				<rect x="0" y="575.276" width="63.7795" height="20" class="st7"/>
+				<text x="26.14" y="588.88" class="st10" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>F#</text>			</g>
+		</g>
+		<g id="group49-79" transform="translate(521.575,-226.772)" v:mID="49" v:groupContext="group">
+			<title>Tabelle.49</title>
+			<g id="shape50-80" v:mID="50" v:groupContext="shape">
+				<title>Kreis.19</title>
+				<desc>Tests</desc>
+				<v:userDefs>
+					<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				</v:userDefs>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="70.8661" cy="524.409" width="124.02" height="106.299"/>
+				<path d="M0 524.41 A70.8661 70.8661 0 0 1 141.73 524.41 A70.8661 70.8661 0 1 1 0 524.41 Z" class="st5"/>
+				<text x="51.95" y="529.81" class="st6" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Tests</text>			</g>
+			<g id="shape52-83" v:mID="52" v:groupContext="shape" transform="translate(14.1732,-28.189)">
+				<title>Tabelle.52</title>
+				<desc>Unittests</desc>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="28.3465" cy="585.276" width="56.7" height="20"/>
+				<rect x="0" y="575.276" width="56.6929" height="20" class="st7"/>
+				<text x="6.26" y="588.88" class="st8" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Unittests</text>			</g>
+			<g id="shape54-86" v:mID="54" v:groupContext="shape" transform="translate(21.2598,-90.7087)">
+				<title>Tabelle.54</title>
+				<desc>Integrationtests</desc>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="46.063" cy="585.276" width="92.13" height="20"/>
+				<rect x="0" y="575.276" width="92.126" height="20" class="st7"/>
+				<text x="7.21" y="588.88" class="st8" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Integrationtests</text>			</g>
+			<g id="shape55-89" v:mID="55" v:groupContext="shape" transform="translate(73.7008,-42.5197)">
+				<title>Tabelle.55</title>
+				<desc>E2E tests</desc>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="28.3465" cy="585.276" width="56.7" height="20"/>
+				<rect x="0" y="575.276" width="56.6929" height="20" class="st7"/>
+				<text x="6.39" y="588.88" class="st8" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>E2E tests</text>			</g>
+		</g>
+	</g>
+</svg>

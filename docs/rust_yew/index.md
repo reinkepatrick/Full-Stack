@@ -283,13 +283,138 @@ for n in 0..101 { // von 0 bis 100
   //code
 }
 ```
+
+### Cargo als Paketmanager
+
+#### Crates
+
+Mit Cargo erstelle Projekte werden `crates` genannt, egal ob es sich um ein Binärprogramm oder eine Bibliothek handelt. Es gibt eine öffentliche Liste von anerkannten Crates die man auf [Crates.io](https://crates.io/) finden kann. 
+Erstellt man so ein Projekt werden zwei Dateien und ein Ordner erstellt:
+* `src` Ordner mit der Datei `main.rs` (Binärprogramm) oder `lib.rs` (Bibliothek)
+* `Cargo.toml`
+
+`main.rs` und `lib.rs` werden als Einstiegspunkt des Programms gesehen und `Cargo.toml` bezeichnet man als Manifest,das alle Metainformationen beinhaltet, die das Programm zum kompilieren benötigt. Diese Datei ist vergleichbar zu `package.json`, welches man aus `Node.js` kennt. Die meist Benutzten Metadaten für Cargo Projekte sind: 
+* package
+    * beinhaltet Name, Version, Author(en) und Edition (Benutzte Rustversion zum Kompilieren)
+* dependencies
+    * beinhaltet Informationen von benutzten Paketen und deren Version
+
+Pakete die in den `dependencies` genannt sind werden beim Kompilieren als source runtergeladen und mit kompiliert, d.h. dass es nicht zu Fehlern kommt, weil eine Library für das falsche System kompiliert wurde.
+Bei oder nach dem Kompilieren wird auch eine `Cargo.lock` Datei erstellt, die Informationen über benutzte Pakete beinhaltet.
+Jedes Paket in der Datei ist folgend aufgebaut:
+
+``` 
+[[package]]
+name = "name" # Name des Pakets
+verson = "1.0.0" # Versionsnummer
+source = "source+link" # Für Crates in Crates.io "registry+https://github.com/rust-lang/crates.io-index" sonst z.B. "git+https://github.com/some/project"
+dependencies = {
+    "name version (source)", # z.B. "stdweb 0.4.16 (registry+https://github.com/rust-lang/crates.io-index)",
+}
+```
+
+Zudem stehen zum Schluss alle Checksums der benutzten Pakete, passend zu ihrer Version. Für Pakete die nicht in Crates.io zu finden sind, ist es möglich, dass keine Checksum vorhanden ist.
+
+#### .toml
+
+Die Dateiendung `.toml`steht für "Tom's Obvious Minimal Language" und wird im Rustkontext als Datenformat für die Manifestinformationen benutzt. Der Aufbau einer .toml-Datei ist .json relativ ähnlich, doch sie unterscheiden sich stark in der Syntax.
+
+##### Key-Value-Paare
+
+Geabreitet wird weiterhin noch mit Key-Value-Paaren. Bei den Keys ist zu beachten, dass es `Bare` und `Quoted` Keys gibt. Bei den Bare Keys darf man nur ASCII Buchstaben, Zahlen, Unter- und Bindestriche benutzen (A-Za-z0-9_-), wobei man bei den Quoted Keys (mit `"` gekennzeichnet) eine größere Auswahl hat. Als Best-Practice soll man dennoch nur Bare Keys und Quoted nur in Notfällen benutzten. 
+Als Values sind folgende Typen erlaubt:
+* String
+* Integer
+* Float
+* Boolean
+* Offset Date-Time
+* Local Date-Time
+* Local Date
+* Local Time
+* Array
+
+Wenn man ein Datum benutzt, muss dieser [RFC 3339](https://tools.ietf.org/html/rfc3339) konform sein. Arrays werden mit eckigen Klammern dargestellt und die Elemente werden mit einem Komma getrennt. Ebenfalls können Arrays weitere Arrays beinhalten.
+
+
+##### Tables
+Tables, bzw. auch hash tables und dictionaries genannt, werden hier als Kollektion von Key-Value-Paaren benutzt. Sie werden mit eckigen Klammern mit einem Namen gekennzeichnet (`[table]`) und sammelt alle Paare die danach Folgen. 
+
+
+Ein [Beispiel](https://github.com/toml-lang/toml/blob/master/README.md#user-content-example) für eine .toml-Datei wäre:
+```
+# This is a TOML document.
+
+title = "TOML Example"
+
+[owner]
+name = "Tom Preston-Werner"
+dob = 1979-05-27T07:32:00-08:00 # First class dates
+
+[database]
+server = "192.168.1.1"
+ports = [ 8001, 8001, 8002 ]
+connection_max = 5000
+enabled = true
+
+[servers]
+
+  # Indentation (tabs and/or spaces) is allowed but not required
+  [servers.alpha]
+  ip = "10.0.0.1"
+  dc = "eqdc10"
+
+  [servers.beta]
+  ip = "10.0.0.2"
+  dc = "eqdc10"
+
+[clients]
+data = [ ["gamma", "delta"], [1, 2] ]
+
+# Line breaks are OK when inside arrays
+hosts = [
+  "alpha",
+  "omega"
+]
+```
 </details>
 
 ## Grundlagen Yew
+<details>
+    <summary> Das Aufbauen einer Webseite mit Hilfe von WebAssembly und Yew in Rust </summary>
+
+### Warum soll man Wasm benutzen?
+
+#### Nicht nur JavaScript
+
+Bis etwa Ende 2017 war die einzige Möglichkeit des Programmierens auf der Clientseite im Web nur mit JavaScript möglich. Wasm ermöglicht es eine Systemprogrammiersprache, wie C/C++ oder Rust, in einem Assembely-ähnlichem Datenformat zu Kompilieren, welches dann vom Browser ausgefürht werden kann. Wasm soll aber nicht als Ersatz für JS gesehen werden, sondern als erweiterung für Use-Cases die von den Vorteilen von Wasm profitieren.
+
+![When to use Wasm Chart](img/when_to_use.png)
+
+#### Schnelligkeit
+
+Da Wasm Dateiformat binär ist, lädt und fürht der Browser die Dekodierung der Datei schneller aus als das Parsen einer JavaScript-Datei. Die Kompilierung kann in Fällen schneller als die Just-In-Time Kompilierung der JavaScript-Datei sein und muss nicht nachträglich in der Laufzeit optimiert werden, da dies schon bei der Generierung der Datei passiert. Generell wird die Ausführung von Wasm 20x schneller als JS gesehen und nur 20% langsamer als die Ausführung von nativem Code
+
+![Yew.rs compared to popular JS frameworks (outdated)](img/yew_speed_comparison.png)
+
+#### Übertragbarkeit
+
+Ein wichtiger Punkt bei dem Design von WebAssembly war es, dass die Software auf jedem Endgerät läuft, egal welcher Prozessor oder Betriebssystem auf dem Gerät läuft. Somit kann die Software auf x86, x64 und ARM sowie auf MacOS, Windows und linuxbasierten Systemen ausgeführt werden.
+
+### Wasm Workflow
+
+Wasm wird generell als Zusatz zu einer bestehenden Webandwendung gesehen und somit kann dann zum Beispiel eine Webseite ein Spiel einbinden, das in Wasm umgewandelt wurde, aber der Rest kann HTML und JS sein.
+
+![Regular Wasm workflow](img/wasm_workflow.png)
+
+#### Unterscheid zu yew.rs
+
+Yew ermöglicht es einem die ganze Webseite in Rust zu erstellen, sodass die `index.html` als Einstiegspunkt dient aber der Inhalt folgend durch die Wasm-Datei gefüllt wird. Zudem wird leicht ermöglicht externe JavaScript Funktionen einzubinden und auszuführen
+
+![Yew workflow](img/yew_workflow.png)
 
 ### MVC mit Yew
 
-Der grundlegende Aufbau für eine Webseite mit WASM und einem MVC Ansatz ist, dass man ein `struct Model` Implementiert, indem Services (FetchService, ConsoleService, LocalStorageService) oder reguläre Variablen definiert werden. Um diese zu Initialisieren muss man ein `Component` für das `Model` Implementieren, welches die Methoden `create` und `update` beinhalten muss. 
+Der grundlegende Aufbau für eine Webseite mit Wasm und einem MVC Ansatz ist, dass man ein `struct Model` Implementiert, indem Services (FetchService, ConsoleService, LocalStorageService) oder reguläre Variablen definiert werden. Um diese zu Initialisieren muss man ein `Component` für das `Model` Implementieren, welches die Methoden `create` und `update` beinhalten muss. 
 
 #### Deklaration Model
 
@@ -394,3 +519,52 @@ impl Renderable<Model> for Model {
 ```
 
 Hier kann man auch sehen, wie für `Message::Bulk()` ein `vector` erstellt wird, welches weitere `Message`s beinhaltet.
+
+</details>
+
+## Routing
+
+Das Routing mit yew with durch eine Crate vereinfacht, das "yew_routing" heißt. Um dann ein Routing anzuwenden, muss man lediglich `Routable` für das Component Implementieren, welches aus zwei Methoden besteht. Eine davon wertet die Route aus und die andere versucht sie anzuwenden. Um das Routing dann anzuwenden, benöting die Hauptseite den Tag `<YewRouter: with router_props, />`, bei dem folgend das Component passend zur Route dargestellt wird.
+
+## Dynamische HTML Generierung
+
+Für die dynamische HTML Generierung braucht man zunächst ein Struct das man darstellen möchte. Ebenfalls muss man für das Struct eine View mit dem HTML Macro Implementieren. Möchte man folgend für mehrere Elemente des Typs die HTML generieren, dann müssen diese in einer Datenstruktur gespeichert sein, die man Iterieren und Mappen kann. Zuletzt führt man in einem HTML die Iterierung der Datenstruktur durch und mapped die Elemente des Structs mit der View.
+
+```
+<div>
+    { for self.keywords.iter().map(Keyword::view) }
+</div>
+
+impl Renderable<Model> for Keyword {
+    fn view(&self) -> Html<Model> {
+        let uuid: KeywordUuid = self.uuid;
+        html! {
+            <div>
+                { &self.title }
+            </div>
+        }
+    }
+}
+```
+
+## Multi Threading via Web Worker
+
+Da es sehr hilfreich ist, zum Beispiel Daten im Hintergrund zu senden oder empfangen, werden Web Worker benutzt. Im Yew Kontext ist die Implementierung eines funktionfähgen Web Workers relativ simpel. Um den Web Worker zu starten wird nur ein `link` zu der Umgebung benötigt, in dem sich der Agent befindet. Der Worker kann auf innere Nachrichten antworten, die durch den `send_back` callback verursacht werden oder Nachrichten von Komponenten anderer Agenten. Man kann bei der Initialisierung definieren, in welchem Kontext er sich befindet und wer auf ihn zugreifen kann.
+
+## FetchService und Fetch
+
+Das FetchService ermöglicht es einem HTTP Requests zu senden. Bei einer Anfrage wird eine FetchTask erstellt, die Folgend von dem Service bearbeitet wird. Um so eine Task zu erstellen wird ein Request und ein Callback der Funktion `fetch` übergeben, welches dann die Request ausführt und das Response dem Callback übergibt. Zudem wird eine URL gebraucht, an dem das Request gesendet wird
+```rust
+fn function(fetch_service: &mut FetchService) -> FetchTask {
+    let url = "https://some.url/api".to_string();
+    let closure = move |response: Response<Result<String,Error>> | {
+        //handling
+    }
+    let callback = Callback::from(closure);
+    let request = Request::get(url)
+        .header("key","value")
+        .body(Nothing)
+        .unwrap
+    fetch_service.fetch(request, callback);
+} 
+```

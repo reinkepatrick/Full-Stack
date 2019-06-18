@@ -1,9 +1,38 @@
 # Flutter
 
 ## Was ist Flutter?
-[Flutter](https://flutter.dev/) ist ein SDK für Android und iOS Apps. Der größte Vorteil ist, dass die Apps sich eine in [Dart](https://www.dartlang.org/) geschriebene Codebase teilen und dann in jeweiligen nativen Sprachen Java und Swift übersetzt werden ohne dabei die Designsprache des jeweiligen Systems zu verletzen. Das Resultat ist eine performante App mit plattformkonsistentem Design, durch verhältnismäßig wenig Programmieraufwand. Flutter besteht aus C / C++, Dart und Skia (2D Grafikengine).
+[Flutter](https://flutter.dev/) ist ein SDK für Android und iOS Apps. Der größte Vorteil ist, dass die Apps sich eine, in [Dart](https://dart.dev/) geschriebene, Codebase teilen und dann in die jeweiligen nativen Sprachen, Java und Swift, übersetzt werden. Dabei wird die Designsprache, des jeweiligen Systems, nicht verletzt. Das Resultat ist eine performante App mit plattformkonsistentem Design, die durch verhältnismäßig wenig Programmieraufwand entsteht. Flutter besteht aus C / C++, Dart und Skia (2D Grafikengine).
 
-Systemanforderungen: min. iPhone 4S mit iOS 8 oder Android 4.1.x und Gerät mit ARM Prozessor
+Minimale Systemanforderungen:
++ iPhones 4S mit iOS 8
++ Android 4.1.x und Gerät mit ARM Prozessor
+
+
+### Vorteile
++ Native Performance
++ Eine Codebase für Android und iOS
++ Gute Dokumentation
++ [Portabilität](#portabilit%C3%A4t)
++ [Kompatibilität](#kompatibilit%C3%A4t)
+
+### Nachteile
++ Um für jede Plattform das entsprechende Design zu realisieren, muss der Gerätetyp abgefragt und im Code unterschieden werden
++ Alle Designelemente sind nur Reproduktionen der nativen API-Elemente
++ Bringt keine Schnittstelle zur Hardware mit
+
+#### Portabilität
+Mit **einer** Codebase können Anwendungen für iOS, Android, Mac OS, Linux, Windows, Chrome OS, das Web und eingebettete Systeme erstellt werden.
+
+#### Kompatibilität 
+Da reproduzierte UI-Elemente verwendet werden, kann die App auch, mit modernem Design, für ältere Geräte zur Verfügung gestellt werden.
+
+### Vergleich mit anderen Frameworks
+| Name             | Performance | Designelemente                                                              | Programmier-/Skriptsprache | Kompatibilität mit weiteren Frameworks |
+| ---------------- | ----------- | --------------------------------------------------------------------------- | -------------------------- | -------------------------------------- |
+| **Flutter**      | nativ       | reproduziert, Unterscheidung notwendig                                      | Dart                       | -                                      |
+| **Ionic**        | hybride App | reproduziert, Unterscheidung nicht notwenig                                 | JavaScript, TypeScript     | Angular, Vue, React                    |
+| **NativeScript** | nativ       | nativ                                                                       | JavaScript, TypeScript     | Angular, Vue                           |
+| **React Native** | nativ       | teilweise nativ, teilweise reproduziert, Unterscheidung teilweise notwendig | JavaScript, TypeScript     | -                                      |
 
 ## Workflow
 Nach der Installation von Flutter wird zunächst ein neues Projekt erzeugt. Dieses automatisch erzeugte Projekt bringt bereits eine Testapp mit an der man sich orientieren kann.
@@ -22,7 +51,7 @@ flutter run
 ```
 
 #### USB-Debugging
-Zunächst muss man sich mit seiner Apple-ID bei Xcode anmelden und ein iOS-Entwickler Zertifikat generieren. Danach das iPhone an den Mac anschließen und als Zielsystem auswählen und mit `flutter run` den Buildprozess und die Übertragung starten. Danach erscheint die App auf dem Homebildschrim des iPhones.
+Zunächst muss man sich mit seiner Apple-ID bei Xcode anmelden und ein iOS-Entwickler Zertifikat generieren. Danach das iPhone an den Mac anschließen, als *Target* auswählen und mit `flutter run` den Buildprozess und die Übertragung starten. Danach erscheint die App auf dem Homebildschrim des iPhones.
 
 > Beim Debugging mit Xcode ist es sehr wichtig sich in den Einstellungen mit einer Apple-ID anzumelden. Das ist notwenig um eine Signatur für die App zu generieren. Ein kostenpflichtiges Developer Enrollment wird erst benötigt wenn die App über den AppStore vertrieben werden soll, jedoch nicht für die Entwicklung. Des Weiteren ist darauf zu achten, dass im Target unter Xcode der *Bundle Identifier* eine eindeutige Identifikation beinhaltet (`com.example.test` oder `com.test.app` reichen nicht aus).
 
@@ -31,7 +60,7 @@ Zunächst muss man sich mit seiner Apple-ID bei Xcode anmelden und ein iOS-Entwi
 Vorraussetzung: Android Studio
 
 #### Simulation
-Als erstes erstellt man in Android Studio unter AVD Manager ein virtuelles Gerät und startet dieses. Danach kann man mit `flutter run` die App builden und auf das virtuelle Gerät übertragen.
+Als erstes erstellt man in Android Studio, unter *AVD Manager*, ein virtuelles Gerät und startet dieses. Danach kann man mit `flutter run` die App builden und auf das virtuelle Gerät übertragen.
 
 #### USB-Debugging
 Zunächst ist es notwendig USB-Debugging in den Entwickleroptionen am Gerät zu aktivieren. Daraufhin kann das Smartphone per USB an PC oder Mac angeschlossen werden und mit `flutter run` den Buildprozess und die Übertragung starten. Das Zielsystem wird dabei automatisch ausgewählt.
@@ -62,21 +91,94 @@ class MyApp extends StatelessWidget {
 }
 ```
 
-### Beispiel einer Flutter App
-
 Bei der Beispielapp liegt in dem App-Widget ein Scaffold-Widget und in diesem wiederum App-Bar, Header-Image und List. So wird Schritt für Schritt (bzw. Widget für Widget) das UI aufgebaut.
 
 ![Flutter-App](./img/flutter_app.png)
 ![Flutter-App-Diagram](./img/flutter_app_dia.png)
 
-### Stateless vs. Stateful
+## Stateless vs. Stateful
 Man unterscheidet Widgets hauptsächlich zwischen stateless und stateful. Wenn ein Widget sich verändert, z.B. durch Benutzerinteraktion, ist es stateful.
 
-#### Stateless
+### Stateless
 Ein **StatelessWidget** ändert sich nicht und die zugehörigen Attribute sind *immutable*. Zustandlose Widgets sind z.B. Icons oder Texte.
 
-#### Stateful
-Ein **StatefulWidget** ist dynamisch. Es kann bei Bedarf auslösen, dass es neu gerendert wird. So werden z.B. Änderungen einer Variable auf dem Bildschirm dargestellt. Der Zustand eines solchen Widgets wird in einem Objekt **State** gespeichert, um die Zustandsinformationen von der Darstellung zu trennen. **State** besteht veränderbaren Werten, wie z.B. der aktuelle Wert eines Sliders. Wenn sich der Zustand eines Widgets ändert, ruft **State** die Methode `setState()` auf um das entsprechende Widget neu zu rendern.
+### Stateful
+Ein **StatefulWidget** ist dynamisch. Es kann bei Bedarf auslösen, dass es neu gerendert wird. So werden z.B. Änderungen einer Variable auf dem Bildschirm dargestellt. Der Zustand eines solchen Widgets wird in einem Objekt **State** gespeichert, um die Zustandsinformationen von der Darstellung zu trennen. **State** besteht aus veränderbaren Werten, wie z.B. der aktuelle Wert eines Sliders. Wenn sich der Zustand eines Widgets ändert, ruft **State** die Methode `setState()` auf um das entsprechende Widget neu zu rendern.
+
+## Layout
+UI-Layout werden in Flutter durch *Rows* und *Columns* realisiert. Im folgenden Beispiel wird aus einigen simplen Widgets ein komplexeres Widget geschaffen. Durch den *Container* ist es möglich dem Kind des Containers, Eigenschaften wie z.B. Abstände oder Rahmen zuzuweisen. Es gibt eine Auswahl an vorgefertigten Layout-Widgets, die viele Layoutarten abdeckt. Darunter u.a. Raster und scrollbare Listen.
+
+![Layout-Example](./img/flutter_layout.png)  
+![Layout-Tree](./img/flutter_layout_tree.png)
+
+## Styling
+Das Styling funktioniert in Flutter über ein Objekt vom Typ `ThemeData`. Dieses Styling ist global. Die Felder dieses Objekts sind dann die entsprechenden Styleanweisungen für z.B. Textart, Textgröße oder Akzentfarbe. Das `ThemeData`-Objekt wird der Wurzel des Widgettrees zugewiesen und allen Kindern, durch den `context`, vererbt. Es ist natürlich auch möglich nur einem bestimmten Widget Styleanweisungen zu geben.
+
+## Plattformkonsistentes Design
+Um mit Flutter eine App zu entwickeln, die die jeweiligen Designsprachen von Android und iOS (Material Design und Human Interface Guidelines) spricht, ist es notwendig im Code die Zielplattform abzufragen und die entsprechenden, plattformkonsistenten Designelemente, zu verwenden. Im folgenden Beispiel ist eine Unterscheidung der Zielplattform, der Aufbau eines, der Plattform entsprechenden, Layoutbaums und die daraus entstehende App zu sehen. Das komplette Beispiel ist [hier](https://github.com/martistuwe/flutterexample) zu finden.
+
+```dart
+if (Theme.of(context).platform == TargetPlatform.android) {
+  appTheme = MaterialApp(
+    home: Scaffold(
+      appBar: AppBar(title: Text('Android App')),
+      body: Center(
+        child: RaisedButton(
+          child: Text('Button'),
+          onPressed: () {},
+        ),
+      ),
+    ),
+  );
+} else if (Theme.of(context).platform == TargetPlatform.iOS) {
+  appTheme = CupertinoApp(
+    home: CupertinoPageScaffold(
+      navigationBar: CupertinoNavigationBar(middle: Text('iOS App')),
+      child: Center(
+        child: CupertinoButton.filled(
+          child: Text('Button'),
+          onPressed: () {},
+        ),
+      ),
+    ),
+  );
+}
+```
+![iOS, Android Desgin](./img/flutter_design.png)
+
+## Navigation und Routing
+In Flutter übernimmt der `Navigator` die Verwaltung von *Routen*. *Routen* bezeichnet dabei die verschiedenen Seiten der App. Der `Navigator` funktioniert wie ein Stack, auf dem Objekte vom Typ `Route` abgelegte werden und immer das oberste Objekt auf dem Bildschirm dargestellt wird. Der `Navigator` stellt außerdem zwei Methoden bereit `Route`-Objekte zu verwalten: `Navigator.push` und `Navigator.pop`. *Routen* können benannt werden und miteinander kommunizieren. *Navigatoren* können ineinander verschachtelt werden.
+
+## Plattformspezifischer Code
+Die meisten plattformspezifischen Funktionalitäten sind als Plugins verfügbar. Falls die benötigte Funktion noch nicht implementiert wurde ist es möglich plattformspezifischen Code zu schreiben. Dabei schickt die App eine Nachricht über einen sogeanannten *platform channel* an das Hostsystem. Der Host empfängt diese Nachricht und ruft die jeweiligen plattformspezifischen Funktionen auf und antwortet üder den *platform channel*.
+
+## Animationen
+
+### Zwischen Routen
+Um Widgets zwischen Routen zu animieren wird das `Hero`-Widget verwendet. Das zu animierende Widget wird in ein `Hero`-Widget gewrapped und mit einem *herotag* versehen. Dann wird das selbe Widget, auch in einem `Hero`-Widget umwickelt und mit dem selben *herotag* gekennzeichnet, in einer anderen Route platziert. Sobald von der einen Route zur anderen navigiert wird, erledigt Flutter den Rest und erzeugt eine entsprechende Übergangsanimation.
+
+## Performance best practices
+
+### build() und setState()
+Es wird empfohlen keine aufwendigen oder repetitiven Aufgaben in der `build()` Methode zu haben oder riesige, aufgeblasene Widgets zu porgrammieren. Außerdem wird empfohlen die `setState()` Methode so tief im UI-Baum wie möglich zu nutzen um nur den Teil des UIs zu aktualisieren, der sich verändert hat.
+
+### Visuelle Effekte
+Einige Effekte nutzen die Methode `saveLayer()`, welche einen Offscreen-Buffer anlegt. Das Rendertarget auf diesen Buffer kann u.U. auf Geräten mit alten GPUs sehr langsam sein. `Opacity` ist einer der Effekte der diese Methode nutzt und sollte nur verwendet werden wenn dies nötig ist. Für einige Widgets wie z.B. Bilder gibt es günstigere Alternativen.
+
+### Listen und Raster
+Wenn Inhalte als Listen oder Raster dargestellt werden sollen, wird empfohlen per Lazy-Loading zunächst nur die Sichtbaren Elemente zu rendern.
+
+### Frames in 16ms bauen und anzeigen
+Frames sollen in unter 16ms auf dem Bildschrim dargestellt werden, da die Performance der App andernsfalls als negativ wahrgenommen wird. Es kann ein *Profile Build* erstellt werden um die Performance der App zu evlauieren.
+
+## Flutter als Desktopanwendung
+Es ist möglich mit Flutter eine Desktopanwendung zu programmieren, die aus einer Codebase, ausführbare Programme für MacOS, Linux, Windows und ChromeOS erzeugt (vergleichbar mit [Electron](https://electronjs.org/)). Dafür kann man auf die Projekte [Flutter Desktop Embedding](https://github.com/google/flutter-desktop-embedding) oder [Go-Flutter](https://github.com/go-flutter-desktop/go-flutter) zurückgreifen. Grundsätzlich funktionieren diese beiden Projekte gleich, sie stellen eine Schnittstelle zwischen der *Flutter Engine* und dem jeweiligen Betriebsystem bereit. Code ist mit dem mobilen Framework kompatibel und kann damit geteilt werden solange keine Hardwarefunktionen aufgerufen werden.
+
+## Flutter als Webanwendung
+In Zukunft soll es möglich sein, aus der vorhanden Codebase, eine Webanwendung zu ersellen. Es ist eine technische Vorschau verfügbar, allerdings befindet sich diese Technologie noch sehr früh in der Entwicklungsphase (*Stand Mai 2019*).
+
+## Flutter für Embedded Systems
+Flutter läuft bereits auf eingebetteten Systemen wie z.B. dem Google Home Hub (bzw. Nest Hub). Um Flutter für eingebettete Systeme zu nutzen muss ein eigener Embedder, eine Schnittstelle zwischen Flutter-Engine und Zielsystem, implementiert werden. Für diesen Anwendungszweck existiert ein [Beispiel](https://medium.com/flutter-io/flutter-on-raspberry-pi-mostly-from-scratch-2824c5e7dcb1), das zeigt wie Flutter auf einem Raspberry Pi läuft. Nicht als Desktop- oder Web-Anwendung, sondern als ARM-Code.
 
 # Dart
 Dart ist eine objektorientierte Programmiersprache. Sie wird primär für mobile- und web-Apps verwendet, kann aber auch serverseitig eingesetzt werden. 
@@ -102,6 +204,7 @@ Standard Datentypen:
 + Rune (Darstellung von Unicodezeichen in einem String)
 
 > Variablen, die nicht initialisiert wurden, haben immer den Wert *null* (auch numerische Typen).
+
 ```dart
 var name = 'Max Mustermann';
 var year = 1995;
@@ -179,7 +282,7 @@ import 'package:test/test.dart';
 import 'path/to/my_other_file.dart';
 ```
 
-Falls man zwei Bibliotheken mit widersprüchlicher Identifikation importiert, kann ein **Bibliothekspräfix** den Konflikt auflösen.
+Falls man zwei Bibliotheken, mit widersprüchlicher Identifikation, importiert, kann ein **Bibliothekspräfix** den Konflikt auflösen.
 ```dart
 import 'package:lib1/lib1.dart';
 import 'package:lib2/lib2.dart' as lib2;
@@ -274,3 +377,21 @@ class PilotedCraft extends Spacecraft with Piloted {
   // ···
 }
 ```
+
+### Asynchrone Programmierung
+Asynchrone Programmierung lässt das Programm weitere Aufgaben erledigen, während auf das Beenden einer Operation gewartet wird. `Future` stellt dabei das Ergebnis einer asynchronen Operation dar.
+
+```dart
+Future checkVersion() async {
+  var version = await lookUpVersion();
+  // Do something with version
+}
+
+Future<String> lookUpVersion() async => '1.0.0';
+```
+
+**Quellen:**  
+https://www.dartlang.org/guides/language/language-tour  
+https://facebook.github.io/react-native/docs/getting-started  
+https://ionicframework.com/docs  
+https://docs.nativescript.org/  

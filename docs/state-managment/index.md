@@ -1,3 +1,7 @@
+
+
+
+
 # Einleitung
 
 ## Was ist "State Managment"?
@@ -12,7 +16,7 @@ State Managment finden wir in fast allen modernen Softwaresystemen. Dabei ist es
 
 Der größte Grund für State Managment ist die Verbesserung des Usererlebnisses. Nehmen wir als Beispiel die Spotify App. 
 
-![Beispiel Spotify](img/BeispielSpotify.png)
+![Beispiel Spotify](./img/beispielSpotify.PNG)
 
 In dem unteren Bereich sieht man welches Lied momentan gespielt wird. Dazu werden noch Zusatzinformationen eingeblendet wie der Name des Künstlers und das Musikalbum. Rechts sieht man eine Fortschrittsleiste für das Lied und noch weiter rechts, in diesem Bildausschnitt nicht vorhanden, sind auch die üblichen Steuerungsbutton zum Abspielen von Musik. In dem oberen, dunkleren Bereich sehe ich die Komponente, die ich gerade geöffnet habe. In diesem Beispiel handelt es sich um die verschiedenen Titel in einer Playlist.
 
@@ -36,7 +40,7 @@ Wird häufig durch die Gesamtheit der Attribute und ihrer Werte beschrieben. Der
 
 Um die verschiedenen Zustände darzustellen, wird meistens ein Zustandsdiagramm verwendet.
 
-![Beispiel Diagramm](img/StatusBeispielSpotify.png)
+![Beispiel Diagramm](./img/StatusBeispielSpotify.png)
 
 In dem Diagramm sind nur zwei Zustände und deren Übergänge dargestellt. Die beiden Zustände sind, dass entweder die Musik spielt oder stoppt. Ein Wechsel in andere Zustände wird durch die beiden Methoden Play() oder Stop() realisiert.
 
@@ -58,7 +62,7 @@ Es gab bei der Entwicklung nach dem klassischen MVC-Modell verschiedene Probleme
 
 ### Aufbau
 
-![Aufbau Flux](img/FluxDataFlow.png)
+![Aufbau Flux](./img/fluxDataFlow.png)
 
 Das obere Diagramm beschreibt den Aufbau und Datenfluss der Architektur. Wie man sieht, fließen die Daten immer von einem Punkt zu einem anderen. Was genau die einzelnen Komponenten sind, wird später noch beschrieben. Aber eine Action kommuniziert immer mit dem Dispatcher, welcher immer mit dem Store redet. Und der Store kommuniziert immer mit der View. Wie man sehen kann, gibt es zwei Actions. Einmal die Action links, welche aus dem Backend ausgelöst wird und einmal die Action ausgehend von der View-Komponente. Diese Action wird also von der UI ausgelöst. 
 
@@ -112,11 +116,59 @@ Diese sind die Komponenten, welche das Frontend beschreiben. Diese hören, ob si
 
 Redux ist momentan wohl das am weitesten verbreiteten Framework wenn es um die Flux-Implementierung geht. Grundsätzlich gibt es die Redux-Bibliothek für die meisten aktuellen JavaScript-Frameworks. So sind zum Beispiel React, Angular und Vue kein Problem.
 
-Zu der Benutzung mit React, gibt es zusätzlich noch eine offizielle Binding Library. Diese verbindet die eigentliche Redux-Library mit der React-Library.
+Die Motivation Redux zu entwickeln ist die gleiche wie bei Facebook. Die Verwaltung des State in modernen Webanwendungen über das klassische MVC ist sehr kompliziert.  Doch ist Redux eine Bibliothek, die nicht die Reinform von Flux umsetzt. Die grundlegende Idee bleibt immer noch gleich, nämlich dass aus einer Aktion ein neuer Zustand entsteht. Der Datenfluss ist also immer noch der gleiche. Allerdings gibt es bei Redux keinen Dispatcher. Das liegt einfach daran, dass Redux auf reine Funktionen anstatt von Ereignissemittern setzt. Und Funktionen benötigen keine zentrale Einheit, die sie verwalten.  Diesen Unterschied kann man allerdings auch einfach Implementierungsdetail ansehen. Redux selber sieht das so.
+
+Ein weiterer direkter Unterschied zu Flux ist, dass Redux immer nur in einem Store umgesetzt wird. Auch dies kann man theoretisch als ein Implementierungsdetail ansehen. Dadurch dass es nur einen Store gibt, gibt es bei Redux auch nur eine Quelle für die Daten. Dies ist ein Grundprinzip von Redux.
+
+Ein weiterer Unterschied ist, dass Redux davon ausgeht, dass man seine Daten nie ändert. Redux arbeitet immer mit der Übergabe von neuen Objekten. Dies hat den Vorteil, dass man einfach Objekte und Arrays zur Datenverwaltung einsetzen kann. Auch aus Performancesicht gibt es keinen nennenswerten Nachteil dadurch. Es ist allerdings technisch möglich die Daten zu verändern um spezielle Sonderfälle wie z.B. einen Hot-Reload zu verwirklichen. Es wird jedoch dringendst davon abgeraten.
+
+Desweiteren ist Redux von der funktionalen Programmiersprache Elm beeinflusst worden. Die Architektur dieser Sprache nutzt statische Typisierung und Unveränderlichkeiten. 
+
+Um Asynchronität umzusetzen kann man Redux zusammen mit RxJS verwenden. Darüber ist es möglich, verschiedene Actionsstreams an den Dispatcherpart zu übergeben.
 
 ### Alt
 
 Hierbei handelt es sich um eine reine Implementierung von Flux. Es hat die gleichen Merkmale wie die Redux-Bibliotheken und konnte sich deshalb nie wirklich gegenüber von Redux durchsetzen.
+
+### Flux vs. MVC
+
+Bei beiden handelt es sich um Architekturlösungen, wie Anwendungen aufgebaut werden sollen. Doch kann man jetzt sagen, dass Flux in allen Punkten besser ist als MVC (Model-View-Controller)?
+
+Zur Erinnerung noch einmal die wesentlichen Bestandteile von MVC.
+
+Das Model enthält die Geschäftslogik und die Zustandsinformationen der Softwareanwendung.
+
+Die View stellt die Daten des Model da, ist also abhängig von diesem. Es kann viele Views für ein Model geben.
+
+Der Controller ist eine Zwischenschicht, welche die Eingaben aus der View verarbeitet und zwischen View und den Models vermittelt. Der Controller legt also das Verhalten auf Benutzereingaben fest, beinhaltet allerdings selber keine Geschäftslogik.
+
+
+
+![Ablauf MVC](./img/AblaufMVC.png)
+
+In dem Diagramm kann man den Ablauf in einer aktiven MVC-Implementierung sehen. Die View schickt die Benutzerereignisse an den Controller. Dieser ändert darauf die entsprechenden Models. Die Models benachrichtigen die mit dem Model verbundenen Views. Die Views holen sich anschließend die neuen Daten und aktualisieren sich. Die aktive Variante wird mit Hilfe des Observer-Pattern umgesetzt.
+
+Daraus ergibt sich dann folgender Datenfluss:
+
+![DataFlow MVC](./img/DataFlowMVC.png)
+
+Der bidirektionale Datenfluss zwischen Model und View war es letztendlich, der Facebook dazu veranlasste Flux zu entwickeln. Das obere Diagramm stellt nämlich nur die Kommunikation zwischen einem Model und einer View. Was passiert allerdings wenn wir mehrere Models und mehrere Views haben?
+
+![Big Data Flow MVC](./img/BigDataFlowMVC.png)
+
+Wie man sehen kann, kommt es zwischen den Models und den Views zu einigen Verstrebungen. Bei der Umsetzung dieser Architektur jetzt immer dran zu denken, die View bei jedem Model anzumelden, damit es jede Benachrichtigung bekommt und sich immer von den passenden Models die Daten holen kann. Dies kann sehr aufwändig werden und es kann schnell zu Fehlern kommen. Dieser Aufbau war einer der Hauptgründe, weshalb Facebook Flux entwickelt hat.
+
+Um diese beiden Architekturen zu Vergleichen gucken wir uns jetzt als erstes den einzelnen Data-Flow von Flux noch einmal an.
+
+![Data-Flow Flux](./img/DataFlowFlux.png)
+
+Was neben der Umbenennung der einzelnen Komponenten auffällt, ist das zwischen den letzten beiden nur noch eine unidirektionale Verbindung existiert. Genau dieser Unterschied liegt zwischen MVC und Flux vor. Während bei MVC meistens eine bidirektionale Kommunikation vorliegt, ist Flux immer nur in eine Richtung. 
+
+Dies hat bei dem oberen aufwändigeren Modell folgende Auswirkungen.
+
+![Big Data Flow Flux](./img/BigDataFlowFlux.png)
+
+Dieses Diagramm entspricht genau den gleichen Verlinkungen zwischen Store und View wie bei MVX zwischen Model und View. Für jeden ist deutlich erkennbar, das Flux in diesem Punkt deutlich übersichtlicher ist als MVC. Aber auch der eigentliche Unterschied ist dadurch sichtbar geworden. Bei MVC haben die Views teilweise die Berechtigung den globalen State direkt zu ändern. Bei Flux geht dies nicht. Die Views sind nur dafür verantwortlich, dass sie den globalen State rendern. Des weiteren ist das obere Diagramm zum ausführlichen Datenfluss in Flux so nicht ganz korrekt. Ist es in MVC noch so, dass ein Model immer nur den State zu einem Objekt verwaltet, kann ein Store bei Flux dieses auch für mehrere Objekte machen. Es würde bei Flux also weniger Stores geben, als Models in MVC. Auch das vereinfacht den Datenfluss. Das hat zu Folge, dass letztendlich kein Objekt ausserhalb des Stores weiß, wie der Store die Daten verwaltet. Dies spricht für eine klare Seperation der Aufgaben.
 
 ### Sonstiges
 
@@ -125,6 +177,104 @@ Wer weitere Beispiele und Vergleiche haben möchte, dem kann ich dieses Github-R
 __https://github.com/voronianski/flux-comparison__
 
 Hier werden auch die verschiedenen Bibliotheken miteinander verglichen.
+
+
+
+## MobX
+
+### Was ist MobX?
+
+Bei MobX handelt es sich um eine Bibliothek und kein Pattern. Das bedeutet, dass die Verwendung von MobX einem nicht vorschreibt, wie die Software aufgebaut werden muss. Häufig wird MobX deshalb auch in einem klassischen MVC-Pattern genutzt.
+
+MobX ist also nur eine spezielle Lösung für die Zustandsverwaltung. Für diese Lösung benutzt MobX das Observable Pattern.
+
+![Beobachterentwurfsmuster](./img/Beobachterentwurfsmuster.png)
+
+Das Pattern beschreibt eigentlich nur, dass es Subjekte gibt, die sich verändern können. Bei diesen Subjekten können sich Beobachter anmelden. Diese Beobachter werden automatisch dann bei jeder Änderung benachrichtigt und können sich dann verändern. Das im Vergleich von Flux und MVC beschriebene Modell von MVC nutzt auch das Observable Pattern. Dies ist also ein möglicher Datenfluss.
+
+MobX basiert jetzt auf dem Ansatz, dass es die Zustände wie eine Tabellenkalkulation betrachtet. 
+
+![Overview MobX](./img/MobX.png)
+
+State ist hier der Status der Anwendung. Das sind sozusagen die Datenzellen. In dem Diagramm steht es auch, MobX kennt nur eine Quelle der Wahrtheit.
+
+Die Derivations (Ableitungen) sind alle Informationen, die aus dem State berechnet werden . Dies sind sozusagen die Formeln der Anwendung. Diese werden automatisch geupdatet.
+
+Reactions sind sehr ähnlich zu den Derivations. Der große Unterschied ist allerdings, dass diese keinen Wert produzieren. Diese laufen automatisch und sorgen dafür, dass bestimmte Aktionen automatisiert ablaufen.
+
+Actions sind die Aktionen, die den State beeinflussen.
+
+### Vorteile / Nachteile
+
+MobX ist eine sehr schlanke Variante, die es einfach macht Anwendungen zu verwalten. Zusätzlich ist sie noch mit allen Pattern kompatibel. Dadurch, dass MobX keinen eigenen Datenfluss oder eine eigene Architektur benötigt, ist MobX nicht skalierbar und auch für kleinere Anwendungen gedacht. Flux zu implementieren bedeutet auch, dass man einen riesigen Overhead hat. Dies kann gerade für kleinere Anwendungen zu viel sein. 
+
+## NgRx
+
+### Was ist NgRx?
+
+NgRx ist ein Framework um reactive Anwendungen in Angular zu bauen. Es kümmert sich dabei um das State Managment. NgRx ist sozusagen eine Angularumsetzung des Redux-Pattern.
+
+![NgRx-Flow](./img/NgRxFlow.png)
+
+In dem Bild sehen wir dabei den Flow von NgRx. Viele Komponenten haben dabei eine große Ähnlichkeit zu dem bereits bekannten Flux-Pattern.
+
+Eine Component ist nichts anderes als eine View aus dem Flux-Pattern. Diese sendet weiterhin Actions an einen Dispatcher,hier Reducer, welcher damit den Store aktualisiert. Dieser wiederum aktualisiert die entsprechenden Components. 
+
+Jetzt gibt es hier aber noch Effects. Die Effects machen erst einmal nichts anderes wie der Reducer. Sie hören auf Actions und entscheiden dann für jede Action, ob sie reagieren müssen. Sollte das der Fall sein, wird ein Side-Effect ausgelöst. Dies ist zum Beispiel das Senden von Daten zu einer API. Sobald dies abgeschlossen ist, wird eine neue Action erzeugt, welche dann in den Reducer geht.
+
+## Akita
+
+### Was ist Akita?
+
+Akita ist wie Flux erst einmal auch ein eigenständiges Pattern. 
+
+![Akita Aufbau](./img/akitaAufbau.jpg)
+
+Akita bedient sich dabei einem objektorientierten Ansatz und nicht wie Flux einem funktionellem Ansatz. Auch hier haben wir Elemente, die wir aus anderen Pattern schon wieder erkennen. 
+
+Der Service koordiniert Anfragen zwischen der Backend API und den ausgelösten Methoden der Components. Components stellen die View-Komponente da, also unsere eigentliche Benutzeroberfläche. Der Service kann den Store updaten. Der Store übernimmt dabei die uns bereits bekannte Funktion. Er speichert die Daten. Auch hier gilt der Grundsatz, dass es nur eine Quelle der Wahrheit gibt, also auch nur einen Store.  Akita stellt hierbei zwei verschiedene Arten von Store zur Verfügung. Einen Basisstore, welcher jegliche Daten beinhalten, und einen EntityStore. Dieser wird meistens bevorzugt und bildet eine flache Sammlung von Entitäten ab. 
+
+Die beiden Arten können sogar parallel verwendet werden. Das trotzdem nur von einer Quelle der Warheit gesprochen wird, liegt daran, dass mit den beiden Stores unterschiedliche Aufgaben erfüllt werden. In dem Store liegen alle Daten, die keine Entität repräsentieren. Dazu gehören zum Beispiel Informationen über die Sitzung oder der UI.
+
+In dem Entity Store liegt jetzt alles, was eine Entität abbildet. Bei einer Studentenverwaltung also z.B den Studenten. Dieses Stores kann man sogar soweit verfeinern, dass man für jede Entität einen eigenen Store anlegt.
+
+![Akita Datenbaum](./img/AkitaDataTree.png)
+
+In dem Bild sieht man, wie so ein Datenbaum in Akita aussehen könnte. Wir haben einen Store für die Session, welcher Informationen zu dem angemeldeten Benutzer beinhaltet. Und wir haben einen Student Store. In diesem lagern verschiedene Einheiten von Studenten.
+
+Um diese Stores zu verwalten, bietet Akita verschiedene Methoden an.
+
+Ein weiteres Element in diesem Pattern sind die Queries. Diese sind vergleichbar mit den Queries aus Datenbankabfragen. Diese Queries fragen einfach die Daten aus den Stores ab. Queries können dabei mit anderen Queries verbunden werden und aus verschiedenen Stores Daten abrufen und verknüpfen. Auch bei den Queries gibt es verschiedene Arten für den Basisstore und für den Querystore. Die sind aber bis auf Kleinigkeiten gleich. Viel wichtiger ist da ein weiterer Unterschied zwischen den Queries. Es gibt einmal reaktive Queries und einmal synchronisierende Queries. Die einen können aufgerufen werden und die anderen aktualisieren sich bei Änderungen automatisch. Dafür wird das Observable Pattern benutzt.
+
+## Vuex
+
+### Was ist Vuex?
+
+Vuex ist die State-Managment-Bibliothek für Vue.js und implementiert auch das Flux-Pattern. Es ist dabei relativ nah mit Redux verwandt. Der größte Vorteil gegenüber Redux, welches man auch für Vue.js verwenden kann, ist das die Bibliothek deutlich besser in das Framework eingebunden ist. Vuex greift aber auch auf einen One-Way-Data-Flow zurück. Es gibt also auch hier eine View, welche immer eine Action auslöst, welche den State beeinflusst. Und der State wird letztendlich wieder in der View dargestellt.
+
+![Aufbau Vuex](./img/vuex.png)
+
+Vuex benutzt für die Abbildung des States einen Single-State-Tree. Das entspricht den Konzepten, die wir bereits kennen. Auch Vuex entspricht also dem Konzept, dass es nur eine Quelle der Wahrheit gibt.
+
+
+
+Actions sind Funktionen, die Änderungen an dem State aufrufen sollen. Hier werden zum Beispiel Api-Calls aufgerufen. Wichtig ist dabei, dass die Funktionen hier zwar aufgerufen werden, eine Änderung des Datensatzes geschieht hier allerdings noch nicht. Diese Änderungen werden jetzt in den Mutations umgesetzt. Actions senden also nach einem erfolgreichen Aufruf eine Mutation ab. Und nur diese Mutation darf jetzt den Datenbestand verändern. Mutationen sind sehr ähnlich zu Actions. Der Unterschied besteht darin, dass Mutationen den Datenbestand verändern. Dafür werden Asynchrone Aufrufe in den Actions umgesetzt.
+
+
+
+Bei Vuex gibt es noch die Möglichkeit von Gettern. Diese liefern sozusagen berechnete Werte aus dem Store. Zum Beispiel, wenn nur erledigte Aufgaben ausgegeben werden sollen.
+
+## Vergleich Frameworks
+
+| Name  | Pattern          | Sprachen | Programmieransatz | Vorteile                                               | Nachteile                             | Doku                                 |
+| ----- | ---------------- | -------- | ----------------- | ------------------------------------------------------ | ------------------------------------- | ------------------------------------ |
+| Redux | Flux             | React    | funktionell       | Single-Direction-Data-Flow                             | großer Overhead                       | <https://redux.js.org/>              |
+| MobX  | Observable       | React    | funktionell       | schmale Lösung                                         | unübersichtlich bei großen Programmen | <https://mobx.js.org/>               |
+| NgRx  | Flux             | Angular  | funktionell       | Single-Direction-Data-Flow                             | großer Overhead                       | <https://ngrx.io/>                   |
+| Akita | Flux, Observable | Angular  | objektorientiert  | vereint Flux und Observable                            | kaum Doku vorhanden                   | <https://netbasal.gitbook.io/akita/> |
+| Vuex  | Flux             | Vue.js   | funktionell       | Single-Direction-Data-Flow, gute Integration in vue.js | großer Overhead                       | <https://vuex.vuejs.org/>            |
+
+
 
 # Zusatz
 
@@ -177,3 +327,4 @@ Der C++-Programmierer, Ulrich, Breyman, ISBN 978-3-446-44346-4
 <https://react-redux.js.org/>
 
  
+

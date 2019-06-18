@@ -6,104 +6,103 @@ Mit WebGL gerenderte Elemente werden im HTML Canvas Element dargestellt, mit Hil
 
 Die API ist low-level OpenGL, und enthält nahezu keinen boilerplate code, d.h. direktes Arbeiten mit Vertices und Framebuffern. Der Grund dafür ist, dass die API möglichst simpel und flexibel bleiben soll. Es existieren jedoch mehrere Bibliotheken die auf bestimmte use-cases zugeschnitten sind.
 
-## WebGL Bibliotheken
+## Relevante Bibliotheken
 
-### three.js
-
-- Support für WebGL 1.0, begrenzter Support für WebGL 2.0
-- Licht/Schatten, Kamera, Material, Animation
-- Natives laden von .obj, .mtl, .gltf, .svg
-- Diverse plugins wie z.B. Physijs als Physics-Engine
-- **Fazit:** Grundsätzliche Funktionen, aber trotzdem noch sehr nah an OpenGL, wenig modern
-
-### BabylonJS
-
-- Vollständiger WebGL 2.0 Support
-- Licht/Schatten, Kamera, Material, Animation
-- Mesh + Morph Funktionen
-- Integrierte Physics- und Collision-Engine
-- Partikel System
-- Integrierte Audio-Engine
-- Voller Shader Support
-- FX Toolkit (Fog, Shadow Maps, Anti-Aliasing, Glow)
-- **Fazit:** Deutlich mehr Funktionen (dadurch aber auch mehr bloat), größere Community, volles Toolkit für Spiel-Design
-
-### D3.js
-
-- Data-Driven Documents, gedacht für Datenvisualisierung
-- Support für so ziemlich alle komplexe Graphen und Chart Darstellungen
-- Dynamisches Rendering, animierte Darstellungen
-- **Fazit:** Für Diagramme super, aber auch nur dafür gedacht.
+|Name|WebGL Support| Basis Features | Zusatzfunktionen | Fazit |
+|----|-------------|----------------|------------------|-------|
+| [**three.js**](https://d3js.org/) | WebGL 1.0, begrenzt 2.0 | Licht/Schatten, Kamera, Material, Animation | Natives laden von .obj, .mtl, .gltf, .svg; Diverse Plugins, z.B. Physijs als Physics-Engine | Grundsätzliche Funktionen, aber trotzdem noch sehr nah an OpenGL, wenig modern|
+| [**BabylonJS**](https://www.babylonjs.com/) | WebGL 2.0 | Licht/Schatten, Kamera, Material, Animation, Shader | Mesh + Morph, Physics- und Collision-Engine, Partikel System, Audio-Engine, FX Toolkit (Fog, Shadow Maps, Anti-Aliasing, Glow) | Deutlich mehr Funktionen (dadurch aber auch mehr bloat), größere Community, volles Toolkit für Spiel-Design|
+| [**D3.js**](https://d3js.org/) | - | Datenverarbeitung, SVG und DOM-Manipulation, Dynamische Änderung & Animation (geringe Performanz) | | Sinnvoll als teil eines Hybriden ansatzes, z.B. zum Zeichnen von statischen Elementen (Koordinaten System)|
+| [**StardustJS**](https://stardustjs.github.io/) | Unbekannt, aber für Anwendung irrelevant | Datenvisualisierung, Databinding, 2D & 3D | | Einzig für (animierte) Datenvisualisierung, gut für große Datenmengen, mehr Potential als SVG Darstellung |
 
 
+## 3D WebGL mit BabylonJS
 
-## WebGL Setup für BabylonJS
+Babylon ist primär für 3D Darstellung gedacht und ein Großteil der Features fällt in die Kategorie Gamedesign. Funktionen wie eine Integriere Physicsengine, FX und Partikel sind hierfür durchaus hilfreich. Die grundlegenden Funktionen in Babylon sind jedoch auch diverse andere Anwendungsfälle nützlich.
 
-1. Neues Projekt angelegen, mit `index.html` und `js/index.js`
+In seiner Struktur und im Programmier-Ansatz ist die Bibliothek offensichtlich Objektorientiert aufgebaut. Die Szene, so wie Licht, Kamera und alle Meshes, werden als Objekte ihrer jeweiligen Klasen instantiiert und positioniert. Meshes bekommen Materialien zugewiesen, Kameras und Lichtquellen haben diverse manipulierbare Attribute. Auch die Physicsengine funktioniert mit sogenannten „Imposter“ Klassen, die ihre jeweiligen Verhalten bestimmen. Damit ist Babylon leicht zu strukturieren und in Komponenten zu teilen und erlaubt eine sehr hohe Konfigurierbarkeit.
 
-2. Scripte Einfügen:
+```javascript
+function createScene() {	
+	//Szene
+	var scene = new BABYLON.Scene(engine);
 
-   ``````html
-   <!-- Cannon Physics:-->
-   <script src="https://cdn.babylonjs.com/cannon.js"></script>
-   <!-- Babylon Core:-->
-   <script src="https://preview.babylonjs.com/babylon.js"></script>
-   <!-- Babylon Loaders:-->
-   <script src="https://preview.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
-   <!-- jquery Polyfill:-->
-   <script src="https://code.jquery.com/pep/0.4.3/pep.js"></script>
-   ``````
+	//Licht
+	var light = new BABYLON.HemisphericLight("light1", new BABYLON.Vector3(1, 1, 0), scene);
 
-3. HTML Canvas Zufügen und index.js einbinden:
+	//Kamera
+	var camera = new BABYLON.UniversalCamera("UniversalCamera", new BABYLON.Vector3(0, 0, -10), scene);
+	//Kamera Steuerung
+	camera.attachControl(canvas, true);
 
-   ```html
-   <canvas id="renderCanvas" touch-action="none"></canvas>
-   <script src="./js/index.js"></script>
-   ```
+	//Kugel
+	var sphere = BABYLON.MeshBuilder.CreateSphere("sphere", {diameter:1}, scene);
 
-4. In index.js die Basics für eine Szene etablieren:
+	return scene;
+}
+```
+*Aufbau einer einfachen Szene mit Licht, Kamera und Kugel Mesh*
 
-   ```js
-   var canvas = document.getElementById("renderCanvas"); // Get the canvas element 
-   
-   var engine = new BABYLON.Engine(canvas, true); // Generate the BABYLON 3D engine
-   
-   /******* Add the create scene function ******/
-   var createScene = function () {
-   	
-   	// Create the scene space
-   	var scene = new BABYLON.Scene(engine);
-   	
-   	// Add a camera to the scene and attach it to the canvas
-   	var camera = new BABYLON.ArcRotateCamera("Camera", Math.PI / 2, Math.PI / 2, 2, new BABYLON.Vector3(0,10,10), scene);
-       camera.setTarget(BABYLON.Vector3.Zero());
-   	camera.attachControl(canvas, true);
-   	
-   	// Add lights to the scene
-   	var light1 = new BABYLON.HemisphericLight("light1", new BABYLON.Vector3(1, 1, 0), scene);
-   	var light2 = new BABYLON.PointLight("light2", new BABYLON.Vector3(0, 1, -1), scene);
-   	
-   	var ground = BABYLON.Mesh.CreateGround("ground1", 24, 24, 2, scene);
-     	
-   	// Add and manipulate meshes in the scene
-   	var sphere = BABYLON.MeshBuilder.CreateSphere("sphere", {diameter:1, updatable: true}, scene);
-   	sphere.position.y = 1;
-   	return scene;
-   };
-   /******* End of the create scene function ******/    
-   
-   var scene = createScene(); //Call the createScene function
-   
-   // Register a render loop to repeatedly render the scene
-   engine.runRenderLoop(function () { 
-   	scene.render();
-   });
-   
-   // Watch for browser/canvas resize events
-   window.addEventListener("resize", function () { 
-   	engine.resize();
-   });
-   
-   ```
+Meshes können in diversen Formaten importiert werden (wie z.B. glTF oder obj), jedoch biete die Bibliothek auch Hilfsmethoden an, mit denen alle gängigen euklidischen Körper (Würfel, Kugel, Zylinder, Kegel, Torus) generiert werden können. 
 
-5. Fertig! Ab hier kann dann mit anderen Meshes oder Physics experimentiert werden
+![Babylon Meshes](img/babylon_meshes.png)
+
+*Eine Auswahl von Meshes die mit Babylon generiert werden können*
+
+## Datenvisualisierung mit StardustJS und D3.js
+
+Stardust ist als Bibliothek ganz auf effiziente, GPU-basierte, Datenvisualisierung ausgelegt. Dazu werden "Marks" verwendet, dies sind quasi die Objekte/Meshes die speichern jedoch noch zusätzliche Informationen, denn Stardust dient gleichermaßen auch der Datenverarbeitung.
+
+Die Bibliothek enthält eine Reihe von bereits definierten Marks, z.B. Kreis, Rechteck, Linie, Polylinie, ermöglicht allerdings auch dem Nutzer, eigene Marks zu definieren:
+```ts
+//Bestehende Marks
+import{ Circle, Line }fromP2D;
+
+//Vertikale Linie
+mark VLine(x: float, y: float) {
+	Line(Vector2(x, y - 3), Vector2(x, y + 3), 1);
+}
+
+//Neues Mark
+mark RangeBarWithCircle(x: float, y: float, xmin: float, xmax: float) {
+	//Zwei vertikale Linien
+	VLine(xmin, y);
+	VLine(xmax, y);
+	// Linie und Kreis
+	Line(Vector2(xmin, y), Vector2(xmax, y), 1);
+	Circle(Vector2(x, y), 2);
+}
+```
+![Stardust Custom Mark](img/stardust_custommark.png)
+
+*Durch den obrigen Code definiert sich dieses Mark. [Quelle](https://donghaoren.org/publications/eurovis17-stardust.pdf)*
+
+Interessant wird Stardust besonders in Kombination mit D3.js, eine Bibliothek die diverse Datenmengen verarbeiten kann, und diese zwar in SVG darstellen kann, jedoch dabei längst nicht so performant ist wie eine WebGL Implementation. Ein hybrider Ansatz ist jedoch durchaus möglich: So wurden im folgenden Beispiel die Daten einer csv Datei erst eingelesen und mit D3 die Domänen eingeschränkt, dann mit Stardust der Graph als Polylinie im Canvas Element visualisiert. Die Koordinatenachsen sind in mit D3 in einem darüber liegenden SVG Element dargestellt. Die Übergänge zwischen den drei Graphen wiederum laufen über eine Utility Funktion von Stardust
+
+![Stardust Graph](img/stardust_animatedgraph.gif)
+
+*Hybride Graphendarstellung eines Datensets mit StardustJS und D3.js*
+
+## Performance: three.js vs BabylonJS vs StardustJS
+Um besser bewerten zu können welche Bibliothek sich für gewisse Projekte eignet, habe ih mich entschlossen einen kleinen Vergleich aufzustellen.
+Dabei ist eine Aufgabe mit Ziel vorgegeben die in der jeweiligen Render-Bibliothek möglichst effizient umgesetzt wird. Danach wird die Laufzeit in ms gemessen und die Anzahl der Codezeilen gezählt und aus diesen Werten ein Vergleich erstellt.
+
+### Die Aufgabe:
+Darstellung eines Graphen samt mit Koordinatensystem, jedoch ohne Beschriftung. Gegeben dafür sind: Das Datenset, die X- und Y-Keys für Werte im Set und zwei Skalierungsfunktionen um die Werte auf den Achsen zu bestimmen.
+
+### Ergebnisse:
+![Output der Funktion](img/performance_1.png)
+*Ergebnis des Renders, L>R: three.js, BabylonJS, StardustJS*
+
+Laufzeit wurde gemessen über 50 Versuche und dann der Durchschnitt ermittelt.
+
+| Bibliothek | Laufzeit (Ø) | Laufzeit (Best) | Laufzeit (Worst) | Codezeilen | Größe des Frameworks |
+|---------|-------|-------|-------|-------|-------|
+| three.js | 64,45 ms | 55 ms | 84 ms | 12 | 571 kB |
+| BabylonJS | 81 ms | 72 ms | 94 ms | 13 | 2,56 MB |
+| StardustJS | 158,5 ms | 150 ms | 201 ms | 12 | 403 kB |
+
+### Fazit: 
+
+Die Anzahl der Codezeilen und der eigentliche Aufbau des Codes ist für alle drei Bibliotheken ähnlich, bei three und Babylon sogar nahezu gleich. Stardust definitiert seine Marks etwas anders.
+In der Laufzeit entäuscht StardustJS, weswegen ich derzeit keinen Vorteil in ihrer Verwendung sehe. Babylon unterscheidet sich letztendlich in seiner Dateigröße stark von three, was für gewisse Seiten ein Effizienzkriterium sein könnte.
