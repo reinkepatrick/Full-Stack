@@ -126,3 +126,12 @@ __10.06.2019 - 16.06.2019__
 | 14.06.2019 | Game Tests geschrieben.                                                                                                         | 4h         |        |
 | 15.06.2019 | Game Tests geschrieben.                                                                                                         | 2h         |        |
 | 15.06.2019 | Kommunikation ziehen von Karten implementiert.                                                                                  | 3h         |        |
+
+
+## Woche 11
+__17.06.2019 - 23.06.2019__
+
+
+| Datum      | Tätigkeit                                                                                                                       | Dauer      | Zusatz |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------- | ---------- | ------ |
+| 20.06.2019 | Kommunnikation mit Frontend implementiert.                                                                                      | 8h         |        |
