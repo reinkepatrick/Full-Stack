@@ -129,3 +129,5 @@ __17.06.2019 - 23.06.2019__
 | 19.06.2019 | Bug fixes und Refactoring                                                                                   | 30 min     |                                    |
 | 19.06.2019 | Darstellung einer generischen Karte, Interaktion mit den Karten, Karten ziehbar, Ereigniserkennung bei Drop | 4 h        |                                    |
 | 19.06.2019 | Darstellung des Wertes und der Farbe auf den Karten                                                         | 1 h        |                                    |
+| 21.06.2019 | Implementierung des Mau Mau UIs                                                                             | 6 h        |                                    |
+| 21.06.2019 | Spielekommunikation mit dem Backend                                                                         | 3 h        |                                    |
