@@ -160,13 +160,14 @@
 
 **17.06.2019 - 23.06.2019**
 
-| Datum      | Tätigkeit                                                    | Dauer      | Zusatz                                          |
-| :--------- | :----------------------------------------------------------- | :--------- | :---------------------------------------------- |
-| 17.06.2019 | Beheben von grafischen Bugs unter macOS                      | 1 h        |                                                 |
-| 17.06.2019 | Aufbau des Spielbretts mit dynamischen Inhalten              | 2 h 30 min | Vom statischen Board auf ein dynamisches Boards |
-| 17.06.2019 | Senden einer Nachricht beim Beitritt eines Spiels            | 30 min     |                                                 |
-| 19.06.2019 | Beheben von kleineren Bugs in Tests und in der Kommunikation | 30 min     |                                                 |
-| 20.06.2019 | Empfangen und Ausgeben von Spielkarten                       | 2 h 30 min |                                                 |
-| 20.06.2019 | Hinzufügen vom Senden und Empfangen von Spielzügen           | 4 h        |                                                 |
-| 20.06.2019 | Reagieren auf sonstige Events vom Server                     | 1 h 30 min | Außer Spielende                                 |
+| Datum      | Tätigkeit                                                    | Dauer      | Zusatz                                                                                                                                                                                                           |
+| :--------- | :----------------------------------------------------------- | :--------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 17.06.2019 | Beheben von grafischen Bugs unter macOS                      | 1 h        |                                                                                                                                                                                                                  |
+| 17.06.2019 | Aufbau des Spielbretts mit dynamischen Inhalten              | 2 h 30 min | Vom statischen Board auf ein dynamisches Boards                                                                                                                                                                  |
+| 17.06.2019 | Senden einer Nachricht beim Beitritt eines Spiels            | 30 min     |                                                                                                                                                                                                                  |
+| 19.06.2019 | Beheben von kleineren Bugs in Tests und in der Kommunikation | 30 min     |                                                                                                                                                                                                                  |
+| 20.06.2019 | Empfangen und Ausgeben von Spielkarten                       | 2 h 30 min |                                                                                                                                                                                                                  |
+| 20.06.2019 | Hinzufügen vom Senden und Empfangen von Spielzügen           | 4 h        |                                                                                                                                                                                                                  |
+| 20.06.2019 | Reagieren auf sonstige Events vom Server                     | 1 h 30 min | Außer Spielende                                                                                                                                                                                                  |
+| 20.06.2019 | Versuchen Animation einzubinden ohne Erfolg                  | 2 h        | Versucht mit [Pose](https://popmotion.io/pose/), [React Transition Group](https://reactcommunity.org/react-transition-group/), [react-spring](https://www.react-spring.io/) und [Anime.js](https://animejs.com/) |
 
