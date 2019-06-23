@@ -103,16 +103,17 @@ GraphQL ist unabhängig von der Datenbanksoftware und ist in fast jeder Programm
 
 __GraphQL Lexikon__ 
 
-| Themen                                   | Kurzbeschreibugn                         |
-| ---------------------------------------- | ---------------------------------------- |
-| [Standard Abfragen](#Abfragen)           | Einfache Abfragen von einzelnen Knoten   |
-| [Verschachtelte Abfragen](#Abfragen)     | Abfragen über mehrere Knoten             |
-| [Argumente](#Argumente)                  | Verfeinerung von Abfragen                |
-| [Variablen](#Variablen)                  | Variable Argumente für Abfragen          |
-| [Richtlinien (Directives)](#Richtlinien (Directives)) | Ermöglichen es, Abfragen dynamisch anzupassen |
-| [Mutation](#Mutation)                    | Ändern von Daten auf den Server          |
-| [Schemen](#Schema)                       | Stellt Serverseitig die Datenstruktur zur Verfügung |
-| [Validation](#Validation)                | Überprüfen der Gültigkeit von Querys     |
+| Themen                                                | Kurzbeschreibung                                    |
+| ----------------------------------------------------- | --------------------------------------------------- |
+| [Standard Abfragen](#Abfragen)                        | Einfache Abfragen von einzelnen Knoten              |
+| [Verschachtelte Abfragen](#Abfragen)                  | Abfragen über mehrere Knoten                        |
+| [Argumente](#Argumente)                               | Verfeinerung von Abfragen                           |
+| [Fragments und Aliase](#Fragments und Aliase)         | Abfragen übersichtlicher Gestalten                  |
+| [Variablen](#Variablen)                               | Variable Argumente für Abfragen                     |
+| [Richtlinien (Directives)](#Richtlinien (Directives)) | Ermöglichen es, Abfragen dynamisch anzupassen       |
+| [Mutation](#Mutation)                                 | Ändern von Daten auf den Server                     |
+| [Schemen](#Schema)                                    | Stellt Serverseitig die Datenstruktur zur Verfügung |
+
 
 
 ### Abfragen
@@ -255,7 +256,7 @@ Antwort:
 
 ##### Fragments und Aliase
 
-Gehen wir davon aus, wir möchten zwei Studenten und dessen Wahlfächer abfragen. Das können wir mithilfe von Aliase machen.
+Gehen wir davon aus, wir möchten zwei Studenten und dessen Wahlfächer abfragen. Dazu benötigen wir Aliase.
 
 ```
 {
@@ -295,13 +296,9 @@ Mithilfe von Fragmenten können wir die Abfrage noch etwas übersichtlicher gest
 
 Die beiden Abfragen sind äquivalent.
 
+##### Variablen
 
-
-
-
-##### Variabeln
-
-Im obigen Beispiel haben wir unsere Argumente statisch in die Abfrage geschrieben. In der Praxis kommt es aber häufig dazu, dass wir Abfragen dynamisch gestalten müssen, beispielsweise wenn bestimmte Einstellungen in der UI getätigt werden. <br/>Theoretisch könnte man seine Abfragen natürlich dynamisch zusammenbauen, dies würde aber gegen das Konzept der einfachen Implementierung sprechen. Deswegen ist es in GraphQL möglich, Argumente mithilfe von Variablen zu füllen.
+Im obigen Beispiel haben wir unsere Argumente statisch in die Abfrage geschrieben. In der Praxis kommt es aber häufig dazu, dass wir Abfragen dynamisch gestalten müssen, beispielsweise wenn bestimmte Einstellungen in der UI getätigt werden. <br/>Theoretisch könnte man seine Abfragen dynamisch zusammenbauen, dies würde aber gegen das Konzept der einfachen Implementierung sprechen. Deswegen ist es in GraphQL möglich, Argumente mithilfe von Variablen zu füllen.
 
 ```
 query wahlfach($WFname: String{
@@ -397,7 +394,7 @@ Das GraphQL Schema wird vom Server bereitgestellt und gibt die Datenstruktur bek
 
 Im Grunde besteht unser GraphQL Schema aus einer Auflistung all unserer Typen. <br/>
 
-#### Object types
+#### Object Type
 
 Die Basis eines GraphQL Schemas bilden die Objekttypen. Dise sind vergleichbar zu Objekten aus objektorientierten Programmiersprachen. Sie geben an, welche Objekt es gibt und welche Attribute sie besitzen. Die Typen in unserem Schema könnten in etwa so aussehen: 
 
@@ -421,7 +418,7 @@ type Student{
 }
 ```
 
-#### Query types
+#### Query Type
 
 Neben dem Objekttypen ist auch der Query Typ besonders wichtig. Von diesen besitzt jedes GraphQL Schema nur einen. Der Query Typ bildet alle möglichen Abfragen ab, welche Parameter benötigt werden und welchen Rückgabetyp wir bekommen, wenn wir eine Abfrage stellen. Immer wenn eine Query eintritt, dient der Query Typ als Einstiegspunkt in den Objektgrafen. Für unsere Studenten Beispiel würde der Query Typ in etwa wie folgt aussehen:
 
@@ -435,7 +432,7 @@ type Query {
 
 Wir können also eine Abfrage "dozent" stellen, der wir bei Bedarf einen String Parameter übergeben, die uns eine Rückgabe vom Typen Dozent gibt, wie der Typ Dozent aussieht, können wir den Objekttyp "Dozent" entnehmen. 
 
-#### Mutation types
+#### Mutation
 
 Mutationen sind im GraphQL Schema genauso aufgebaut wie Querys. Technisch gesehen gibt es gar keinen Unterschied zwischen ihnen. Das Klassifizieren einer Query als Mutation dient jede glich dazu, anzugeben das es bei Verwendung dieser Query zu Änderungen an den Daten kommt.
 
@@ -444,6 +441,19 @@ type Mutation{
   createDozentOnServer(name: String!, titel: String!, fachgebiet: String!):Dozent!
 }
 ```
+
+#### Subscription Type
+
+GraphQL Subscriptions bieten eine Möglichkeit, das Obeserver Pattern innerhalb seiner GraphQL API umzusetzen. Hierfür reicht es allderings nicht, einen einfachen Webserver aufzusetzen, es wird ein Server mit Websocket Unterstützung benötigt. <br/>Der Subscription Type sieht den Query Type im GraphQL Schema sehr ähnlich.
+
+```
+type Subscription {
+  newStudent: Student
+  }
+```
+
+Die Serverseitige Implementation des Subscription Types unterscheidet sich je nach Framework sehr voneinander. Der zugrunde legende Ablauf ähnelt den klassischen vorgehen des Observer Patterns. <br> In vielen GraphQL Frameworks befinden sich Subscriptions und Websockets noch in der Entwicklung.   
+
 
 #### Andere
 
@@ -456,9 +466,7 @@ Es gibt noch weitere Typen und Elemente im GraphQL Schema. Eine kurze Auflistung
 | Input types       | Wie Mutation types, nur das komplexere Objekte übergeben werden können |
 | Interfaces        | Interfaces wie in anderen Sprachen       |
 
-### Validation
 
-Durch das Typesystem kann die Gültigkeit einer Query bereits überprüft werden ohne diese Auszuführen. Dadurch können sowohl Server auch als Client den Entwickler über ungültige Querys informieren.
 
 ### Frameworks und Libraries 
 
@@ -509,7 +517,13 @@ gRPC ist ein, von Google entwickeltes, RPC Framework. </br>
 
 RPC steht für Remote Procedure Call und dient als Programmierschnittstelle um Prozesse auf entfernten Geräten zu starten. Im Grunde geht es darum, Methoden und Funktionen vom Client auf einen Server auszulagern. <br/>Der Client sendet eine Rad-Nachricht an den Server. Der Server empfängt diese Rad-Nachricht, liest die Daten über die Anwendung aus und leitet sie dann, an die jeweilige Server Anwendung weiter. Die Server Anwendung bearbeitet die Anfrage und schickt das Ergebnis an den Client zurück.
 
-Man unterscheidet grundlegend zwischen Synchronen und A-Synchronen RPC Anfragen. <br/>Bei Synchronen Anfragen muss der Client auf die Antwort des Servers warten und darf keine weiteren Aufgaben erledigen. Bei A-Synchronen Anfragen, ist es den Client möglich, weitere Operationen durchzuführen.
+![](./resources/img/grpc.PNG)
+
+
+
+Man unterscheidet grundlegend zwischen Synchronen und A-Synchronen RPC Anfragen. <br/>Bei Synchronen Anfragen muss der Client auf die Antwort des Servers warten und darf keine weiteren Aufgaben erledigen. Bei A-Synchronen Anfragen, ist es den Client möglich, weitere Operationen durchzuführen. <br/>
+
+RPC-Server müssen ihren Service definieren. In der Service Definition steht, welche Methoden der Client Aufrufen kann und welch Rückgabe er zu erwarten hat. 
 
 ### Google RPC
 
