@@ -125,7 +125,7 @@ __03.06.2019-09.06.2019__
 | 03.06 | Erfolgreiche Implementation automatischer ID vergabe | 180min | Mutations returnen, aufgrund von Asynchronen Methodenaufrufen, jetzt keine Ergebnisse mehr an den Client. Problem erstmal hingenommen, fix folgt. |
 | 09.06 | Erste (erfolglose) versuche WebSockets zu implementieren | 120min | Es gibt graphql-ws, allerdings noch WiP und ehr mäßig dokumentiert. Aktueller Ansatz: GraphQL Subscriptions |
 | 09.06 | Einlesen in GraphQL Subscriptions        | 60min  |                                          |
-|       |                                          |        |                                          |
+
 
 
 
@@ -147,13 +147,15 @@ __10.06.2019-16.06.2019__
 
 __17.06.2019-23.06.2019__
 
-| Datum | Tätigkeit                               | Dauer  | Zusatz               |
-| ----- | --------------------------------------- | ------ | -------------------- |
-| 17.06 | GraphQL Subscriptionserver eingerichtet | 180min |                      |
-| 17.06 | Implement subscriptions with DeviceID   | 30min  |                      |
-| 17.06 | Implement subscription with filter      | 150min |                      |
-| 21.06 | fixed server bug                        | 15min  | addeed cors suppoert |
-| 21.06 | setup Logger                            | 60min  |                      |
-| 23.06 | fixed Logger                            | 30min  |                      |
-| 23.06 | Projekt Dokumentation überarbeitet      | 30min  |                      |
+| Datum | Tätigkeit                               | Dauer  | Zusatz              |
+| ----- | --------------------------------------- | ------ | ------------------- |
+| 17.06 | GraphQL Subscriptionserver eingerichtet | 180min |                     |
+| 17.06 | Implement subscriptions with DeviceID   | 30min  |                     |
+| 17.06 | Implement subscription with filter      | 150min |                     |
+| 21.06 | fixed server bug                        | 15min  | addeed cors support |
+| 21.06 | setup Logger                            | 60min  |                     |
+| 23.06 | fixed Logger                            | 30min  |                     |
+| 23.06 | Projekt Dokumentation überarbeitet      | 30min  |                     |
+| 23.06 | Dokumentation inhaltlich Fertiggestellt | 60min  |                     |
+| 23.06 | Dokumentation final überarbeitet        | 120min |                     |
 
