@@ -121,7 +121,18 @@ Zuzüglich zur Heimarbeit beinhaltet jede Woche das Seminar (1h 30m) mit anschli
 
 **17.06.2019 - 23.06.2019**
 
+| Datum      | Tätigkeit                                               | Dauer  | Zusatz |
+| ---------- | ------------------------------------------------------- | ------ | ------ |
+| 18.06.2019 | Implementierung der Darstellung von Teams aus dem Store | 1h     |        |
+| 19.06.2019 | Vorbereitung des vorhanden Codes zur Nutzung von ngrx   | 0h 45m |        |
+| 19.06.2019 | Einarbeitung von ngrx zum Vesseren Verständnis          | 1h 20m |        |
+| 21.06.2019 | Videoreihe zum Thema Routing und Forms vortgesetzt      | 0h 55m |        |
+| 22.06.2019 | Implementierung um neues Team anlegen zu können         | 0h 40m |        |
+
+## Woche 12
+
+**24.06.2019 - 30.06.2019**
+
 | Datum | Tätigkeit | Dauer | Zusatz |
 | ----- | --------- | ----- | ------ |
 |       |           |       |        |
-
