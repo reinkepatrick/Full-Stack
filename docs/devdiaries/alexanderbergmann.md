@@ -118,10 +118,21 @@ __10.06.2019 - 16.06.2019__
 
 __17.06.2019 - 23.06.2019__
 
-| Datum      | Tätigkeit                                     | Dauer | Zusatz |
-| ---------- | --------------------------------------------- | ----- | ------ |
-| 18.06.2019 | Wöchentliches Meeting - Projektarbeit         | 3,5 h |        |
-| 19.06.2019 | coachr-Backend Pipeline bearbeitet            | 0,5 h |        |
-| 19.06.2019 | Dokumentation bearbeiten                      | 1,5 h |        |
-| 13.06.2019 | Angular University Testing Course x/40 Videos |       |        |
+| Datum      | Tätigkeit                                      | Dauer | Zusatz |
+| ---------- | ---------------------------------------------- | ----- | ------ |
+| 18.06.2019 | Wöchentliches Meeting - Projektarbeit          | 3,5 h |        |
+| 19.06.2019 | coachr-Backend Pipeline bearbeitet             | 0,5 h |        |
+| 19.06.2019 | Dokumentation bearbeiten                       | 1,5 h |        |
+| 13.06.2019 | Angular University Testing Course 15/40 Videos |       |        |
+
+## Woche 12
+
+__24.06.2019 - 30.06.2019__
+
+| Datum      | Tätigkeit                                      | Dauer | Zusatz |
+| ---------- | ---------------------------------------------- | ----- | ------ |
+| 24.06.2019 | Angular University Testing Course 15/40 Videos |       |        |
+|            |                                                |       |        |
+|            |                                                |       |        |
+|            |                                                |       |        |
 
