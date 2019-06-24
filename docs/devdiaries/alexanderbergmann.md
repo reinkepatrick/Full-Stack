@@ -106,10 +106,33 @@ __03.06.2019 - 09.06.2019__
 
 __10.06.2019 - 16.06.2019__
 
-| Datum      | Tätigkeit                             | Dauer | Zusatz |
-| ---------- | ------------------------------------- | ----- | ------ |
-| 10.06.2019 | Delpoy Pipeline Coach-Backend         | 3 h   |        |
-| 10.06.2019 | Dokumentation bearbeiten              | 0,5 h |        |
-| 11.06.2019 | Wöchentliches Meeting - Projektarbeit | 6,5 h |        |
-|            |                                       |       |        |
+| Datum      | Tätigkeit                                     | Dauer | Zusatz |
+| ---------- | --------------------------------------------- | ----- | ------ |
+| 10.06.2019 | Delpoy Pipeline coachr-Backend                | 3 h   |        |
+| 10.06.2019 | Dokumentation bearbeiten                      | 0,5 h |        |
+| 11.06.2019 | Wöchentliches Meeting - Projektarbeit         | 6,5 h |        |
+| 13.06.2019 | coachr-API läuft nicht nach dem Deployen      | 3 h   |        |
+| 14.06.2019 | Angular University Testing Course 5/40 Videos | 2 h   |        |
+
+## Woche 11
+
+__17.06.2019 - 23.06.2019__
+
+| Datum      | Tätigkeit                                      | Dauer | Zusatz |
+| ---------- | ---------------------------------------------- | ----- | ------ |
+| 18.06.2019 | Wöchentliches Meeting - Projektarbeit          | 3,5 h |        |
+| 19.06.2019 | coachr-Backend Pipeline bearbeitet             | 0,5 h |        |
+| 19.06.2019 | Dokumentation bearbeiten                       | 1,5 h |        |
+| 13.06.2019 | Angular University Testing Course 15/40 Videos |       |        |
+
+## Woche 12
+
+__24.06.2019 - 30.06.2019__
+
+| Datum      | Tätigkeit                                      | Dauer | Zusatz |
+| ---------- | ---------------------------------------------- | ----- | ------ |
+| 24.06.2019 | Angular University Testing Course 15/40 Videos |       |        |
+|            |                                                |       |        |
+|            |                                                |       |        |
+|            |                                                |       |        |
 

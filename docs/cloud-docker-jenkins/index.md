@@ -2,11 +2,11 @@
 
 ## Einleitung
 
-Dieses Dokument enthält eine Zusammenfassung der wichtigsten Begriffe in Bezug auf automatische Build Prozesse der Softwareentwicklung. Als erstes gibt es eine Einführung in **Cloud Computing** und eine Erläuterung der Begriffe CI und CD. Darauf folgt die Vorstellung von den wichtigsten Tools in diesem Gebiet, sowie die jeweiligen Vor und Nachteile. In der Lehrveranstaltung "Fullstackdevelopment" wurde **Jenkins als CI/CD Tool** ausgewählt. Um automatische Build Prozesse auszuführen, ist es hilfreich sich mit **Docker und der Containerisierung** zu beschäftigen. Diese ermöglichen es eine flexible, leichtgewichtige  und saubere Build Umgebung zu erzeugen. Grundbegriffe und die wichtigsten Funktionen von Docker und Jenkins werden erläutert und abschließend am **Beispiel der Anwendung "coachr",** die auch Teil der Lehrveranstaltung ist, angewendet.
+Dieses Dokument enthält einen Überblick der wichtigsten Begriffe, Tools und Services in Bezug auf automatische Build-Prozesse der Softwareentwicklung (DevOps). Als Erstes gibt es eine Einführung in **Cloud Computing** und eine Erläuterung der Begriffe CI und CD. Darauf folgt die Vorstellung von den wichtigsten Tools in diesem Gebiet, sowie die jeweiligen Vor- und Nachteile. In der Lehrveranstaltung "Fullstackdevelopment" wurde **Jenkins als CI/CD Tool** ausgewählt. Um automatische Build-Prozesse auszuführen, ist es hilfreich sich mit **Docker und der Containerisierung** zu beschäftigen. Diese ermöglichen es eine flexible, leichtgewichtige  und saubere Build-Umgebung zu erzeugen. Grundbegriffe und die wichtigsten Funktionen von Docker und Jenkins werden erläutert. Im Zuge der Lehrveranstaltung wird auch eine Anwendung Namens **coachr** entwickelt, bei der die zuvor genannten Tools und Services eingesetzt werden. Abschließen wurden die Einrichtung der Services und die dafür nötigen Konfigurationen, anhand des Beispiels **coachr** zusammengefasst.
 
 ## Cloud Computing
 
-Die Spannweite der Dienstleistungen die in einer Cloud angebotenen werden, umfasst das gesamte Spektrum der Informationstechnik und beinhaltet unter anderem Infrastruktur, Plattformen und Software.
+Die Spannweite der Dienstleistungen, die in einer Cloud angebotenen werden, umfasst das gesamte Spektrum der Informationstechnik und beinhaltet unter anderem Infrastruktur, Plattformen und Software.
 
 ![Cloud_computing.svg](img/Cloud_computing.svg.png)
 
@@ -20,11 +20,11 @@ Die Spannweite der Dienstleistungen die in einer Cloud angebotenen werden, umfas
 
 **Was ist der Unterschied zwischen CI und CD?**
 
-Diese Begriffe findet man häufig im Bereich der "**DevOps**", denn sie stellen Teilbereiche der Anwendungsentwicklung dar. CI/CD löst die Probleme, die die Integration von neuem Code für DevOps-Teams verursachen kann (auch bekannt als die „[Integrationshölle](https://www.solutionsiq.com/agile-glossary/integration-hell/)“).
+Diese Begriffe findet man häufig im Bereich der **DevOps**, denn sie stellen Teilbereiche der Anwendungsentwicklung dar. CI/CD löst die Probleme, die die Integration von neuem Code verursachen kann (auch bekannt als die „[Integrationshölle](https://www.solutionsiq.com/agile-glossary/integration-hell/)“).
 
 **Continuous Integration**
 
-Wenn mehrere Entwickler an einem Code arbeiten, ermöglicht CI diesen eine einfache Integration der unterschiedlichen Codebasen und ein einheitliches Build und Testsystem. 
+Wenn mehrere Entwickler an einem Code arbeiten, ermöglicht CI diesen eine einfache Integration der unterschiedlichen Codebasen und ein einheitliches Build- und Testsystem. 
 
 **Continuous Delivery**
 
@@ -176,7 +176,7 @@ Die Kommandozeilenbefehle ähneln denen von Git:
 - `docker push <repositoryname>/<imagename>:<tagname>`
 - `docker pull <repositoryname>/<imagename>:<tagname>`
 - Im Dockerfile gibt man noch den Maintainer an
-  - `MANTAINER Alexander Bergmann alex.bergmann87@gmail.com`
+  - `MANTAINER <user.name> <user.email>`
 
 **Registry**
 
@@ -190,11 +190,11 @@ Eine Sammlung zusammengehöriger Images (oft handelt es sich um verschiedene Ver
 
 Diese Verwendung von Namensräumen sorgt dafür, dass die Anwender von Namensräumen sicher sein können, woher Images kommen. Zusätzlich können Images auch kryptographisch signiert werden, um eine bessere Authentizität sicherzustellen. Dabei spricht man von Trusted Images.
 
-Root - Die Docker eigenen Repositorys z. B. debian
+- Root - Die Docker eigenen Repositorys z. B. debian
 
-User - Die Nutzer eigenen Repositorys z. B. abergy/cowsay
+- User - Die Nutzer eigenen Repositorys z. B. <dockerhub user>/cowsay
 
-Selfhosted - Selbst gehostete Repositorys, diesen geht eine IP voraus z. B. 192.168.1. 20/cowsay
+- Selfhosted - Selbst gehostete Repositorys, diesen geht eine IP voraus z. B. 192.168.1. 20/cowsay
 
 ### Docker Compose
 
@@ -319,7 +319,7 @@ docker run test/cowsay-dockerfile Hallo Muh
 
 ### Server einrichten
 
-Die Serverinstanzen wurden mit AWS erstellt, die Einrichtung und Konfiguration hier aufzuführen würde den Rahmen diese Beispiels sprengen. Es handelt sich hier bei um "**Elastic Cloud 2**" Instanzen. Nachfolgend werden die Kommandozeilenbefehle der einzelnen Instanzen aufgelistet, nach dem man sich erfolgreich per SSH darauf verbunden hat.
+Die Serverinstanzen wurden mit AWS erstellt, die Einrichtung und Konfiguration hier aufzuführen würde den Rahmen dieses Beispiels sprengen. Es handelt sich hier bei um "**Elastic Cloud 2**" Instanzen. Nachfolgend werden die Kommandozeilenbefehle der einzelnen Instanzen aufgelistet, nach dem man sich erfolgreich per SSH darauf verbunden hat.
 
 *Note*: Der Befehl `sudo yum update -y` wird in jeder Instanz als erstes ausgeführt.
 
@@ -341,15 +341,15 @@ docker run -p 80:80 -d --name coachr -v /home/ec2-user/app/dist/coachr:/usr/shar
 # Die erfolgreich getestete und gebaute Anwendung wird von Jenkins in den Ordner ~/app deployed und an den Contanier weitergereicht 
 ```
 
-**EC2-instance-backend**
+**EC2-instance-coachr-backend**
 
 ```bash
-########### Docker installieren --> EC2-instance-coachr-frontend ###########
+########### Docker installieren --> siehe EC2-instance-coachr-frontend ###########
 
 # Datenbank starten
 docker run -p 5432:5432 --rm --name coachr-db -e POSTGRES_PASSWORD=testsystem -d postgres
 # Dotnet API starten
-docker run -it --rm -v ~/app/src/bin/Debug/netcoreapp2.2/:/ --link coachr-db:coachr-db-p 80:80 --name coachr-api mcr.microsoft.com/dotnet/core/sdk
+docker run -it --rm -v ~/app/:/home --link coachr-db:coachr-db-p 80:80 --name coachr-api mcr.microsoft.com/dotnet/core/sdk
 ```
 
 **EC2-instance-Jenkins**
@@ -364,7 +364,7 @@ sudo yum install java-1.8.0-openjdk.x86_64 -y
 # Git
 sudo yum install git -y
 
-########### Docker installieren --> EC2-instance-coachr-frontend ###########
+########### Docker installieren --> siehe EC2-instance-coachr-frontend ###########
 
 # Jenkins User brachen Zugriff auf den docker Befehl
 sudo usermod -a -G docker jenkins
@@ -380,7 +380,7 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
 #### Konfiguration
 
-Nach der Installation muss Jenkins noch konfiguriert werden, um die Bedürfnisse für das Beispiel **coachr** zu erfüllen. Es folgen die nötigen Einstellungen mit Konfigurationspfad .
+Nach der Installation muss Jenkins noch konfiguriert werden, um die Bedürfnisse für das Beispiel **coachr** zu erfüllen. Es folgen die nötigen Einstellungen mit Konfigurationspfad.
 
 **Plugins** 
 
@@ -394,7 +394,7 @@ Nach der Installation muss Jenkins noch konfiguriert werden, um die Bedürfnisse
 - Zugangsdaten => Scope: global => Zugangsdaten hinzufügen
   - Es können sechs verschiedene Arten von Zugangsdaten gewählt werden 
 - Zu erstellende Zugangsdaten
-  - Github-Logindaten für Zugriff auf die Repositorys (Benutzername und Passwort)
+  - GitHub-Logindaten für Zugriff auf die Repositorys (Benutzername und Passwort)
   - GitHub-Token für die Nutzung von Webhooks (Secret text)
 
 **SSH Server**
@@ -416,6 +416,8 @@ Nach der Installation muss Jenkins noch konfiguriert werden, um die Bedürfnisse
 Für für Frontend und Backend müssen jeweils zwei Pipelines erstellt werden. Hier folgt das Beispiel anhand der Frontend-Pipelines. 
 
 **Jenkinsfile erstellen**
+
+*Note: Diese Datei wird im Wurzelverzeichnis des Repositorys erstellt.*
 
 ```groovy
 pipeline {
@@ -456,7 +458,7 @@ pipeline {
 
 **Geheime-Dateien hinzufügen**
 
-Im Fall von coachr dürfen sicherheitskritische Konfigurationsdateien nicht im Repository gehalten werden und müssen den Projekten manuell zugeführt werden, in unserem Fall geschiet das über den SecureCopie-Befehl `scp` geschehen. [Mehr zu scp](https://linuxize.com/post/how-to-use-scp-command-to-securely-transfer-files/)
+Im Fall von coachr dürfen sicherheitskritische Konfigurationsdateien nicht im Repository gehalten werden und müssen den Projekten manuell zugeführt werden, in unserem Fall geschieht das über den SecureCopy-Befehl `scp`. [Mehr zu scp](https://linuxize.com/post/how-to-use-scp-command-to-securely-transfer-files/)
 
 **Build-Pipeline erstellen**
 
@@ -476,17 +478,11 @@ Im Fall von coachr dürfen sicherheitskritische Konfigurationsdateien nicht im R
 - Element anlegen => "Freestyle"-Softwareprojekt bauen => OK
 - Abschnitt: Build Auslöser
   - Dort den Haken bei `Starte Build, nachdem andere Projekte gebaut wurden` setzen
-  - Bei `zu überwachende Projekte` den Namen der Build-Pipeline eintragen, so das sie nur ausgelöst wird wenn der Build stabil ist
+  - Bei `zu überwachende Projekte` den Namen der Build-Pipeline eintragen so das sie nur ausgelöst wird, wenn der Build stabil ist
 - Abschnitt: Post-Build-Aktionen
   - SSH-Server auswählen
     - Source files: Hier werden Dateien aufgeführt die per SSH zum angegeben Server übertragen werden (Remote Directory)
     - Exec command: Hier werden Zeilenweise Befehle ausgeführt die nach dem Übertragen angestoßen werden
-
-### Continuous Integration in Aktion
-
-TODO: Woche 11-12 - coachr-CI in GIFs
-
-TODO: Teststages in den Jenkinsfiles
 
 ## Quellen
 
