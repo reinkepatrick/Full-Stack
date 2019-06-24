@@ -156,6 +156,12 @@
 
 **18.06.2019 - 24.06.2019**
 
-| Datum      | Tätigkeit                                                        | Dauer  | Zusatz |
-| ---------- | ---------------------------------------------------------------- | ------ | ------ |
-| 18.06.2019 | BugFix: Overview --> es standen die falschen Spieler zur Auswahl | 20 min |        |
+| Datum      | Tätigkeit                                                                    | Dauer   | Zusatz |
+| ---------- | ---------------------------------------------------------------------------- | ------- | ------ |
+| 18.06.2019 | BugFix: Overview --> es standen die falschen Spieler zur Auswahl             | 20 min  |        |
+| 18.06.2019 | Overview: Spieler GUI erstellen implementiert                                | 30 min  |        |
+| 18.06.2019 | BugFix: selektierter Spieler wurde nicht abgewählt bei Teamwechsel           | 10 min  |        |
+| 18.06.2019 | State-Management ausseinander gesetzt und versucht zu integrieren            | 3 h     |        |
+| 18.06.2019 | Funktion neuen Spieler erstellen in Overview-Page umgezogen                  | 1 h     |        |
+| 18.06.2019 | Team-Page: versucht selektierte Auswahl des Teams (Button) zu färben         | 30 min  |        |
+| 24.06.2019 | Android Apk exportiert und auf dem eigenen Smartphone erfolgreich ausgeführt | 2 h min |        |
