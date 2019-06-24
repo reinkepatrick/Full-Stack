@@ -164,4 +164,4 @@
 | 18.06.2019 | State-Management ausseinander gesetzt und versucht zu integrieren            | 3 h     |        |
 | 18.06.2019 | Funktion neuen Spieler erstellen in Overview-Page umgezogen                  | 1 h     |        |
 | 18.06.2019 | Team-Page: versucht selektierte Auswahl des Teams (Button) zu färben         | 30 min  |        |
-| 18.06.2019 | Android Apk exportiert und auf dem eigenen Smartphone erfolgreich ausgeführt | 2 h min |        |
+| 24.06.2019 | Android Apk exportiert und auf dem eigenen Smartphone erfolgreich ausgeführt | 2 h min |        |
