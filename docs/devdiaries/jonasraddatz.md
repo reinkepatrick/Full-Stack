@@ -123,3 +123,13 @@ __17.06.2019 - 23.06.2019__
 | 17.06.2019 | Implementierung MQTT-Client | 3 h |  |
 | 17.06.2019 | Tests definieren und schreiben | 1 h |  |
 | 18.06.2019 | Abfangen und Ausgeben von Netzwerkfehlern (MQTT-Client) | 2 h | |
+| 23.06.2019 | Planung des Ablaufs der Projektpräsentation | 2 h |  |
+
+## Woche 12
+
+__24.06.2019 - 30.06.2019__
+
+| Datum      | Tätigkeit      | Dauer  | Zusatz |
+| ---------- | -------------- | ------ | ------ |
+| 24.06.2019 | Planung des Ablaufs der Projektpräsentation | 2 h |  |
+| 24.06.2019 | Erstellung der Projektpräsentation begonnen | 1 h |  |
