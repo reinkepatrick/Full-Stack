@@ -98,3 +98,13 @@ __20.05.2019 - 26.05.2019__
 | 07.06.2019 | Team Effects versucht einzubinden                          | 2h    | Daten nicht aus Store lesbar |
 | 10.06.2016 | Weitere Effects eingebaut, Versuch selektoren zu schreiben | 3h    |                              |
 
+## Woche 10
+
+__10.06.2019 - 16.06.2019__
+
+| Datum      | Tätigkeit                            | Dauer | Zusatz |
+| ---------- | ------------------------------------ | ----- | ------ |
+| 11.06.2019 | Frontend und Api zusammen bringen    | 4h    |        |
+| 12.06.2019 | Frontend und Api zusammen bringen    | 5h    |        |
+| 13.06.2019 | Frontend und State Managment Meeting | 1,5h  |        |
+
