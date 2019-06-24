@@ -120,8 +120,15 @@ __10.06.2019 - 16.06.2019__
 ## Woche 11 
 __17.06.2019 - 23.06.2019__
 
-| Datum      | Tätigkeit                                             | Dauer      | Zusatz                             |
-| ---------- | ----------------------------------------------------- | ---------- | ---------------------------------- |
-| 17.06.2019 | Recherche zur Umsetzung des Kartenspiels              | 1 h 30 min |                                    |
-| 17.06.2019 | Beispiel für plattformkonsistentes Design mit Flutter | 1 h 30 min |                                    |
-| 17.06.2019 | Cardholder als WebApp                                 | 2 h        | Problem mit inkompatiblen Packages |
+| Datum      | Tätigkeit                                                                                                   | Dauer      | Zusatz                             |
+| ---------- | ----------------------------------------------------------------------------------------------------------- | ---------- | ---------------------------------- |
+| 17.06.2019 | Recherche zur Umsetzung des Kartenspiels                                                                    | 1 h 30 min |                                    |
+| 17.06.2019 | Beispiel für plattformkonsistentes Design mit Flutter                                                       | 1 h 30 min |                                    |
+| 17.06.2019 | Cardholder als WebApp                                                                                       | 2 h        | Problem mit inkompatiblen Packages |
+| 19.06.2019 | Spiel starten und Übergang ins Spiel                                                                        | 1 h 45 min |                                    |
+| 19.06.2019 | Bug fixes und Refactoring                                                                                   | 30 min     |                                    |
+| 19.06.2019 | Darstellung einer generischen Karte, Interaktion mit den Karten, Karten ziehbar, Ereigniserkennung bei Drop | 4 h        |                                    |
+| 19.06.2019 | Darstellung des Wertes und der Farbe auf den Karten                                                         | 1 h        |                                    |
+| 21.06.2019 | Implementierung des Mau Mau UIs                                                                             | 6 h        |                                    |
+| 21.06.2019 | Spielekommunikation mit dem Backend                                                                         | 3 h        |                                    |
+| 22.06.2019 | Spielekommunikation mit dem Backend                                                                         | 2 h        |                                    |
