@@ -162,7 +162,7 @@ __17.06.2019 - 23.06.2019__
 | 17.06.2019 | Thema aufbereitung | 30 min | |
 | 19.06.2019 | erklären wie man swaggerhub lesen kann | 120 min | |
 | 21.06.2019 | Konzeptänderung der Api im teilabschnitt Uebung | 200 min | Total verschwendete zeit Funktionalität war bereits vorhanden |
-| 22.06.2019 | Swagger doku verbessert | 200 min | Total verschwendete zeit Funktionalität war bereits vorhanden |
+| 22.06.2019 | Swagger doku verbessert | 60 min | Total verschwendete zeit Funktionalität war bereits vorhanden |
 | 23.06.2019 | Konzeptänderung der Api im teilabschnitt Uebung | 200 min | Total verschwendete zeit Funktionalität war bereits vorhanden |
 
 ## Woche 12
@@ -173,3 +173,4 @@ __24.06.2019 - 30.06.2019__
 | --- | --- | --- | --- |
 | 24.06.2019 | Selenium doku eingelesen | 30 min | |
 | 24.06.2019 | Selenium video geschaut | 60 min | |
+| 24.06.2019 | QualityAsurance für Swaggerhub doku | 180 min | |
