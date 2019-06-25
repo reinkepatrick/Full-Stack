@@ -90,3 +90,12 @@ __10.06.2019 - 16.06.2019__
 | 15.06.2019 | Projekt: Raspberry - Konfigurationswebsite einrichten                                 | 3 h        | PhP ist Mist |
 | 15.06.2019 | Projekt: Raspberry - Haupt Python Skript erstellt, Konfiguration geladen              | 2 h 10 min | |
 | 16.06.2019 | Projekt: Raspberry - Python Skript ausgearbeitet, Vollständige Funktionalität         | 4 h        | |
+
+## Woche 11
+__17.06.2019 - 23.06.2019__
+
+| Datum      | Tätigkeit                                                                             | Dauer      | Zusatz |
+| ---------- | ------------------------------------------------------------------------------------- | ---------- | ------ |
+| 18.06.2019 | Projekt: Raspberry - Breakoutboard verlötet                                           | 1 h 50 min | |
+| 21.06.2019 | Projekt: Statische Webseite für WebGL Demo angefangen                                 | 2 h        | |
+| 22.06.2019 | Projekt: Einarbeiten in Websockets                                                    | 1 h        | |
