@@ -132,3 +132,11 @@ __17.06.2019 - 23.06.2019__
 | 21.06.2019 | Implementierung des Mau Mau UIs                                                                             | 6 h        |                                    |
 | 21.06.2019 | Spielekommunikation mit dem Backend                                                                         | 3 h        |                                    |
 | 22.06.2019 | Spielekommunikation mit dem Backend                                                                         | 2 h        |                                    |
+
+## Woche 12 
+__24.06.2019 - 30.06.2019__
+
+| Datum      | Tätigkeit               | Dauer  | Zusatz |
+| ---------- | ----------------------- | ------ | ------ |
+| 29.06.2019 | Refactoring und Cleanup | 30 min |        |
+| 29.06.2019 | Kartenfarbe wünschen    | 4 h    |        |
