@@ -171,3 +171,17 @@
 | 20.06.2019 | Reagieren auf sonstige Events vom Server                     | 1 h 30 min | Außer Spielende                                                                                                                                                                                                  |
 | 20.06.2019 | Versuchen Animation einzubinden ohne Erfolg                  | 2 h        | Versucht mit [Pose](https://popmotion.io/pose/), [React Transition Group](https://reactcommunity.org/react-transition-group/), [react-spring](https://www.react-spring.io/) und [Anime.js](https://animejs.com/) |
 
+## Woche 12
+
+**24.06.2019 - 30.06.2019**
+
+| Datum      | Tätigkeit                                                             | Dauer      | Zusatz                                                                                    |
+| :--------- | :-------------------------------------------------------------------- | :--------- | :---------------------------------------------------------------------------------------- |
+| 23.06.2019 | Besprechung des weiteren Vorgehen                                     | 2 h        |                                                                                           |
+| 23.06.2019 | Kartenwunsch hinzugefügt und kleiner Fehler behoben beim Kartenwunsch | 1 h        |                                                                                           |
+| 24.06.2019 | Wünschen von Karten fertiggestellt                                    | 2 h 30 min |                                                                                           |
+| 29.06.2019 | Nachricht beim Beenden des Spiel ob Gewinner oder Verlierer           | 1 h 30 min |                                                                                           |
+| 30.06.2019 | Automatisches sortieren der Karten                                    | 1 h        |                                                                                           |
+| 30.06.2019 | Fächern der Karten                                                    | 1 h 30 min | Verworfen, da Karten unter Chrome unscharf wurden und keine Lösung gefunden werden konnte |
+| 30.06.2019 | Beheben von kleineres Fehlern                                         | 1 h        | RegEx bei der Username Eingabe und Nachricht, wenn nur noch ein Spieler in der Lobby ist  |
+| 30.06.2019 | Erstellung von einer Dokumentation über das Aufsetzen der Webseite    | 30 min     |                                                                                           |
