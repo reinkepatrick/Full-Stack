@@ -135,3 +135,17 @@ __17.06.2019 - 23.06.2019__
 | Datum      | Tätigkeit                                                                                                                       | Dauer      | Zusatz |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------- | ---------- | ------ |
 | 20.06.2019 | Kommunnikation mit Frontend implementiert.                                                                                      | 8h         |        |
+
+## Woche 12
+__24.06.2019 - 30.06.2019__
+
+
+| Datum      | Tätigkeit                                                                                                                       | Dauer      | Zusatz |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------- | ---------- | ------ |
+| 25.06.2019 | Weiteres Vorgehen besprochen.                                                                                                   | 2h         |        |
+| 25.06.2019 | Bugs gefixt.                                                                                                                    | 1h         |        |
+| 25.06.2019 | Kommunikation für Bubenwunsch implementiert.                                                                                    | 1h         |        |
+| 27.06.2019 | Bugs gefixt.                                                                                                                    | 3h         |        |
+| 30.06.2019 | Mit Sphinx auseinandergesetzt und Dokumentation angefangen.                                                                     | 3h         |        |
+| 30.06.2019 | Bug gefixt wenn Spieler das Spiel verlassen hat.                                                                                | 2h         |        |
+| 30.06.2019 | Dokumentation zu ende geschrieben                                                                                               | 1h         |        |
