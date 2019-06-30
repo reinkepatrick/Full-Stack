@@ -177,9 +177,9 @@
 
 | Datum      | Tätigkeit                                                             | Dauer      | Zusatz                                                                                    |
 | :--------- | :-------------------------------------------------------------------- | :--------- | :---------------------------------------------------------------------------------------- |
-| 23.06.2019 | Besprechung des weiteren Vorgehen                                     | 2 h        |                                                                                           |
-| 23.06.2019 | Kartenwunsch hinzugefügt und kleiner Fehler behoben beim Kartenwunsch | 1 h        |                                                                                           |
 | 24.06.2019 | Wünschen von Karten fertiggestellt                                    | 2 h 30 min |                                                                                           |
+| 25.06.2019 | Besprechung des weiteren Vorgehen                                     | 2 h        |                                                                                           |
+| 25.06.2019 | Kartenwunsch hinzugefügt und kleiner Fehler behoben beim Kartenwunsch | 1 h        |                                                                                           |
 | 29.06.2019 | Nachricht beim Beenden des Spiel ob Gewinner oder Verlierer           | 1 h 30 min |                                                                                           |
 | 30.06.2019 | Automatisches sortieren der Karten                                    | 1 h        |                                                                                           |
 | 30.06.2019 | Fächern der Karten                                                    | 1 h 30 min | Verworfen, da Karten unter Chrome unscharf wurden und keine Lösung gefunden werden konnte |
