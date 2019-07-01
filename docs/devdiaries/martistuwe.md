@@ -150,3 +150,4 @@ __01.07.2019 - 07.07.2019__
 | Datum      | Tätigkeit                                                                  | Dauer | Zusatz |
 | ---------- | -------------------------------------------------------------------------- | ----- | ------ |
 | 01.07.2019 | Neues Logo designed, Bugfixes, Popup beim Gewinnen, Vorbereitung auf Präsi | 4 h   |        |
+| 01.07.2019 | Bugfixes, Vorbereitung auf Präsi                                           | 2 h   |        |
