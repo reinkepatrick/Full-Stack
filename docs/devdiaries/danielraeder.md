@@ -99,3 +99,20 @@ __17.06.2019 - 23.06.2019__
 | 18.06.2019 | Projekt: Raspberry - Breakoutboard verlötet                                           | 1 h 50 min | |
 | 21.06.2019 | Projekt: Statische Webseite für WebGL Demo angefangen                                 | 2 h        | |
 | 22.06.2019 | Projekt: Einarbeiten in Websockets                                                    | 1 h        | |
+
+## Woche 12
+__24.06.2019 - 30.06.2019__
+
+| Datum      | Tätigkeit                                                                             | Dauer      | Zusatz |
+| ---------- | ------------------------------------------------------------------------------------- | ---------- | ------ |
+| 25.06.2019 | Projekt: WebGL Darstellung verbessern                                                 | 3 h        | |
+| 27.06.2019 | Projekt: Raspi Config Webseite erweitern                                              | 2 h 30 min | |
+| 28.06.2019 | Projekt: Raspi Config Seite, Start/Stop buttons versucht                              | 3 h 10 min | geht noch nicht |
+
+## Woche 13
+__01.07.2019 - 07.06.2019__
+
+| Datum      | Tätigkeit                                                                             | Dauer      | Zusatz |
+| ---------- | ------------------------------------------------------------------------------------- | ---------- | ------ |
+| 01.07.2019 | Projekt: Raspi Config Seite, Start/Stop buttons fertig gestellt                       | 5 h 30 min | |
+| 01.07.2019 | Projekt: MQTT Client, Einfügen in Datenbank gefixed und logging verbessert            | 30 min     | |
