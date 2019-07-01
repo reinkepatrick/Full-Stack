@@ -143,3 +143,10 @@ __24.06.2019 - 30.06.2019__
 | 29.06.2019 | Kartenfarbe wünschen          | 4 h        |                                                    |
 | 30.06.2019 | Bugfixes und Refactoring      | 2 h 30 min |                                                    |
 | 30.06.2019 | Animationen im Spiel versucht | 1 h 30 min | nur schwer möglich auf Grund unserer Kommunikation |
+
+## Woche 13 
+__01.07.2019 - 07.07.2019__
+
+| Datum      | Tätigkeit                                                                  | Dauer | Zusatz |
+| ---------- | -------------------------------------------------------------------------- | ----- | ------ |
+| 01.07.2019 | Neues Logo designed, Bugfixes, Popup beim Gewinnen, Vorbereitung auf Präsi | 4 h   |        |
