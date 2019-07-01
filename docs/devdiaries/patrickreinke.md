@@ -185,3 +185,14 @@
 | 30.06.2019 | Fächern der Karten                                                    | 1 h 30 min | Verworfen, da Karten unter Chrome unscharf wurden und keine Lösung gefunden werden konnte |
 | 30.06.2019 | Beheben von kleineres Fehlern                                         | 1 h        | RegEx bei der Username Eingabe und Nachricht, wenn nur noch ein Spieler in der Lobby ist  |
 | 30.06.2019 | Erstellung von einer Dokumentation über das Aufsetzen der Webseite    | 30 min     |                                                                                           |
+
+## Woche 13
+
+**01.07.2019 - 07.07.2019**
+
+| Datum      | Tätigkeit                                              | Dauer      | Zusatz                                                                                                                                           |
+| :--------- | :----------------------------------------------------- | :--------- | :----------------------------------------------------------------------------------------------------------------------------------------------- |
+| 01.07.2019 | Integration von einem neuen Logo, überall              | 15 min     |                                                                                                                                                  |
+| 01.07.2019 | Erstellung der Präsentation                            | 2 h 30 min |                                                                                                                                                  |
+| 01.07.2019 | Fehler im Test behoben                                 | 15 min     | Entstanden durch das Hinzufügen vom neuen Logo in die Web-Anwendung                                                                              |
+| 01.07.2019 | Fehler bei der Erkennung bei der Ausgabe des Gewinners | 5 h        | Lange suche nachdem Fehler, dieser bestand darin, dass die Überprüfung einer Variable nicht funktionierte, dies ist aber lange nicht aufgefallen |
