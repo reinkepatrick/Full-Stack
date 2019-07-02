@@ -136,12 +136,16 @@ __24.06.2019 - 30.06.2019__
 
 ## Woche 13
 
-__24.06.2019 - 30.06.2019__
+__01.07.2019 - 02.07.2019__
 
 | Datum      | Tätigkeit                         | Dauer | Zusatz |
 | ---------- | --------------------------------- | ----- | ------ |
 | 01.07.2019 | Projekt Präsentation Vorbereitung | 4 h   |        |
-| 02.07.2019 | Projekt Präsentation              |       |        |
-|            |                                   |       |        |
-|            |                                   |       |        |
+| 02.07.2019 | Projekt Präsentation              | 3 h   |        |
+
+
+
+Gesamt Stunden vom **08.04.2019 - 02.07.2019** : **150** Stunden
+
+Durchschnitt pro Woche: **11,5** Stunden
 
