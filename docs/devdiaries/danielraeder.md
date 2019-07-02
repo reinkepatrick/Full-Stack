@@ -116,3 +116,6 @@ __01.07.2019 - 07.06.2019__
 | ---------- | ------------------------------------------------------------------------------------- | ---------- | ------ |
 | 01.07.2019 | Projekt: Raspi Config Seite, Start/Stop buttons fertig gestellt                       | 5 h 30 min | |
 | 01.07.2019 | Projekt: MQTT Client, Einfügen in Datenbank gefixed und logging verbessert            | 30 min     | |
+
+
+__Gesamte Zeit: 98 Stunden, 45 Minuten__
