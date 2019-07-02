@@ -102,4 +102,34 @@ __10.06.2019 - 16.06.2019__
 | 10.06.2019 | Recherche Authentifizierungsverfahren | 2 Std   |        |
 | 10.06.2019 | Verbessern der Ladefunktion           | 1 Std   |        |
 | 10.06.2019 | Hinzufügen von neuen Bildern          | 0,5 Std |        |
+| 12.06.2019 | Versuch neuer Pfeile                  | 2,5 Std |        |
 
+## Woche 11
+
+__17.06.2019 - 23.06.2019__
+
+| Datum      | Tätigkeit                      | Dauer | Zusatz |
+| ---------- | ------------------------------ | ----- | ------ |
+| 18.06.2019 | Hinzufügen Fehlender Attribute | 1 Std |        |
+| 19.06.2019 | API Service                    | 3 Std |        |
+| 20.06.2019 | Fehlerbehebung                 | 2 Std |        |
+
+## Woche 12
+
+__24.06.2019 - 30.06.2019__
+
+| Datum      | Tätigkeit                          | Dauer   | Zusatz |
+| ---------- | ---------------------------------- | ------- | ------ |
+| 25.06.2019 | Anpassung Models an API            | 1,5 Std |        |
+| 26.06.2019 | Anpassung Routen und Request Bodys | 3,5 Std |        |
+| 29.06.2019 | Anpassung Routen und Request Bodys | 2 Std   |        |
+
+## Woche 13
+
+__01.07.2019 - 02.07.2019__
+
+| Datum      | Tätigkeit                      | Dauer   | Zusatz |
+| ---------- | ------------------------------ | ------- | ------ |
+| 01.07.2019 | Fertigstellen des Editors      | 4 Std   |        |
+| 01.07.2019 | Fertigstellen der Team-Details | 4 Std   |        |
+| 01.07.2019 | Überarbeitung Zusammenfassung  | 0,5 Std |        |

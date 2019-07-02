@@ -139,7 +139,7 @@ __03.06.2019 - 09.06.2019__
 | 06.06.2019 | Fix EF Loading | 30 min | |
 | 06.06.2019 | Refactor extrahieren von Texten | 20 min  | |
 | 07.06.2019 | Write basic Spielertests | 60 min | |
-| 07.06.2019 | Write Merkmaltests | 60 min | |
+| 07.06.2019 | Write Merkmaltests | 60 min | | 
 | 08.06.2019 | erweitern von Teamtests | 30 min | |
 | 09.06.2019 | Swaggerhub dokumentation angepasst | 50 min | | 
 
@@ -155,10 +155,22 @@ __10.06.2019 - 16.06.2019__
 
 ## Woche 11
 
-__17.06.2019 - 24.06.2019__
+__17.06.2019 - 23.06.2019__
 
 | Datum | Tätigkeit | Dauer | Zusatz |
 | --- | --- | --- | --- |
 | 17.06.2019 | Thema aufbereitung | 30 min | |
+| 19.06.2019 | erklären wie man swaggerhub lesen kann | 120 min | |
+| 21.06.2019 | Konzeptänderung der Api im teilabschnitt Uebung | 200 min | Total verschwendete zeit Funktionalität war bereits vorhanden |
+| 22.06.2019 | Swagger doku verbessert | 60 min | Total verschwendete zeit Funktionalität war bereits vorhanden |
+| 23.06.2019 | Konzeptänderung der Api im teilabschnitt Uebung | 200 min | Total verschwendete zeit Funktionalität war bereits vorhanden |
 
+## Woche 12
 
+__24.06.2019 - 30.06.2019__
+
+| Datum | Tätigkeit | Dauer | Zusatz |
+| --- | --- | --- | --- |
+| 24.06.2019 | Selenium doku eingelesen | 30 min | |
+| 24.06.2019 | Selenium video geschaut | 60 min | |
+| 24.06.2019 | QualityAsurance für Swaggerhub doku | 180 min | |
