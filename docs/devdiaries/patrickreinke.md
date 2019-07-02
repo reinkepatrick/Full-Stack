@@ -196,3 +196,19 @@
 | 01.07.2019 | Erstellung der Präsentation                            | 2 h 30 min |                                                                                                                                                  |
 | 01.07.2019 | Fehler im Test behoben                                 | 15 min     | Entstanden durch das Hinzufügen vom neuen Logo in die Web-Anwendung                                                                              |
 | 01.07.2019 | Fehler bei der Erkennung bei der Ausgabe des Gewinners | 5 h        | Lange suche nachdem Fehler, dieser bestand darin, dass die Überprüfung einer Variable nicht funktionierte, dies ist aber lange nicht aufgefallen |
+
+
+Woche  1: 10h 35min
+Woche  2: 11h 30min
+Woche  3: 14h 40min
+Woche  4: 16h  0min
+Woche  5: 13h 30min
+Woche  6: 17h 50min
+Woche  7: 22h 30min
+Woche  8: 13h  0min
+Woche  9: 13h  0min
+Woche 10:  8h  0min
+Woche 11: 14h 30min
+Woche 12: 11h  0min
+Woche 13:  8h  0min
+**Gesamtstunden: 174h 5min**
