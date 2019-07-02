@@ -159,3 +159,14 @@ __17.06.2019-23.06.2019__
 | 23.06 | Dokumentation inhaltlich Fertiggestellt | 60min  |                     |
 | 23.06 | Dokumentation final überarbeitet        | 120min |                     |
 
+## Woche 12
+
+__24.06.2019-30.06.2019__
+
+| Datum | Tätigkeit                               | Dauer  | Zusatz              |
+| ----- | --------------------------------------- | ------ | ------------------- |
+| 25.06 | Letzte Anpassungen | 120min |                     |
+| 25.06 | Vorbereitung Präsentation   | 120min  |                     |
+
+
+__Gesamte Zeit ca 85 Stunden__ 
