@@ -13,7 +13,7 @@ __08.04.2019 - 14.04.2019__
 | 10.04.2019 | Eingelesen in .net standard                                  | 20 min | gemeinsame Libarys für .net Framework , .net core , xamarin und unity |
 | 10.04.2019 | Einleitung für .net core geschrieben                         | 40 min |                                                              |
 | 11.04.2019 | Beispiel für Entityframework geschrieben                     | 30 min | .net Core nutzt nicht die selben namespaces im Web wie in der Konsole |
-| 11.04.2019 | Beispiel für Linq Funktions und Query Syntax                 | 1 h    | Query Syntax ist ungewohnt zu schreiben wenn man es noch nie gemacht hat, während Funktions Syntax lambda und pfeil funktionen (js) ähnelt |
+| 11.04.2019 | Beispiel für Linq Funktions und Query Syntax                 | 60 min | Query Syntax ist ungewohnt zu schreiben wenn man es noch nie gemacht hat, während Funktions Syntax lambda und pfeil funktionen (js) ähnelt |
 | 12.04.2019 | erstellen von Contributing.md                                | 40 min |                                                              |
 
 
@@ -122,7 +122,7 @@ __27.05.2019 - 02.06.2019__
 | 28.05.2019 | XUnit Test verfahren | 120 min | |
 | 29.05.2019 | Unit Tests für die Enums | 120 min | Parameterisierte Tests für Enums kompliziert |
 | 30.05.2019 | Unit Tests erweitert | 120 min | |
-| 01.06.2019 | Integration Tests informationen gesammelt |  |
+| 01.06.2019 | Integration Tests informationen gesammelt | 30 min | |
 | 02.06.2019 | Integration Tests fehlerhaft entwickelt | 180 min | Testserver weigert sich zu starten. Tests werden nicht mehr erkannt |
 
 ## Woche 9
@@ -174,3 +174,14 @@ __24.06.2019 - 30.06.2019__
 | 24.06.2019 | Selenium doku eingelesen | 30 min | |
 | 24.06.2019 | Selenium video geschaut | 60 min | |
 | 24.06.2019 | QualityAsurance für Swaggerhub doku | 180 min | |
+
+## Woche 13
+
+__01.07.2019 - 02.07.2019__
+
+| Datum | Tätigkeit | Dauer | Zusatz |
+| --- | --- | --- | --- |
+| 01.07.2019 | kleine Änderungen | 45 min | |
+| 01.07.2019 | Hilfestellung | 30 min | |
+
+92 h und 5 min
