@@ -165,3 +165,16 @@
 | 18.06.2019 | Funktion neuen Spieler erstellen in Overview-Page umgezogen                  | 1 h     |        |
 | 18.06.2019 | Team-Page: versucht selektierte Auswahl des Teams (Button) zu färben         | 30 min  |        |
 | 24.06.2019 | Android Apk exportiert und auf dem eigenen Smartphone erfolgreich ausgeführt | 2 h min |        |
+
+## Woche 12
+
+**25.06.2019 - 01.07.2019**
+
+| Datum          | Tätigkeit                                                        | Dauer    | Zusatz |
+| -------------- | ---------------------------------------------------------------- | -------- | ------ |
+| 25.06.2019     | BugFix: Attribute wurden im falschen Lifecycle zugewiesen        | 1 h      |        |
+| 25.06.2019     | Neu erzeugter Spieler wird nun dem ausgewähltem Team hinzugefügt | 15 min   |        |
+| bis 01.07.2019 | Diverse Implementierungen                                        | ca. 20 h |        |
+
+
+Summe der Arbeitszeit: 5945 min = 99 h 5 min
